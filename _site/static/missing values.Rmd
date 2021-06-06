@@ -1,0 +1,443 @@
+---
+title: "کار با داده های گمشده"
+subtitle: ""  
+author: 
+  - "محمد چناریان نخعی"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = FALSE, include = FALSE)
+options(htmltools.dir.version = FALSE)
+#devtools::install_github("gadenbuie/xaringanExtra")
+#remotes::install_github('yihui/xaringan',force =  TRUE)
+
+```
+
+
+
+```{css echo=FALSE}
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Markazi+Text&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text');
+
+h1, h2, h3, h4, h5, h6 {
+  direction: rtl;
+ font-family: 'Markazi Text', serif;
+}
+
+title {
+  direction: rtl;
+    font-family: 'Markazi Text', serif;
+}
+body {
+  direction: rtl;
+  font-family:'Markazi Text', serif;
+}
+
+code {
+  direction: ltr
+}
+
+```
+
+
+
+```{r xaringan-themer, message=FALSE, warning=FALSE, include=FALSE}
+library(xaringanthemer)
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+xaringanExtra::use_slide_tone()
+
+xaringanExtra::use_editable(expires = 1)
+
+style_duo_accent(
+  
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF",
+  header_font_google = google_font("Markazi Text"),
+  text_font_google   = google_font("Markazi Text", "600", "600i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+---
+
+```{r}
+library(tidyverse)
+```
+
+---
+## داده های گمشده چه هستند
+
+مقادیری که در دیتاست باید ثبت می شدند ولی به هر دلیلی ثبت نشده اند داده ای گمشده هستند:
+
+در R داده های گمشده با NA نشان داده می شوند
+NA = Not Available
+
+---
+## انواع داده های گمشده
+داده هی گمشده آشکار
+داده های گمشده پنهان
+
+
+---
+### پیدا کردن گمشده پنهان
+
+```{r message=FALSE, warning=FALSE}
+data %>% 
+  tidyr::complete(var1,var2)
+```
+
+
+
+
+---
+## انواع داده های گمشده
+
+MCAR مقادیر گمشده به صورت تصادفی
+MAR: مقادیر گمشده به صورت غیر تصادفی
+MNAR: 
+
+
+---
+
+```{r}
+NA
+```
+
+
+هر عملیات ریاضی با داده های گمشده منجر به مقدار گمشده دیگری می شود.
+
+```{r}
+NA  + 10
+```
+
+
+---
+## فیلتر کردن داده های گمشده
+
+```{r}
+NA == NA
+```
+--
+```{r}
+titanic <- read_csv('data/titanic.csv')
+head(titanic)
+```
+
+
+برای مقایسه کردن داده های گمشده یا برای این که ببینیم که کدام مقادیر گمشده هستند از دستور `filter()` و `is.na()` استفاده می کنیم
+
+```{r}
+titanic %>% 
+filter(is.na(Age)) %>% 
+  glimpse()
+```
+```{r}
+titanic %>% 
+filter(is.na(Age)) %>% 
+dim()
+```
+
+
+سطرهایی که د `drop_na` دیتاست حاوی مقادیر گمشده هستند را با تابع ÷ حذف می کنیم.
+
+```{r}
+titanic %>% 
+  #filter(is.na(Age)) 
+  drop_na(Age) %>% 
+  glimpse()
+```
+
+که نتیجه مشابه با 
+
+---
+## کتابخانه naniar
+
+کتابخانه naniar یک سری تابع و قابلیت ها در اختیار ما می گذارد که کار با داده های گمشده را راحت تر می کند.
+
+نصب naniar
+
+```{r eval = FALSE}
+install.packages('naniar')
+```
+فراخوانی naniar
+
+```{r}
+library(naniar)
+```
+
+---
+
+### بررسی داده های گمشده
+
+
+```{r}
+any_na(titanic$Age)
+```
+
+```{r}
+are_na(titanic$Age) %>% 
+  head()
+```
+
+---
+## نگاه کلی به دیتاست
+```{r}
+prop_miss_case(titanic)
+```
+به صورت برعکس می توانیم تعداد مقادیر و نسبت
+
+```{r}
+prop_complete_case(titanic)
+```
+
+
+```{r}
+miss_var_summary(titanic)
+```
+
+```{r}
+miss_case_summary(titanic)
+```
+
+
+---
+#### تعداد مقادیر گمشده
+و نسبت مقادیر گمشده
+```{r}
+titanic %>% 
+  group_by(Survived) %>% 
+  summarise(n_missing = n_miss(Age),
+            prop_missing = prop_miss(Age))
+```
+
+
+---
+
+### مکمل
+
+```{r}
+titanic %>% 
+  group_by(Survived) %>% 
+  summarise(n_complete = n_complete(Age),
+            prop_complete = prop_complete(Age))
+```
+
+---
+رسم داده های گمشده
+
+
+```{r}
+vis_miss(titanic)
+```
+
+`
+---
+
+
+ماتریس داده های گمشده
+
+
+---
+### داده گمشده در سری های زمانی
+
+
+```{r}
+#miss_var_span()
+```
+
+```{r}
+#miss_var_run()
+```
+
+
+```{r}
+vis_miss(titanic,cluster = TRUE)
+```
+---
+---
+## چطور با داده های گمشده مواجه کنیم؟
+
+حذف داده های گمشده
+جایگزینی  با یک مقدار مناسب ( پر کردن مقادیر گمشده) 
+
+
+هر دو این دو عملیات عواقب و نتایجی بر روی  گام های بعدی و مدل سازی دارند.
+
+هر کدام از این استراتژی ها بستگی به این دارند که با کدام نوع از داده های گمشده سر و کار  داریم
+
+---
+## تشخیص نوع مقادیر گمشده
+راه حل اول: مصورسازی
+راه حل دوم: استفاده از تست های آماری
+---
+مصورسازی
+بررسی این که با کدام نوع از داده های گمشده سر و کار داریم می توانیم از `vis_miss` استفاده کنیم.
+
+```{r}
+
+```
+---
+## کتابخانه VIM
+
+نمودار تجمعی
+نمودار Spine
+نمودار موزائیکی
+
+---
+```{r}
+library(VIM)
+titanic %>% 
+  aggr(numbers = TRUE)
+```
+
+---
+```{r eval=FALSE, include=TRUE}
+titanic %>% 
+  select(Pclass,Age) %>% 
+  mutate(
+         Pclass = as_factor(Pclass)) %>% 
+  #glimpse()
+  spineMiss()
+```
+
+---
+
+```{r eval=FALSE, warning=FALSE, include=FALSE}
+titanic %>% 
+  mutate(Pclass = as.factor(Pclass),
+         Sex = as_factor(Sex)) %>% 
+  mosaicplot(highlight = 'Pclass',plotvars = c('Survived','Sex')  )
+```
+
+
+```{r}
+
+```
+
+---
+تست های آماری
+از تست T برای تشخیص نوع مقادیر گمشده استفاده می کنیم.
+
+1. فرض صفر را تعیین می کنیم (میانگین متغیر بازای مقادیر گمشده و غیرگمشده برابر اس)
+
+2. آماره آزمون t را بر روی داده ها محاسبه می کنیم.
+
+3. p-value آزمون را محاسبه می کنیم که به ما می گوید که چقدر احتمال دارد که فرض صفر ما درست باشد.
+
+4. اگر p-value کوچک باشد فرض صفر را رد می کنیم و در غیر این صورت فرض صفر را می پذیریم.
+---
+
+
+# یک مثال
+
+
+```{r}
+
+```
+
+
+
+
+```{r message=FALSE, warning=FALSE}
+data %>% 
+  tidyr::fill(var)
+```
+
+
+```{r}
+#replace_with_na()
+
+#replace_with_na_if()
+```
+
+
+---
+
+پر کردن (جایگذاری مقادیر گمشده)
+مقادیر گمشده را با یک مقدار که بر اساس فرضیاتمان در خصوص داده ها به دست آورده ایم جایگزین می کنیم.
+
+روش های مختلفی برای جایگذاری مقادیر گمشده وجوده وجود دارد
+
+---
+### جایگزینی با میانگین
+مقادیر گمشده در یک متغیر را با میانگین مقادیر در دسترس ( مشاهده شده) جایگزین می کنیم.
+
+برای سری های زمانی مناسب است چون مقادیر سری زمانی حول و حوش میانگین بالا و پائین می رود در بلند مدت
+
+```{r}
+titanic %>% 
+  mutate(Age_imp = if_else(is.na(Age),mean(Age,na.rm = TRUE),Age) ) %>% 
+  select(Age,Age_imp)
+```
+رابطه بین متغیرها ممکن است بعد از جایگزینی با میانگین از بین برود.
+به طور مثال، دو متغییر که همبستگی بالایی دارند ممکن است از جایگزینی با میانگین همبستگی شان صفر شود.
+به جای میانگین می توانیم از میانه یا مد برای جایگزینی استفاده کنیم.
+به طور خاص وقتی با داده های پرت سر و کار داریم بهتر از میانه استفاده کنیم.
+برای متغیرهای دسته ای از مد (فراوان ترین دسته) استفاده می کنیم.
+کماکان مشکل قبلی باپرجا می ماند در هر صورت.
+
+```{r}
+
+```
+
+### جایگزینی با آخرین مقدار مشاهده شده
+
+فرض می کنیم که داده ها به صورت کاملا تصادفی تولید شده اند.
+رابطه بین متغیرها از بین می رود.
+
+```{r}
+titanic %>% 
+  mutate(Age_missing = is.na(Age) ) %>% 
+  fill( Age) %>% 
+  select(Age,Age_missing)
+```
+
+دوباره ممکن است همبستگی و ارتباط بین متغیرها از بین برود.
+ (مثال عملی)
+برای حل این مشکل می توانیم ابتدا مقادیر متغیرهای همبسته را بر اساس ترتیب بچینیم و سپس جایگذاری را انجام بدهیم.
+
+این کار را می توانیم به صورت خودکار به وسیله کتابخانه VIM انجام بدهیم.
+
+```{r eval=FALSE, include=FALSE}
+titanic %>% 
+  hotdeck(variable = 'Age', ord_var = 'Fare')
+```
+
+
+
+---
+### استفاده از الگوریتم KNN
+یک مشاهده که دارای یک مقدار گمشده است را انتخاب می کنیم.
+از بین سایر مشاهدات k مشاهده دیگری که شباهت بیشتری به این مشاهده است هستند را انتخاب می کنیم ( مشاهدات که نزدیک ترند)
+مقدار گمشده را با میانگین یا میانه این k عوض می کنیم
+
+شباهت یا نزدیکی بین دو مشاهده را با فاصله اقلیدسی به صورت معمول جایگزین می کنیم
+
+برای متغیرهای دسته ای  فاصله به وسیله معیار منتهن و همینگ محاسبه می شود.
+
+---
+
+```{r eval=FALSE, include=FALSE}
+titanic %>% 
+  KNN(k = 3,variable)
+```
+
+---
+
+
+### ارزیابی روش های جایگزینی مقادیر گمشده
+
+می توانیم از تابع marginplot در کتابخانه VIM استفاده کنیم
+

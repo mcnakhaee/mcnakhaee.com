@@ -1,0 +1,28 @@
+---
+title: "Muhammad Nakhaee"
+image: "imgs/pic.jpg"
+links:
+  - label: Twitter
+    url: "https://twitter.com/m_cnakhaee"
+  - label: GitHub
+    url: "https://github.com/mcnakhaee"
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/muhammadcnakhaee/"
+  - label: Email
+    url: "mailto:mcnakhaee@gmail.com"
+site: distill::distill_website
+output:
+  postcards::jolla
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+```
+
+### Welcome to my personal site!
+
+ I am a data analyst working at a financial and business software company in the Netherlands. I specialize in using R and Python for data analysis, modeling, and data visualizations. 

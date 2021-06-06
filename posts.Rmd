@@ -1,0 +1,8 @@
+---
+title: "Posts"
+listing: posts
+---
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+
+```
