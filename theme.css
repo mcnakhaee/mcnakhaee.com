@@ -6,15 +6,14 @@
   --font-header: Karla,'Karla',"LEMONMILKPro",Tahoma,"Helvetica Neue",Helvetica,Arial,sans-serif;
   --font-mono:   SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
 
-  --color-background:   #EAE9EA;
-  --color-primary:      #74a08a;
-  --color-primary-dark: #2F4238;
-  --color-secondary:    #8a74a0;
-  --color-tertiary:     #a08a74;
-  --color-text:         #172a3a;
-  --color-white:        #FFFFFF;
+  --color-background:   #F4F4F9;  /* Soft light gray */
+  --color-primary:      #5A8F7B;  /* Muted teal for a calming effect */
+  --color-primary-dark: #264653;  /* Dark slate blue for contrast */
+  --color-secondary:    #9C7AAE;  /* Soft lavender for accent */
+  --color-tertiary:     #D4A373;  /* Warm muted ochre for balance */
+  --color-text:         #2A2A2A;  /* Dark gray for readability */
+  --color-white:        #FFFFFF;  /* Keep white as is */
 }
-
 /* base variables */
 
 /* Edit the CSS properties in this file to create a custom
