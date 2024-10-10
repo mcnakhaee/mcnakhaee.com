@@ -1,0 +1,16 @@
+---
+title: "Photography Posts"
+description: "A collection of my photography-related posts."
+listing:
+  contents:
+    - _posts/photography
+  sort_by: "date"
+  type: "default"
+  fields: [title, date, description]
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+

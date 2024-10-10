@@ -19,11 +19,11 @@ navbar:
     - text: "About"
       href: about.html
     - text: "Posts"
-      href: posts.html
+      href: data.html
     - text: "Projects"
       href: projects.html
     - text: "Photography"
-      href: gallery.html
+      href: photography.html
     - icon: fab fa-github
       href: https://github.com/mcnakhaee
     - icon: fab fa-twitter

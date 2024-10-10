@@ -6,36 +6,52 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\r\nI’m Muhammad. I work as a data analyst/scientist at Exact in the Netherlands. Before that I worked as a researcher at the University of Twente.\r\nMy website is built using the {distill} package. Before that I used Hugo and the blogdown package for my website.\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-10-09T23:42:38+02:00"
+      "last_modified": "2024-10-11T00:07:44+02:00"
+    },
+    {
+      "path": "data.html",
+      "title": "Data Science Posts",
+      "description": "A collection of my data science-related posts.",
+      "author": [],
+      "contents": "\r\nR Markdown\r\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\r\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\r\n\r\n\r\nsummary(cars)\r\n\r\n     speed           dist       \r\n Min.   : 4.0   Min.   :  2.00  \r\n 1st Qu.:12.0   1st Qu.: 26.00  \r\n Median :15.0   Median : 36.00  \r\n Mean   :15.4   Mean   : 42.98  \r\n 3rd Qu.:19.0   3rd Qu.: 56.00  \r\n Max.   :25.0   Max.   :120.00  \r\n\r\nIncluding Plots\r\nYou can also embed plots, for example:\r\n\r\n\r\n\r\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.\r\n\r\n\r\n\r\n",
+      "last_modified": "2024-10-11T00:07:46+02:00"
     },
     {
       "path": "gallery.html",
       "title": "Gallery",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-10-09T23:42:41+02:00"
+      "last_modified": "2024-10-11T00:07:49+02:00"
     },
     {
       "path": "index.html",
       "title": "Muhammad Nakhaee",
       "author": [],
       "contents": "\r\n\r\n          \r\n          \r\n          Muhammad Nakhaee\r\n          \r\n          \r\n          Home\r\n          About\r\n          Posts\r\n          Projects\r\n          Photography\r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          \r\n            Muhammad Nakhaee\r\n          \r\n          \r\n            \r\n              \r\n              Welcome to my personal site!\r\n              I am a data analyst working at a financial and business\r\n              software company in the Netherlands. I specialize in using\r\n              R and Python for data analysis, modeling, and data\r\n              visualizations.\r\n              \r\n            \r\n            \r\n              \r\n              Welcome to my personal site!\r\n              I am a data analyst working at a financial and business\r\n              software company in the Netherlands. I specialize in using\r\n              R and Python for data analysis, modeling, and data\r\n              visualizations.\r\n              \r\n            \r\n          \r\n\r\n          \r\n            \r\n              \r\n                  \r\n                    \r\n                      Twitter\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      GitHub\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      LinkedIn\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      Email\r\n                    \r\n                  \r\n                \r\n                              \r\n          \r\n\r\n          \r\n            \r\n              \r\n                                \r\n                  \r\n                    Twitter\r\n                  \r\n                \r\n                                \r\n                  \r\n                    GitHub\r\n                  \r\n                \r\n                                \r\n                  \r\n                    LinkedIn\r\n                  \r\n                \r\n                                \r\n                  \r\n                    Email\r\n                  \r\n                \r\n                              \r\n            \r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
-      "last_modified": "2024-10-09T23:42:46+02:00"
+      "last_modified": "2024-10-11T00:07:52+02:00"
+    },
+    {
+      "path": "photography.html",
+      "title": "Photography Posts",
+      "description": "A collection of my photography-related posts.",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2024-10-11T00:07:54+02:00"
     },
     {
       "path": "posts.html",
       "title": "Posts",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-10-09T23:42:48+02:00"
+      "last_modified": "2024-10-11T00:07:56+02:00"
     },
     {
       "path": "projects.html",
       "title": "Projects",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n\r\nTidyTuesday\r\n\r\n\r\nMy Submissions for the weekly TidyTuesday Project created using R and ggplot()\r\n\r\n\r\n\r\n\r\n\r\n\r\n{Delgosha}\r\n\r\n\r\nAn R package which aims to provide a collection of\r\nggplot2 themes for RTL languages (mostly Persian)\r\n\r\n\r\n\r\n\r\n\r\n\r\n{palmerpenguins}\r\n\r\n\r\nA python package for easily loading the Palmer penguins into your python environment\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-10-09T23:42:51+02:00"
+      "last_modified": "2024-10-11T00:07:59+02:00"
     }
   ],
-  "collections": ["posts/posts.json"]
+  "collections": ["posts/posts.json", "contents/contents.json", "sort_by/sort_by.json", "type/type.json", "fields/fields.json"]
 }
