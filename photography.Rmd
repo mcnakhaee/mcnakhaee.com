@@ -3,7 +3,7 @@ title: "Photography Posts"
 description: "A collection of my photography-related posts."
 listing:
   contents:
-    - _posts/photography
+    - posts/photography
   sort_by: "date"
   type: "default"
   fields: [title, date, description]

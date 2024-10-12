@@ -3,7 +3,7 @@ title: "Data Science Posts"
 description: "A collection of my data science-related posts."
 listing:
   contents:
-    - _posts/data
+    - posts/data
   sort_by: "date"
   type: "default"
   fields: [title, date, description]

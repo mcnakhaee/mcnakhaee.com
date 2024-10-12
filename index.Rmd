@@ -10,9 +10,9 @@ links:
     url: "https://www.linkedin.com/in/muhammadcnakhaee/"
   - label: Email
     url: "mailto:mcnakhaee@gmail.com"
-site: distill::distill_website
 output:
-  postcards::jolla
+  postcards::trestles
+site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}

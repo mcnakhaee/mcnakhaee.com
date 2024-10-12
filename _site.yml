@@ -16,14 +16,14 @@ navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "Posts"
+      href: posts.html
     - text: "About"
       href: about.html
-    - text: "Posts"
-      href: data.html
     - text: "Projects"
       href: projects.html
     - text: "Photography"
-      href: photography.html
+      href: gallery.html
     - icon: fab fa-github
       href: https://github.com/mcnakhaee
     - icon: fab fa-twitter
