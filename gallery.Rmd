@@ -1,5 +1,8 @@
 ---
 title: "Gallery"
+listing: 
+  contents:
+    - gallery
 output:
   distill::distill_article
 ---
