@@ -1,11 +1,11 @@
 # Netlify Deployment Configuration for Quarto
 
 [build]
-  command = "quarto render"
+  command = "chmod +x build.sh && ./build.sh"
   publish = "_site"
 
 [build.environment]
-  QUARTO_VERSION = "1.4.0"
+  QUARTO_VERSION = "1.4.555"
 
 [[redirects]]
   from = "/*"
