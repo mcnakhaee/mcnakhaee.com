@@ -1,0 +1,64 @@
+---
+title: "shiny test"
+description: |
+  A short description of the post.
+author:
+  - name: Muhammad Chenariyan Nakhaee
+    url: {}
+date: 2024-10-15
+categories:
+ - R
+ - Visualization
+tags:
+ - R
+ - Visualization
+output:
+  distill::distill_article:
+    highlight: rstudio
+    highlight_downlit: false
+    code_folding: true
+    toc: true
+    self_contained: false
+---
+
+
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+library(crosstalk)
+#library(echarts4r)
+library(magrittr)
+#library(dplyr)
+library(plotly)
+
+```
+
+
+
+```{r}
+# Sample data
+df <- data.frame(
+  Name = c("Alice", "Bob", "Charlie", "David", "Eve"),
+  Value1 = c(10, 23, 45, 67, 89),
+  Value2 = c(34, 12, 78, 56, 23)
+)
+
+# Create a SharedData object for crosstalk
+shared_df <- SharedData$new(df)
+
+# Create a crosstalk filter for 'Name'
+filter_select("name", "Select Name:", shared_df, ~Name)
+
+# Create an interactive scatter plot with plotly and crosstalk
+plot_ly(shared_df, x = ~Value1, y = ~Value2, type = 'scatter', mode = 'markers', text = ~Name) %>%
+  layout(title = "Interactive Scatter Plot")
+
+
+
+```
+
+
+

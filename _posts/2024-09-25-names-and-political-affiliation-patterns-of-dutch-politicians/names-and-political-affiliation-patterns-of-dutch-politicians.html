@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; } /* Alert */
+code span.an { color: #008000; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.ch { color: #008080; } /* Char */
+code span.cn { color: #585cf6; } /* Constant */
+code span.co { color: #4c886b; } /* Comment */
+code span.cv { color: #008000; } /* CommentVar */
+code span.do { color: #008000; } /* Documentation */
+code span.dv { color: #0000cd; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cd; } /* Float */
+code span.im { } /* Import */
+code span.in { color: #008000; } /* Information */
+code span.kw { color: #0000ff; } /* Keyword */
+code span.op { color: #687687; } /* Operator */
+code span.ot { color: #ff4000; } /* Other */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.ss { color: #008080; } /* SpecialString */
+code span.st { color: #036a07; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Names and Political Affiliation Patterns of Dutch Politicians</title>
+
+  <meta property="description" itemprop="description" content="A short description of the post."/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2024-09-25"/>
+  <meta property="article:created" itemprop="dateCreated" content="2024-09-25"/>
+  <meta name="article:author" content="Muhammad Chenariyan Nakhaee"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Names and Political Affiliation Patterns of Dutch Politicians"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="A short description of the post."/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Names and Political Affiliation Patterns of Dutch Politicians"/>
+  <meta property="twitter:description" content="A short description of the post."/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","categories","tags","output"]}},"value":[{"type":"character","attributes":{},"value":["Names and Political Affiliation Patterns of Dutch Politicians"]},{"type":"character","attributes":{},"value":["A short description of the post.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Muhammad Chenariyan Nakhaee"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2024-09-25"]},{"type":"character","attributes":{},"value":["R","Visualization"]},{"type":"character","attributes":{},"value":["R","Visualization"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["highlight","highlight_downlit","code_folding","toc","self_contained"]}},"value":[{"type":"character","attributes":{},"value":["rstudio"]},{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["names-and-political-affiliation-patterns-of-dutch-politicians_files/anchor-4.2.2/anchor.min.js","names-and-political-affiliation-patterns-of-dutch-politicians_files/bowser-1.9.3/bowser.min.js","names-and-political-affiliation-patterns-of-dutch-politicians_files/crosstalk-1.2.1/css/crosstalk.min.css","names-and-political-affiliation-patterns-of-dutch-politicians_files/crosstalk-1.2.1/js/crosstalk.js","names-and-political-affiliation-patterns-of-dutch-politicians_files/crosstalk-1.2.1/js/crosstalk.js.map","names-and-political-affiliation-patterns-of-dutch-politicians_files/crosstalk-1.2.1/js/crosstalk.min.js","names-and-political-affiliation-patterns-of-dutch-politicians_files/crosstalk-1.2.1/js/crosstalk.min.js.map","names-and-political-affiliation-patterns-of-dutch-politicians_files/crosstalk-1.2.1/scss/crosstalk.scss","names-and-political-affiliation-patterns-of-dutch-politicians_files/distill-2.2.21/template.v2.js","names-and-political-affiliation-patterns-of-dutch-politicians_files/figure-html5/unnamed-chunk-7-1.png","names-and-political-affiliation-patterns-of-dutch-politicians_files/header-attrs-2.28/header-attrs.js","names-and-political-affiliation-patterns-of-dutch-politicians_files/jquery-3.6.0/jquery-3.6.0.js","names-and-political-affiliation-patterns-of-dutch-politicians_files/jquery-3.6.0/jquery-3.6.0.min.js","names-and-political-affiliation-patterns-of-dutch-politicians_files/jquery-3.6.0/jquery-3.6.0.min.map","names-and-political-affiliation-patterns-of-dutch-politicians_files/popper-2.6.0/popper.min.js","names-and-political-affiliation-patterns-of-dutch-politicians_files/selectize-0.12.4/css/selectize.bootstrap3.css","names-and-political-affiliation-patterns-of-dutch-politicians_files/selectize-0.12.4/js/selectize.min.js","names-and-political-affiliation-patterns-of-dutch-politicians_files/tippy-6.2.7/tippy-bundle.umd.min.js","names-and-political-affiliation-patterns-of-dutch-politicians_files/tippy-6.2.7/tippy-light-border.css","names-and-political-affiliation-patterns-of-dutch-politicians_files/tippy-6.2.7/tippy.css","names-and-political-affiliation-patterns-of-dutch-politicians_files/tippy-6.2.7/tippy.umd.min.js","names-and-political-affiliation-patterns-of-dutch-politicians_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+    font-size: 100%;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+    border-top: none;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="names-and-political-affiliation-patterns-of-dutch-politicians_files/header-attrs-2.28/header-attrs.js"></script>
+  <script src="names-and-political-affiliation-patterns-of-dutch-politicians_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="names-and-political-affiliation-patterns-of-dutch-politicians_files/selectize-0.12.4/css/selectize.bootstrap3.css" rel="stylesheet" />
+  <script src="names-and-political-affiliation-patterns-of-dutch-politicians_files/selectize-0.12.4/js/selectize.min.js"></script>
+  <link href="names-and-political-affiliation-patterns-of-dutch-politicians_files/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+  <script src="names-and-political-affiliation-patterns-of-dutch-politicians_files/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+  <script src="names-and-political-affiliation-patterns-of-dutch-politicians_files/popper-2.6.0/popper.min.js"></script>
+  <link href="names-and-political-affiliation-patterns-of-dutch-politicians_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="names-and-political-affiliation-patterns-of-dutch-politicians_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="names-and-political-affiliation-patterns-of-dutch-politicians_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="names-and-political-affiliation-patterns-of-dutch-politicians_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="names-and-political-affiliation-patterns-of-dutch-politicians_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="names-and-political-affiliation-patterns-of-dutch-politicians_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="names-and-political-affiliation-patterns-of-dutch-politicians_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Names and Political Affiliation Patterns of Dutch Politicians","description":"A short description of the post.","authors":[{"author":"Muhammad Chenariyan Nakhaee","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2024-09-25T00:00:00.000+02:00","citationText":"Nakhaee, 2024"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Names and Political Affiliation Patterns of Dutch Politicians</h1>
+
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt-tag">R</div>
+<div class="dt-tag">Visualization</div>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>A short description of the post.</p></p>
+</div>
+
+<div class="d-byline">
+  Muhammad Chenariyan Nakhaee true 
+  
+<br/>2024-09-25
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#section" id="toc-section"></a></li>
+<li><a href="#extract-and-clean-tables" id="toc-extract-and-clean-tables">Extract and Clean Tables</a></li>
+<li><a href="#combine-and-clean-data" id="toc-combine-and-clean-data">Combine and Clean Data</a></li>
+<li><a href="#join-with-external-data-and-process-names" id="toc-join-with-external-data-and-process-names">Join with External Data and Process Names</a></li>
+<li><a href="#filter-top-names-and-prepare-for-plotting" id="toc-filter-top-names-and-prepare-for-plotting">6. Filter Top Names and Prepare for Plotting</a></li>
+<li><a href="#create-the-plot" id="toc-create-the-plot">Create the Plot</a></li>
+</ul>
+</nav>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sysfonts)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(showtext)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggtext)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Download and register the Google Font you want (e.g., &quot;Roboto&quot;)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>font_name <span class="ot">=</span> <span class="st">&#39;Merriweather&#39;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">font_add_google</span>(<span class="at">name =</span> font_name, <span class="at">family =</span> font_name)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable showtext for ggplot2 to use custom fonts</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">showtext_auto</span>()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>dutch_political_parties <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">FULL_Name =</span> <span class="fu">c</span>(</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Socialist Party&quot;</span>, <span class="st">&quot;GroenLinks&quot;</span>, <span class="st">&quot;Labour Party&quot;</span>, <span class="st">&quot;Democrats 66&quot;</span>, </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Party for the Animals&quot;</span>, <span class="st">&quot;Christian Union&quot;</span>, <span class="st">&quot;Volt Netherlands&quot;</span>, </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;People&#39;s Party for Freedom and Democracy&quot;</span>, <span class="st">&quot;Christian Democratic Appeal&quot;</span>, </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Reformed Political Party&quot;</span>, <span class="st">&quot;Forum for Democracy&quot;</span>, <span class="st">&quot;Party for Freedom&quot;</span>, </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;JA21&quot;</span>, <span class="st">&quot;DENK&quot;</span>, <span class="st">&quot;50PLUS&quot;</span>, <span class="st">&quot;GL-PvdA&quot;</span>, <span class="st">&quot;New Social Contract&quot;</span>, </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Group Van Haga&quot;</span>, <span class="st">&quot;50+/Baay&quot;</span>, <span class="st">&quot;Bontes/Van Klaveren&quot;</span>, </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Group Krol/Van Kooten&quot;</span>, <span class="st">&quot;Kuzu/Öztürk&quot;</span>, <span class="st">&quot;Lid Van Kooten-Arissen&quot;</span>, </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;50+/Klein&quot;</span>, <span class="st">&quot;BIJ1&quot;</span>, <span class="st">&quot;Bontes&quot;</span>, <span class="st">&quot;Fractie-Den Haan&quot;</span>, </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Houwers&quot;</span>, <span class="st">&quot;Klaver&quot;</span>, <span class="st">&quot;Lid Ephraim&quot;</span>, <span class="st">&quot;Lid Gündoğan&quot;</span>, </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Lid Omtzigt&quot;</span>, <span class="st">&quot;Lid Van Haga&quot;</span>, <span class="st">&quot;Lid Krol&quot;</span>, <span class="st">&quot;Monasch&quot;</span>, </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Van Vliet&quot;</span>,<span class="st">&quot;BBB&quot;</span>,<span class="st">&quot;VOLT&quot;</span>,<span class="st">&quot;FVD&quot;</span>,<span class="st">&#39;Denk&#39;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">Party_Name =</span> <span class="fu">c</span>(</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;SP&quot;</span>, <span class="st">&quot;GL&quot;</span>, <span class="st">&quot;PvdA&quot;</span>, <span class="st">&quot;D66&quot;</span>, <span class="st">&quot;PvdD&quot;</span>, <span class="st">&quot;CU&quot;</span>, <span class="st">&quot;Volt&quot;</span>, </span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;VVD&quot;</span>, <span class="st">&quot;CDA&quot;</span>, <span class="st">&quot;SGP&quot;</span>, <span class="st">&quot;FvD&quot;</span>, <span class="st">&quot;PVV&quot;</span>, <span class="st">&quot;JA21&quot;</span>, <span class="st">&quot;DENK&quot;</span>, </span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;50PLUS&quot;</span>, <span class="st">&quot;GL-PvdA&quot;</span>, <span class="st">&quot;NSC&quot;</span>, <span class="st">&quot;Groep Van Haga&quot;</span>, </span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;50+/Baay&quot;</span>, <span class="st">&quot;Bontes/Van Klaveren&quot;</span>, <span class="st">&quot;Groep Krol/Van Kooten&quot;</span>, </span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Kuzu/Öztürk&quot;</span>, <span class="st">&quot;Lid Van Kooten-Arissen&quot;</span>, <span class="st">&quot;50+/Klein&quot;</span>, </span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;BIJ1&quot;</span>, <span class="st">&quot;Bontes&quot;</span>, <span class="st">&quot;Fractie-Den Haan&quot;</span>, <span class="st">&quot;Houwers&quot;</span>, </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Klaver&quot;</span>, <span class="st">&quot;Lid Ephraim&quot;</span>, <span class="st">&quot;Lid Gündoğan&quot;</span>, <span class="st">&quot;Lid Omtzigt&quot;</span>, </span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Lid Van Haga&quot;</span>, <span class="st">&quot;Lid Krol&quot;</span>, <span class="st">&quot;Monasch&quot;</span>, <span class="st">&quot;Van Vliet&quot;</span>,<span class="st">&quot;BBB&quot;</span>,<span class="st">&quot;VOLT&quot;</span>,<span class="st">&quot;FVD&quot;</span>,<span class="st">&#39;Denk&#39;</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  <span class="at">Political_Leaning =</span> <span class="fu">c</span>(</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Left&quot;</span>, <span class="st">&quot;Left&quot;</span>, <span class="st">&quot;Left&quot;</span>, <span class="st">&quot;Left&quot;</span>, </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Left&quot;</span>, <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Left&quot;</span>, <span class="st">&quot;Right&quot;</span>, </span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, </span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Left&quot;</span>, <span class="st">&quot;Left&quot;</span>, <span class="st">&quot;Left&quot;</span>, </span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, </span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Left&quot;</span>, <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Left&quot;</span>, </span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, </span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Left&quot;</span>, <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, </span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>, <span class="st">&quot;Right&quot;</span>,<span class="st">&quot;Right&quot;</span>,<span class="st">&quot;Left&quot;</span>,<span class="st">&quot;Right&quot;</span>,<span class="st">&quot;Left&quot;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+</details>
+</div>
+<h3 id="section"></h3>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># URLs for the tables</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>urls <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;https://en.wikipedia.org/wiki/List_of_members_of_the_House_of_Representatives_of_the_Netherlands,_2021%E2%80%932023&#39;</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;https://en.wikipedia.org/wiki/List_of_members_of_the_House_of_Representatives_of_the_Netherlands,_2023%E2%80%93present&#39;</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;https://en.wikipedia.org/wiki/List_of_members_of_the_House_of_Representatives_of_the_Netherlands,_2010%E2%80%932012&#39;</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;https://en.wikipedia.org/wiki/List_of_members_of_the_House_of_Representatives_of_the_Netherlands,_2012%E2%80%932017&#39;</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;https://en.wikipedia.org/wiki/List_of_members_of_the_House_of_Representatives_of_the_Netherlands,_2017%E2%80%932021&#39;</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;https://en.wikipedia.org/wiki/List_of_members_of_the_House_of_Representatives_of_the_Netherlands,_2002%E2%80%932003&#39;</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;https://en.wikipedia.org/wiki/List_of_members_of_the_House_of_Representatives_of_the_Netherlands,_2006%E2%80%932010&#39;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+</details>
+</div>
+<h3 id="extract-and-clean-tables">Extract and Clean Tables</h3>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to extract and clean the table from a given URL</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>get_table <span class="ot">&lt;-</span> <span class="cf">function</span>(url) {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_html</span>(url) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">html_table</span>(<span class="at">fill =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    .[[<span class="dv">1</span>]] <span class="sc">%&gt;%</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">setNames</span>(<span class="fu">c</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;icon&quot;</span>, <span class="st">&quot;Party_Name&quot;</span>, <span class="st">&quot;Assumed_office&quot;</span>, <span class="st">&quot;Left_office&quot;</span>, <span class="st">&quot;temp&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">distinct</span>(name, Party_Name)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Get all dataframes by applying get_table function over the list of URLs</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>df_list <span class="ot">&lt;-</span> <span class="fu">lapply</span>(urls, get_table)</span></code></pre></div>
+</details>
+</div>
+<h3 id="combine-and-clean-data">Combine and Clean Data</h3>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine all dataframes, clean names, and remove duplicates</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>d_politicians <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(df_list) <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(name, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Party_Name =</span> <span class="fu">str_remove</span>(Party_Name, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">[.*</span><span class="sc">\\</span><span class="st">]&quot;</span>))</span></code></pre></div>
+</details>
+</div>
+<h3 id="join-with-external-data-and-process-names">Join with External Data and Process Names</h3>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Join with political party data and split the name into first name and surname</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>d_politicians_parties_leaning <span class="ot">&lt;-</span> d_politicians <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(dutch_political_parties, <span class="at">by =</span> <span class="st">&quot;Party_Name&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(name, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;first_name&quot;</span>, <span class="st">&quot;surname&quot;</span>), <span class="at">sep =</span> <span class="st">&quot; &quot;</span>, <span class="at">extra =</span> <span class="st">&quot;merge&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;right&quot;</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Count and create signed values for right-leaning politicians</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>d_count <span class="ot">&lt;-</span> d_politicians_parties_leaning <span class="sc">%&gt;%</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(first_name, Political_Leaning, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">n_signed =</span> <span class="fu">if_else</span>(Political_Leaning <span class="sc">==</span> <span class="st">&#39;Right&#39;</span>, n, n <span class="sc">*</span> <span class="sc">-</span><span class="dv">1</span>))</span></code></pre></div>
+</details>
+</div>
+<h3 id="filter-top-names-and-prepare-for-plotting">6. Filter Top Names and Prepare for Plotting</h3>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract top 20 names by frequency</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>top_names <span class="ot">&lt;-</span> d_politicians_parties_leaning <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(first_name, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(first_name) <span class="sc">%&gt;%</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">20</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>()</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the top 26 entries from the count data</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>top_26 <span class="ot">&lt;-</span> d_count <span class="sc">%&gt;%</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(first_name <span class="sc">%in%</span> top_names) <span class="co">#%&gt;% filter(first_name  == &#39;Paul&#39;)</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="co">#head(26)</span></span></code></pre></div>
+</details>
+</div>
+<h3 id="create-the-plot">Create the Plot</h3>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a bar plot visualizing the first names and political affiliation patterns</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(top_26) <span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(first_name, n), <span class="at">y =</span> n_signed, <span class="at">fill =</span> Political_Leaning), </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(first_name, n), <span class="at">y =</span> <span class="dv">15</span>), <span class="at">fill =</span> <span class="st">&#39;grey&#39;</span>, <span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span> </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(first_name, n), <span class="at">y =</span> <span class="sc">-</span><span class="dv">7</span>), <span class="at">fill =</span> <span class="st">&#39;grey&#39;</span>, <span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span> </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(first_name, n), <span class="at">y =</span> n_signed, <span class="at">label =</span> n), </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="fu">ifelse</span>(top_26<span class="sc">$</span>n_signed <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="sc">-</span><span class="fl">0.5</span>, <span class="fl">1.5</span>), <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">family =</span> font_name, <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;#e63946&quot;</span>, <span class="st">&quot;#457b9d&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">7</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;First Names and Political Affiliation Patterns of Dutch Politicians&quot;</span>,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;This plot explores political  affiliation  trends (&lt;span style=&#39;color:#e63946;&#39;&gt;left-wing&lt;/span&gt; vs. &lt;span style=&#39;color:#457b9d;&#39;&gt;right-wing&lt;/span&gt; )  of first names among &lt;br&gt; Dutch members of the Tweede Kamer from 2002 to the present.&quot;</span>,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;&quot;</span>,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_family =</span> font_name) <span class="sc">+</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">23</span>, <span class="at">family =</span> font_name),</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(<span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">t =</span> <span class="dv">5</span>, <span class="at">b =</span> <span class="dv">20</span>), <span class="at">lineheight =</span> <span class="fl">1.2</span>),</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">family =</span> font_name, <span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">r =</span> <span class="sc">-</span><span class="dv">15</span>, <span class="at">l =</span> <span class="sc">-</span><span class="dv">2</span>)),</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;#F0F3EE&quot;</span>, <span class="at">color =</span> <span class="cn">NA</span>),</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;#F0F3EE&quot;</span>, <span class="at">color =</span> <span class="cn">NA</span>) </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+</details>
+<p><img src="names-and-political-affiliation-patterns-of-dutch-politicians_files/figure-html5/unnamed-chunk-7-1.png" width="768" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(crosstalk)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#library(echarts4r)</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#library(dplyr)</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a SharedData object for crosstalk</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>shared_df <span class="ot">&lt;-</span> SharedData<span class="sc">$</span><span class="fu">new</span>(d_count)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>d_count</span></code></pre></div>
+</details>
+<pre><code># A tibble: 495 × 4
+   first_name Political_Leaning     n n_signed
+   &lt;chr&gt;      &lt;chr&gt;             &lt;int&gt;    &lt;dbl&gt;
+ 1 Jan        Right                14       14
+ 2 Pieter     Right                 7        7
+ 3 Henk       Right                 6        6
+ 4 Chris      Right                 5        5
+ 5 Mark       Right                 5        5
+ 6 Peter      Right                 5        5
+ 7 André      Right                 4        4
+ 8 Bart       Right                 4        4
+ 9 Erik       Right                 4        4
+10 Jan        Left                  4       -4
+# ℹ 485 more rows</code></pre>
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a crosstalk filter for &#39;Name&#39;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter_select</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;Select Name:&quot;</span>, shared_df, <span class="sc">~</span>first_name)</span></code></pre></div>
+</details>
+<div id="name" class="form-group crosstalk-input-select crosstalk-input">
+<label class="control-label" for="name">Select Name:</label>
+<div>
+<select multiple></select>
+<script type="application/json" data-for="name">{
+  "items": {
+    "value": ["Aant-Jelle", "Aart", "Ab", "Achraf", "Ad", "Adri", "Afke", "Agnes", "Ahmed", "Albert", "Aleid", "Alexander", "Ali", "Amma", "André", "Angelien", "Anita", "Anja", "Ank", "Anke", "Anne", "Anne-Marijke", "Anne-Wil", "Annemarie", "Annie", "Anouchka", "Anoushka", "Antje", "Antoinette", "Ard", "Arda", "Arend", "Arie", "Arjan", "Arne", "Arno", "Arnold", "Astrid", "Attje", "Atzo", "Aukje", "Barbara", "Barry", "Bart", "Bas", "Benk", "Bente", "Bert", "Betty", "Bibi", "Boris", "Bram", "Brigitte", "Bruno", "Camiel", "Carla", "Carline", "Carola", "Caroline", "Caspar", "Cees", "Cem", "Chantal", "Charlie", "Chris", "Christianne", "Christine", "Cisca", "Claire", "Claudia", "Clémence", "Clemens", "Cor", "Cora", "Corinne", "Coskun", "Cynthia", "Daan", "Danai", "Daniel", "Daniël", "Daniëlle", "Dennis", "Derk", "Désirée", "Dick", "Diederik", "Dilan", "Dion", "Doğukan", "Don", "Duco", "Ed", "Eddy", "Edgar", "Edith", "Eeke", "Eelco", "Elbert", "Eline", "Elke", "Ella", "Elly", "Elmar", "Emiel", "Emile", "Emre", "Eppo", "Eric", "Erica", "Erik", "Ernst", "Esmah", "Esmé", "Esther", "Eva", "Evelien", "Eveline", "Evert", "Evert-Jan", "Ewout", "Fahid", "Faissal", "Faith", "Farah", "Farid", "Farshad", "Fatma", "Femke", "Fenna", "Ferd", "Fleur", "Folkert", "Fonda", "Foort", "Francine", "Frank", "Frans", "Fred", "Freek", "Gabriëlle", "Geert", "Ger", "Gerard", "Gerda", "Gerdi", "Gerrit", "Gerritjan", "Gert-Jan", "Gideon", "Gidi", "Gijs", "Glimina", "Godelieve", "Grace", "Habtamu", "Halbe", "Han", "Hanke", "Hanneke", "Hans", "Harm", "Harmen", "Harry", "Hatte", "Hawre", "Hayke", "Hella", "Helma", "Henk", "Henri", "Hero", "Hester", "Hidde", "Hilde", "Hind", "Hubert", "Hülya", "Ilana", "Ilse", "Ine", "Ineke", "Ines", "Inge", "Ingrid", "Ino", "Isa", "Isabelle", "Ismail", "Jack", "Jaco", "Jacqueline", "Jacques", "James", "Jan", "Janneke", "Jasper", "Jeanet", "Jeanine", "Jeltje", "Jeremy", "Jeroen", "Jesse", "Jessica", "Jet", "Jetta", "Jhim", "Jimme", "Jimmy", "Job", "Joba", "Jock", "Joël", "Joeri", "Johan", "John", "Jolande", "Joop", "Joost", "Joram", "Jorien", "Joris", "Jos", "Joyce", "Jozias", "Judith", "Julian", "Julius", "Karen", "Karin", "Kars", "Kathalijne", "Kathleen", "Kati", "Kauthar", "Kees", "Keklik", "Kelly", "Khadija", "Kiki", "Kirsten", "Klaas", "Krista", "Lammert", "Laura", "Laurens", "Lea", "Leen", "Leendert", "Lenny", "Léon", "Leonie", "Liesbeth", "Lilian", "Lilianne", "Linda", "Lisa", "Lodewijk", "Loek", "Loes", "Louis", "Luc", "Lucille", "Lutz", "Maarten", "Machiel", "Madeleine", "Magda", "Mahir", "Maikel", "Malik", "Manja", "Manon", "Marcial", "Marco", "Margot", "Margreeth", "Maria", "Marianne", "Marieke", "Mariëlle", "Mariëtte", "Marijke", "Mariko", "Marina", "Mariska", "Marit", "Marith", "Marja", "Marjolein", "Mark", "Marleen", "Martijn", "Martin", "Martine", "Matthijs", "Maurits", "Max", "Maxime", "Mei", "Merlien", "Metin", "Michel", "Michiel", "Mikal", "Mirjam", "Mohammed", "Mona", "Monica", "Monique", "Mpanzu", "Mustafa", "Myra", "Myrthe", "Naïma", "Natascha", "Nebahat", "Nellie", "Nevin", "Nicki", "Nico", "Nicole", "Nicolien", "Niels", "Nihat", "Nilüfer", "Nine", "Niny", "Nirmala", "Ockje", "Olaf", "Olger", "Otwin", "Patrick", "Paul", "Pauline", "Paulus", "Pepijn", "Perjan", "Peter", "Pia", "Pierre", "Piet", "Pieter", "Pim", "Queeny", "Rachel", "Ralf", "Raoul", "Raymond", "Reinder", "Reinette", "Remco", "Rendert", "René", "Rens", "Renske", "Richard", "Rien", "Rik", "Rikus", "Roald", "Rob", "Robert", "Roelien", "Roelof", "Roland", "Romke", "Ronald", "Roos", "Rosanne", "Rosemarijn", "Roy", "Ruben", "Rudmer", "Rutger", "Ruud", "Sabine", "Sadet", "Salima", "Sander", "Sandra", "Sarah", "Saskia", "Selçuk", "Senna", "Sharon", "Sidney", "Siem", "Sietse", "Sigrid", "Silvio", "Simone", "Sjoera", "Sjoerd", "Songül", "Sophie", "Stef", "Stephan", "Steven", "Stieneke", "Stientje", "Sultan", "Suzanne", "Sven", "Sybrand", "Sylvana", "Tamara", "Tanja", "Teun", "Theo", "Thierry", "Thom", "Tineke", "Tjebbe", "Tjeerd", "Tjitske", "Tobias", "Tofik", "Tom", "Ton", "Tunahan", "Ulysse", "Ursie", "Vera", "Vicky", "Vincent", "Vivien", "Wassila", "Wendy", "Wieke", "Wijnand", "Willem", "William", "Willibrord", "Willie", "Wim", "Wim-Jan", "Wopke", "Wouter", "Wybren", "Wytske", "Yasemin", "Ybeltje", "Yvonne", "Zihni", "Zohair"],
+    "label": ["Aant-Jelle", "Aart", "Ab", "Achraf", "Ad", "Adri", "Afke", "Agnes", "Ahmed", "Albert", "Aleid", "Alexander", "Ali", "Amma", "André", "Angelien", "Anita", "Anja", "Ank", "Anke", "Anne", "Anne-Marijke", "Anne-Wil", "Annemarie", "Annie", "Anouchka", "Anoushka", "Antje", "Antoinette", "Ard", "Arda", "Arend", "Arie", "Arjan", "Arne", "Arno", "Arnold", "Astrid", "Attje", "Atzo", "Aukje", "Barbara", "Barry", "Bart", "Bas", "Benk", "Bente", "Bert", "Betty", "Bibi", "Boris", "Bram", "Brigitte", "Bruno", "Camiel", "Carla", "Carline", "Carola", "Caroline", "Caspar", "Cees", "Cem", "Chantal", "Charlie", "Chris", "Christianne", "Christine", "Cisca", "Claire", "Claudia", "Clémence", "Clemens", "Cor", "Cora", "Corinne", "Coskun", "Cynthia", "Daan", "Danai", "Daniel", "Daniël", "Daniëlle", "Dennis", "Derk", "Désirée", "Dick", "Diederik", "Dilan", "Dion", "Doğukan", "Don", "Duco", "Ed", "Eddy", "Edgar", "Edith", "Eeke", "Eelco", "Elbert", "Eline", "Elke", "Ella", "Elly", "Elmar", "Emiel", "Emile", "Emre", "Eppo", "Eric", "Erica", "Erik", "Ernst", "Esmah", "Esmé", "Esther", "Eva", "Evelien", "Eveline", "Evert", "Evert-Jan", "Ewout", "Fahid", "Faissal", "Faith", "Farah", "Farid", "Farshad", "Fatma", "Femke", "Fenna", "Ferd", "Fleur", "Folkert", "Fonda", "Foort", "Francine", "Frank", "Frans", "Fred", "Freek", "Gabriëlle", "Geert", "Ger", "Gerard", "Gerda", "Gerdi", "Gerrit", "Gerritjan", "Gert-Jan", "Gideon", "Gidi", "Gijs", "Glimina", "Godelieve", "Grace", "Habtamu", "Halbe", "Han", "Hanke", "Hanneke", "Hans", "Harm", "Harmen", "Harry", "Hatte", "Hawre", "Hayke", "Hella", "Helma", "Henk", "Henri", "Hero", "Hester", "Hidde", "Hilde", "Hind", "Hubert", "Hülya", "Ilana", "Ilse", "Ine", "Ineke", "Ines", "Inge", "Ingrid", "Ino", "Isa", "Isabelle", "Ismail", "Jack", "Jaco", "Jacqueline", "Jacques", "James", "Jan", "Janneke", "Jasper", "Jeanet", "Jeanine", "Jeltje", "Jeremy", "Jeroen", "Jesse", "Jessica", "Jet", "Jetta", "Jhim", "Jimme", "Jimmy", "Job", "Joba", "Jock", "Joël", "Joeri", "Johan", "John", "Jolande", "Joop", "Joost", "Joram", "Jorien", "Joris", "Jos", "Joyce", "Jozias", "Judith", "Julian", "Julius", "Karen", "Karin", "Kars", "Kathalijne", "Kathleen", "Kati", "Kauthar", "Kees", "Keklik", "Kelly", "Khadija", "Kiki", "Kirsten", "Klaas", "Krista", "Lammert", "Laura", "Laurens", "Lea", "Leen", "Leendert", "Lenny", "Léon", "Leonie", "Liesbeth", "Lilian", "Lilianne", "Linda", "Lisa", "Lodewijk", "Loek", "Loes", "Louis", "Luc", "Lucille", "Lutz", "Maarten", "Machiel", "Madeleine", "Magda", "Mahir", "Maikel", "Malik", "Manja", "Manon", "Marcial", "Marco", "Margot", "Margreeth", "Maria", "Marianne", "Marieke", "Mariëlle", "Mariëtte", "Marijke", "Mariko", "Marina", "Mariska", "Marit", "Marith", "Marja", "Marjolein", "Mark", "Marleen", "Martijn", "Martin", "Martine", "Matthijs", "Maurits", "Max", "Maxime", "Mei", "Merlien", "Metin", "Michel", "Michiel", "Mikal", "Mirjam", "Mohammed", "Mona", "Monica", "Monique", "Mpanzu", "Mustafa", "Myra", "Myrthe", "Naïma", "Natascha", "Nebahat", "Nellie", "Nevin", "Nicki", "Nico", "Nicole", "Nicolien", "Niels", "Nihat", "Nilüfer", "Nine", "Niny", "Nirmala", "Ockje", "Olaf", "Olger", "Otwin", "Patrick", "Paul", "Pauline", "Paulus", "Pepijn", "Perjan", "Peter", "Pia", "Pierre", "Piet", "Pieter", "Pim", "Queeny", "Rachel", "Ralf", "Raoul", "Raymond", "Reinder", "Reinette", "Remco", "Rendert", "René", "Rens", "Renske", "Richard", "Rien", "Rik", "Rikus", "Roald", "Rob", "Robert", "Roelien", "Roelof", "Roland", "Romke", "Ronald", "Roos", "Rosanne", "Rosemarijn", "Roy", "Ruben", "Rudmer", "Rutger", "Ruud", "Sabine", "Sadet", "Salima", "Sander", "Sandra", "Sarah", "Saskia", "Selçuk", "Senna", "Sharon", "Sidney", "Siem", "Sietse", "Sigrid", "Silvio", "Simone", "Sjoera", "Sjoerd", "Songül", "Sophie", "Stef", "Stephan", "Steven", "Stieneke", "Stientje", "Sultan", "Suzanne", "Sven", "Sybrand", "Sylvana", "Tamara", "Tanja", "Teun", "Theo", "Thierry", "Thom", "Tineke", "Tjebbe", "Tjeerd", "Tjitske", "Tobias", "Tofik", "Tom", "Ton", "Tunahan", "Ulysse", "Ursie", "Vera", "Vicky", "Vincent", "Vivien", "Wassila", "Wendy", "Wieke", "Wijnand", "Willem", "William", "Willibrord", "Willie", "Wim", "Wim-Jan", "Wopke", "Wouter", "Wybren", "Wytske", "Yasemin", "Ybeltje", "Yvonne", "Zihni", "Zohair"]
+  },
+  "map": {
+    "Aant-Jelle": ["84"],
+    "Aart": ["85"],
+    "Ab": ["86"],
+    "Achraf": ["87"],
+    "Ad": ["88", "89"],
+    "Adri": ["90"],
+    "Afke": ["91"],
+    "Agnes": ["15", "29"],
+    "Ahmed": ["92"],
+    "Albert": ["93", "94"],
+    "Aleid": ["95"],
+    "Alexander": ["30", "96"],
+    "Ali": ["97"],
+    "Amma": ["98"],
+    "André": ["7"],
+    "Angelien": ["99"],
+    "Anita": ["100"],
+    "Anja": ["101"],
+    "Ank": ["102"],
+    "Anke": ["103"],
+    "Anne": ["31"],
+    "Anne-Marijke": ["104"],
+    "Anne-Wil": ["32"],
+    "Annemarie": ["33"],
+    "Annie": ["105"],
+    "Anouchka": ["106"],
+    "Anoushka": ["107"],
+    "Antje": ["108"],
+    "Antoinette": ["34"],
+    "Ard": ["109"],
+    "Arda": ["110"],
+    "Arend": ["111"],
+    "Arie": ["112", "113"],
+    "Arjan": ["114"],
+    "Arne": ["115"],
+    "Arno": ["116"],
+    "Arnold": ["117"],
+    "Astrid": ["118"],
+    "Attje": ["119"],
+    "Atzo": ["120"],
+    "Aukje": ["121"],
+    "Barbara": ["122", "123"],
+    "Barry": ["124"],
+    "Bart": ["8", "35"],
+    "Bas": ["16"],
+    "Benk": ["125"],
+    "Bente": ["126"],
+    "Bert": ["36"],
+    "Betty": ["127"],
+    "Bibi": ["128"],
+    "Boris": ["37"],
+    "Bram": ["129"],
+    "Brigitte": ["130"],
+    "Bruno": ["131"],
+    "Camiel": ["132"],
+    "Carla": ["133"],
+    "Carline": ["134"],
+    "Carola": ["135"],
+    "Caroline": ["136"],
+    "Caspar": ["137"],
+    "Cees": ["138"],
+    "Cem": ["139"],
+    "Chantal": ["140"],
+    "Charlie": ["141"],
+    "Chris": ["4"],
+    "Christianne": ["142"],
+    "Christine": ["143"],
+    "Cisca": ["144"],
+    "Claire": ["145"],
+    "Claudia": ["146"],
+    "Clémence": ["148"],
+    "Clemens": ["147"],
+    "Cor": ["149"],
+    "Cora": ["150"],
+    "Corinne": ["151"],
+    "Coskun": ["152"],
+    "Cynthia": ["153"],
+    "Daan": ["38"],
+    "Danai": ["154"],
+    "Daniel": ["155"],
+    "Daniël": ["156"],
+    "Daniëlle": ["157", "158"],
+    "Dennis": ["39"],
+    "Derk": ["40"],
+    "Désirée": ["165"],
+    "Dick": ["159"],
+    "Diederik": ["41", "160"],
+    "Dilan": ["17"],
+    "Dion": ["161"],
+    "Doğukan": ["163"],
+    "Don": ["162"],
+    "Duco": ["164"],
+    "Ed": ["166"],
+    "Eddy": ["167"],
+    "Edgar": ["168"],
+    "Edith": ["169"],
+    "Eeke": ["170"],
+    "Eelco": ["171"],
+    "Elbert": ["172"],
+    "Eline": ["173"],
+    "Elke": ["174"],
+    "Ella": ["175"],
+    "Elly": ["176"],
+    "Elmar": ["177"],
+    "Emiel": ["178"],
+    "Emile": ["179"],
+    "Emre": ["180"],
+    "Eppo": ["181"],
+    "Eric": ["18", "182"],
+    "Erica": ["183"],
+    "Erik": ["9"],
+    "Ernst": ["184"],
+    "Esmah": ["185"],
+    "Esmé": ["186"],
+    "Esther": ["187"],
+    "Eva": ["42"],
+    "Evelien": ["188"],
+    "Eveline": ["189"],
+    "Evert": ["190"],
+    "Evert-Jan": ["191"],
+    "Ewout": ["192"],
+    "Fahid": ["193"],
+    "Faissal": ["194"],
+    "Faith": ["195"],
+    "Farah": ["196"],
+    "Farid": ["197"],
+    "Farshad": ["198"],
+    "Fatma": ["199"],
+    "Femke": ["43", "200"],
+    "Fenna": ["201"],
+    "Ferd": ["202"],
+    "Fleur": ["203"],
+    "Folkert": ["44"],
+    "Fonda": ["204"],
+    "Foort": ["205"],
+    "Francine": ["206"],
+    "Frank": ["45", "207"],
+    "Frans": ["19", "208"],
+    "Fred": ["209"],
+    "Freek": ["210"],
+    "Gabriëlle": ["211"],
+    "Geert": ["212", "213"],
+    "Ger": ["214"],
+    "Gerard": ["215", "216"],
+    "Gerda": ["217"],
+    "Gerdi": ["218"],
+    "Gerrit": ["219"],
+    "Gerritjan": ["220"],
+    "Gert-Jan": ["46"],
+    "Gideon": ["221"],
+    "Gidi": ["222"],
+    "Gijs": ["47", "223"],
+    "Glimina": ["224"],
+    "Godelieve": ["225"],
+    "Grace": ["226"],
+    "Habtamu": ["227"],
+    "Halbe": ["228"],
+    "Han": ["229"],
+    "Hanke": ["230"],
+    "Hanneke": ["231"],
+    "Hans": ["20", "21"],
+    "Harm": ["48", "232"],
+    "Harmen": ["233"],
+    "Harry": ["49", "234"],
+    "Hatte": ["235"],
+    "Hawre": ["236"],
+    "Hayke": ["237"],
+    "Hella": ["238"],
+    "Helma": ["50"],
+    "Henk": ["3", "22"],
+    "Henri": ["239", "240"],
+    "Hero": ["241"],
+    "Hester": ["242"],
+    "Hidde": ["243"],
+    "Hilde": ["244"],
+    "Hind": ["245"],
+    "Hubert": ["246"],
+    "Hülya": ["247"],
+    "Ilana": ["248"],
+    "Ilse": ["249"],
+    "Ine": ["250"],
+    "Ineke": ["251", "252"],
+    "Ines": ["253"],
+    "Inge": ["254"],
+    "Ingrid": ["23", "255"],
+    "Ino": ["256"],
+    "Isa": ["257"],
+    "Isabelle": ["258"],
+    "Ismail": ["259"],
+    "Jack": ["260"],
+    "Jaco": ["261"],
+    "Jacqueline": ["262"],
+    "Jacques": ["51"],
+    "James": ["263"],
+    "Jan": ["1", "10"],
+    "Janneke": ["264"],
+    "Jasper": ["265"],
+    "Jeanet": ["266", "267"],
+    "Jeanine": ["268"],
+    "Jeltje": ["269"],
+    "Jeremy": ["270"],
+    "Jeroen": ["24", "271"],
+    "Jesse": ["272", "273"],
+    "Jessica": ["274"],
+    "Jet": ["275"],
+    "Jetta": ["276"],
+    "Jhim": ["277"],
+    "Jimme": ["278"],
+    "Jimmy": ["279"],
+    "Job": ["280"],
+    "Joba": ["52"],
+    "Jock": ["281"],
+    "Joël": ["291"],
+    "Joeri": ["282"],
+    "Johan": ["25"],
+    "John": ["53"],
+    "Jolande": ["283"],
+    "Joop": ["54"],
+    "Joost": ["55", "284"],
+    "Joram": ["285"],
+    "Jorien": ["286"],
+    "Joris": ["287"],
+    "Jos": ["288"],
+    "Joyce": ["289"],
+    "Jozias": ["290"],
+    "Judith": ["56", "292"],
+    "Julian": ["293"],
+    "Julius": ["294"],
+    "Karen": ["295"],
+    "Karin": ["296", "297"],
+    "Kars": ["298"],
+    "Kathalijne": ["299"],
+    "Kathleen": ["300"],
+    "Kati": ["301"],
+    "Kauthar": ["302"],
+    "Kees": ["57", "303"],
+    "Keklik": ["304"],
+    "Kelly": ["305"],
+    "Khadija": ["306"],
+    "Kiki": ["307"],
+    "Kirsten": ["308"],
+    "Klaas": ["309", "310"],
+    "Krista": ["311"],
+    "Lammert": ["312"],
+    "Laura": ["313"],
+    "Laurens": ["314"],
+    "Lea": ["315"],
+    "Leen": ["316"],
+    "Leendert": ["317"],
+    "Lenny": ["318"],
+    "Léon": ["333"],
+    "Leonie": ["319"],
+    "Liesbeth": ["320", "321"],
+    "Lilian": ["322", "323"],
+    "Lilianne": ["324"],
+    "Linda": ["325"],
+    "Lisa": ["58"],
+    "Lodewijk": ["326"],
+    "Loek": ["327"],
+    "Loes": ["328"],
+    "Louis": ["329"],
+    "Luc": ["330"],
+    "Lucille": ["331"],
+    "Lutz": ["332"],
+    "Maarten": ["59", "60"],
+    "Machiel": ["334"],
+    "Madeleine": ["335"],
+    "Magda": ["336"],
+    "Mahir": ["337"],
+    "Maikel": ["338"],
+    "Malik": ["339"],
+    "Manja": ["340"],
+    "Manon": ["341"],
+    "Marcial": ["342"],
+    "Marco": ["343"],
+    "Margot": ["344"],
+    "Margreeth": ["345"],
+    "Maria": ["346"],
+    "Marianne": ["347"],
+    "Marieke": ["61", "348"],
+    "Mariëlle": ["354"],
+    "Mariëtte": ["62"],
+    "Marijke": ["11"],
+    "Mariko": ["349"],
+    "Marina": ["350"],
+    "Mariska": ["351"],
+    "Marit": ["352"],
+    "Marith": ["353"],
+    "Marja": ["355"],
+    "Marjolein": ["356"],
+    "Mark": ["5"],
+    "Marleen": ["357"],
+    "Martijn": ["12", "358"],
+    "Martin": ["63"],
+    "Martine": ["359"],
+    "Matthijs": ["360", "361"],
+    "Maurits": ["362"],
+    "Max": ["363"],
+    "Maxime": ["364"],
+    "Mei": ["365"],
+    "Merlien": ["366"],
+    "Metin": ["367"],
+    "Michel": ["368"],
+    "Michiel": ["64", "65"],
+    "Mikal": ["369"],
+    "Mirjam": ["66"],
+    "Mohammed": ["370"],
+    "Mona": ["371"],
+    "Monica": ["372"],
+    "Monique": ["373"],
+    "Mpanzu": ["374"],
+    "Mustafa": ["375"],
+    "Myra": ["376"],
+    "Myrthe": ["377"],
+    "Naïma": ["379"],
+    "Natascha": ["378"],
+    "Nebahat": ["380"],
+    "Nellie": ["381"],
+    "Nevin": ["382"],
+    "Nicki": ["383"],
+    "Nico": ["67"],
+    "Nicole": ["384"],
+    "Nicolien": ["385"],
+    "Niels": ["386"],
+    "Nihat": ["387"],
+    "Nilüfer": ["388"],
+    "Nine": ["389"],
+    "Niny": ["390"],
+    "Nirmala": ["391"],
+    "Ockje": ["392"],
+    "Olaf": ["393"],
+    "Olger": ["394"],
+    "Otwin": ["395"],
+    "Patrick": ["68"],
+    "Paul": ["13", "396"],
+    "Pauline": ["397"],
+    "Paulus": ["398"],
+    "Pepijn": ["399"],
+    "Perjan": ["400"],
+    "Peter": ["6", "26"],
+    "Pia": ["401"],
+    "Pierre": ["402"],
+    "Piet": ["403"],
+    "Pieter": ["2"],
+    "Pim": ["404"],
+    "Queeny": ["405"],
+    "Rachel": ["406"],
+    "Ralf": ["407"],
+    "Raoul": ["69"],
+    "Raymond": ["70"],
+    "Reinder": ["408"],
+    "Reinette": ["409"],
+    "Remco": ["71"],
+    "Rendert": ["410"],
+    "René": ["27"],
+    "Rens": ["411"],
+    "Renske": ["412"],
+    "Richard": ["413"],
+    "Rien": ["414"],
+    "Rik": ["72"],
+    "Rikus": ["415"],
+    "Roald": ["416"],
+    "Rob": ["417"],
+    "Robert": ["418"],
+    "Roelien": ["419"],
+    "Roelof": ["420", "421"],
+    "Roland": ["73"],
+    "Romke": ["422"],
+    "Ronald": ["74", "423"],
+    "Roos": ["424"],
+    "Rosanne": ["425"],
+    "Rosemarijn": ["426"],
+    "Roy": ["427"],
+    "Ruben": ["428"],
+    "Rudmer": ["429"],
+    "Rutger": ["430"],
+    "Ruud": ["75"],
+    "Sabine": ["431"],
+    "Sadet": ["432"],
+    "Salima": ["433"],
+    "Sander": ["76"],
+    "Sandra": ["434", "435"],
+    "Sarah": ["436"],
+    "Saskia": ["437"],
+    "Selçuk": ["438"],
+    "Senna": ["439"],
+    "Sharon": ["77"],
+    "Sidney": ["440"],
+    "Siem": ["441"],
+    "Sietse": ["442"],
+    "Sigrid": ["443"],
+    "Silvio": ["444"],
+    "Simone": ["78"],
+    "Sjoera": ["445"],
+    "Sjoerd": ["79", "446"],
+    "Songül": ["447"],
+    "Sophie": ["448"],
+    "Stef": ["449"],
+    "Stephan": ["450"],
+    "Steven": ["451"],
+    "Stieneke": ["452"],
+    "Stientje": ["453"],
+    "Sultan": ["454"],
+    "Suzanne": ["455"],
+    "Sven": ["456"],
+    "Sybrand": ["457"],
+    "Sylvana": ["458"],
+    "Tamara": ["459"],
+    "Tanja": ["460"],
+    "Teun": ["461"],
+    "Theo": ["28"],
+    "Thierry": ["80"],
+    "Thom": ["462", "463"],
+    "Tineke": ["464", "465"],
+    "Tjebbe": ["466"],
+    "Tjeerd": ["81"],
+    "Tjitske": ["467"],
+    "Tobias": ["468"],
+    "Tofik": ["469"],
+    "Tom": ["82"],
+    "Ton": ["470"],
+    "Tunahan": ["471"],
+    "Ulysse": ["472"],
+    "Ursie": ["473"],
+    "Vera": ["474"],
+    "Vicky": ["475"],
+    "Vincent": ["476"],
+    "Vivien": ["477"],
+    "Wassila": ["478"],
+    "Wendy": ["479"],
+    "Wieke": ["480"],
+    "Wijnand": ["481"],
+    "Willem": ["482", "483"],
+    "William": ["484"],
+    "Willibrord": ["485"],
+    "Willie": ["486"],
+    "Wim": ["14"],
+    "Wim-Jan": ["487"],
+    "Wopke": ["488"],
+    "Wouter": ["83"],
+    "Wybren": ["489"],
+    "Wytske": ["490"],
+    "Yasemin": ["491"],
+    "Ybeltje": ["492"],
+    "Yvonne": ["493"],
+    "Zihni": ["494"],
+    "Zohair": ["495"]
+  },
+  "group": ["SharedDatab06272a3"]
+}</script>
+</div>
+</div>
+</div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

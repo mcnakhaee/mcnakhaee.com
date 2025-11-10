@@ -65,6 +65,13 @@ I made use of both Python and R in my analysis. My workflow includes the followi
 
 Note that I could have implemented all the steps in R. For instance, Spacy has an R wrapper called Spacyr, which gives the same functionality that I need for this analysis. However, I'd like to increase the number of tools that I can use. Notably, using Python and R side by side is an exciting challenge for me.
 
+
+```{r}
+devtools::install_github("favstats/demdebates2020")
+
+```
+
+
 ```{r message=FALSE, warning=FALSE}
 library(demdebates2020)
 library(tidytext)

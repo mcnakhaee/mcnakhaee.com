@@ -25,4 +25,5 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Welcome to my personal site!
 
- I am a data analyst working at a financial and business software company in the Netherlands. I specialize in using R and Python for data analysis, modeling, and data visualizations. 
+Welcome to my personal site!
+I'm a data analyst based in the Netherlands, working in the financial and business software industry. While Python is my primary work tool, love language is R, especially when it comes to creating visualizations. 

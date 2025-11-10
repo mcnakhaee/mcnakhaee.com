@@ -12,7 +12,28 @@
       <link>https://mcnakhaee.com/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>shiny test</title>
+      <dc:creator>Muhammad Chenariyan Nakhaee</dc:creator>
+      <link>https://mcnakhaee.com/posts/2024-10-15-shiny-test</link>
+      <description>A short description of the post.</description>
+      <category>R</category>
+      <category>Visualization</category>
+      <guid>https://mcnakhaee.com/posts/2024-10-15-shiny-test</guid>
+      <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Names and Political Affiliation Patterns of Dutch Politicians</title>
+      <dc:creator>Muhammad Chenariyan Nakhaee</dc:creator>
+      <link>https://mcnakhaee.com/posts/2024-09-25-names-and-political-affiliation-patterns-of-dutch-politicians</link>
+      <description>A short description of the post.</description>
+      <category>R</category>
+      <category>Visualization</category>
+      <guid>https://mcnakhaee.com/posts/2024-09-25-names-and-political-affiliation-patterns-of-dutch-politicians</guid>
+      <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
+      <media:content url="https://mcnakhaee.com/posts/2024-09-25-names-and-political-affiliation-patterns-of-dutch-politicians/names-and-political-affiliation-patterns-of-dutch-politicians_files/figure-html5/unnamed-chunk-7-1.png" medium="image" type="image/png" width="1536" height="1344"/>
+    </item>
     <item>
       <title>Explaining Machine Learning Models Using Contextual Importance and Contextual Utility</title>
       <dc:creator>Muhammad Chenariyan Nakhaee</dc:creator>

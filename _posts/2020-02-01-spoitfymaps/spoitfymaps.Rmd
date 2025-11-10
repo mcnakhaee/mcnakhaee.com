@@ -79,8 +79,8 @@ theme_update(legend.position = 'top',
    plot.subtitle = element_text(
    family = 'Montserrat', size = 30, hjust = 0.5),
    strip.background = element_blank(),
-   plot.background = element_rect(fill = "black", color = "black"),
-   panel.background = element_rect(fill = "black", color = "black"),
+        panel.background = element_rect(fill = "#F0F3EE", color = NA),  # Set panel background color
+    plot.background = element_rect(fill = "#F0F3EE", color = NA),
    panel.grid.major.x =element_blank(),
    panel.grid.major.y =element_blank(),
    panel.grid.minor =element_blank(),
