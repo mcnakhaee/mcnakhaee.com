@@ -1,0 +1,19 @@
+---
+title: "Projects"
+listing:
+  contents: projects
+  sort: "date desc"
+  type: grid
+  categories: true
+  grid-columns: 3
+  fields: [image, date, title, description, categories]
+page-layout: full
+---
+
+# My Projects
+
+Here's a showcase of my recent projects and work. Each project represents a unique challenge and learning experience.
+
+## Featured Work
+
+Explore the projects below to see what I've been working on. From web applications to data analysis, each project demonstrates different skills and technologies.

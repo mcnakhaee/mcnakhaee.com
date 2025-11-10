@@ -1,57 +1,303 @@
-{
-  "articles": [
-    {
-      "path": "about.html",
-      "title": "About this site",
-      "description": "Some additional details about the website",
-      "author": [],
-      "contents": "\r\nI’m Muhammad. I work as a data analyst/scientist at Exact in the Netherlands. Before that I worked as a researcher at the University of Twente.\r\nMy website is built using the {distill} package. Before that I used Hugo and the blogdown package for my website.\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-10-13T11:26:23+02:00"
-    },
-    {
-      "path": "data.html",
-      "title": "Data Science Posts",
-      "description": "A collection of my data science-related posts.",
-      "author": [],
-      "contents": "\r\nR Markdown\r\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\r\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\r\n\r\n\r\nsummary(cars)\r\n\r\n     speed           dist       \r\n Min.   : 4.0   Min.   :  2.00  \r\n 1st Qu.:12.0   1st Qu.: 26.00  \r\n Median :15.0   Median : 36.00  \r\n Mean   :15.4   Mean   : 42.98  \r\n 3rd Qu.:19.0   3rd Qu.: 56.00  \r\n Max.   :25.0   Max.   :120.00  \r\n\r\nIncluding Plots\r\nYou can also embed plots, for example:\r\n\r\n\r\n\r\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-10-13T11:26:25+02:00"
-    },
-    {
-      "path": "gallery.html",
-      "title": "Gallery",
-      "author": [],
-      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-10-13T11:26:29+02:00"
-    },
-    {
-      "path": "index.html",
-      "title": "Muhammad Nakhaee",
-      "author": [],
-      "contents": "\r\n\r\n          \r\n          \r\n          Muhammad Nakhaee\r\n          \r\n          \r\n          Home\r\n          Posts\r\n          About\r\n          Projects\r\n          Photography\r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          \r\n            \r\n              \r\n            \r\n              Muhammad Nakhaee\r\n            \r\n            \r\n              \r\n                \r\n                    \r\n                      \r\n                        Twitter\r\n                      \r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      \r\n                        GitHub\r\n                      \r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      \r\n                        LinkedIn\r\n                      \r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      \r\n                        Email\r\n                      \r\n                    \r\n                  \r\n                                  \r\n            \r\n          \r\n        \r\n        \r\n        \r\n          \r\n            \r\n            Welcome to my personal site!\r\n            I am a data analyst working at a financial and business\r\n            software company in the Netherlands. I specialize in using R\r\n            and Python for data analysis, modeling, and data\r\n            visualizations.\r\n            \r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n      \r\n        \r\n          \r\n            \r\n              \r\n            \r\n              Muhammad Nakhaee\r\n            \r\n            \r\n              \r\n                \r\n                                    \r\n                    \r\n                      Twitter\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      GitHub\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      LinkedIn\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      Email\r\n                    \r\n                  \r\n                                  \r\n              \r\n            \r\n            \r\n              \r\n              Welcome to my personal site!\r\n              I am a data analyst working at a financial and business\r\n              software company in the Netherlands. I specialize in using\r\n              R and Python for data analysis, modeling, and data\r\n              visualizations.\r\n              \r\n            \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
-      "last_modified": "2024-10-13T11:26:34+02:00"
-    },
-    {
-      "path": "photography.html",
-      "title": "Photography Posts",
-      "description": "A collection of my photography-related posts.",
-      "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-10-13T11:26:38+02:00"
-    },
-    {
-      "path": "posts.html",
-      "title": "Posts",
-      "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-10-13T11:26:42+02:00"
-    },
-    {
-      "path": "projects.html",
-      "title": "Projects",
-      "author": [],
-      "contents": "\r\n\r\n\r\n\r\n\r\nTidyTuesday\r\n\r\n\r\nMy Submissions for the weekly TidyTuesday Project created using R and ggplot()\r\n\r\n\r\n\r\n\r\n\r\n\r\n{Delgosha}\r\n\r\n\r\nAn R package which aims to provide a collection of\r\nggplot2 themes for RTL languages (mostly Persian)\r\n\r\n\r\n\r\n\r\n\r\n\r\n{palmerpenguins}\r\n\r\n\r\nA python package for easily loading the Palmer penguins into your python environment\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-10-13T11:26:44+02:00"
-    }
-  ],
-  "collections": ["posts/posts.json", "contents/contents.json", "sort_by/sort_by.json", "type/type.json", "fields/fields.json"]
-}
+[
+  {
+    "objectID": "gallery.html",
+    "href": "gallery.html",
+    "title": "Photography",
+    "section": "",
+    "text": "Welcome to my photography gallery. Here I share photos from my travels and everyday moments.\n\n\n\n\n\n\nNoteComing Soon\n\n\n\nThis gallery is currently being updated with new photos. Check back soon!\n\n\n\n\n\nPhotos from various destinations and adventures around the world.\n\n\n\nLocation 1 Description coming soon\n\n\n\nLocation 2 Description coming soon\n\n\n\nLocation 3 Description coming soon\n\n\n\n\n\n\nCapturing moments from daily life and urban environments.\n\n\n\n\n\n\nTipFollow on Instagram\n\n\n\nFor more photos and updates, follow me on Instagram: @mcnakhaee\n\n\n\nNote: All photos are automatically displayed with lightbox functionality. Click on any image to view it in full screen.\n\nMuhammad Nakhaee Muhammad Nakhaee Home /index.html Projects /projects/index.html Posts /blog/index.html Photography /gallery.html About /about.html https://github.com/mcnakhaee https://twitter.com/m_cnakhaee https://www.linkedin.com/in/muhammadcnakhaee/ https://instagram.com/mcnakhaee\n\n© 2025 Muhammad Nakhaee ∙ Made with Quarto\n\n\n   \n\n\nLicense: CC BY-SA\n\n\n\nPhotography – Muhammad Nakhaee Photography – Muhammad Nakhaee Photography – Muhammad Nakhaee Muhammad Nakhaee Muhammad Nakhaee’s personal website Muhammad Nakhaee’s personal website"
+  },
+  {
+    "objectID": "gallery.html#travel-photography",
+    "href": "gallery.html#travel-photography",
+    "title": "Photography",
+    "section": "",
+    "text": "Photos from various destinations and adventures around the world.\n\n\n\nLocation 1 Description coming soon\n\n\n\nLocation 2 Description coming soon\n\n\n\nLocation 3 Description coming soon"
+  },
+  {
+    "objectID": "gallery.html#street-photography",
+    "href": "gallery.html#street-photography",
+    "title": "Photography",
+    "section": "",
+    "text": "Capturing moments from daily life and urban environments.\n\n\n\n\n\n\nTipFollow on Instagram\n\n\n\nFor more photos and updates, follow me on Instagram: @mcnakhaee\n\n\n\nNote: All photos are automatically displayed with lightbox functionality. Click on any image to view it in full screen.\n\nMuhammad Nakhaee Muhammad Nakhaee Home /index.html Projects /projects/index.html Posts /blog/index.html Photography /gallery.html About /about.html https://github.com/mcnakhaee https://twitter.com/m_cnakhaee https://www.linkedin.com/in/muhammadcnakhaee/ https://instagram.com/mcnakhaee\n\n© 2025 Muhammad Nakhaee ∙ Made with Quarto\n\n\n   \n\n\nLicense: CC BY-SA\n\n\n\nPhotography – Muhammad Nakhaee Photography – Muhammad Nakhaee Photography – Muhammad Nakhaee Muhammad Nakhaee Muhammad Nakhaee’s personal website Muhammad Nakhaee’s personal website"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Muhammad Nakhaee",
+    "section": "",
+    "text": "Data Analyst/Scientist | Researcher | Developer\nWelcome to my personal website. I work at Exact in the Netherlands and share my work on data science, analytics, and technology.\nView Projects About Me"
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "Muhammad Nakhaee",
+    "section": "What You’ll Find Here",
+    "text": "What You’ll Find Here\nThis website features:\n\nProjects: Data science and development projects\nPosts: Articles on data analysis, technology, and research\nPhotography: Travel and street photography\nAbout: My background and experience"
+  },
+  {
+    "objectID": "index.html#featured-content",
+    "href": "index.html#featured-content",
+    "title": "Muhammad Nakhaee",
+    "section": "Featured Content",
+    "text": "Featured Content\n\n\n Projects\nExplore my latest projects and work. View Projects →\n\n\n Photography\nView my photography gallery. View Gallery →\n\n\n Blog\nRead the latest articles and insights. Visit Blog →\n\n\n About\nLearn more about me and what I do. Learn More →"
+  },
+  {
+    "objectID": "index.html#connect-with-me",
+    "href": "index.html#connect-with-me",
+    "title": "Muhammad Nakhaee",
+    "section": "Connect With Me",
+    "text": "Connect With Me\nFind me on social media:\n\n GitHub\n Twitter\n LinkedIn\n Instagram\n\n\nWebsite built with Quarto | License: CC BY-SA"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Here’s a showcase of my recent projects and work. Each project represents a unique challenge and learning experience.\n\n\nExplore the projects below to see what I’ve been working on. From web applications to data analysis, each project demonstrates different skills and technologies."
+  },
+  {
+    "objectID": "projects/index.html#featured-work",
+    "href": "projects/index.html#featured-work",
+    "title": "Projects",
+    "section": "",
+    "text": "Explore the projects below to see what I’ve been working on. From web applications to data analysis, each project demonstrates different skills and technologies."
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html",
+    "href": "projects/projects/web-app/index.html",
+    "title": "Modern Web Application",
+    "section": "",
+    "text": "This project is a modern web application that demonstrates best practices in full-stack development. It features a responsive design, user authentication, and real-time data updates."
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html#overview",
+    "href": "projects/projects/web-app/index.html#overview",
+    "title": "Modern Web Application",
+    "section": "",
+    "text": "This project is a modern web application that demonstrates best practices in full-stack development. It features a responsive design, user authentication, and real-time data updates."
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html#key-features",
+    "href": "projects/projects/web-app/index.html#key-features",
+    "title": "Modern Web Application",
+    "section": "Key Features",
+    "text": "Key Features\n\nResponsive Design: Works seamlessly across all devices\nUser Authentication: Secure login and registration system\nReal-time Updates: Live data synchronization using WebSockets\nModern Stack: Built with React, Node.js, Express, and MongoDB"
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html#technologies-used",
+    "href": "projects/projects/web-app/index.html#technologies-used",
+    "title": "Modern Web Application",
+    "section": "Technologies Used",
+    "text": "Technologies Used\n\n\nFrontend - React - TypeScript - Tailwind CSS\n\n\nBackend - Node.js - Express - MongoDB\n\n\nTools - Git - Docker - Jest\n\n\nDeployment - Vercel - MongoDB Atlas - GitHub Actions"
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html#challenges-solutions",
+    "href": "projects/projects/web-app/index.html#challenges-solutions",
+    "title": "Modern Web Application",
+    "section": "Challenges & Solutions",
+    "text": "Challenges & Solutions\nOne of the main challenges was implementing real-time updates efficiently. We solved this by using WebSockets for live data synchronization, which significantly improved the user experience."
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html#demo-code",
+    "href": "projects/projects/web-app/index.html#demo-code",
+    "title": "Modern Web Application",
+    "section": "Demo & Code",
+    "text": "Demo & Code\n\n\n\n\n\n\nNoteLinks\n\n\n\n\nLive Demo: View Project\nGitHub Repository: View Code\n\nNote: Replace these placeholder links with your actual project URLs."
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html#what-i-learned",
+    "href": "projects/projects/web-app/index.html#what-i-learned",
+    "title": "Modern Web Application",
+    "section": "What I Learned",
+    "text": "What I Learned\nThis project taught me the importance of: - Planning architecture before coding - Writing clean, maintainable code - Testing throughout the development process - Optimizing for performance from the start\n\nProject completed: October 2025"
+  },
+  {
+    "objectID": "blog/posts/quarto-intro/index.html",
+    "href": "blog/posts/quarto-intro/index.html",
+    "title": "Getting Started with Quarto",
+    "section": "",
+    "text": "Quarto is an amazing tool for creating scientific and technical documents, websites, and presentations. In this post, we’ll explore some of its key features.\n\n\nQuarto offers several advantages:\n\nMulti-Format Output: Create HTML, PDF, Word documents, and more from a single source\nBeautiful Defaults: Modern, professional-looking output out of the box\nCode Integration: Seamlessly integrate code from Python, R, Julia, and other languages\nMarkdown-Based: Simple, readable syntax that’s easy to learn\n\n\n\n\nTo create a new Quarto project, simply install Quarto and run:\nquarto create project website mysite\n\n\n\n\n\nQuarto supports syntax highlighting for many languages:\ndef hello_world():\n    print(\"Hello from Quarto!\")\n    \nhello_world()\n\n\n\nUse callouts to highlight important information:\n\n\n\n\n\n\nWarningImportant Note\n\n\n\nAlways test your code before publishing!\n\n\n\n\n\nCreate sophisticated layouts using Quarto’s grid system and divs.\n\n\n\n\nQuarto is a powerful tool for creating modern, professional content. We’ll explore more advanced features in future posts.\n\n\n\n\nQuarto Documentation\nQuarto Gallery"
+  },
+  {
+    "objectID": "blog/posts/quarto-intro/index.html#introduction-to-quarto",
+    "href": "blog/posts/quarto-intro/index.html#introduction-to-quarto",
+    "title": "Getting Started with Quarto",
+    "section": "",
+    "text": "Quarto is an amazing tool for creating scientific and technical documents, websites, and presentations. In this post, we’ll explore some of its key features.\n\n\nQuarto offers several advantages:\n\nMulti-Format Output: Create HTML, PDF, Word documents, and more from a single source\nBeautiful Defaults: Modern, professional-looking output out of the box\nCode Integration: Seamlessly integrate code from Python, R, Julia, and other languages\nMarkdown-Based: Simple, readable syntax that’s easy to learn\n\n\n\n\nTo create a new Quarto project, simply install Quarto and run:\nquarto create project website mysite\n\n\n\n\n\nQuarto supports syntax highlighting for many languages:\ndef hello_world():\n    print(\"Hello from Quarto!\")\n    \nhello_world()\n\n\n\nUse callouts to highlight important information:\n\n\n\n\n\n\nWarningImportant Note\n\n\n\nAlways test your code before publishing!\n\n\n\n\n\nCreate sophisticated layouts using Quarto’s grid system and divs.\n\n\n\n\nQuarto is a powerful tool for creating modern, professional content. We’ll explore more advanced features in future posts.\n\n\n\n\nQuarto Documentation\nQuarto Gallery"
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html",
+    "href": "blog/posts/welcome/index.html",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "I’m excited to launch this blog. This space will be dedicated to sharing insights, tutorials, and updates about data science, analytics, and technology projects.\n\n\nIn the coming weeks and months, you can expect:\n\nTechnical Tutorials: Step-by-step guides on various technologies\nProject Updates: News about what we’re working on\nIndustry Insights: Our thoughts on trends and developments\nCommunity Highlights: Showcasing contributions from our community\n\n\n\n\nMake sure to check back regularly for new content. We’re committed to providing valuable information and fostering a community of learners and creators.\n\n\n\n\n\n\nTipSubscribe to Updates\n\n\n\nDon’t miss a post! Follow us on social media to get notified when we publish new content.\n\n\nThank you for joining us on this journey!"
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html#welcome",
+    "href": "blog/posts/welcome/index.html#welcome",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "I’m excited to launch this blog. This space will be dedicated to sharing insights, tutorials, and updates about data science, analytics, and technology projects.\n\n\nIn the coming weeks and months, you can expect:\n\nTechnical Tutorials: Step-by-step guides on various technologies\nProject Updates: News about what we’re working on\nIndustry Insights: Our thoughts on trends and developments\nCommunity Highlights: Showcasing contributions from our community\n\n\n\n\nMake sure to check back regularly for new content. We’re committed to providing valuable information and fostering a community of learners and creators.\n\n\n\n\n\n\nTipSubscribe to Updates\n\n\n\nDon’t miss a post! Follow us on social media to get notified when we publish new content.\n\n\nThank you for joining us on this journey!"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Welcome to my blog! Here you’ll find articles, tutorials, and insights on data science, technology, and research.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nWelcome to My Blog\n\n\n\nnews\n\nwelcome\n\n\n\nWelcome to my blog! This is where I share insights on data science, analytics, and technology.\n\n\n\nMuhammad Nakhaee\n\n\nNov 9, 2025\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with Quarto\n\n\n\nquarto\n\ntutorial\n\n\n\nLearn how to get started with Quarto for creating beautiful websites and documents.\n\n\n\nMuhammad Nakhaee\n\n\nNov 8, 2025\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/projects/data-dashboard/index.html",
+    "href": "projects/projects/data-dashboard/index.html",
+    "title": "Data Analysis Dashboard",
+    "section": "",
+    "text": "This data analysis dashboard provides interactive visualizations and insights from complex datasets. It’s designed to make data exploration intuitive and accessible."
+  },
+  {
+    "objectID": "projects/projects/data-dashboard/index.html#overview",
+    "href": "projects/projects/data-dashboard/index.html#overview",
+    "title": "Data Analysis Dashboard",
+    "section": "",
+    "text": "This data analysis dashboard provides interactive visualizations and insights from complex datasets. It’s designed to make data exploration intuitive and accessible."
+  },
+  {
+    "objectID": "projects/projects/data-dashboard/index.html#key-features",
+    "href": "projects/projects/data-dashboard/index.html#key-features",
+    "title": "Data Analysis Dashboard",
+    "section": "Key Features",
+    "text": "Key Features\n\nInteractive Visualizations: Dynamic charts and graphs using Plotly\nData Processing: Efficient data handling with Pandas\nReal-time Filtering: Interactive filters for data exploration\nExport Options: Export reports in multiple formats"
+  },
+  {
+    "objectID": "projects/projects/data-dashboard/index.html#technologies-used",
+    "href": "projects/projects/data-dashboard/index.html#technologies-used",
+    "title": "Data Analysis Dashboard",
+    "section": "Technologies Used",
+    "text": "Technologies Used\n# Core libraries used in this project\nimport pandas as pd\nimport plotly.express as px\nimport dash\nfrom dash import dcc, html\nTech Stack: - Python 3.11 - Pandas for data manipulation - Plotly & Dash for visualizations - NumPy for numerical computations"
+  },
+  {
+    "objectID": "projects/projects/data-dashboard/index.html#project-highlights",
+    "href": "projects/projects/data-dashboard/index.html#project-highlights",
+    "title": "Data Analysis Dashboard",
+    "section": "Project Highlights",
+    "text": "Project Highlights\n\nData Processing Pipeline\nThe dashboard processes large datasets efficiently using:\n\nData Cleaning: Automated preprocessing and validation\nTransformation: Feature engineering and aggregation\nVisualization: Multiple chart types and interactive elements\n\n\n\nPerformance Optimization\n\nImplemented caching for faster load times\nOptimized queries for large datasets\nUsed lazy loading for better UX"
+  },
+  {
+    "objectID": "projects/projects/data-dashboard/index.html#use-cases",
+    "href": "projects/projects/data-dashboard/index.html#use-cases",
+    "title": "Data Analysis Dashboard",
+    "section": "Use Cases",
+    "text": "Use Cases\nThis dashboard has been used for: - Business intelligence reporting - Sales data analysis - Customer behavior tracking - Performance metrics monitoring\n\n\n\n\n\n\nTipTry It Out\n\n\n\nThe dashboard is designed to work with various data sources. You can connect your own CSV files or databases to visualize your data."
+  },
+  {
+    "objectID": "projects/projects/data-dashboard/index.html#code-sample",
+    "href": "projects/projects/data-dashboard/index.html#code-sample",
+    "title": "Data Analysis Dashboard",
+    "section": "Code Sample",
+    "text": "Code Sample\nHere’s an example of creating an interactive visualization:\ndef create_chart(df, x_col, y_col):\n    fig = px.scatter(df, x=x_col, y=y_col, \n                     title=f'{y_col} vs {x_col}',\n                     hover_data=df.columns)\n    return fig"
+  },
+  {
+    "objectID": "projects/projects/data-dashboard/index.html#links",
+    "href": "projects/projects/data-dashboard/index.html#links",
+    "title": "Data Analysis Dashboard",
+    "section": "Links",
+    "text": "Links\n\nGitHub: View Source Code\nDocumentation: Read More\n\n\nProject completed: September 2025"
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "I enjoy sharing knowledge and insights with the community through talks, workshops, and presentations. Here’s a collection of my speaking engagements.\n\n\n\n\n\nConference: Tech Summit 2025\nDate: October 15, 2025\nLocation: Virtual\nAn overview of modern web development practices, including React, TypeScript, and best practices for building scalable applications.\n\n\n\n\n\n\nNoteResources\n\n\n\n\nSlides (PDF)\nVideo Recording\nCode Examples\n\n\n\n\n\n\n\nEvent: Data Science Meetup\nDate: August 22, 2025\nLocation: San Francisco, CA\nExploring techniques for creating effective data visualizations that tell compelling stories and drive insights.\nKey Topics: - Choosing the right chart type - Color theory for data viz - Interactive vs. static visualizations - Tools and libraries overview\n\n\n\n\n\n\nNoteResources\n\n\n\n\nSlides (PDF)\nDemo Code\n\n\n\n\n\n\n\nEvent: Developer Bootcamp\nDate: June 10, 2025\nLocation: Virtual\nA hands-on workshop covering RESTful API development, authentication, and deployment best practices.\nWhat Attendees Learned: - REST API fundamentals - Express.js framework - Database integration - Security best practices - Testing and deployment\n\n\n\n\n\n\nNoteResources\n\n\n\n\nWorkshop Materials\nGitHub Repository\n\n\n\n\n\n\n\n\n\n\nConference: WebDev Conference 2024\nDate: November 5, 2024\nLocation: New York, NY\nParticipated in a panel discussion about emerging trends and the future direction of web development technologies.\n\n\n\n\nEvent: Local Tech Meetup\nDate: September 18, 2024\nLocation: Seattle, WA\nA 15-minute lightning talk sharing practical tips for maintaining high code quality in fast-paced development environments.\n\n\n\n\n\nI’m available to speak on the following topics:\n\n\nWeb Development - Modern JavaScript/TypeScript - React and frontend frameworks - Performance optimization - Responsive design\n\n\nData Science - Data visualization - Python for data analysis - Machine learning basics - Statistical analysis\n\n\nBest Practices - Code quality and testing - CI/CD pipelines - Developer productivity - Technical documentation\n\n\n\n\n\n\nI’m always interested in speaking opportunities! If you’d like me to speak at your event, please reach out.\n\n\n\n\n\n\nTipContact\n\n\n\n\nEmail: speaking@example.com\nTopics: See above or suggest your own\nFormat: Talks, workshops, panels, or podcasts\n\nNote: Replace with your actual contact information.\n\n\n\n\n\n\nLooking for older presentations? Check out my GitHub repository where I archive all presentation materials, slides, and code examples."
+  },
+  {
+    "objectID": "talks/index.html#section",
+    "href": "talks/index.html#section",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "Conference: Tech Summit 2025\nDate: October 15, 2025\nLocation: Virtual\nAn overview of modern web development practices, including React, TypeScript, and best practices for building scalable applications.\n\n\n\n\n\n\nNoteResources\n\n\n\n\nSlides (PDF)\nVideo Recording\nCode Examples\n\n\n\n\n\n\n\nEvent: Data Science Meetup\nDate: August 22, 2025\nLocation: San Francisco, CA\nExploring techniques for creating effective data visualizations that tell compelling stories and drive insights.\nKey Topics: - Choosing the right chart type - Color theory for data viz - Interactive vs. static visualizations - Tools and libraries overview\n\n\n\n\n\n\nNoteResources\n\n\n\n\nSlides (PDF)\nDemo Code\n\n\n\n\n\n\n\nEvent: Developer Bootcamp\nDate: June 10, 2025\nLocation: Virtual\nA hands-on workshop covering RESTful API development, authentication, and deployment best practices.\nWhat Attendees Learned: - REST API fundamentals - Express.js framework - Database integration - Security best practices - Testing and deployment\n\n\n\n\n\n\nNoteResources\n\n\n\n\nWorkshop Materials\nGitHub Repository"
+  },
+  {
+    "objectID": "talks/index.html#section-1",
+    "href": "talks/index.html#section-1",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "Conference: WebDev Conference 2024\nDate: November 5, 2024\nLocation: New York, NY\nParticipated in a panel discussion about emerging trends and the future direction of web development technologies.\n\n\n\n\nEvent: Local Tech Meetup\nDate: September 18, 2024\nLocation: Seattle, WA\nA 15-minute lightning talk sharing practical tips for maintaining high code quality in fast-paced development environments."
+  },
+  {
+    "objectID": "talks/index.html#speaking-topics",
+    "href": "talks/index.html#speaking-topics",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "I’m available to speak on the following topics:\n\n\nWeb Development - Modern JavaScript/TypeScript - React and frontend frameworks - Performance optimization - Responsive design\n\n\nData Science - Data visualization - Python for data analysis - Machine learning basics - Statistical analysis\n\n\nBest Practices - Code quality and testing - CI/CD pipelines - Developer productivity - Technical documentation"
+  },
+  {
+    "objectID": "talks/index.html#invite-me-to-speak",
+    "href": "talks/index.html#invite-me-to-speak",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "I’m always interested in speaking opportunities! If you’d like me to speak at your event, please reach out.\n\n\n\n\n\n\nTipContact\n\n\n\n\nEmail: speaking@example.com\nTopics: See above or suggest your own\nFormat: Talks, workshops, panels, or podcasts\n\nNote: Replace with your actual contact information."
+  },
+  {
+    "objectID": "talks/index.html#past-presentations-archive",
+    "href": "talks/index.html#past-presentations-archive",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "Looking for older presentations? Check out my GitHub repository where I archive all presentation materials, slides, and code examples."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I’m a data analyst/scientist currently working at Exact in the Netherlands. Before that, I worked as a researcher at the University of Twente. Welcome to my personal website!\n\n\n\n\nI specialize in full-stack development and data science, with a particular interest in creating intuitive user experiences and deriving insights from data.\n\n\n\nBuilding modern web applications with cutting-edge technologies. I focus on clean code, scalability, and user experience.\nTechnologies: - JavaScript/TypeScript - React, Node.js - Python - Databases & APIs\n\n\n\nTransforming data into actionable insights through analysis and visualization. I love finding patterns and telling stories with data.\nSkills: - Data analysis - Machine learning - Visualization - Statistical modeling\n\n\n\nSharing knowledge through talks, workshops, and writing. I believe in giving back to the community and helping others grow.\nTopics: - Web development - Data visualization - Best practices - Career development\n\n\n\n\n\n\nEducation: - University of Twente - Researcher\nExperience: - Data Analyst/Scientist at Exact (Present) - Researcher at University of Twente (Previously)\n\n\n\n\nWhen I’m not coding or analyzing data, you can find me:\n\n Reading about technology and science\n Hiking and exploring nature\n Photography\n Listening to music and podcasts\n Trying new coffee shops\n\n\n\n\n\n\n[Award Name] - [Organization], 2024\nPublished Article - “[Article Title]” in [Publication]\nOpen Source Contributor - [Project Names]\nCommunity Leader - Organized [Event/Meetup]\n\n\n\n\n\nI’m always interested in connecting with fellow developers, data enthusiasts, and interesting people. Feel free to reach out!\n\n\n\n\n\n\nNoteContact Information\n\n\n\n\n GitHub: github.com/mcnakhaee\n Twitter: @m_cnakhaee\n LinkedIn: linkedin.com/in/muhammadcnakhaee\n Instagram: @mcnakhaee\n\n\n\n\n\n\n\n\nThis website is built using Quarto, a modern scientific and technical publishing system. Previously, I used the {distill} package and Hugo with the blogdown package.\n\n\n\n\n\n\nTipLet’s Connect!\n\n\n\nI’m always interested in connecting with fellow data scientists, developers, and researchers. Feel free to reach out through any of my social channels!"
+  },
+  {
+    "objectID": "about.html#hello-im-muhammad-nakhaee",
+    "href": "about.html#hello-im-muhammad-nakhaee",
+    "title": "About",
+    "section": "",
+    "text": "I’m a data analyst/scientist currently working at Exact in the Netherlands. Before that, I worked as a researcher at the University of Twente. Welcome to my personal website!"
+  },
+  {
+    "objectID": "about.html#what-i-do",
+    "href": "about.html#what-i-do",
+    "title": "About",
+    "section": "",
+    "text": "I specialize in full-stack development and data science, with a particular interest in creating intuitive user experiences and deriving insights from data.\n\n\n\nBuilding modern web applications with cutting-edge technologies. I focus on clean code, scalability, and user experience.\nTechnologies: - JavaScript/TypeScript - React, Node.js - Python - Databases & APIs\n\n\n\nTransforming data into actionable insights through analysis and visualization. I love finding patterns and telling stories with data.\nSkills: - Data analysis - Machine learning - Visualization - Statistical modeling\n\n\n\nSharing knowledge through talks, workshops, and writing. I believe in giving back to the community and helping others grow.\nTopics: - Web development - Data visualization - Best practices - Career development"
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "",
+    "text": "Education: - University of Twente - Researcher\nExperience: - Data Analyst/Scientist at Exact (Present) - Researcher at University of Twente (Previously)"
+  },
+  {
+    "objectID": "about.html#interests-hobbies",
+    "href": "about.html#interests-hobbies",
+    "title": "About",
+    "section": "",
+    "text": "When I’m not coding or analyzing data, you can find me:\n\n Reading about technology and science\n Hiking and exploring nature\n Photography\n Listening to music and podcasts\n Trying new coffee shops"
+  },
+  {
+    "objectID": "about.html#achievements-recognition",
+    "href": "about.html#achievements-recognition",
+    "title": "About",
+    "section": "",
+    "text": "[Award Name] - [Organization], 2024\nPublished Article - “[Article Title]” in [Publication]\nOpen Source Contributor - [Project Names]\nCommunity Leader - Organized [Event/Meetup]"
+  },
+  {
+    "objectID": "about.html#get-in-touch",
+    "href": "about.html#get-in-touch",
+    "title": "About",
+    "section": "",
+    "text": "I’m always interested in connecting with fellow developers, data enthusiasts, and interesting people. Feel free to reach out!\n\n\n\n\n\n\nNoteContact Information\n\n\n\n\n GitHub: github.com/mcnakhaee\n Twitter: @m_cnakhaee\n LinkedIn: linkedin.com/in/muhammadcnakhaee\n Instagram: @mcnakhaee"
+  },
+  {
+    "objectID": "about.html#about-this-site",
+    "href": "about.html#about-this-site",
+    "title": "About",
+    "section": "",
+    "text": "This website is built using Quarto, a modern scientific and technical publishing system. Previously, I used the {distill} package and Hugo with the blogdown package.\n\n\n\n\n\n\nTipLet’s Connect!\n\n\n\nI’m always interested in connecting with fellow data scientists, developers, and researchers. Feel free to reach out through any of my social channels!"
+  }
+]

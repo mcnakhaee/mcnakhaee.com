@@ -1,0 +1,59 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Muhammad Nakhaee"
+  description: "Muhammad Nakhaee's personal website"
+  favicon: favicon.png
+  site-url: https://mcnakhaee.com/
+  repo-url: https://github.com/mcnakhaee
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        file: index.qmd
+      - text: "Projects"
+        file: projects/index.qmd
+      - text: "Posts"
+        file: blog/index.qmd
+      - text: "Photography"
+        file: gallery.qmd
+      - text: "About"
+        file: about.qmd
+    right:
+      - icon: github
+        href: https://github.com/mcnakhaee
+      - icon: twitter
+        href: https://twitter.com/m_cnakhaee
+      - icon: linkedin
+        href: https://www.linkedin.com/in/muhammadcnakhaee/
+      - icon: instagram
+        href: https://instagram.com/mcnakhaee
+  page-footer:
+    left: >-
+      &#169; 2025 Muhammad Nakhaee &#8729; Made with [Quarto](https://quarto.org)
+    center: |
+      <a class="link-dark me-1" href="https://github.com/mcnakhaee" title="GitHub" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+      <a class="link-dark me-1" href="https://twitter.com/m_cnakhaee" title="Twitter" target="_blank" rel="noopener">{{< fa brands twitter >}}</a>
+      <a class="link-dark me-1" href="https://linkedin.com/in/muhammadcnakhaee" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
+      <a class="link-dark me-1" href="https://instagram.com/mcnakhaee" title="Instagram" target="_blank" rel="noopener">{{< fa brands instagram >}}</a>
+    right:
+      - text: "License: CC BY-SA"
+        aria-label: "License Details"
+        href: https://creativecommons.org/licenses/by-sa/4.0/
+      - icon: rss
+        href: blog/index.xml
+
+format:
+  html:
+    theme:
+      light: [litera, custom.scss]
+      dark: [darkly, custom.scss]
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    code-overflow: wrap
+    theme-dark-toggle: true

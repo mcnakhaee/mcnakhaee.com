@@ -1,0 +1,69 @@
+---
+title: "Muhammad Nakhaee"
+pagetitle: "Muhammad Nakhaee"
+page-layout: full
+---
+
+::: {.hero-banner}
+# Muhammad Nakhaee
+
+Data Analyst/Scientist | Researcher | Developer
+
+Welcome to my personal website. I work at Exact in the Netherlands and share my work on data science, analytics, and technology.
+
+[View Projects](projects/index.qmd){.btn .btn-primary .btn-lg}
+[About Me](about.qmd){.btn .btn-outline-secondary .btn-lg}
+:::
+
+## What You'll Find Here {#getting-started}
+
+This website features:
+
+- **Projects**: Data science and development projects
+- **Posts**: Articles on data analysis, technology, and research
+- **Photography**: Travel and street photography
+- **About**: My background and experience
+
+## Featured Content
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-3}
+### {{< fa solid folder-open >}} Projects
+Explore my latest projects and work.
+[View Projects →](projects/index.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-3}
+### {{< fa solid camera >}} Photography
+View my photography gallery.
+[View Gallery →](gallery.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-3}
+### {{< fa regular file-lines >}} Blog
+Read the latest articles and insights.
+[Visit Blog →](blog/index.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-3}
+### {{< fa regular user >}} About
+Learn more about me and what I do.
+[Learn More →](about.qmd)
+:::
+
+:::
+
+## Connect With Me
+
+Find me on social media:
+
+- {{< fa brands github >}} [GitHub](https://github.com/mcnakhaee)
+- {{< fa brands twitter >}} [Twitter](https://twitter.com/m_cnakhaee)
+- {{< fa brands linkedin >}} [LinkedIn](https://www.linkedin.com/in/muhammadcnakhaee/)
+- {{< fa brands instagram >}} [Instagram](https://instagram.com/mcnakhaee)
+
+---
+
+*Website built with [Quarto](https://quarto.org/) | License: [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)*
+

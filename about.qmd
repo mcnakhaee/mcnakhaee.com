@@ -1,0 +1,115 @@
+---
+title: "About"
+page-layout: full
+---
+
+::: {.column-page}
+
+## {{< fa solid user >}} Hello, I'm Muhammad Nakhaee
+
+I'm a data analyst/scientist currently working at [Exact](https://www.exact.com) in the Netherlands. Before that, I worked as a researcher at the University of Twente. Welcome to my personal website!
+
+---
+
+## {{< fa solid briefcase >}} What I Do
+
+I specialize in full-stack development and data science, with a particular interest in creating intuitive user experiences and deriving insights from data.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### {{< fa solid code >}} Development
+Building modern web applications with cutting-edge technologies. I focus on clean code, scalability, and user experience.
+
+**Technologies:**
+- JavaScript/TypeScript
+- React, Node.js
+- Python
+- Databases & APIs
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### {{< fa solid chart-line >}} Data Science
+Transforming data into actionable insights through analysis and visualization. I love finding patterns and telling stories with data.
+
+**Skills:**
+- Data analysis
+- Machine learning
+- Visualization
+- Statistical modeling
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### {{< fa solid microphone >}} Speaking
+Sharing knowledge through talks, workshops, and writing. I believe in giving back to the community and helping others grow.
+
+**Topics:**
+- Web development
+- Data visualization
+- Best practices
+- Career development
+:::
+
+:::
+
+---
+
+## {{< fa solid graduation-cap >}} Background
+
+**Education:**
+- University of Twente - Researcher
+
+**Experience:**
+- Data Analyst/Scientist at [Exact](https://www.exact.com) (Present)
+- Researcher at University of Twente (Previously)
+
+---
+
+## {{< fa solid heart >}} Interests & Hobbies
+
+When I'm not coding or analyzing data, you can find me:
+
+- {{< fa solid book >}} Reading about technology and science
+- {{< fa solid hiking >}} Hiking and exploring nature
+- {{< fa solid camera >}} Photography
+- {{< fa solid music >}} Listening to music and podcasts
+- {{< fa solid mug-hot >}} Trying new coffee shops
+
+---
+
+## {{< fa solid award >}} Achievements & Recognition
+
+- **[Award Name]** - [Organization], 2024
+- **Published Article** - "[Article Title]" in [Publication]
+- **Open Source Contributor** - [Project Names]
+- **Community Leader** - Organized [Event/Meetup]
+
+---
+
+## {{< fa solid envelope >}} Get in Touch
+
+I'm always interested in connecting with fellow developers, data enthusiasts, and interesting people. Feel free to reach out!
+
+::: {.callout-note appearance="minimal"}
+## Contact Information
+
+- {{< fa brands github >}} **GitHub:** [github.com/mcnakhaee](https://github.com/mcnakhaee)
+- {{< fa brands twitter >}} **Twitter:** [@m_cnakhaee](https://twitter.com/m_cnakhaee)
+- {{< fa brands linkedin >}} **LinkedIn:** [linkedin.com/in/muhammadcnakhaee](https://www.linkedin.com/in/muhammadcnakhaee/)
+- {{< fa brands instagram >}} **Instagram:** [@mcnakhaee](https://instagram.com/mcnakhaee)
+:::
+
+---
+
+---
+
+## About This Site
+
+This website is built using [Quarto](https://quarto.org/), a modern scientific and technical publishing system. Previously, I used the [{distill}](https://rstudio.github.io/distill/) package and Hugo with the blogdown package.
+
+::: {.callout-tip}
+## Let's Connect!
+I'm always interested in connecting with fellow data scientists, developers, and researchers. Feel free to reach out through any of my social channels!
+:::
+
+:::

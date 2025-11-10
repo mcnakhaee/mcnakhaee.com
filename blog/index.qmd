@@ -1,0 +1,19 @@
+---
+title: "Posts"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [image, date, title, author, description, categories]
+  feed:
+    title: "Muhammad Nakhaee's Blog"
+    description: "Articles on data science, analytics, and technology"
+    type: full
+    categories: [news, tutorial, quarto]
+page-layout: full
+---
+
+Welcome to my blog! Here you'll find articles, tutorials, and insights on data science, technology, and research.

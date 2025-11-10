@@ -1,0 +1,59 @@
+---
+title: "Photography"
+page-layout: full
+---
+
+# Photography Gallery
+
+Welcome to my photography gallery. Here I share photos from my travels and everyday moments.
+
+::: {.callout-note}
+## Coming Soon
+This gallery is currently being updated with new photos. Check back soon!
+:::
+
+---
+
+## Travel Photography
+
+Photos from various destinations and adventures around the world.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+![](images/placeholder1.jpg){.lightbox}
+
+**Location 1**
+Description coming soon
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![](images/placeholder2.jpg){.lightbox}
+
+**Location 2**
+Description coming soon
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![](images/placeholder3.jpg){.lightbox}
+
+**Location 3**
+Description coming soon
+:::
+
+:::
+
+---
+
+## Street Photography
+
+Capturing moments from daily life and urban environments.
+
+::: {.callout-tip}
+## Follow on Instagram
+For more photos and updates, follow me on Instagram: [@mcnakhaee](https://instagram.com/mcnakhaee)
+:::
+
+---
+
+*Note: All photos are automatically displayed with lightbox functionality. Click on any image to view it in full screen.*
