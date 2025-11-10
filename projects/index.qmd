@@ -12,8 +12,8 @@ page-layout: full
 
 # My Projects
 
-Here's a showcase of my recent projects and work. Each project represents a unique challenge and learning experience.
+A collection of my open-source projects, packages, and data visualization work. Each project represents a commitment to making data science more accessible and creating tools that serve the community.
 
 ## Featured Work
 
-Explore the projects below to see what I've been working on. From web applications to data analysis, each project demonstrates different skills and technologies.
+From R and Python packages to weekly data visualizations, explore the projects below to see how I combine technical skills with a passion for open-source software and data storytelling.

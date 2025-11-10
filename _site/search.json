@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "gallery.html",
-    "href": "gallery.html",
-    "title": "Photography",
-    "section": "",
-    "text": "Welcome to my photography gallery. Here I share photos from my travels and everyday moments.\n\n\n\n\n\n\nNoteComing Soon\n\n\n\nThis gallery is currently being updated with new photos. Check back soon!\n\n\n\n\n\nPhotos from various destinations and adventures around the world.\n\n\n\nLocation 1 Description coming soon\n\n\n\nLocation 2 Description coming soon\n\n\n\nLocation 3 Description coming soon\n\n\n\n\n\n\nCapturing moments from daily life and urban environments.\n\n\n\n\n\n\nTipFollow on Instagram\n\n\n\nFor more photos and updates, follow me on Instagram: @mcnakhaee\n\n\n\nNote: All photos are automatically displayed with lightbox functionality. Click on any image to view it in full screen.\n\nMuhammad Nakhaee Muhammad Nakhaee Home /index.html Projects /projects/index.html Posts /blog/index.html Photography /gallery.html About /about.html https://github.com/mcnakhaee https://twitter.com/m_cnakhaee https://www.linkedin.com/in/muhammadcnakhaee/ https://instagram.com/mcnakhaee\n\n© 2025 Muhammad Nakhaee ∙ Made with Quarto\n\n\n   \n\n\nLicense: CC BY-SA\n\n\n\nPhotography – Muhammad Nakhaee Photography – Muhammad Nakhaee Photography – Muhammad Nakhaee Muhammad Nakhaee Muhammad Nakhaee’s personal website Muhammad Nakhaee’s personal website"
-  },
-  {
-    "objectID": "gallery.html#travel-photography",
-    "href": "gallery.html#travel-photography",
-    "title": "Photography",
-    "section": "",
-    "text": "Photos from various destinations and adventures around the world.\n\n\n\nLocation 1 Description coming soon\n\n\n\nLocation 2 Description coming soon\n\n\n\nLocation 3 Description coming soon"
-  },
-  {
-    "objectID": "gallery.html#street-photography",
-    "href": "gallery.html#street-photography",
-    "title": "Photography",
-    "section": "",
-    "text": "Capturing moments from daily life and urban environments.\n\n\n\n\n\n\nTipFollow on Instagram\n\n\n\nFor more photos and updates, follow me on Instagram: @mcnakhaee\n\n\n\nNote: All photos are automatically displayed with lightbox functionality. Click on any image to view it in full screen.\n\nMuhammad Nakhaee Muhammad Nakhaee Home /index.html Projects /projects/index.html Posts /blog/index.html Photography /gallery.html About /about.html https://github.com/mcnakhaee https://twitter.com/m_cnakhaee https://www.linkedin.com/in/muhammadcnakhaee/ https://instagram.com/mcnakhaee\n\n© 2025 Muhammad Nakhaee ∙ Made with Quarto\n\n\n   \n\n\nLicense: CC BY-SA\n\n\n\nPhotography – Muhammad Nakhaee Photography – Muhammad Nakhaee Photography – Muhammad Nakhaee Muhammad Nakhaee Muhammad Nakhaee’s personal website Muhammad Nakhaee’s personal website"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Muhammad Nakhaee",
@@ -49,18 +28,249 @@
     "text": "Connect With Me\nFind me on social media:\n\n GitHub\n Twitter\n LinkedIn\n Instagram\n\n\nWebsite built with Quarto | License: CC BY-SA"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
+    "objectID": "DEPLOYMENT.html",
+    "href": "DEPLOYMENT.html",
+    "title": "Deployment Guide for Netlify",
     "section": "",
-    "text": "Here’s a showcase of my recent projects and work. Each project represents a unique challenge and learning experience.\n\n\nExplore the projects below to see what I’ve been working on. From web applications to data analysis, each project demonstrates different skills and technologies."
+    "text": "Backup your old distill blog (optional but recommended):\ngit checkout -b backup-distill\ngit push origin backup-distill\nSwitch to main branch and update:\ngit checkout main\nAdd your new Quarto website files:\ngit add .\ngit commit -m \"Migrate from distill to Quarto\"\ngit push origin main\n\n\n\n\nGo to your Netlify site dashboard:\n\nSite settings → Build & deploy → Build settings\nUpdate the settings:\n\nBuild command: quarto render\nPublish directory: _site\n\nEnvironment variables → Add:\n\nKey: QUARTO_VERSION\nValue: 1.4.0 (or latest version)\n\n\n\n\n\n\nClick Deploys → Trigger deploy → Deploy site\nYour new Quarto site will build and deploy!\n\n\n\n\n\n\nIf you prefer to deploy manually without CI/CD:\n\nBuild your site locally:\nquarto render\nDeploy the _site folder:\n\nDrag and drop the _site folder to Netlify’s deploy page\nOr use Netlify CLI:\nnpm install -g netlify-cli\nnetlify deploy --prod --dir=_site\n\n\n\n\n\n\n\nnetlify.toml - Netlify configuration file\n.gitignore - Already excludes _site folder\n\n\n\n\n\n\nRemove old distill files: Delete these if they exist:\n\n_site.yml (replaced by _quarto.yml)\nOld R Markdown files (.Rmd)\ndistill-specific configuration\n\nCustom domain: If you have a custom domain, keep your DNS settings in Netlify\nRedirects: The netlify.toml includes a catch-all redirect for client-side routing\nBuild time: First build may take 2-3 minutes\n\n\n\n\n\n\n\nMake sure QUARTO_VERSION environment variable is set in Netlify.\n\n\n\nClear your browser cache or do a hard refresh (Ctrl+Shift+R).\n\n\n\nCheck that publish directory is set to _site (not _site/ or docs).\n\n\n\n\n\n\nQuarto Publishing Guide\nNetlify Documentation"
   },
   {
-    "objectID": "projects/index.html#featured-work",
-    "href": "projects/index.html#featured-work",
-    "title": "Projects",
+    "objectID": "DEPLOYMENT.html#option-1-using-github-recommended",
+    "href": "DEPLOYMENT.html#option-1-using-github-recommended",
+    "title": "Deployment Guide for Netlify",
     "section": "",
-    "text": "Explore the projects below to see what I’ve been working on. From web applications to data analysis, each project demonstrates different skills and technologies."
+    "text": "Backup your old distill blog (optional but recommended):\ngit checkout -b backup-distill\ngit push origin backup-distill\nSwitch to main branch and update:\ngit checkout main\nAdd your new Quarto website files:\ngit add .\ngit commit -m \"Migrate from distill to Quarto\"\ngit push origin main\n\n\n\n\nGo to your Netlify site dashboard:\n\nSite settings → Build & deploy → Build settings\nUpdate the settings:\n\nBuild command: quarto render\nPublish directory: _site\n\nEnvironment variables → Add:\n\nKey: QUARTO_VERSION\nValue: 1.4.0 (or latest version)\n\n\n\n\n\n\nClick Deploys → Trigger deploy → Deploy site\nYour new Quarto site will build and deploy!"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#option-2-manual-deployment",
+    "href": "DEPLOYMENT.html#option-2-manual-deployment",
+    "title": "Deployment Guide for Netlify",
+    "section": "",
+    "text": "If you prefer to deploy manually without CI/CD:\n\nBuild your site locally:\nquarto render\nDeploy the _site folder:\n\nDrag and drop the _site folder to Netlify’s deploy page\nOr use Netlify CLI:\nnpm install -g netlify-cli\nnetlify deploy --prod --dir=_site"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#files-included-for-netlify",
+    "href": "DEPLOYMENT.html#files-included-for-netlify",
+    "title": "Deployment Guide for Netlify",
+    "section": "",
+    "text": "netlify.toml - Netlify configuration file\n.gitignore - Already excludes _site folder"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#important-notes",
+    "href": "DEPLOYMENT.html#important-notes",
+    "title": "Deployment Guide for Netlify",
+    "section": "",
+    "text": "Remove old distill files: Delete these if they exist:\n\n_site.yml (replaced by _quarto.yml)\nOld R Markdown files (.Rmd)\ndistill-specific configuration\n\nCustom domain: If you have a custom domain, keep your DNS settings in Netlify\nRedirects: The netlify.toml includes a catch-all redirect for client-side routing\nBuild time: First build may take 2-3 minutes"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#troubleshooting",
+    "href": "DEPLOYMENT.html#troubleshooting",
+    "title": "Deployment Guide for Netlify",
+    "section": "",
+    "text": "Make sure QUARTO_VERSION environment variable is set in Netlify.\n\n\n\nClear your browser cache or do a hard refresh (Ctrl+Shift+R).\n\n\n\nCheck that publish directory is set to _site (not _site/ or docs)."
+  },
+  {
+    "objectID": "DEPLOYMENT.html#resources",
+    "href": "DEPLOYMENT.html#resources",
+    "title": "Deployment Guide for Netlify",
+    "section": "",
+    "text": "Quarto Publishing Guide\nNetlify Documentation"
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "I enjoy sharing knowledge and insights with the community through talks, workshops, and presentations. Here’s a collection of my speaking engagements.\n\n\n\n\n\nConference: Tech Summit 2025\nDate: October 15, 2025\nLocation: Virtual\nAn overview of modern web development practices, including React, TypeScript, and best practices for building scalable applications.\n\n\n\n\n\n\nNoteResources\n\n\n\n\nSlides (PDF)\nVideo Recording\nCode Examples\n\n\n\n\n\n\n\nEvent: Data Science Meetup\nDate: August 22, 2025\nLocation: San Francisco, CA\nExploring techniques for creating effective data visualizations that tell compelling stories and drive insights.\nKey Topics: - Choosing the right chart type - Color theory for data viz - Interactive vs. static visualizations - Tools and libraries overview\n\n\n\n\n\n\nNoteResources\n\n\n\n\nSlides (PDF)\nDemo Code\n\n\n\n\n\n\n\nEvent: Developer Bootcamp\nDate: June 10, 2025\nLocation: Virtual\nA hands-on workshop covering RESTful API development, authentication, and deployment best practices.\nWhat Attendees Learned: - REST API fundamentals - Express.js framework - Database integration - Security best practices - Testing and deployment\n\n\n\n\n\n\nNoteResources\n\n\n\n\nWorkshop Materials\nGitHub Repository\n\n\n\n\n\n\n\n\n\n\nConference: WebDev Conference 2024\nDate: November 5, 2024\nLocation: New York, NY\nParticipated in a panel discussion about emerging trends and the future direction of web development technologies.\n\n\n\n\nEvent: Local Tech Meetup\nDate: September 18, 2024\nLocation: Seattle, WA\nA 15-minute lightning talk sharing practical tips for maintaining high code quality in fast-paced development environments.\n\n\n\n\n\nI’m available to speak on the following topics:\n\n\nWeb Development - Modern JavaScript/TypeScript - React and frontend frameworks - Performance optimization - Responsive design\n\n\nData Science - Data visualization - Python for data analysis - Machine learning basics - Statistical analysis\n\n\nBest Practices - Code quality and testing - CI/CD pipelines - Developer productivity - Technical documentation\n\n\n\n\n\n\nI’m always interested in speaking opportunities! If you’d like me to speak at your event, please reach out.\n\n\n\n\n\n\nTipContact\n\n\n\n\nEmail: speaking@example.com\nTopics: See above or suggest your own\nFormat: Talks, workshops, panels, or podcasts\n\nNote: Replace with your actual contact information.\n\n\n\n\n\n\nLooking for older presentations? Check out my GitHub repository where I archive all presentation materials, slides, and code examples."
+  },
+  {
+    "objectID": "talks/index.html#section",
+    "href": "talks/index.html#section",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "Conference: Tech Summit 2025\nDate: October 15, 2025\nLocation: Virtual\nAn overview of modern web development practices, including React, TypeScript, and best practices for building scalable applications.\n\n\n\n\n\n\nNoteResources\n\n\n\n\nSlides (PDF)\nVideo Recording\nCode Examples\n\n\n\n\n\n\n\nEvent: Data Science Meetup\nDate: August 22, 2025\nLocation: San Francisco, CA\nExploring techniques for creating effective data visualizations that tell compelling stories and drive insights.\nKey Topics: - Choosing the right chart type - Color theory for data viz - Interactive vs. static visualizations - Tools and libraries overview\n\n\n\n\n\n\nNoteResources\n\n\n\n\nSlides (PDF)\nDemo Code\n\n\n\n\n\n\n\nEvent: Developer Bootcamp\nDate: June 10, 2025\nLocation: Virtual\nA hands-on workshop covering RESTful API development, authentication, and deployment best practices.\nWhat Attendees Learned: - REST API fundamentals - Express.js framework - Database integration - Security best practices - Testing and deployment\n\n\n\n\n\n\nNoteResources\n\n\n\n\nWorkshop Materials\nGitHub Repository"
+  },
+  {
+    "objectID": "talks/index.html#section-1",
+    "href": "talks/index.html#section-1",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "Conference: WebDev Conference 2024\nDate: November 5, 2024\nLocation: New York, NY\nParticipated in a panel discussion about emerging trends and the future direction of web development technologies.\n\n\n\n\nEvent: Local Tech Meetup\nDate: September 18, 2024\nLocation: Seattle, WA\nA 15-minute lightning talk sharing practical tips for maintaining high code quality in fast-paced development environments."
+  },
+  {
+    "objectID": "talks/index.html#speaking-topics",
+    "href": "talks/index.html#speaking-topics",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "I’m available to speak on the following topics:\n\n\nWeb Development - Modern JavaScript/TypeScript - React and frontend frameworks - Performance optimization - Responsive design\n\n\nData Science - Data visualization - Python for data analysis - Machine learning basics - Statistical analysis\n\n\nBest Practices - Code quality and testing - CI/CD pipelines - Developer productivity - Technical documentation"
+  },
+  {
+    "objectID": "talks/index.html#invite-me-to-speak",
+    "href": "talks/index.html#invite-me-to-speak",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "I’m always interested in speaking opportunities! If you’d like me to speak at your event, please reach out.\n\n\n\n\n\n\nTipContact\n\n\n\n\nEmail: speaking@example.com\nTopics: See above or suggest your own\nFormat: Talks, workshops, panels, or podcasts\n\nNote: Replace with your actual contact information."
+  },
+  {
+    "objectID": "talks/index.html#past-presentations-archive",
+    "href": "talks/index.html#past-presentations-archive",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "Looking for older presentations? Check out my GitHub repository where I archive all presentation materials, slides, and code examples."
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html",
+    "href": "projects/projects/palmerpenguins/index.html",
+    "title": "{palmerpenguins}",
+    "section": "",
+    "text": "{palmerpenguins} is a Python package that provides easy access to the Palmer Penguins dataset, making it simple to load this popular dataset for data science education, exploration, and visualization in Python. This is the Python equivalent of the popular R package of the same name."
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#overview",
+    "href": "projects/projects/palmerpenguins/index.html#overview",
+    "title": "{palmerpenguins}",
+    "section": "",
+    "text": "{palmerpenguins} is a Python package that provides easy access to the Palmer Penguins dataset, making it simple to load this popular dataset for data science education, exploration, and visualization in Python. This is the Python equivalent of the popular R package of the same name."
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#about-palmer-penguins",
+    "href": "projects/projects/palmerpenguins/index.html#about-palmer-penguins",
+    "title": "{palmerpenguins}",
+    "section": "About Palmer Penguins",
+    "text": "About Palmer Penguins\nThe Palmer Penguins dataset is a modern alternative to the classic Iris dataset. It contains size measurements for three penguin species observed on three islands in the Palmer Archipelago, Antarctica.\nThe dataset includes: - 344 penguins across 3 species - 7 variables including species, island, bill dimensions, flipper length, body mass, and sex - Real data collected by Dr. Kristen Gorman at Palmer Station, Antarctica"
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#why-this-package",
+    "href": "projects/projects/palmerpenguins/index.html#why-this-package",
+    "title": "{palmerpenguins}",
+    "section": "Why This Package?",
+    "text": "Why This Package?\nWhile the Palmer Penguins dataset is available in R, Python users needed an easy way to access it. This package:\n\nSimplifies Data Loading: One-line import of the dataset\nMultiple Formats: Returns pandas DataFrames or raw data\nConsistent API: Follows Python conventions and best practices\nWell-Documented: Clear examples and use cases\nLightweight: Minimal dependencies"
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#key-features",
+    "href": "projects/projects/palmerpenguins/index.html#key-features",
+    "title": "{palmerpenguins}",
+    "section": "Key Features",
+    "text": "Key Features\n\n\nFor Data Scientists - Quick dataset access - Pandas integration - Perfect for teaching - Ideal for testing code\n\n\nPackage Features - Simple API - Type hints - Comprehensive tests - PyPI distribution"
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#technologies-used",
+    "href": "projects/projects/palmerpenguins/index.html#technologies-used",
+    "title": "{palmerpenguins}",
+    "section": "Technologies Used",
+    "text": "Technologies Used\n\nPython: Core language\npandas: Data manipulation\npytest: Testing framework\nsetuptools: Package distribution\nGitHub Actions: CI/CD"
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#installation",
+    "href": "projects/projects/palmerpenguins/index.html#installation",
+    "title": "{palmerpenguins}",
+    "section": "Installation",
+    "text": "Installation\npip install palmerpenguins"
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#basic-usage",
+    "href": "projects/projects/palmerpenguins/index.html#basic-usage",
+    "title": "{palmerpenguins}",
+    "section": "Basic Usage",
+    "text": "Basic Usage\nfrom palmerpenguins import load_penguins\n\n# Load the penguins dataset\npenguins = load_penguins()\n\n# Start exploring\nprint(penguins.head())\nprint(penguins.describe())"
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#use-cases",
+    "href": "projects/projects/palmerpenguins/index.html#use-cases",
+    "title": "{palmerpenguins}",
+    "section": "Use Cases",
+    "text": "Use Cases\nPerfect for: - Teaching: Introduce data science concepts with real data - Learning: Practice visualization and analysis techniques - Testing: Quick dataset for prototyping code - Examples: Demonstrate statistical methods and visualizations"
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#example-analysis",
+    "href": "projects/projects/palmerpenguins/index.html#example-analysis",
+    "title": "{palmerpenguins}",
+    "section": "Example Analysis",
+    "text": "Example Analysis\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom palmerpenguins import load_penguins\n\n# Load data\npenguins = load_penguins()\n\n# Create visualization\nsns.scatterplot(\n    data=penguins,\n    x=\"bill_length_mm\",\n    y=\"bill_depth_mm\",\n    hue=\"species\"\n)\nplt.title(\"Palmer Penguins: Bill Dimensions\")\nplt.show()"
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#project-links",
+    "href": "projects/projects/palmerpenguins/index.html#project-links",
+    "title": "{palmerpenguins}",
+    "section": "Project Links",
+    "text": "Project Links\n\n\n\n\n\n\nTipAccess the Package\n\n\n\n\nGitHub Repository: github.com/mcnakhaee/palmerpenguin\nPyPI: Install via pip install palmerpenguins"
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#impact",
+    "href": "projects/projects/palmerpenguins/index.html#impact",
+    "title": "{palmerpenguins}",
+    "section": "Impact",
+    "text": "Impact\nThis package: - Makes quality educational datasets more accessible to Python users - Supports the data science teaching community - Promotes the use of modern, ethically-sourced datasets - Contributes to the Python data science ecosystem"
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#what-i-learned",
+    "href": "projects/projects/palmerpenguins/index.html#what-i-learned",
+    "title": "{palmerpenguins}",
+    "section": "What I Learned",
+    "text": "What I Learned\nDeveloping this package taught me: - Python package development and distribution - Working with PyPI and package management - Writing effective documentation - The importance of good educational resources - How to contribute to the open-source data science community - Testing and continuous integration best practices"
+  },
+  {
+    "objectID": "projects/projects/palmerpenguins/index.html#credits",
+    "href": "projects/projects/palmerpenguins/index.html#credits",
+    "title": "{palmerpenguins}",
+    "section": "Credits",
+    "text": "Credits\nDataset originally published by: - Dr. Kristen Gorman: Palmer Station, Antarctica LTER - Dr. Allison Horst: Artwork and R package\n\nOpen source project available on GitHub and PyPI"
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html",
+    "href": "projects/projects/tidytuesday/index.html",
+    "title": "TidyTuesday",
+    "section": "",
+    "text": "TidyTuesday is a weekly data project aimed at the R ecosystem. Every week, a new dataset is posted, and participants create visualizations and share their work on social media. This repository contains my submissions for the weekly TidyTuesday Project, created using R and ggplot2."
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#overview",
+    "href": "projects/projects/tidytuesday/index.html#overview",
+    "title": "TidyTuesday",
+    "section": "",
+    "text": "TidyTuesday is a weekly data project aimed at the R ecosystem. Every week, a new dataset is posted, and participants create visualizations and share their work on social media. This repository contains my submissions for the weekly TidyTuesday Project, created using R and ggplot2."
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#about-tidytuesday",
+    "href": "projects/projects/tidytuesday/index.html#about-tidytuesday",
+    "title": "TidyTuesday",
+    "section": "About TidyTuesday",
+    "text": "About TidyTuesday\nThe TidyTuesday project is:\n\nA safe and supportive forum for individuals to practice their data wrangling and visualization skills\nA weekly social data project that focuses on understanding data\nAn opportunity to work with real-world datasets and create compelling visualizations"
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#key-features",
+    "href": "projects/projects/tidytuesday/index.html#key-features",
+    "title": "TidyTuesday",
+    "section": "Key Features",
+    "text": "Key Features\n\nWeekly Visualizations: Regular contributions exploring diverse datasets\nR & ggplot2: All visualizations created using R’s powerful ggplot2 package\nData Storytelling: Each visualization tells a unique story about the data\nReproducible Code: All code is available for learning and reproduction"
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#technologies-used",
+    "href": "projects/projects/tidytuesday/index.html#technologies-used",
+    "title": "TidyTuesday",
+    "section": "Technologies Used",
+    "text": "Technologies Used\n\n\nLanguages & Tools - R - ggplot2 - tidyverse - RStudio\n\n\nSkills Demonstrated - Data wrangling - Statistical visualization - Design principles - Data storytelling"
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#sample-visualizations",
+    "href": "projects/projects/tidytuesday/index.html#sample-visualizations",
+    "title": "TidyTuesday",
+    "section": "Sample Visualizations",
+    "text": "Sample Visualizations\nMy TidyTuesday submissions cover a wide range of topics and datasets, including:\n\nEconomic trends and indicators\nSocial and demographic data\nSports statistics\nEnvironmental data\nCultural and entertainment data\n\nEach visualization is crafted to: - Clearly communicate insights from the data - Follow best practices in data visualization - Use effective color schemes and typography - Be accessible and easy to understand"
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#project-links",
+    "href": "projects/projects/tidytuesday/index.html#project-links",
+    "title": "TidyTuesday",
+    "section": "Project Links",
+    "text": "Project Links\n\n\n\n\n\n\nTipView My Work\n\n\n\n\nGitHub Repository: github.com/mcnakhaee/Tidy-Tuesday\nExplore my weekly submissions and see how different datasets can be visualized"
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#what-i-learned",
+    "href": "projects/projects/tidytuesday/index.html#what-i-learned",
+    "title": "TidyTuesday",
+    "section": "What I Learned",
+    "text": "What I Learned\nParticipating in TidyTuesday has helped me: - Develop stronger data visualization skills - Learn to work with diverse datasets quickly - Understand design principles for effective communication - Build a portfolio of data visualization work - Engage with the R community\n\nOngoing project with weekly contributions"
   },
   {
     "objectID": "projects/projects/web-app/index.html",
@@ -112,18 +322,102 @@
     "text": "What I Learned\nThis project taught me the importance of: - Planning architecture before coding - Writing clean, maintainable code - Testing throughout the development process - Optimizing for performance from the start\n\nProject completed: October 2025"
   },
   {
-    "objectID": "blog/posts/quarto-intro/index.html",
-    "href": "blog/posts/quarto-intro/index.html",
-    "title": "Getting Started with Quarto",
+    "objectID": "blog/posts/PACKAGE_REQUIREMENTS.html",
+    "href": "blog/posts/PACKAGE_REQUIREMENTS.html",
+    "title": "Package Requirements for Migrated Blog Posts",
     "section": "",
-    "text": "Quarto is an amazing tool for creating scientific and technical documents, websites, and presentations. In this post, we’ll explore some of its key features.\n\n\nQuarto offers several advantages:\n\nMulti-Format Output: Create HTML, PDF, Word documents, and more from a single source\nBeautiful Defaults: Modern, professional-looking output out of the box\nCode Integration: Seamlessly integrate code from Python, R, Julia, and other languages\nMarkdown-Based: Simple, readable syntax that’s easy to learn\n\n\n\n\nTo create a new Quarto project, simply install Quarto and run:\nquarto create project website mysite\n\n\n\n\n\nQuarto supports syntax highlighting for many languages:\ndef hello_world():\n    print(\"Hello from Quarto!\")\n    \nhello_world()\n\n\n\nUse callouts to highlight important information:\n\n\n\n\n\n\nWarningImportant Note\n\n\n\nAlways test your code before publishing!\n\n\n\n\n\nCreate sophisticated layouts using Quarto’s grid system and divs.\n\n\n\n\nQuarto is a powerful tool for creating modern, professional content. We’ll explore more advanced features in future posts.\n\n\n\n\nQuarto Documentation\nQuarto Gallery"
+    "text": "This document lists the R and Python packages referenced in the migrated blog posts.\n\n\nLocation: blog/posts/trump-speech-readability/index.qmd\n\n\n\ntidyverse - Data manipulation and visualization\nreticulate - R interface to Python\nggthemes - Additional themes for ggplot2\nus2020election - Custom package with US election speeches data (https://github.com/mcnakhaee/us2020election)\nggridges - Ridge plots for visualizations\nshowtext (optional) - Font management\nknitr - R Markdown support\n\n\n\n\n\nnumpy - Numerical computing\npandas - Data manipulation\ntextstat - Text readability metrics (https://github.com/shivam5992/textstat)\n\n\n\n\n\n\ninstall.packages(c(\"tidyverse\", \"reticulate\", \"ggthemes\", \"ggridges\", \"showtext\", \"knitr\"))\n\n# Install us2020election from GitHub\n# install.packages(\"devtools\")\n# devtools::install_github(\"mcnakhaee/us2020election\")\n\n\n\npip install numpy pandas textstat\n\n\n\n\n\n\nLocation: blog/posts/covid-19-netherlands/index.qmd\n\n\n\ntidyverse - Data manipulation and visualization\nCoronaWatchNL - Custom package for Netherlands COVID-19 data (https://github.com/mcnakhaee/CoronaWatchNL)\nsf - Spatial data handling\ngganimate - Animated visualizations\nsantoku - Data binning/chopping\nlubridate - Date/time handling (part of tidyverse)\nforeign - Reading foreign data formats\nknitr - R Markdown support\n\n\n\n\n\n\ninstall.packages(c(\"tidyverse\", \"sf\", \"gganimate\", \"santoku\", \"lubridate\", \"foreign\", \"knitr\"))\n\n# Install CoronaWatchNL from GitHub\n# install.packages(\"devtools\")\n# devtools::install_github(\"mcnakhaee/CoronaWatchNL\")\n\n\n\n\n\n\nBoth posts are currently configured with eval=FALSE for all code chunks. This means: - ✅ The code is displayed for educational purposes - ✅ The site renders without requiring all packages to be installed - ✅ No Python environment configuration is needed - ✅ Images and GIFs (if present in post directories) will still display\n\n\n\nIf you want to execute the code:\n\nInstall all required packages (see above)\nFor the Trump speech post, configure Python environment:\n\nUncomment the reticulate configuration in the setup chunk\nEnsure you have a conda environment or use reticulate::use_python()\n\nChange eval=FALSE to eval=TRUE in the chunks you want to run\nEnsure data files and dependencies are available\n\n\n\n\n\nThe us2020election and CoronaWatchNL packages are custom packages that need to be installed from GitHub\nFont configuration (Lobster, Poppins Light) may require system fonts to be installed\nAnimation GIFs should be placed in the respective post directories if you want them to display\nThe posts are currently optimized for display without execution, perfect for portfolio/documentation purposes"
   },
   {
-    "objectID": "blog/posts/quarto-intro/index.html#introduction-to-quarto",
-    "href": "blog/posts/quarto-intro/index.html#introduction-to-quarto",
-    "title": "Getting Started with Quarto",
+    "objectID": "blog/posts/PACKAGE_REQUIREMENTS.html#trump-speech-readability-analysis-post",
+    "href": "blog/posts/PACKAGE_REQUIREMENTS.html#trump-speech-readability-analysis-post",
+    "title": "Package Requirements for Migrated Blog Posts",
     "section": "",
-    "text": "Quarto is an amazing tool for creating scientific and technical documents, websites, and presentations. In this post, we’ll explore some of its key features.\n\n\nQuarto offers several advantages:\n\nMulti-Format Output: Create HTML, PDF, Word documents, and more from a single source\nBeautiful Defaults: Modern, professional-looking output out of the box\nCode Integration: Seamlessly integrate code from Python, R, Julia, and other languages\nMarkdown-Based: Simple, readable syntax that’s easy to learn\n\n\n\n\nTo create a new Quarto project, simply install Quarto and run:\nquarto create project website mysite\n\n\n\n\n\nQuarto supports syntax highlighting for many languages:\ndef hello_world():\n    print(\"Hello from Quarto!\")\n    \nhello_world()\n\n\n\nUse callouts to highlight important information:\n\n\n\n\n\n\nWarningImportant Note\n\n\n\nAlways test your code before publishing!\n\n\n\n\n\nCreate sophisticated layouts using Quarto’s grid system and divs.\n\n\n\n\nQuarto is a powerful tool for creating modern, professional content. We’ll explore more advanced features in future posts.\n\n\n\n\nQuarto Documentation\nQuarto Gallery"
+    "text": "Location: blog/posts/trump-speech-readability/index.qmd\n\n\n\ntidyverse - Data manipulation and visualization\nreticulate - R interface to Python\nggthemes - Additional themes for ggplot2\nus2020election - Custom package with US election speeches data (https://github.com/mcnakhaee/us2020election)\nggridges - Ridge plots for visualizations\nshowtext (optional) - Font management\nknitr - R Markdown support\n\n\n\n\n\nnumpy - Numerical computing\npandas - Data manipulation\ntextstat - Text readability metrics (https://github.com/shivam5992/textstat)\n\n\n\n\n\n\ninstall.packages(c(\"tidyverse\", \"reticulate\", \"ggthemes\", \"ggridges\", \"showtext\", \"knitr\"))\n\n# Install us2020election from GitHub\n# install.packages(\"devtools\")\n# devtools::install_github(\"mcnakhaee/us2020election\")\n\n\n\npip install numpy pandas textstat"
+  },
+  {
+    "objectID": "blog/posts/PACKAGE_REQUIREMENTS.html#covid-19-netherlands-analysis-post",
+    "href": "blog/posts/PACKAGE_REQUIREMENTS.html#covid-19-netherlands-analysis-post",
+    "title": "Package Requirements for Migrated Blog Posts",
+    "section": "",
+    "text": "Location: blog/posts/covid-19-netherlands/index.qmd\n\n\n\ntidyverse - Data manipulation and visualization\nCoronaWatchNL - Custom package for Netherlands COVID-19 data (https://github.com/mcnakhaee/CoronaWatchNL)\nsf - Spatial data handling\ngganimate - Animated visualizations\nsantoku - Data binning/chopping\nlubridate - Date/time handling (part of tidyverse)\nforeign - Reading foreign data formats\nknitr - R Markdown support\n\n\n\n\n\n\ninstall.packages(c(\"tidyverse\", \"sf\", \"gganimate\", \"santoku\", \"lubridate\", \"foreign\", \"knitr\"))\n\n# Install CoronaWatchNL from GitHub\n# install.packages(\"devtools\")\n# devtools::install_github(\"mcnakhaee/CoronaWatchNL\")"
+  },
+  {
+    "objectID": "blog/posts/PACKAGE_REQUIREMENTS.html#current-configuration",
+    "href": "blog/posts/PACKAGE_REQUIREMENTS.html#current-configuration",
+    "title": "Package Requirements for Migrated Blog Posts",
+    "section": "",
+    "text": "Both posts are currently configured with eval=FALSE for all code chunks. This means: - ✅ The code is displayed for educational purposes - ✅ The site renders without requiring all packages to be installed - ✅ No Python environment configuration is needed - ✅ Images and GIFs (if present in post directories) will still display"
+  },
+  {
+    "objectID": "blog/posts/PACKAGE_REQUIREMENTS.html#to-enable-code-execution",
+    "href": "blog/posts/PACKAGE_REQUIREMENTS.html#to-enable-code-execution",
+    "title": "Package Requirements for Migrated Blog Posts",
+    "section": "",
+    "text": "If you want to execute the code:\n\nInstall all required packages (see above)\nFor the Trump speech post, configure Python environment:\n\nUncomment the reticulate configuration in the setup chunk\nEnsure you have a conda environment or use reticulate::use_python()\n\nChange eval=FALSE to eval=TRUE in the chunks you want to run\nEnsure data files and dependencies are available"
+  },
+  {
+    "objectID": "blog/posts/PACKAGE_REQUIREMENTS.html#notes",
+    "href": "blog/posts/PACKAGE_REQUIREMENTS.html#notes",
+    "title": "Package Requirements for Migrated Blog Posts",
+    "section": "",
+    "text": "The us2020election and CoronaWatchNL packages are custom packages that need to be installed from GitHub\nFont configuration (Lobster, Poppins Light) may require system fonts to be installed\nAnimation GIFs should be placed in the respective post directories if you want them to display\nThe posts are currently optimized for display without execution, perfect for portfolio/documentation purposes"
+  },
+  {
+    "objectID": "blog/posts/trump-speech-readability/index.html",
+    "href": "blog/posts/trump-speech-readability/index.html",
+    "title": "How Easy Is It to Understand What Donald Trump Says?",
+    "section": "",
+    "text": "Aside from their political differences, Donald Trump and Barack Obama have very contrasting personalities, traits, and characters. Obama is known to be a great communicator and an articulate speaker whose speeches are used in English classes to show how one should speak proper English. On the other hand, Trump is not the most eloquent English speaker or US president in history. Every now and then, you can find a clip on the web where Donald Trump is being mocked for the way he speaks or mispronounces words. This is so obvious that even non-native English speakers can notice how Trump’s speeches are very simple and inarticulate. Of course, this was not a bad thing for Trump at all. Actually, almost every political analyst that you see on the news talks about the fact that a vast majority of Trump’s fervent supporters are not college-educated Americans. We can attribute this to the fact that he knows how to speak to his audience and his base supporters using their language (although it is more likely that he cannot speak English better than this level).\nThis post will investigate how difficult it is to understand what each US politician talked about in the 2020 US Election cycle. I will use several readability metrics that can help us compute text comprehensibility. A wide range of these measures are implemented in the {textstat} Python package, and it is super easy to calculate them using this package.\nI compiled a list of US Election-related speeches from rev.com and turned them into an R package called {us2020election}. I use this package as my data source for my analysis. Like some of my other posts, I use Python to perform the analysis and R to visualize my results. Now let’s get started by importing the necessary packages.\nCode\nlibrary(tidyverse)\nlibrary(reticulate)\nlibrary(ggthemes)\nlibrary(us2020election)\nlibrary(ggridges)\ntheme_set(theme_tufte())\ntheme_update(legend.position = 'none',\n          text = element_text(family = 'Lobster'),\n          plot.title = element_text(margin = margin(t= 10,b= 5),family = 'Lobster'),\n          plot.subtitle = element_text(margin = margin(b= 10),family = 'Lobster'),\n          panel.background = element_rect(fill = '#FDF6E3'),\n          plot.background = element_rect(fill = '#FDF6E3'))\nCode\nimport numpy as np\nimport pandas as pd \nimport textstat\nThere are several readability measures for English text included in {textstat}. Calculating these measures is very straightforward and easy. I will explain what each metric represents in more detail.\nCode\nus_election_speeches = r.us_election_speeches\nus_election_speeches['Flesch_Reading_Ease_formula'] = us_election_speeches['text'].apply(lambda x: textstat.flesch_reading_ease(x))\nus_election_speeches['gunning_fog'] = us_election_speeches['text'].apply(lambda x: textstat.gunning_fog(x))\nus_election_speeches['smog_index'] = us_election_speeches['text'].apply(lambda x: textstat.smog_index(x))\nus_election_speeches['automated_readability_index'] = us_election_speeches['text'].apply(lambda x: textstat.automated_readability_index(x))\nus_election_speeches['coleman_liau_index'] = us_election_speeches['text'].apply(lambda x: textstat.coleman_liau_index(x))\nus_election_speeches['linsear_write_formula'] = us_election_speeches['text'].apply(lambda x: textstat.linsear_write_formula(x))\nus_election_speeches['dale_chall_readability_score'] = us_election_speeches['text'].apply(lambda x: textstat.dale_chall_readability_score(x))\nus_election_speeches['text_standard'] = us_election_speeches['text'].apply(lambda x: textstat.text_standard(x))\nus_election_speeches['text_standard_float'] = us_election_speeches['text'].apply(lambda x: textstat.text_standard(x,float_output  = True))\nLet’s look at the resulting dataframe.\nCode\nus_election_speeches &lt;- py$us_election_speeches \nus_election_speeches %&gt;% \nglimpse()\nNow I am going to visualize the changes in the distribution of speech complexity for each politician. To make things easier, I will select a list of politicians that I’d like to analyze in this post.\nCode\nspeakers &lt;- c('Barack Obama','Pete Buttigieg','Mike Pence','Elizabeth Warren','Bernie Sanders','Donald Trump','Kamala Harris','Joe Biden','Mike Bloomberg')\ncustom_palette &lt;-c(\n    'Mike Bloomberg' = '#4E79A7',\n    'Amy Klobuchar' = '#4E79A7',\n    'Joe Biden' = '#4E79A7',\n    'Pete Buttigieg' = '#4E79A7',\n    'Elizabeth Warren' =  '#4E79A7',\n    'Barack Obama'  = '#4E79A7',\n    'Bernie Sanders' = '#4E79A7',\n    'Kamala Harris' = '#4E79A7',\n    'Donald Trump'  = '#E15759' ,\n     'Mike Pence' = '#E15759' \n  )\nAlso, I created a function to make ridge plots for each metric easier.\nCode\ncreate_plot &lt;- function(metric = Flesch_Reading_Ease_formula,subtitle = subtitle) {\n  metrics &lt;- rlang::enquo(metric)\n  us_election_speeches %&gt;%\n    separate_rows(speaker, sep = ',') %&gt;%\n    filter(speaker %in% speakers, type != 'Debate') %&gt;%\n    add_count(speaker) %&gt;%\n    ggplot() +\n    geom_density_ridges(aes(\n      x = !!metrics ,\n      y = speaker,\n      fill = speaker\n    )) +\n    labs(x = '', y = '',title = \"How Easy Is It to Comprehend Different US Politicians?\",subtitle = str_wrap(subtitle,width = 100)) +\n    scale_fill_manual(values = custom_palette) \n}\nNow, let’s look at several readability measures in more depth."
+  },
+  {
+    "objectID": "blog/posts/trump-speech-readability/index.html#flesch-reading-ease-scores",
+    "href": "blog/posts/trump-speech-readability/index.html#flesch-reading-ease-scores",
+    "title": "How Easy Is It to Understand What Donald Trump Says?",
+    "section": "Flesch Reading Ease Scores",
+    "text": "Flesch Reading Ease Scores\nThe first readability score that I will look at is based on the Flesch Reading Ease formula. It computes the number of syllables to determine how easy a piece of text is. The maximum value of Flesch Reading Ease is 122, and there is no minimum value for it. Higher Flesch Reading Ease scores indicate that the text (speech) is easier to understand by the audience. In our case, it would show how sophisticated each politician is in terms of language use. You can find more about this metric on Wikipedia!\n\n\nCode\ncreate_plot(Flesch_Reading_Ease_formula ,\n            subtitle = 'The Flesch Reading Ease scores measure the complexity of a text document. Higher scores indicate a text is easier to comprehend.')\n\n\nWe can interpret the scores using the following table:\n\n\n\n\n\n\n\n\nScore\nSchool level\nNotes\n\n\n\n\n100.00–90.00\n5th grade\nVery easy to read. Easily understood by an average 11-year-old student.\n\n\n90.0–80.0\n6th grade\nEasy to read. Conversational English for consumers.\n\n\n80.0–70.0\n7th grade\nFairly easy to read.\n\n\n70.0–60.0\n8th & 9th grade\nPlain English. Easily understood by 13- to 15-year-old students.\n\n\n60.0–50.0\n10th to 12th grade\nFairly difficult to read.\n\n\n50.0–30.0\nCollege\nDifficult to read.\n\n\n30.0–10.0\nCollege graduate\nVery difficult to read. Best understood by university graduates.\n\n\n10.0–0.0\nProfessional\nExtremely difficult to read. Best understood by university graduates."
+  },
+  {
+    "objectID": "blog/posts/trump-speech-readability/index.html#gunning-fog-index",
+    "href": "blog/posts/trump-speech-readability/index.html#gunning-fog-index",
+    "title": "How Easy Is It to Understand What Donald Trump Says?",
+    "section": "Gunning Fog Index",
+    "text": "Gunning Fog Index\nThe Gunning fog index is another metric to measure the complexity of a text document. It shows how many years of education one might need to understand a piece of text. Larger values of the Gunning fog index correspond to more difficult writings.\n\n\nCode\ncreate_plot(gunning_fog,subtitle = 'The Gunning fog index measures the complexity of a text document. Larger values of the Gunning fog index correspond to more difficult writings.' )"
+  },
+  {
+    "objectID": "blog/posts/trump-speech-readability/index.html#the-smog-index",
+    "href": "blog/posts/trump-speech-readability/index.html#the-smog-index",
+    "title": "How Easy Is It to Understand What Donald Trump Says?",
+    "section": "The SMOG Index",
+    "text": "The SMOG Index\nThe SMOG index computes the ratio of polysyllables (words with three or more syllables) in sentences to determine text complexity.\n\n\nCode\ncreate_plot(smog_index,subtitle = 'The SMOG index measures the complexity of a text document. Larger values of the SMOG index indicate more difficult writings.' )"
+  },
+  {
+    "objectID": "blog/posts/trump-speech-readability/index.html#linsear-write-formula",
+    "href": "blog/posts/trump-speech-readability/index.html#linsear-write-formula",
+    "title": "How Easy Is It to Understand What Donald Trump Says?",
+    "section": "Linsear Write Formula",
+    "text": "Linsear Write Formula\nLike the previous metric, the Linsear Write Formula uses words with three or more syllables to compute text readability. It also relies on the sentence length to measure how difficult reading a text could be.\n\n\nCode\ncreate_plot(linsear_write_formula, subtitle = 'The Linsear Write Formula measures the complexity of a text document. Larger values indicate more difficult writings.')"
+  },
+  {
+    "objectID": "blog/posts/trump-speech-readability/index.html#dale-chall-readability-score",
+    "href": "blog/posts/trump-speech-readability/index.html#dale-chall-readability-score",
+    "title": "How Easy Is It to Understand What Donald Trump Says?",
+    "section": "Dale-Chall Readability Score",
+    "text": "Dale-Chall Readability Score\nThis metric is different from the other metrics that we have talked about. It uses a dictionary of 3000 words that are easy to read and understand for a fourth-grade student. So, words that are not in this dictionary are considered to be complex. The higher the Dale-Chall Score is, the more difficult it is to read a text.\n\n\nCode\ncreate_plot(dale_chall_readability_score,subtitle = 'The Dale-Chall Readability Score measures the complexity of a text document. The higher the Dale-Chall Score is, the more difficult it is to read a text.')"
+  },
+  {
+    "objectID": "blog/posts/trump-speech-readability/index.html#a-unified-readability-score",
+    "href": "blog/posts/trump-speech-readability/index.html#a-unified-readability-score",
+    "title": "How Easy Is It to Understand What Donald Trump Says?",
+    "section": "A Unified Readability Score",
+    "text": "A Unified Readability Score\nWe introduced several readability metrics, but each one of them might give us a slightly different result. There is a way in textstat to combine all these metrics and have a single readability metric.\n\n\nCode\nus_election_speeches %&gt;%\n  filter(speaker %in% speakers) %&gt;%\n  mutate(text_standard = str_replace(text_standard,' and ','-'),\n        text_standard = factor(\n    text_standard,\n    levels = c(\n      '4th-5th grade',\n      '5th-6th grade',\n      '6th-7th grade',\n      '7th-8th grade',\n      '8th-9th grade',\n      '9th-10th grade',\n      '10th-11th grade',\n      '11th-12th grade',\n      '12th-13th grade',\n      '14th-15th grade'\n    )\n  )) %&gt;%\n  count(speaker, text_standard) %&gt;%\n  mutate(n = n + 1) %&gt;%\n  ggplot()  +\n  geom_col(aes(x = text_standard , y =  n, fill = speaker)) +\n  labs(x = '', y = 'Number of Speeches', title = \"How Easy Is It to Understand Trump's Speeches?\",\n       subtitle = 'Based on several readability tests, the education level that one needs to comprehend the 2020 Election speeches by different US politicians is illustrated in this plot.' ) +\n  scale_fill_manual(values = custom_palette) +\n  scale_y_log10() +\n  facet_wrap(~ speaker, ncol = 1) +\n  theme(axis.text  = element_text(size = 13),\n        axis.title.y = element_text(size = 15,margin = margin(r = 10,l = 10)),\n        plot.title = element_text(size = 20,margin = margin(b = 10,t = 10)),\n        plot.subtitle = element_text(size = 14,margin = margin(b = 10)),\n        strip.text = element_text(size = 15))\n\n\nInterestingly, we can observe that Trump never gave a speech to an audience with difficulty more than the 7th or 8th grade. We can also convert this readability metric to numbers to visualize and compare it to other metrics.\n\n\nCode\ncreate_plot(text_standard_float,\n            subtitle = 'The complexity of a text document was measured based on several readability metrics where larger values indicate more difficult writings.')"
+  },
+  {
+    "objectID": "blog/posts/trump-speech-readability/index.html#conclusion",
+    "href": "blog/posts/trump-speech-readability/index.html#conclusion",
+    "title": "How Easy Is It to Understand What Donald Trump Says?",
+    "section": "Conclusion",
+    "text": "Conclusion\nWe can consistently see that Trump’s speeches are less sophisticated and less complex than the speeches given by the rest of the politicians. We can attribute this to his lack of sophistication in terms of language, the fact that he knows how to speak to his audience, or both. Also, we can notice that Mike Pence and Barack Obama seem to use more advanced language in their speeches."
   },
   {
     "objectID": "blog/posts/welcome/index.html",
@@ -140,11 +434,60 @@
     "text": "I’m excited to launch this blog. This space will be dedicated to sharing insights, tutorials, and updates about data science, analytics, and technology projects.\n\n\nIn the coming weeks and months, you can expect:\n\nTechnical Tutorials: Step-by-step guides on various technologies\nProject Updates: News about what we’re working on\nIndustry Insights: Our thoughts on trends and developments\nCommunity Highlights: Showcasing contributions from our community\n\n\n\n\nMake sure to check back regularly for new content. We’re committed to providing valuable information and fostering a community of learners and creators.\n\n\n\n\n\n\nTipSubscribe to Updates\n\n\n\nDon’t miss a post! Follow us on social media to get notified when we publish new content.\n\n\nThank you for joining us on this journey!"
   },
   {
+    "objectID": "blog/posts/quarto-intro/index.html",
+    "href": "blog/posts/quarto-intro/index.html",
+    "title": "Getting Started with Quarto",
+    "section": "",
+    "text": "Quarto is an amazing tool for creating scientific and technical documents, websites, and presentations. In this post, we’ll explore some of its key features.\n\n\nQuarto offers several advantages:\n\nMulti-Format Output: Create HTML, PDF, Word documents, and more from a single source\nBeautiful Defaults: Modern, professional-looking output out of the box\nCode Integration: Seamlessly integrate code from Python, R, Julia, and other languages\nMarkdown-Based: Simple, readable syntax that’s easy to learn\n\n\n\n\nTo create a new Quarto project, simply install Quarto and run:\nquarto create project website mysite\n\n\n\n\n\nQuarto supports syntax highlighting for many languages:\ndef hello_world():\n    print(\"Hello from Quarto!\")\n    \nhello_world()\n\n\n\nUse callouts to highlight important information:\n\n\n\n\n\n\nWarningImportant Note\n\n\n\nAlways test your code before publishing!\n\n\n\n\n\nCreate sophisticated layouts using Quarto’s grid system and divs.\n\n\n\n\nQuarto is a powerful tool for creating modern, professional content. We’ll explore more advanced features in future posts.\n\n\n\n\nQuarto Documentation\nQuarto Gallery"
+  },
+  {
+    "objectID": "blog/posts/quarto-intro/index.html#introduction-to-quarto",
+    "href": "blog/posts/quarto-intro/index.html#introduction-to-quarto",
+    "title": "Getting Started with Quarto",
+    "section": "",
+    "text": "Quarto is an amazing tool for creating scientific and technical documents, websites, and presentations. In this post, we’ll explore some of its key features.\n\n\nQuarto offers several advantages:\n\nMulti-Format Output: Create HTML, PDF, Word documents, and more from a single source\nBeautiful Defaults: Modern, professional-looking output out of the box\nCode Integration: Seamlessly integrate code from Python, R, Julia, and other languages\nMarkdown-Based: Simple, readable syntax that’s easy to learn\n\n\n\n\nTo create a new Quarto project, simply install Quarto and run:\nquarto create project website mysite\n\n\n\n\n\nQuarto supports syntax highlighting for many languages:\ndef hello_world():\n    print(\"Hello from Quarto!\")\n    \nhello_world()\n\n\n\nUse callouts to highlight important information:\n\n\n\n\n\n\nWarningImportant Note\n\n\n\nAlways test your code before publishing!\n\n\n\n\n\nCreate sophisticated layouts using Quarto’s grid system and divs.\n\n\n\n\nQuarto is a powerful tool for creating modern, professional content. We’ll explore more advanced features in future posts.\n\n\n\n\nQuarto Documentation\nQuarto Gallery"
+  },
+  {
+    "objectID": "blog/posts/covid-19-netherlands/index.html",
+    "href": "blog/posts/covid-19-netherlands/index.html",
+    "title": "Covid-19 Trends in the Netherlands",
+    "section": "",
+    "text": "Two weeks ago, I made a visualization that shows how Covid-19 cases spread in the Netherlands from the beginning of March and how grim the situation looked. However, someone pointed out the fact that the number of tests has increased significantly. It means that my plot may exaggerate the Covid-19 situation in the Netherlands. Unfortunately, I could not find testing data for each Dutch municipality. Instead, I decided to use hospitalization admissions and deceased cases to see if we can indeed see a massive spread in the second wave of Covid-19 cases in the Netherlands.\nCode\nlibrary(tidyverse)\nlibrary(CoronaWatchNL)\nlibrary(sf)\nlibrary(gganimate)\nlibrary(santoku)\nlibrary(lubridate)\nlibrary(foreign)\ntheme_set(theme_void())\ntheme_update(\n  #plot.background = element_rect(fill = '#FDF6E3',color = '#FDF6E3'),\n  text = element_text(family = 'Poppins Light'),\n  plot.subtitle = element_text(\n    family = 'Poppins Light',\n    size = 10,\n    margin = margin(b = 10)\n  ),\n  plot.title = element_text(\n    family = 'Poppins Light',\n    size = 12,\n    margin = margin(t = 10, b = 10)\n  )\n)\nI created an R package called CoronaWatchNL that allows you to access a wide range of Covid-19 datasets. I’ll use this package in this post to get Covid-19 cases, hospital admissions, and deaths for Dutch municipalities.\nCode\nmunicipalBoundaries &lt;- st_read(\n    \"https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=cbs_gemeente_2020_gegeneraliseerd&outputFormat=json\"\n  )\n\ndaily_cases_per_municpality &lt;- get_daily_cases_per_municipality()\npopulatuon_per_region &lt;- get_population_per_region()\n\ndaily_cases_per_municpality &lt;- daily_cases_per_municpality %&gt;%\n  inner_join(populatuon_per_region, by = c('Municipality_name' = 'Regions')) %&gt;%\n  mutate(\n    Date_of_publication = as_date(Date_of_publication),\n    avg_daily_total_cases = 100000 * as.numeric(Total_reported) / as.numeric(`Bevolking op 1 januari (aantal)`),\n    avg_daily_hospital_admissions = 100000 * as.numeric(Hospital_admission) / as.numeric(`Bevolking op 1 januari (aantal)`),\n    avg_daily_deceased = 100000 * as.numeric(Deceased) / as.numeric(`Bevolking op 1 januari (aantal)`)\n  )\nI compute the weekly average number of Covid-19 cases, hospitalizations, and deaths per 100,000 inhabitants in each municipality in the Netherlands. The following piece of code shows how I did this using R.\nCode\nweekly_cases &lt;- daily_cases_per_municpality %&gt;%\n  mutate(week = round_date(Date_of_publication , unit = 'week'))\n\nweekly_cases_per_municpality &lt;- weekly_cases %&gt;%\n  group_by(Municipality_name, week) %&gt;%\n  summarise(\n    avg_weekly_total_cases = mean(avg_daily_total_cases),\n    avg_weekly_hospital_admissions = mean(avg_daily_hospital_admissions),\n    avg_weekly_deceased = mean(avg_daily_deceased)) %&gt;%\n  ungroup() %&gt;%\n  mutate(\n    d_avg_weekly_total_cases = chop(avg_weekly_total_cases, c(0, 0, 0.5, 1, 5, 12, 20, 35, 55, 80, 100)),\n    d_avg_hospital_admissions = chop(\n      avg_weekly_hospital_admissions,\n      c(0, 0, 0.5, 1, 2, 3, 5, 7, 9, 10, 15)),\n    d_avg_weekly_deceased = chop(avg_weekly_deceased, c(0, 0, 0.1, 0.5, 1, 1.5, 2, 2.5, 3, 5)))\n\ndata_weekly &lt;- municipalBoundaries %&gt;%\n  right_join(weekly_cases_per_municpality,\n             by = c(statnaam = \"Municipality_name\"))\nI will create an animation that shows how Covid-19 cases spread in the Netherlands and which municipalities were and are hit hardest by the pandemic.\nCode\nmake_animation &lt;- function(data, var_name, pal, title) {\n  var_name &lt;- rlang::enquo(var_name)\n  data %&gt;%\n    #filter(week &gt; '2020-10-01') %&gt;%\n    ggplot() +\n    geom_sf(aes(fill = !!var_name), color = 'gray95') +\n    scale_fill_manual(values  = pal) +\n    coord_sf(datum = NA) +\n    labs(\n      title = title,\n      subtitle = 'Date: {current_frame}',\n      fill = 'Counts per 100,000',\n      caption = 'Source: RIVM'\n    ) +\n    transition_manual(week, cumulative = T) +\n    ease_aes(\"sine\") +\n    enter_fade(alpha = 0.5) +\n    exit_fade(alpha = 0.5)\n}"
+  },
+  {
+    "objectID": "blog/posts/covid-19-netherlands/index.html#covid-19-cases",
+    "href": "blog/posts/covid-19-netherlands/index.html#covid-19-cases",
+    "title": "Covid-19 Trends in the Netherlands",
+    "section": "Covid-19 Cases",
+    "text": "Covid-19 Cases\nThe first animation shows the number of infections in each municipality, from the start of the pandemic in February until recently. As you can see, the second wave, which began in late September, looks really terrifying. Note that there are some municipalities for which no data is available.\n\n\nCode\npal_cases &lt;- c(\n      'gray95',\n      '#fee440',\n      '#FFBA08',\n      '#FAA307',\n      '#F48C06',\n      '#E85D04',\n      '#DC2F02',\n      '#D00000',\n      '#9D0208',\n      '#6A040F',\n      '#370617',\n      '#03071e'\n    )\nmake_animation(data_weekly,d_avg_weekly_total_cases,pal_cases,'The Average Weekly Number of Covid-19 Cases\\nper 100,000 Inhabitants in the Netherlands')"
+  },
+  {
+    "objectID": "blog/posts/covid-19-netherlands/index.html#hospital-admissions",
+    "href": "blog/posts/covid-19-netherlands/index.html#hospital-admissions",
+    "title": "Covid-19 Trends in the Netherlands",
+    "section": "Hospital Admissions",
+    "text": "Hospital Admissions\nIf we look at the number of hospital admissions, we see a different story. It seems that the number of hospitalizations was higher during the first wave of Covid-19 compared to the second wave, and mostly the southern parts of the Netherlands were hit harder than the rest of the Netherlands.\n\n\nCode\npal_patients &lt;- c(\n      'gray95',\n      '#caf0f8',\n      '#ade8f4',\n      '#90e0ef',\n      '#48cae4',\n      '#00b4d8',\n      '#0096c7',\n      '#0077b6',\n      '#023e8a',\n      '#03045e',\n      '#03071e'\n)\nmake_animation(data_weekly,d_avg_hospital_admissions,pal_patients,'The Average Weekly Number of Hospital Admissions\\nper 100,000 Inhabitants in the Netherlands')"
+  },
+  {
+    "objectID": "blog/posts/covid-19-netherlands/index.html#deaths",
+    "href": "blog/posts/covid-19-netherlands/index.html#deaths",
+    "title": "Covid-19 Trends in the Netherlands",
+    "section": "Deaths",
+    "text": "Deaths\nThe trend for deceased patients looks similar to that of hospital admissions. The average number of deaths during the first wave of coronavirus was higher than the average number of deaths during the second wave.\n\n\nCode\npal_deceased &lt;- c(\n      'gray95',\n      '#fdc5f5',\n     '#e0aaff',\n      '#c77dff',\n      '#9d4edd',\n      '#7b2cbf',\n      '#5a189a',\n      '#3c096c',\n      '#240046',\n      '#10002b'\n)\nmake_animation(data_weekly,d_avg_weekly_deceased,pal_deceased,'The Average Weekly Number of Deceased Patients\\nper 100,000 Inhabitants in the Netherlands')"
+  },
+  {
+    "objectID": "blog/posts/covid-19-netherlands/index.html#conclusion",
+    "href": "blog/posts/covid-19-netherlands/index.html#conclusion",
+    "title": "Covid-19 Trends in the Netherlands",
+    "section": "Conclusion",
+    "text": "Conclusion\nThese different animations show us two distinct trends. On the one hand, we can see the number of confirmed cases rose rapidly during the second wave to affect almost all regions. On the other hand, the number of hospitalizations and deaths during the second wave slightly decreased. This might suggest that the rise in the number of cases is mainly driven by an increase in the number of tests. Alternatively, the virus might have become less deadly and severe."
+  },
+  {
     "objectID": "blog/index.html",
     "href": "blog/index.html",
     "title": "Posts",
     "section": "",
-    "text": "Welcome to my blog! Here you’ll find articles, tutorials, and insights on data science, technology, and research.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nWelcome to My Blog\n\n\n\nnews\n\nwelcome\n\n\n\nWelcome to my blog! This is where I share insights on data science, analytics, and technology.\n\n\n\nMuhammad Nakhaee\n\n\nNov 9, 2025\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with Quarto\n\n\n\nquarto\n\ntutorial\n\n\n\nLearn how to get started with Quarto for creating beautiful websites and documents.\n\n\n\nMuhammad Nakhaee\n\n\nNov 8, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my blog! Here you’ll find articles, tutorials, and insights on data science, technology, and research.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nPackage Requirements for Migrated Blog Posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My Blog\n\n\n\nnews\n\nwelcome\n\n\n\nWelcome to my blog! This is where I share insights on data science, analytics, and technology.\n\n\n\nMuhammad Nakhaee\n\n\nNov 9, 2025\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with Quarto\n\n\n\nquarto\n\ntutorial\n\n\n\nLearn how to get started with Quarto for creating beautiful websites and documents.\n\n\n\nMuhammad Nakhaee\n\n\nNov 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nCovid-19 Trends in the Netherlands\n\n\n\nR\n\ndata visualization\n\nCovid-19\n\n\n\nBased on data published by RIVM, in this post I looked at how Covid-19 cases spread throughout the Netherlands.\n\n\n\nMuhammad Chenariyan Nakhaee\n\n\nMay 22, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow Easy Is It to Understand What Donald Trump Says?\n\n\n\npolitics\n\ndata analysis\n\nNLP\n\npython\n\nR\n\n\n\nThe computational complexity of the language that Trump uses in his speeches\n\n\n\nMuhammad Chenariyan Nakhaee\n\n\nNov 3, 2020\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/projects/data-dashboard/index.html",
@@ -203,46 +546,102 @@
     "text": "Links\n\nGitHub: View Source Code\nDocumentation: Read More\n\n\nProject completed: September 2025"
   },
   {
-    "objectID": "talks/index.html",
-    "href": "talks/index.html",
-    "title": "Talks & Presentations",
+    "objectID": "projects/projects/delgosha/index.html",
+    "href": "projects/projects/delgosha/index.html",
+    "title": "{delgosha}",
     "section": "",
-    "text": "I enjoy sharing knowledge and insights with the community through talks, workshops, and presentations. Here’s a collection of my speaking engagements.\n\n\n\n\n\nConference: Tech Summit 2025\nDate: October 15, 2025\nLocation: Virtual\nAn overview of modern web development practices, including React, TypeScript, and best practices for building scalable applications.\n\n\n\n\n\n\nNoteResources\n\n\n\n\nSlides (PDF)\nVideo Recording\nCode Examples\n\n\n\n\n\n\n\nEvent: Data Science Meetup\nDate: August 22, 2025\nLocation: San Francisco, CA\nExploring techniques for creating effective data visualizations that tell compelling stories and drive insights.\nKey Topics: - Choosing the right chart type - Color theory for data viz - Interactive vs. static visualizations - Tools and libraries overview\n\n\n\n\n\n\nNoteResources\n\n\n\n\nSlides (PDF)\nDemo Code\n\n\n\n\n\n\n\nEvent: Developer Bootcamp\nDate: June 10, 2025\nLocation: Virtual\nA hands-on workshop covering RESTful API development, authentication, and deployment best practices.\nWhat Attendees Learned: - REST API fundamentals - Express.js framework - Database integration - Security best practices - Testing and deployment\n\n\n\n\n\n\nNoteResources\n\n\n\n\nWorkshop Materials\nGitHub Repository\n\n\n\n\n\n\n\n\n\n\nConference: WebDev Conference 2024\nDate: November 5, 2024\nLocation: New York, NY\nParticipated in a panel discussion about emerging trends and the future direction of web development technologies.\n\n\n\n\nEvent: Local Tech Meetup\nDate: September 18, 2024\nLocation: Seattle, WA\nA 15-minute lightning talk sharing practical tips for maintaining high code quality in fast-paced development environments.\n\n\n\n\n\nI’m available to speak on the following topics:\n\n\nWeb Development - Modern JavaScript/TypeScript - React and frontend frameworks - Performance optimization - Responsive design\n\n\nData Science - Data visualization - Python for data analysis - Machine learning basics - Statistical analysis\n\n\nBest Practices - Code quality and testing - CI/CD pipelines - Developer productivity - Technical documentation\n\n\n\n\n\n\nI’m always interested in speaking opportunities! If you’d like me to speak at your event, please reach out.\n\n\n\n\n\n\nTipContact\n\n\n\n\nEmail: speaking@example.com\nTopics: See above or suggest your own\nFormat: Talks, workshops, panels, or podcasts\n\nNote: Replace with your actual contact information.\n\n\n\n\n\n\nLooking for older presentations? Check out my GitHub repository where I archive all presentation materials, slides, and code examples."
+    "text": "{delgosha} is an R package that aims to provide a collection of ggplot2 themes specifically designed for Right-to-Left (RTL) languages, with a primary focus on Persian (Farsi). This package makes it easier for R users to create beautiful, publication-ready visualizations in Persian and other RTL languages."
   },
   {
-    "objectID": "talks/index.html#section",
-    "href": "talks/index.html#section",
-    "title": "Talks & Presentations",
+    "objectID": "projects/projects/delgosha/index.html#overview",
+    "href": "projects/projects/delgosha/index.html#overview",
+    "title": "{delgosha}",
     "section": "",
-    "text": "Conference: Tech Summit 2025\nDate: October 15, 2025\nLocation: Virtual\nAn overview of modern web development practices, including React, TypeScript, and best practices for building scalable applications.\n\n\n\n\n\n\nNoteResources\n\n\n\n\nSlides (PDF)\nVideo Recording\nCode Examples\n\n\n\n\n\n\n\nEvent: Data Science Meetup\nDate: August 22, 2025\nLocation: San Francisco, CA\nExploring techniques for creating effective data visualizations that tell compelling stories and drive insights.\nKey Topics: - Choosing the right chart type - Color theory for data viz - Interactive vs. static visualizations - Tools and libraries overview\n\n\n\n\n\n\nNoteResources\n\n\n\n\nSlides (PDF)\nDemo Code\n\n\n\n\n\n\n\nEvent: Developer Bootcamp\nDate: June 10, 2025\nLocation: Virtual\nA hands-on workshop covering RESTful API development, authentication, and deployment best practices.\nWhat Attendees Learned: - REST API fundamentals - Express.js framework - Database integration - Security best practices - Testing and deployment\n\n\n\n\n\n\nNoteResources\n\n\n\n\nWorkshop Materials\nGitHub Repository"
+    "text": "{delgosha} is an R package that aims to provide a collection of ggplot2 themes specifically designed for Right-to-Left (RTL) languages, with a primary focus on Persian (Farsi). This package makes it easier for R users to create beautiful, publication-ready visualizations in Persian and other RTL languages."
   },
   {
-    "objectID": "talks/index.html#section-1",
-    "href": "talks/index.html#section-1",
-    "title": "Talks & Presentations",
-    "section": "",
-    "text": "Conference: WebDev Conference 2024\nDate: November 5, 2024\nLocation: New York, NY\nParticipated in a panel discussion about emerging trends and the future direction of web development technologies.\n\n\n\n\nEvent: Local Tech Meetup\nDate: September 18, 2024\nLocation: Seattle, WA\nA 15-minute lightning talk sharing practical tips for maintaining high code quality in fast-paced development environments."
+    "objectID": "projects/projects/delgosha/index.html#the-challenge",
+    "href": "projects/projects/delgosha/index.html#the-challenge",
+    "title": "{delgosha}",
+    "section": "The Challenge",
+    "text": "The Challenge\nCreating data visualizations in RTL languages like Persian, Arabic, or Hebrew presents unique challenges:\n\nFont support and rendering\nText alignment and direction\nLabel positioning\nTheme compatibility with RTL text"
   },
   {
-    "objectID": "talks/index.html#speaking-topics",
-    "href": "talks/index.html#speaking-topics",
-    "title": "Talks & Presentations",
-    "section": "",
-    "text": "I’m available to speak on the following topics:\n\n\nWeb Development - Modern JavaScript/TypeScript - React and frontend frameworks - Performance optimization - Responsive design\n\n\nData Science - Data visualization - Python for data analysis - Machine learning basics - Statistical analysis\n\n\nBest Practices - Code quality and testing - CI/CD pipelines - Developer productivity - Technical documentation"
+    "objectID": "projects/projects/delgosha/index.html#solution",
+    "href": "projects/projects/delgosha/index.html#solution",
+    "title": "{delgosha}",
+    "section": "Solution",
+    "text": "Solution\n{delgosha} provides:\n\nRTL-Compatible Themes: Pre-configured ggplot2 themes optimized for RTL languages\nFont Management: Easy integration with Persian fonts\nHelper Functions: Utilities to simplify working with RTL text in ggplot2\nDocumentation: Comprehensive examples in both English and Persian"
   },
   {
-    "objectID": "talks/index.html#invite-me-to-speak",
-    "href": "talks/index.html#invite-me-to-speak",
-    "title": "Talks & Presentations",
-    "section": "",
-    "text": "I’m always interested in speaking opportunities! If you’d like me to speak at your event, please reach out.\n\n\n\n\n\n\nTipContact\n\n\n\n\nEmail: speaking@example.com\nTopics: See above or suggest your own\nFormat: Talks, workshops, panels, or podcasts\n\nNote: Replace with your actual contact information."
+    "objectID": "projects/projects/delgosha/index.html#key-features",
+    "href": "projects/projects/delgosha/index.html#key-features",
+    "title": "{delgosha}",
+    "section": "Key Features",
+    "text": "Key Features\n\n\nFor Users - Ready-to-use themes - Simple API - Persian font integration - Example gallery\n\n\nFor Developers - Clean, documented code - Extensible architecture - Unit tests - CI/CD pipeline"
   },
   {
-    "objectID": "talks/index.html#past-presentations-archive",
-    "href": "talks/index.html#past-presentations-archive",
-    "title": "Talks & Presentations",
+    "objectID": "projects/projects/delgosha/index.html#technologies-used",
+    "href": "projects/projects/delgosha/index.html#technologies-used",
+    "title": "{delgosha}",
+    "section": "Technologies Used",
+    "text": "Technologies Used\n\nR: Package development\nggplot2: Visualization framework\nroxygen2: Documentation\ntestthat: Testing framework\nGitHub Actions: Continuous integration"
+  },
+  {
+    "objectID": "projects/projects/delgosha/index.html#package-philosophy",
+    "href": "projects/projects/delgosha/index.html#package-philosophy",
+    "title": "{delgosha}",
+    "section": "Package Philosophy",
+    "text": "Package Philosophy\nThe name “delgosha” (دلگشا) means “heartwarming” or “delightful” in Persian, reflecting the package’s goal to make data visualization in Persian a delightful experience rather than a frustrating one."
+  },
+  {
+    "objectID": "projects/projects/delgosha/index.html#installation",
+    "href": "projects/projects/delgosha/index.html#installation",
+    "title": "{delgosha}",
+    "section": "Installation",
+    "text": "Installation\n# Install from GitHub\n# install.packages(\"devtools\")\ndevtools::install_github(\"mcnakhaee/delgosha\")"
+  },
+  {
+    "objectID": "projects/projects/delgosha/index.html#basic-usage",
+    "href": "projects/projects/delgosha/index.html#basic-usage",
+    "title": "{delgosha}",
+    "section": "Basic Usage",
+    "text": "Basic Usage\nlibrary(delgosha)\nlibrary(ggplot2)\n\n# Create a plot with Persian theme\nggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +\n  geom_point() +\n  theme_delgosha()"
+  },
+  {
+    "objectID": "projects/projects/delgosha/index.html#project-links",
+    "href": "projects/projects/delgosha/index.html#project-links",
+    "title": "{delgosha}",
+    "section": "Project Links",
+    "text": "Project Links\n\n\n\n\n\n\nTipAccess the Package\n\n\n\n\nGitHub Repository: github.com/mcnakhaee/delgosha\nDocumentation: Full documentation and examples available in the repository"
+  },
+  {
+    "objectID": "projects/projects/delgosha/index.html#impact",
+    "href": "projects/projects/delgosha/index.html#impact",
+    "title": "{delgosha}",
+    "section": "Impact",
+    "text": "Impact\nThis package helps: - Persian-speaking R users create better visualizations - Researchers publish work in Persian journals - Students learn data visualization in their native language - The R community become more inclusive and multilingual"
+  },
+  {
+    "objectID": "projects/projects/delgosha/index.html#what-i-learned",
+    "href": "projects/projects/delgosha/index.html#what-i-learned",
+    "title": "{delgosha}",
+    "section": "What I Learned",
+    "text": "What I Learned\nBuilding {delgosha} taught me: - R package development best practices - Working with fonts and text rendering in R - Internationalization and localization challenges - The importance of accessible tools for non-English speakers - How to build and maintain open-source software\n\nOpen source project available on GitHub"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
-    "text": "Looking for older presentations? Check out my GitHub repository where I archive all presentation materials, slides, and code examples."
+    "text": "A collection of my open-source projects, packages, and data visualization work. Each project represents a commitment to making data science more accessible and creating tools that serve the community.\n\n\nFrom R and Python packages to weekly data visualizations, explore the projects below to see how I combine technical skills with a passion for open-source software and data storytelling."
+  },
+  {
+    "objectID": "projects/index.html#featured-work",
+    "href": "projects/index.html#featured-work",
+    "title": "Projects",
+    "section": "",
+    "text": "From R and Python packages to weekly data visualizations, explore the projects below to see how I combine technical skills with a passion for open-source software and data storytelling."
   },
   {
     "objectID": "about.html",
@@ -299,5 +698,26 @@
     "title": "About",
     "section": "",
     "text": "This website is built using Quarto, a modern scientific and technical publishing system. Previously, I used the {distill} package and Hugo with the blogdown package.\n\n\n\n\n\n\nTipLet’s Connect!\n\n\n\nI’m always interested in connecting with fellow data scientists, developers, and researchers. Feel free to reach out through any of my social channels!"
+  },
+  {
+    "objectID": "gallery.html",
+    "href": "gallery.html",
+    "title": "Photography",
+    "section": "",
+    "text": "Welcome to my photography gallery. Here I share photos from my travels and everyday moments.\n\n\n\n\n\n\nNoteComing Soon\n\n\n\nThis gallery is currently being updated with new photos. Check back soon!\n\n\n\n\n\nPhotos from various destinations and adventures around the world.\n\n\n\nLocation 1 Description coming soon\n\n\n\nLocation 2 Description coming soon\n\n\n\nLocation 3 Description coming soon\n\n\n\n\n\n\nCapturing moments from daily life and urban environments.\n\n\n\n\n\n\nTipFollow on Instagram\n\n\n\nFor more photos and updates, follow me on Instagram: @mcnakhaee\n\n\n\nNote: All photos are automatically displayed with lightbox functionality. Click on any image to view it in full screen."
+  },
+  {
+    "objectID": "gallery.html#travel-photography",
+    "href": "gallery.html#travel-photography",
+    "title": "Photography",
+    "section": "",
+    "text": "Photos from various destinations and adventures around the world.\n\n\n\nLocation 1 Description coming soon\n\n\n\nLocation 2 Description coming soon\n\n\n\nLocation 3 Description coming soon"
+  },
+  {
+    "objectID": "gallery.html#street-photography",
+    "href": "gallery.html#street-photography",
+    "title": "Photography",
+    "section": "",
+    "text": "Capturing moments from daily life and urban environments.\n\n\n\n\n\n\nTipFollow on Instagram\n\n\n\nFor more photos and updates, follow me on Instagram: @mcnakhaee\n\n\n\nNote: All photos are automatically displayed with lightbox functionality. Click on any image to view it in full screen."
   }
 ]

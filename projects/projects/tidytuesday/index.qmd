@@ -1,0 +1,85 @@
+---
+title: "TidyTuesday"
+date: "2024-01-01"
+categories: [R, data visualization, ggplot2]
+description: "My submissions for the weekly TidyTuesday Project created using R and ggplot2"
+image: "tidytuesday.png"
+---
+
+## Overview
+
+TidyTuesday is a weekly data project aimed at the R ecosystem. Every week, a new dataset is posted, and participants create visualizations and share their work on social media. This repository contains my submissions for the weekly TidyTuesday Project, created using R and ggplot2.
+
+## About TidyTuesday
+
+The TidyTuesday project is:
+
+- A safe and supportive forum for individuals to practice their data wrangling and visualization skills
+- A weekly social data project that focuses on understanding data
+- An opportunity to work with real-world datasets and create compelling visualizations
+
+## Key Features
+
+- **Weekly Visualizations**: Regular contributions exploring diverse datasets
+- **R & ggplot2**: All visualizations created using R's powerful ggplot2 package
+- **Data Storytelling**: Each visualization tells a unique story about the data
+- **Reproducible Code**: All code is available for learning and reproduction
+
+## Technologies Used
+
+::: {.grid}
+
+::: {.g-col-6}
+**Languages & Tools**
+- R
+- ggplot2
+- tidyverse
+- RStudio
+:::
+
+::: {.g-col-6}
+**Skills Demonstrated**
+- Data wrangling
+- Statistical visualization
+- Design principles
+- Data storytelling
+:::
+
+:::
+
+## Sample Visualizations
+
+My TidyTuesday submissions cover a wide range of topics and datasets, including:
+
+- Economic trends and indicators
+- Social and demographic data
+- Sports statistics
+- Environmental data
+- Cultural and entertainment data
+
+Each visualization is crafted to:
+- Clearly communicate insights from the data
+- Follow best practices in data visualization
+- Use effective color schemes and typography
+- Be accessible and easy to understand
+
+## Project Links
+
+::: {.callout-tip}
+## View My Work
+- **GitHub Repository**: [github.com/mcnakhaee/Tidy-Tuesday](https://github.com/mcnakhaee/Tidy-Tuesday)
+- Explore my weekly submissions and see how different datasets can be visualized
+:::
+
+## What I Learned
+
+Participating in TidyTuesday has helped me:
+- Develop stronger data visualization skills
+- Learn to work with diverse datasets quickly
+- Understand design principles for effective communication
+- Build a portfolio of data visualization work
+- Engage with the R community
+
+---
+
+*Ongoing project with weekly contributions*

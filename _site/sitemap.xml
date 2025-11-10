@@ -1,28 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mcnakhaee.com/gallery.html</loc>
-    <lastmod>2025-11-09T20:55:09.000Z</lastmod>
-  </url>
-  <url>
     <loc>https://mcnakhaee.com/index.html</loc>
     <lastmod>2025-11-09T22:19:53.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/projects/index.html</loc>
-    <lastmod>2025-11-09T20:39:52.000Z</lastmod>
+    <loc>https://mcnakhaee.com/DEPLOYMENT.html</loc>
+    <lastmod>2025-11-10T17:24:19.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/talks/index.html</loc>
+    <lastmod>2025-11-09T20:39:53.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/projects/projects/palmerpenguins/index.html</loc>
+    <lastmod>2025-11-10T18:42:34.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/projects/projects/tidytuesday/index.html</loc>
+    <lastmod>2025-11-10T18:37:38.000Z</lastmod>
   </url>
   <url>
     <loc>https://mcnakhaee.com/projects/projects/web-app/index.html</loc>
     <lastmod>2025-11-09T20:39:52.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/blog/posts/quarto-intro/index.html</loc>
-    <lastmod>2025-11-10T17:24:28.000Z</lastmod>
+    <loc>https://mcnakhaee.com/blog/posts/PACKAGE_REQUIREMENTS.html</loc>
+    <lastmod>2025-11-10T18:37:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/blog/posts/trump-speech-readability/index.html</loc>
+    <lastmod>2025-11-10T17:53:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://mcnakhaee.com/blog/posts/welcome/index.html</loc>
     <lastmod>2025-11-10T17:24:26.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/blog/posts/quarto-intro/index.html</loc>
+    <lastmod>2025-11-10T17:24:28.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/blog/posts/covid-19-netherlands/index.html</loc>
+    <lastmod>2025-11-10T17:53:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://mcnakhaee.com/blog/index.html</loc>
@@ -33,11 +53,19 @@
     <lastmod>2025-11-09T20:39:52.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/talks/index.html</loc>
-    <lastmod>2025-11-09T20:39:53.000Z</lastmod>
+    <loc>https://mcnakhaee.com/projects/projects/delgosha/index.html</loc>
+    <lastmod>2025-11-10T18:37:38.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/projects/index.html</loc>
+    <lastmod>2025-11-10T18:42:34.000Z</lastmod>
   </url>
   <url>
     <loc>https://mcnakhaee.com/about.html</loc>
+    <lastmod>2025-11-09T20:55:09.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/gallery.html</loc>
     <lastmod>2025-11-09T20:55:09.000Z</lastmod>
   </url>
 </urlset>
