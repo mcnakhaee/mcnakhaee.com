@@ -1,0 +1,13 @@
+# Netlify Deployment Configuration for Quarto
+
+[build]
+  command = "quarto render"
+  publish = "_site"
+
+[build.environment]
+  QUARTO_VERSION = "1.4.0"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

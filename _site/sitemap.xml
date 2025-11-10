@@ -1,63 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
-  <url>
-    <loc>https://mcnakhaee.com/about.html</loc>
-    <lastmod>2024-09-24T23:27:10+02:00</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/data.html</loc>
-    <lastmod>2024-10-11T00:10:14+02:00</lastmod>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mcnakhaee.com/gallery.html</loc>
-    <lastmod>2024-10-13T11:00:54+02:00</lastmod>
+    <lastmod>2025-11-09T20:55:09.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/</loc>
-    <lastmod>2024-10-13T00:11:59+02:00</lastmod>
+    <loc>https://mcnakhaee.com/index.html</loc>
+    <lastmod>2025-11-09T22:19:53.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/photography.html</loc>
-    <lastmod>2024-10-11T00:10:09+02:00</lastmod>
+    <loc>https://mcnakhaee.com/projects/index.html</loc>
+    <lastmod>2025-11-09T20:39:52.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/posts.html</loc>
-    <lastmod>2024-10-11T18:17:52+02:00</lastmod>
+    <loc>https://mcnakhaee.com/projects/projects/web-app/index.html</loc>
+    <lastmod>2025-11-09T20:39:52.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/projects.html</loc>
-    <lastmod>2024-09-24T23:27:11+02:00</lastmod>
+    <loc>https://mcnakhaee.com/blog/posts/quarto-intro/index.html</loc>
+    <lastmod>2025-11-09T22:24:13.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/posts/2021-05-22-contextual-importance-and-contextual-utility/</loc>
-    <lastmod>2024-09-24T23:27:02+02:00</lastmod>
+    <loc>https://mcnakhaee.com/blog/posts/welcome/index.html</loc>
+    <lastmod>2025-11-09T22:24:11.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/posts/2021-05-22-covid-in-nl/</loc>
-    <lastmod>2024-09-24T23:27:03+02:00</lastmod>
+    <loc>https://mcnakhaee.com/blog/index.html</loc>
+    <lastmod>2025-11-09T22:29:37.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/posts/2021-05-22-how-easy-is-it-to-understand-what-donald-trump-says/</loc>
-    <lastmod>2024-09-24T23:27:03+02:00</lastmod>
+    <loc>https://mcnakhaee.com/projects/projects/data-dashboard/index.html</loc>
+    <lastmod>2025-11-09T20:39:52.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/posts/2020-10-15-which-presidential-debate-was-more-chaotic/</loc>
-    <lastmod>2024-09-24T23:27:01+02:00</lastmod>
+    <loc>https://mcnakhaee.com/talks/index.html</loc>
+    <lastmod>2025-11-09T20:39:53.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/posts/2020-05-04-persiansongs/</loc>
-    <lastmod>2024-09-24T23:26:56+02:00</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/posts/2020-03-08-analyzing-the-2020-democratic-presidential-debates-part-2/</loc>
-    <lastmod>2024-09-24T23:26:55+02:00</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/posts/2020-02-01-spoitfymaps/</loc>
-    <lastmod>2024-09-24T23:26:50+02:00</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/posts/2019-12-31-explainable-data-science-summer-school/</loc>
-    <lastmod>2024-09-24T23:26:50+02:00</lastmod>
+    <loc>https://mcnakhaee.com/about.html</loc>
+    <lastmod>2025-11-09T20:55:09.000Z</lastmod>
   </url>
 </urlset>

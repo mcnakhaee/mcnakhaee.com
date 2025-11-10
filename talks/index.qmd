@@ -1,0 +1,144 @@
+---
+title: "Talks & Presentations"
+page-layout: full
+---
+
+# Talks & Presentations
+
+I enjoy sharing knowledge and insights with the community through talks, workshops, and presentations. Here's a collection of my speaking engagements.
+
+---
+
+## 2025
+
+### {{< fa solid microphone >}} Introduction to Modern Web Development
+**Conference:** Tech Summit 2025  
+**Date:** October 15, 2025  
+**Location:** Virtual
+
+An overview of modern web development practices, including React, TypeScript, and best practices for building scalable applications.
+
+::: {.callout-note}
+## Resources
+- [Slides](#) (PDF)
+- [Video Recording](#)
+- [Code Examples](#)
+:::
+
+---
+
+### {{< fa solid presentation-screen >}} Data Visualization Best Practices
+**Event:** Data Science Meetup  
+**Date:** August 22, 2025  
+**Location:** San Francisco, CA
+
+Exploring techniques for creating effective data visualizations that tell compelling stories and drive insights.
+
+**Key Topics:**
+- Choosing the right chart type
+- Color theory for data viz
+- Interactive vs. static visualizations
+- Tools and libraries overview
+
+::: {.callout-note}
+## Resources
+- [Slides](#) (PDF)
+- [Demo Code](#)
+:::
+
+---
+
+### {{< fa solid chalkboard-user >}} Workshop: Building APIs with Node.js
+**Event:** Developer Bootcamp  
+**Date:** June 10, 2025  
+**Location:** Virtual
+
+A hands-on workshop covering RESTful API development, authentication, and deployment best practices.
+
+**What Attendees Learned:**
+- REST API fundamentals
+- Express.js framework
+- Database integration
+- Security best practices
+- Testing and deployment
+
+::: {.callout-note}
+## Resources
+- [Workshop Materials](#)
+- [GitHub Repository](#)
+:::
+
+---
+
+## 2024
+
+### {{< fa solid comments >}} Panel Discussion: The Future of Web Development
+**Conference:** WebDev Conference 2024  
+**Date:** November 5, 2024  
+**Location:** New York, NY
+
+Participated in a panel discussion about emerging trends and the future direction of web development technologies.
+
+---
+
+### {{< fa solid laptop-code >}} Lightning Talk: Quick Tips for Code Quality
+**Event:** Local Tech Meetup  
+**Date:** September 18, 2024  
+**Location:** Seattle, WA
+
+A 15-minute lightning talk sharing practical tips for maintaining high code quality in fast-paced development environments.
+
+---
+
+## Speaking Topics
+
+I'm available to speak on the following topics:
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+**Web Development**
+- Modern JavaScript/TypeScript
+- React and frontend frameworks
+- Performance optimization
+- Responsive design
+:::
+
+::: {.g-col-12 .g-col-md-4}
+**Data Science**
+- Data visualization
+- Python for data analysis
+- Machine learning basics
+- Statistical analysis
+:::
+
+::: {.g-col-12 .g-col-md-4}
+**Best Practices**
+- Code quality and testing
+- CI/CD pipelines
+- Developer productivity
+- Technical documentation
+:::
+
+:::
+
+---
+
+## Invite Me to Speak
+
+I'm always interested in speaking opportunities! If you'd like me to speak at your event, please reach out.
+
+::: {.callout-tip}
+## Contact
+- **Email:** speaking@example.com
+- **Topics:** See above or suggest your own
+- **Format:** Talks, workshops, panels, or podcasts
+
+*Note: Replace with your actual contact information.*
+:::
+
+---
+
+## Past Presentations Archive
+
+Looking for older presentations? Check out my [GitHub repository](#) where I archive all presentation materials, slides, and code examples.
