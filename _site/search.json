@@ -119,6 +119,20 @@
     "text": "Looking for older presentations? Check out my GitHub repository where I archive all presentation materials, slides, and code examples."
   },
   {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "A collection of my open-source projects, packages, and data visualization work. Each project represents a commitment to making data science more accessible and creating tools that serve the community.\n\n\nFrom R and Python packages to weekly data visualizations, explore the projects below to see how I combine technical skills with a passion for open-source software and data storytelling."
+  },
+  {
+    "objectID": "projects/index.html#featured-work",
+    "href": "projects/index.html#featured-work",
+    "title": "Projects",
+    "section": "",
+    "text": "From R and Python packages to weekly data visualizations, explore the projects below to see how I combine technical skills with a passion for open-source software and data storytelling."
+  },
+  {
     "objectID": "projects/projects/palmerpenguins/index.html",
     "href": "projects/projects/palmerpenguins/index.html",
     "title": "{palmerpenguins}",
@@ -420,34 +434,6 @@
     "text": "Conclusion\nWe can consistently see that Trump’s speeches are less sophisticated and less complex than the speeches given by the rest of the politicians. We can attribute this to his lack of sophistication in terms of language, the fact that he knows how to speak to his audience, or both. Also, we can notice that Mike Pence and Barack Obama seem to use more advanced language in their speeches."
   },
   {
-    "objectID": "blog/posts/welcome/index.html",
-    "href": "blog/posts/welcome/index.html",
-    "title": "Welcome to My Blog",
-    "section": "",
-    "text": "I’m excited to launch this blog. This space will be dedicated to sharing insights, tutorials, and updates about data science, analytics, and technology projects.\n\n\nIn the coming weeks and months, you can expect:\n\nTechnical Tutorials: Step-by-step guides on various technologies\nProject Updates: News about what we’re working on\nIndustry Insights: Our thoughts on trends and developments\nCommunity Highlights: Showcasing contributions from our community\n\n\n\n\nMake sure to check back regularly for new content. We’re committed to providing valuable information and fostering a community of learners and creators.\n\n\n\n\n\n\nTipSubscribe to Updates\n\n\n\nDon’t miss a post! Follow us on social media to get notified when we publish new content.\n\n\nThank you for joining us on this journey!"
-  },
-  {
-    "objectID": "blog/posts/welcome/index.html#welcome",
-    "href": "blog/posts/welcome/index.html#welcome",
-    "title": "Welcome to My Blog",
-    "section": "",
-    "text": "I’m excited to launch this blog. This space will be dedicated to sharing insights, tutorials, and updates about data science, analytics, and technology projects.\n\n\nIn the coming weeks and months, you can expect:\n\nTechnical Tutorials: Step-by-step guides on various technologies\nProject Updates: News about what we’re working on\nIndustry Insights: Our thoughts on trends and developments\nCommunity Highlights: Showcasing contributions from our community\n\n\n\n\nMake sure to check back regularly for new content. We’re committed to providing valuable information and fostering a community of learners and creators.\n\n\n\n\n\n\nTipSubscribe to Updates\n\n\n\nDon’t miss a post! Follow us on social media to get notified when we publish new content.\n\n\nThank you for joining us on this journey!"
-  },
-  {
-    "objectID": "blog/posts/quarto-intro/index.html",
-    "href": "blog/posts/quarto-intro/index.html",
-    "title": "Getting Started with Quarto",
-    "section": "",
-    "text": "Quarto is an amazing tool for creating scientific and technical documents, websites, and presentations. In this post, we’ll explore some of its key features.\n\n\nQuarto offers several advantages:\n\nMulti-Format Output: Create HTML, PDF, Word documents, and more from a single source\nBeautiful Defaults: Modern, professional-looking output out of the box\nCode Integration: Seamlessly integrate code from Python, R, Julia, and other languages\nMarkdown-Based: Simple, readable syntax that’s easy to learn\n\n\n\n\nTo create a new Quarto project, simply install Quarto and run:\nquarto create project website mysite\n\n\n\n\n\nQuarto supports syntax highlighting for many languages:\ndef hello_world():\n    print(\"Hello from Quarto!\")\n    \nhello_world()\n\n\n\nUse callouts to highlight important information:\n\n\n\n\n\n\nWarningImportant Note\n\n\n\nAlways test your code before publishing!\n\n\n\n\n\nCreate sophisticated layouts using Quarto’s grid system and divs.\n\n\n\n\nQuarto is a powerful tool for creating modern, professional content. We’ll explore more advanced features in future posts.\n\n\n\n\nQuarto Documentation\nQuarto Gallery"
-  },
-  {
-    "objectID": "blog/posts/quarto-intro/index.html#introduction-to-quarto",
-    "href": "blog/posts/quarto-intro/index.html#introduction-to-quarto",
-    "title": "Getting Started with Quarto",
-    "section": "",
-    "text": "Quarto is an amazing tool for creating scientific and technical documents, websites, and presentations. In this post, we’ll explore some of its key features.\n\n\nQuarto offers several advantages:\n\nMulti-Format Output: Create HTML, PDF, Word documents, and more from a single source\nBeautiful Defaults: Modern, professional-looking output out of the box\nCode Integration: Seamlessly integrate code from Python, R, Julia, and other languages\nMarkdown-Based: Simple, readable syntax that’s easy to learn\n\n\n\n\nTo create a new Quarto project, simply install Quarto and run:\nquarto create project website mysite\n\n\n\n\n\nQuarto supports syntax highlighting for many languages:\ndef hello_world():\n    print(\"Hello from Quarto!\")\n    \nhello_world()\n\n\n\nUse callouts to highlight important information:\n\n\n\n\n\n\nWarningImportant Note\n\n\n\nAlways test your code before publishing!\n\n\n\n\n\nCreate sophisticated layouts using Quarto’s grid system and divs.\n\n\n\n\nQuarto is a powerful tool for creating modern, professional content. We’ll explore more advanced features in future posts.\n\n\n\n\nQuarto Documentation\nQuarto Gallery"
-  },
-  {
     "objectID": "blog/posts/covid-19-netherlands/index.html",
     "href": "blog/posts/covid-19-netherlands/index.html",
     "title": "Covid-19 Trends in the Netherlands",
@@ -487,7 +473,7 @@
     "href": "blog/index.html",
     "title": "Posts",
     "section": "",
-    "text": "Welcome to my blog! Here you’ll find articles, tutorials, and insights on data science, technology, and research.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nPackage Requirements for Migrated Blog Posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My Blog\n\n\n\nnews\n\nwelcome\n\n\n\nWelcome to my blog! This is where I share insights on data science, analytics, and technology.\n\n\n\nMuhammad Nakhaee\n\n\nNov 9, 2025\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with Quarto\n\n\n\nquarto\n\ntutorial\n\n\n\nLearn how to get started with Quarto for creating beautiful websites and documents.\n\n\n\nMuhammad Nakhaee\n\n\nNov 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nCovid-19 Trends in the Netherlands\n\n\n\nR\n\ndata visualization\n\nCovid-19\n\n\n\nBased on data published by RIVM, in this post I looked at how Covid-19 cases spread throughout the Netherlands.\n\n\n\nMuhammad Chenariyan Nakhaee\n\n\nMay 22, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow Easy Is It to Understand What Donald Trump Says?\n\n\n\npolitics\n\ndata analysis\n\nNLP\n\npython\n\nR\n\n\n\nThe computational complexity of the language that Trump uses in his speeches\n\n\n\nMuhammad Chenariyan Nakhaee\n\n\nNov 3, 2020\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my blog! Here you’ll find articles, tutorials, and insights on data science, technology, and research.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nPackage Requirements for Migrated Blog Posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCovid-19 Trends in the Netherlands\n\n\n\nR\n\ndata visualization\n\nCovid-19\n\n\n\nBased on data published by RIVM, in this post I looked at how Covid-19 cases spread throughout the Netherlands.\n\n\n\nMuhammad Chenariyan Nakhaee\n\n\nMay 22, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow Easy Is It to Understand What Donald Trump Says?\n\n\n\npolitics\n\ndata analysis\n\nNLP\n\npython\n\nR\n\n\n\nThe computational complexity of the language that Trump uses in his speeches\n\n\n\nMuhammad Chenariyan Nakhaee\n\n\nNov 3, 2020\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/projects/data-dashboard/index.html",
@@ -630,18 +616,81 @@
     "text": "What I Learned\nBuilding {delgosha} taught me: - R package development best practices - Working with fonts and text rendering in R - Internationalization and localization challenges - The importance of accessible tools for non-English speakers - How to build and maintain open-source software\n\nOpen source project available on GitHub"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
+    "objectID": "projects/projects/IMAGES_README.html",
+    "href": "projects/projects/IMAGES_README.html",
+    "title": "Project Images",
     "section": "",
-    "text": "A collection of my open-source projects, packages, and data visualization work. Each project represents a commitment to making data science more accessible and creating tools that serve the community.\n\n\nFrom R and Python packages to weekly data visualizations, explore the projects below to see how I combine technical skills with a passion for open-source software and data storytelling."
+    "text": "This directory should contain the following images for the project cards:\n\n\n\ntidytuesday.png - TidyTuesday project thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nShould show a sample TidyTuesday visualization\n\ndelgosha.png - Delgosha R package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show Persian text visualization or package logo\n\npalmer.png - Palmer Penguins package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show penguin illustrations or sample visualization\n\n\n\n\n\n\nImages are referenced in the respective project index.qmd files\nIf images are missing, Quarto will still render but show placeholder or no image\nYou can copy these images from your old Distill blog’s imgs/ directory\nSupported formats: PNG, JPG, SVG\n\n\n\n\n\nTidyTuesday: projects/projects/tidytuesday/tidytuesday.png\nDelgosha: projects/projects/delgosha/delgosha.png\nPalmer Penguins: projects/projects/palmerpenguins/palmer.png"
   },
   {
-    "objectID": "projects/index.html#featured-work",
-    "href": "projects/index.html#featured-work",
-    "title": "Projects",
+    "objectID": "projects/projects/IMAGES_README.html#required-images",
+    "href": "projects/projects/IMAGES_README.html#required-images",
+    "title": "Project Images",
     "section": "",
-    "text": "From R and Python packages to weekly data visualizations, explore the projects below to see how I combine technical skills with a passion for open-source software and data storytelling."
+    "text": "tidytuesday.png - TidyTuesday project thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nShould show a sample TidyTuesday visualization\n\ndelgosha.png - Delgosha R package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show Persian text visualization or package logo\n\npalmer.png - Palmer Penguins package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show penguin illustrations or sample visualization"
+  },
+  {
+    "objectID": "projects/projects/IMAGES_README.html#notes",
+    "href": "projects/projects/IMAGES_README.html#notes",
+    "title": "Project Images",
+    "section": "",
+    "text": "Images are referenced in the respective project index.qmd files\nIf images are missing, Quarto will still render but show placeholder or no image\nYou can copy these images from your old Distill blog’s imgs/ directory\nSupported formats: PNG, JPG, SVG"
+  },
+  {
+    "objectID": "projects/projects/IMAGES_README.html#image-locations",
+    "href": "projects/projects/IMAGES_README.html#image-locations",
+    "title": "Project Images",
+    "section": "",
+    "text": "TidyTuesday: projects/projects/tidytuesday/tidytuesday.png\nDelgosha: projects/projects/delgosha/delgosha.png\nPalmer Penguins: projects/projects/palmerpenguins/palmer.png"
+  },
+  {
+    "objectID": "projects/MIGRATION_SUMMARY.html",
+    "href": "projects/MIGRATION_SUMMARY.html",
+    "title": "Projects Migration Summary",
+    "section": "",
+    "text": "I’ve successfully migrated your three projects from your Distill blog to the Quarto website. Here are the new project pages:\n\n\n\nLocation: projects/projects/tidytuesday/index.qmd\nDescription: Your weekly TidyTuesday submissions created using R and ggplot2\nCategories: R, data visualization, ggplot2\nGitHub: github.com/mcnakhaee/Tidy-Tuesday\n\n\n\n\n\nLocation: projects/projects/delgosha/index.qmd\nDescription: An R package providing ggplot2 themes for RTL languages (Persian)\nCategories: R, package development, RTL languages, Persian\nGitHub: github.com/mcnakhaee/delgosha\n\n\n\n\n\nLocation: projects/projects/palmerpenguins/index.qmd\nDescription: A Python package for loading the Palmer Penguins dataset\nCategories: Python, package development, data science, datasets\nGitHub: github.com/mcnakhaee/palmerpenguin\n\n\n\n\n\nYou need to copy three images from your old Distill blog to the new locations:\n\n\n\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\tidtuesday.png\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\delgosha.png\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\palmer.png\n\n\n\n\n\nCopy tidtuesday.png → projects\\projects\\tidytuesday\\tidytuesday.png\nCopy delgosha.png → projects\\projects\\delgosha\\delgosha.png\nCopy palmer.png → projects\\projects\\palmerpenguins\\palmer.png\n\n\n\n\n\nEach project page includes: - Comprehensive overview and description - Key features and technologies used - Installation and usage instructions (where applicable) - Links to GitHub repositories - What you learned from each project - Proper categorization for filtering\n\n\n\nThe main projects page (projects/index.qmd) now has: - Updated description focusing on open-source and data visualization work - Grid layout showing all 5 projects (2 original + 3 new) - Category filtering - Responsive design\n\n\n\nTo add more projects in the future: 1. Create a new folder in projects/projects/ 2. Add an index.qmd file with the project details 3. Add a project image 4. The project will automatically appear on the main projects page\n\n\n\n✅ All project pages created and rendering successfully ✅ Main projects page updated ✅ Site builds without errors ✅ Preview server running ⚠️ Project images need to be copied from old blog (see above)\nOnce you copy the images, the projects page will be complete!"
+  },
+  {
+    "objectID": "projects/MIGRATION_SUMMARY.html#projects-successfully-added",
+    "href": "projects/MIGRATION_SUMMARY.html#projects-successfully-added",
+    "title": "Projects Migration Summary",
+    "section": "",
+    "text": "I’ve successfully migrated your three projects from your Distill blog to the Quarto website. Here are the new project pages:\n\n\n\nLocation: projects/projects/tidytuesday/index.qmd\nDescription: Your weekly TidyTuesday submissions created using R and ggplot2\nCategories: R, data visualization, ggplot2\nGitHub: github.com/mcnakhaee/Tidy-Tuesday\n\n\n\n\n\nLocation: projects/projects/delgosha/index.qmd\nDescription: An R package providing ggplot2 themes for RTL languages (Persian)\nCategories: R, package development, RTL languages, Persian\nGitHub: github.com/mcnakhaee/delgosha\n\n\n\n\n\nLocation: projects/projects/palmerpenguins/index.qmd\nDescription: A Python package for loading the Palmer Penguins dataset\nCategories: Python, package development, data science, datasets\nGitHub: github.com/mcnakhaee/palmerpenguin"
+  },
+  {
+    "objectID": "projects/MIGRATION_SUMMARY.html#next-step-add-project-images",
+    "href": "projects/MIGRATION_SUMMARY.html#next-step-add-project-images",
+    "title": "Projects Migration Summary",
+    "section": "",
+    "text": "You need to copy three images from your old Distill blog to the new locations:\n\n\n\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\tidtuesday.png\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\delgosha.png\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\palmer.png\n\n\n\n\n\nCopy tidtuesday.png → projects\\projects\\tidytuesday\\tidytuesday.png\nCopy delgosha.png → projects\\projects\\delgosha\\delgosha.png\nCopy palmer.png → projects\\projects\\palmerpenguins\\palmer.png"
+  },
+  {
+    "objectID": "projects/MIGRATION_SUMMARY.html#what-was-created",
+    "href": "projects/MIGRATION_SUMMARY.html#what-was-created",
+    "title": "Projects Migration Summary",
+    "section": "",
+    "text": "Each project page includes: - Comprehensive overview and description - Key features and technologies used - Installation and usage instructions (where applicable) - Links to GitHub repositories - What you learned from each project - Proper categorization for filtering"
+  },
+  {
+    "objectID": "projects/MIGRATION_SUMMARY.html#updated-main-projects-page",
+    "href": "projects/MIGRATION_SUMMARY.html#updated-main-projects-page",
+    "title": "Projects Migration Summary",
+    "section": "",
+    "text": "The main projects page (projects/index.qmd) now has: - Updated description focusing on open-source and data visualization work - Grid layout showing all 5 projects (2 original + 3 new) - Category filtering - Responsive design"
+  },
+  {
+    "objectID": "projects/MIGRATION_SUMMARY.html#how-to-add-more-projects",
+    "href": "projects/MIGRATION_SUMMARY.html#how-to-add-more-projects",
+    "title": "Projects Migration Summary",
+    "section": "",
+    "text": "To add more projects in the future: 1. Create a new folder in projects/projects/ 2. Add an index.qmd file with the project details 3. Add a project image 4. The project will automatically appear on the main projects page"
+  },
+  {
+    "objectID": "projects/MIGRATION_SUMMARY.html#current-status",
+    "href": "projects/MIGRATION_SUMMARY.html#current-status",
+    "title": "Projects Migration Summary",
+    "section": "",
+    "text": "✅ All project pages created and rendering successfully ✅ Main projects page updated ✅ Site builds without errors ✅ Preview server running ⚠️ Project images need to be copied from old blog (see above)\nOnce you copy the images, the projects page will be complete!"
   },
   {
     "objectID": "about.html",
@@ -719,5 +768,33 @@
     "title": "Photography",
     "section": "",
     "text": "Capturing moments from daily life and urban environments.\n\n\n\n\n\n\nTipFollow on Instagram\n\n\n\nFor more photos and updates, follow me on Instagram: @mcnakhaee\n\n\n\nNote: All photos are automatically displayed with lightbox functionality. Click on any image to view it in full screen."
+  },
+  {
+    "objectID": "projects/IMAGES_README.html",
+    "href": "projects/IMAGES_README.html",
+    "title": "Project Images",
+    "section": "",
+    "text": "This directory should contain the following images for the project cards:\n\n\n\ntidytuesday.png - TidyTuesday project thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nShould show a sample TidyTuesday visualization\n\ndelgosha.png - Delgosha R package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show Persian text visualization or package logo\n\npalmer.png - Palmer Penguins package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show penguin illustrations or sample visualization\n\n\n\n\n\n\nImages are referenced in the respective project index.qmd files\nIf images are missing, Quarto will still render but show placeholder or no image\nYou can copy these images from your old Distill blog’s imgs/ directory\nSupported formats: PNG, JPG, SVG\n\n\n\n\n\nTidyTuesday: projects/projects/tidytuesday/tidytuesday.png\nDelgosha: projects/projects/delgosha/delgosha.png\nPalmer Penguins: projects/projects/palmerpenguins/palmer.png"
+  },
+  {
+    "objectID": "projects/IMAGES_README.html#required-images",
+    "href": "projects/IMAGES_README.html#required-images",
+    "title": "Project Images",
+    "section": "",
+    "text": "tidytuesday.png - TidyTuesday project thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nShould show a sample TidyTuesday visualization\n\ndelgosha.png - Delgosha R package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show Persian text visualization or package logo\n\npalmer.png - Palmer Penguins package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show penguin illustrations or sample visualization"
+  },
+  {
+    "objectID": "projects/IMAGES_README.html#notes",
+    "href": "projects/IMAGES_README.html#notes",
+    "title": "Project Images",
+    "section": "",
+    "text": "Images are referenced in the respective project index.qmd files\nIf images are missing, Quarto will still render but show placeholder or no image\nYou can copy these images from your old Distill blog’s imgs/ directory\nSupported formats: PNG, JPG, SVG"
+  },
+  {
+    "objectID": "projects/IMAGES_README.html#image-locations",
+    "href": "projects/IMAGES_README.html#image-locations",
+    "title": "Project Images",
+    "section": "",
+    "text": "TidyTuesday: projects/projects/tidytuesday/tidytuesday.png\nDelgosha: projects/projects/delgosha/delgosha.png\nPalmer Penguins: projects/projects/palmerpenguins/palmer.png"
   }
 ]

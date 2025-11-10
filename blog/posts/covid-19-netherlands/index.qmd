@@ -19,8 +19,9 @@ knitr::opts_chunk$set(
 	warning = FALSE,
 	eval = FALSE
 )
-windowsFonts('Lobster' = 'Lobster')
-windowsFonts('Poppins Light' = 'Poppins Light')
+# Font configuration - uncomment if fonts are installed
+# windowsFonts('Lobster' = 'Lobster')
+# windowsFonts('Poppins Light' = 'Poppins Light')
 ```
 
 Two weeks ago, I made [a visualization](https://www.linkedin.com/posts/muhammadcnakhaee_covid19-datavisualization-ggplot-activity-6726775611223764992-c_dk) that shows how Covid-19 cases spread in the Netherlands from the beginning of March and how grim the situation looked. However, someone pointed out the fact that the number of tests has increased significantly. It means that my plot may exaggerate the Covid-19 situation in the Netherlands. Unfortunately, I could not find testing data for each Dutch municipality. Instead, I decided to use hospitalization admissions and deceased cases to see if we can indeed see a massive spread in the second wave of Covid-19 cases in the Netherlands.
