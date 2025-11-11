@@ -8,7 +8,7 @@ website:
   favicon: favicon.png
   site-url: https://mcnakhaee.com
   repo-url: https://github.com/mcnakhaee
-  google-analytics: "G-XXXXXXXXXX"  # Replace with your Google Analytics ID
+  google-analytics: "UA-103723417-2"  # Replace with your Google Analytics ID
   open-graph: true
   twitter-card: true
   navbar:
