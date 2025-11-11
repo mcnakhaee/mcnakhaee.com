@@ -1,5 +1,61 @@
 [
   {
+    "objectID": "SEO_SETUP_GUIDE.html",
+    "href": "SEO_SETUP_GUIDE.html",
+    "title": "Google Search Engine Optimization (SEO) Setup Guide",
+    "section": "",
+    "text": "Your Quarto website is now configured for better search engine indexing:\n\n\n\nQuarto automatically generates sitemap.xml at https://mcnakhaee.com/sitemap.xml\nThis helps Google discover all your pages\n\n\n\n\n\nCreated robots.txt file that tells search engines they can crawl your site\nPoints to your sitemap\n\n\n\n\n\nAdded description, keywords, and Open Graph tags\nEnabled Twitter Card support\nAdded structured metadata to homepage\n\n\n\n\n\nBlog RSS feed available at https://mcnakhaee.com/blog/index.xml\n\n\n\n\n\n\n\n\nGo to Google Search Console\nClick “Start Now” and sign in with your Google account\nClick “Add Property”\nEnter your domain: mcnakhaee.com\n\n\n\n\nChoose one of these verification methods:\n\n\n\nGoogle will give you an HTML file to download (e.g., google1234567890abcdef.html)\nPlace this file in the root of your website directory\nRender your site: quarto render\nCommit and push to GitHub\nWait for Netlify to deploy\nClick “Verify” in Google Search Console\n\n\n\n\n\nGoogle will give you a meta tag like: &lt;meta name=\"google-site-verification\" content=\"abc123...\" /&gt;\nAdd this to your index.qmd frontmatter:\n---\ntitle: \"Muhammad Nakhaee\"\ngoogle-site-verification: \"abc123...\"\n---\nRender, commit, push, and verify\n\n\n\n\n\n\nOnce verified, in Google Search Console, go to “Sitemaps”\nEnter: sitemap.xml\nClick “Submit”\n\n\n\n\n\nGo to Google Analytics\nCreate a new property for your website\nGet your Measurement ID (format: G-XXXXXXXXXX)\nUpdate _quarto.yml with your real ID:\ngoogle-analytics: \"G-YOUR-ACTUAL-ID\"\nRender, commit, and push\n\n\n\n\n\n\n\n\nDescriptive page titles\nMeta descriptions\nSemantic HTML structure\nMobile-responsive design\nFast loading (static site)\nHTTPS (via Netlify)\nSocial media meta tags\n\n\n\n\n\nAdd alt text to all images - Helps with accessibility and SEO\nInternal linking - Link between related posts and pages\nRegular content updates - Post consistently to your blog\nQuality content - Focus on valuable, original content\nShare on social media - Increases visibility and backlinks\n\n\n\n\n\nAfter submitting to Google Search Console: - Wait 24-48 hours for Google to crawl your site - Check coverage report in Search Console - Use site search: site:mcnakhaee.com in Google to see indexed pages\n\n\n\nGoogle Search Console provides: - Number of indexed pages - Search queries bringing traffic - Click-through rates - Mobile usability issues - Security problems\n\n\n\n# Render your site locally\nquarto render\n\n# Add files and commit\ngit add .\ngit commit -m \"Update SEO configuration\"\n\n# Push to deploy\ngit push origin quarto\n\n\n\n\nGoogle Search Console Help\nQuarto SEO Documentation\nNetlify SEO Guide\n\n\nNote: Google indexing can take several days to weeks. Be patient and keep creating quality content!"
+  },
+  {
+    "objectID": "SEO_SETUP_GUIDE.html#whats-been-configured",
+    "href": "SEO_SETUP_GUIDE.html#whats-been-configured",
+    "title": "Google Search Engine Optimization (SEO) Setup Guide",
+    "section": "",
+    "text": "Your Quarto website is now configured for better search engine indexing:\n\n\n\nQuarto automatically generates sitemap.xml at https://mcnakhaee.com/sitemap.xml\nThis helps Google discover all your pages\n\n\n\n\n\nCreated robots.txt file that tells search engines they can crawl your site\nPoints to your sitemap\n\n\n\n\n\nAdded description, keywords, and Open Graph tags\nEnabled Twitter Card support\nAdded structured metadata to homepage\n\n\n\n\n\nBlog RSS feed available at https://mcnakhaee.com/blog/index.xml"
+  },
+  {
+    "objectID": "SEO_SETUP_GUIDE.html#next-steps-submit-your-site-to-google",
+    "href": "SEO_SETUP_GUIDE.html#next-steps-submit-your-site-to-google",
+    "title": "Google Search Engine Optimization (SEO) Setup Guide",
+    "section": "",
+    "text": "Go to Google Search Console\nClick “Start Now” and sign in with your Google account\nClick “Add Property”\nEnter your domain: mcnakhaee.com\n\n\n\n\nChoose one of these verification methods:\n\n\n\nGoogle will give you an HTML file to download (e.g., google1234567890abcdef.html)\nPlace this file in the root of your website directory\nRender your site: quarto render\nCommit and push to GitHub\nWait for Netlify to deploy\nClick “Verify” in Google Search Console\n\n\n\n\n\nGoogle will give you a meta tag like: &lt;meta name=\"google-site-verification\" content=\"abc123...\" /&gt;\nAdd this to your index.qmd frontmatter:\n---\ntitle: \"Muhammad Nakhaee\"\ngoogle-site-verification: \"abc123...\"\n---\nRender, commit, push, and verify\n\n\n\n\n\n\nOnce verified, in Google Search Console, go to “Sitemaps”\nEnter: sitemap.xml\nClick “Submit”\n\n\n\n\n\nGo to Google Analytics\nCreate a new property for your website\nGet your Measurement ID (format: G-XXXXXXXXXX)\nUpdate _quarto.yml with your real ID:\ngoogle-analytics: \"G-YOUR-ACTUAL-ID\"\nRender, commit, and push"
+  },
+  {
+    "objectID": "SEO_SETUP_GUIDE.html#additional-seo-best-practices",
+    "href": "SEO_SETUP_GUIDE.html#additional-seo-best-practices",
+    "title": "Google Search Engine Optimization (SEO) Setup Guide",
+    "section": "",
+    "text": "Descriptive page titles\nMeta descriptions\nSemantic HTML structure\nMobile-responsive design\nFast loading (static site)\nHTTPS (via Netlify)\nSocial media meta tags\n\n\n\n\n\nAdd alt text to all images - Helps with accessibility and SEO\nInternal linking - Link between related posts and pages\nRegular content updates - Post consistently to your blog\nQuality content - Focus on valuable, original content\nShare on social media - Increases visibility and backlinks"
+  },
+  {
+    "objectID": "SEO_SETUP_GUIDE.html#checking-indexing-status",
+    "href": "SEO_SETUP_GUIDE.html#checking-indexing-status",
+    "title": "Google Search Engine Optimization (SEO) Setup Guide",
+    "section": "",
+    "text": "After submitting to Google Search Console: - Wait 24-48 hours for Google to crawl your site - Check coverage report in Search Console - Use site search: site:mcnakhaee.com in Google to see indexed pages"
+  },
+  {
+    "objectID": "SEO_SETUP_GUIDE.html#monitoring-performance",
+    "href": "SEO_SETUP_GUIDE.html#monitoring-performance",
+    "title": "Google Search Engine Optimization (SEO) Setup Guide",
+    "section": "",
+    "text": "Google Search Console provides: - Number of indexed pages - Search queries bringing traffic - Click-through rates - Mobile usability issues - Security problems"
+  },
+  {
+    "objectID": "SEO_SETUP_GUIDE.html#quick-commands",
+    "href": "SEO_SETUP_GUIDE.html#quick-commands",
+    "title": "Google Search Engine Optimization (SEO) Setup Guide",
+    "section": "",
+    "text": "# Render your site locally\nquarto render\n\n# Add files and commit\ngit add .\ngit commit -m \"Update SEO configuration\"\n\n# Push to deploy\ngit push origin quarto"
+  },
+  {
+    "objectID": "SEO_SETUP_GUIDE.html#resources",
+    "href": "SEO_SETUP_GUIDE.html#resources",
+    "title": "Google Search Engine Optimization (SEO) Setup Guide",
+    "section": "",
+    "text": "Google Search Console Help\nQuarto SEO Documentation\nNetlify SEO Guide\n\n\nNote: Google indexing can take several days to weeks. Be patient and keep creating quality content!"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Muhammad Nakhaee",
@@ -768,5 +824,61 @@
     "title": "Photography",
     "section": "",
     "text": "Capturing moments from daily life and urban environments.\n\n\n\n\n\n\nTipFollow on Instagram\n\n\n\nFor more photos and updates, follow me on Instagram: @mcnakhaee\n\n\n\nNote: All photos are automatically displayed with lightbox functionality. Click on any image to view it in full screen."
+  },
+  {
+    "objectID": "DEPLOYMENT_WORKFLOW.html",
+    "href": "DEPLOYMENT_WORKFLOW.html",
+    "title": "Deployment Workflow - Pre-Rendered Site",
+    "section": "",
+    "text": "Your Quarto website is now configured to be rendered locally and then deployed to Netlify as a static site. This approach is simpler and avoids the need to install R on Netlify’s build servers.\n\n\n\n\nLocal Rendering: You render the site on your local machine (where R is installed)\nGit Tracking: The _site folder is tracked in Git (not ignored)\nNetlify Deployment: Netlify simply serves the pre-built files from the _site folder\n\n\n\n\n\n\n\nMake changes to your .qmd files, projects, or blog posts\nRender locally:\nquarto render\nCommit and push:\ngit add -A\ngit commit -m \"Update site content\"\ngit push origin quarto\nNetlify automatically deploys the updated _site folder\n\n\n\n\n\n\n\n[build]\n  command = \"\"  # No build command - site is pre-rendered\n  publish = \"_site\"\n\n\n\n# _site/ is commented out so it's tracked in Git\n/.quarto/\n**/*.quarto_ipynb\n\n\n\n\n✅ Simple: No complex build setup on Netlify\n✅ Fast: Netlify just serves files, no rendering needed\n✅ Reliable: Builds happen locally where you control the environment\n✅ R Support: Full R support since you render where R is installed\n✅ Preview: You can test the site locally before deploying\n\n\n\n\nAlways run quarto render before committing\nThe _site folder will be large (contains all HTML, CSS, JS, images)\nMake sure to push the _site folder to Git\nNetlify will deploy automatically when you push to the quarto branch\n\n\n\n\nIf Netlify deployment fails: 1. Check that _site folder exists and is pushed to Git 2. Verify netlify.toml has publish = \"_site\" 3. Check Netlify build logs for any errors\n\nYour site should now deploy successfully on Netlify! 🎉"
+  },
+  {
+    "objectID": "DEPLOYMENT_WORKFLOW.html#overview",
+    "href": "DEPLOYMENT_WORKFLOW.html#overview",
+    "title": "Deployment Workflow - Pre-Rendered Site",
+    "section": "",
+    "text": "Your Quarto website is now configured to be rendered locally and then deployed to Netlify as a static site. This approach is simpler and avoids the need to install R on Netlify’s build servers."
+  },
+  {
+    "objectID": "DEPLOYMENT_WORKFLOW.html#how-it-works",
+    "href": "DEPLOYMENT_WORKFLOW.html#how-it-works",
+    "title": "Deployment Workflow - Pre-Rendered Site",
+    "section": "",
+    "text": "Local Rendering: You render the site on your local machine (where R is installed)\nGit Tracking: The _site folder is tracked in Git (not ignored)\nNetlify Deployment: Netlify simply serves the pre-built files from the _site folder"
+  },
+  {
+    "objectID": "DEPLOYMENT_WORKFLOW.html#deployment-steps",
+    "href": "DEPLOYMENT_WORKFLOW.html#deployment-steps",
+    "title": "Deployment Workflow - Pre-Rendered Site",
+    "section": "",
+    "text": "Make changes to your .qmd files, projects, or blog posts\nRender locally:\nquarto render\nCommit and push:\ngit add -A\ngit commit -m \"Update site content\"\ngit push origin quarto\nNetlify automatically deploys the updated _site folder"
+  },
+  {
+    "objectID": "DEPLOYMENT_WORKFLOW.html#configuration-files",
+    "href": "DEPLOYMENT_WORKFLOW.html#configuration-files",
+    "title": "Deployment Workflow - Pre-Rendered Site",
+    "section": "",
+    "text": "[build]\n  command = \"\"  # No build command - site is pre-rendered\n  publish = \"_site\"\n\n\n\n# _site/ is commented out so it's tracked in Git\n/.quarto/\n**/*.quarto_ipynb"
+  },
+  {
+    "objectID": "DEPLOYMENT_WORKFLOW.html#benefits-of-this-approach",
+    "href": "DEPLOYMENT_WORKFLOW.html#benefits-of-this-approach",
+    "title": "Deployment Workflow - Pre-Rendered Site",
+    "section": "",
+    "text": "✅ Simple: No complex build setup on Netlify\n✅ Fast: Netlify just serves files, no rendering needed\n✅ Reliable: Builds happen locally where you control the environment\n✅ R Support: Full R support since you render where R is installed\n✅ Preview: You can test the site locally before deploying"
+  },
+  {
+    "objectID": "DEPLOYMENT_WORKFLOW.html#important-notes",
+    "href": "DEPLOYMENT_WORKFLOW.html#important-notes",
+    "title": "Deployment Workflow - Pre-Rendered Site",
+    "section": "",
+    "text": "Always run quarto render before committing\nThe _site folder will be large (contains all HTML, CSS, JS, images)\nMake sure to push the _site folder to Git\nNetlify will deploy automatically when you push to the quarto branch"
+  },
+  {
+    "objectID": "DEPLOYMENT_WORKFLOW.html#troubleshooting",
+    "href": "DEPLOYMENT_WORKFLOW.html#troubleshooting",
+    "title": "Deployment Workflow - Pre-Rendered Site",
+    "section": "",
+    "text": "If Netlify deployment fails: 1. Check that _site folder exists and is pushed to Git 2. Verify netlify.toml has publish = \"_site\" 3. Check Netlify build logs for any errors\n\nYour site should now deploy successfully on Netlify! 🎉"
   }
 ]

@@ -1,7 +1,11 @@
 ---
 title: "Muhammad Nakhaee"
-pagetitle: "Muhammad Nakhaee"
+pagetitle: "Muhammad Nakhaee - Data Scientist & Developer"
 page-layout: full
+description: "Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Explore my portfolio of data science projects and blog posts."
+author: "Muhammad Chenariyan Nakhaee"
+keywords: ["data science", "R", "Python", "data visualization", "machine learning", "portfolio", "blog"]
+image: "profile.jpg"
 ---
 
 ::: {.hero-banner}

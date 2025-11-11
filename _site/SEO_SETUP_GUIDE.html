@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Muhammad Nakhaee</title>
+<title>seo_setup_guide – Muhammad Nakhaee</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -87,9 +122,9 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="About – Muhammad Nakhaee">
+<meta property="og:title" content="Muhammad Nakhaee">
 <meta property="og:site_name" content="Muhammad Nakhaee">
-<meta name="twitter:title" content="About – Muhammad Nakhaee">
+<meta name="twitter:title" content="Muhammad Nakhaee">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -291,7 +326,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <span class="menu-text">Photography</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -325,135 +360,200 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#google-search-engine-optimization-seo-setup-guide" id="toc-google-search-engine-optimization-seo-setup-guide" class="nav-link active" data-scroll-target="#google-search-engine-optimization-seo-setup-guide">Google Search Engine Optimization (SEO) Setup Guide</a>
+  <ul class="collapse">
+  <li><a href="#whats-been-configured" id="toc-whats-been-configured" class="nav-link" data-scroll-target="#whats-been-configured">What’s Been Configured</a>
+  <ul class="collapse">
+  <li><a href="#sitemap" id="toc-sitemap" class="nav-link" data-scroll-target="#sitemap">1. ✅ Sitemap</a></li>
+  <li><a href="#robots.txt" id="toc-robots.txt" class="nav-link" data-scroll-target="#robots.txt">2. ✅ Robots.txt</a></li>
+  <li><a href="#meta-tags" id="toc-meta-tags" class="nav-link" data-scroll-target="#meta-tags">3. ✅ Meta Tags</a></li>
+  <li><a href="#rss-feeds" id="toc-rss-feeds" class="nav-link" data-scroll-target="#rss-feeds">4. ✅ RSS Feeds</a></li>
+  </ul></li>
+  <li><a href="#next-steps-submit-your-site-to-google" id="toc-next-steps-submit-your-site-to-google" class="nav-link" data-scroll-target="#next-steps-submit-your-site-to-google">Next Steps: Submit Your Site to Google</a>
+  <ul class="collapse">
+  <li><a href="#step-1-get-google-search-console-access" id="toc-step-1-get-google-search-console-access" class="nav-link" data-scroll-target="#step-1-get-google-search-console-access">Step 1: Get Google Search Console Access</a></li>
+  <li><a href="#step-2-verify-ownership" id="toc-step-2-verify-ownership" class="nav-link" data-scroll-target="#step-2-verify-ownership">Step 2: Verify Ownership</a></li>
+  <li><a href="#step-3-submit-your-sitemap" id="toc-step-3-submit-your-sitemap" class="nav-link" data-scroll-target="#step-3-submit-your-sitemap">Step 3: Submit Your Sitemap</a></li>
+  <li><a href="#step-4-set-up-google-analytics-optional-but-recommended" id="toc-step-4-set-up-google-analytics-optional-but-recommended" class="nav-link" data-scroll-target="#step-4-set-up-google-analytics-optional-but-recommended">Step 4: Set Up Google Analytics (Optional but Recommended)</a></li>
+  </ul></li>
+  <li><a href="#additional-seo-best-practices" id="toc-additional-seo-best-practices" class="nav-link" data-scroll-target="#additional-seo-best-practices">Additional SEO Best Practices</a>
+  <ul class="collapse">
+  <li><a href="#already-implemented" id="toc-already-implemented" class="nav-link" data-scroll-target="#already-implemented">✅ Already Implemented</a></li>
+  <li><a href="#to-improve-further" id="toc-to-improve-further" class="nav-link" data-scroll-target="#to-improve-further">🔄 To Improve Further</a></li>
+  </ul></li>
+  <li><a href="#checking-indexing-status" id="toc-checking-indexing-status" class="nav-link" data-scroll-target="#checking-indexing-status">Checking Indexing Status</a></li>
+  <li><a href="#monitoring-performance" id="toc-monitoring-performance" class="nav-link" data-scroll-target="#monitoring-performance">Monitoring Performance</a></li>
+  <li><a href="#quick-commands" id="toc-quick-commands" class="nav-link" data-scroll-target="#quick-commands">Quick Commands</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta column-body">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<div class="column-page">
-<section id="hello-im-muhammad-nakhaee" class="level2">
-<h2 class="anchored" data-anchor-id="hello-im-muhammad-nakhaee"><i class="fa-solid fa-user" aria-label="user"></i> Hello, I’m Muhammad Nakhaee</h2>
-<p>I’m a data analyst/scientist currently working at <a href="https://www.exact.com">Exact</a> in the Netherlands. Before that, I worked as a researcher at the University of Twente. Welcome to my personal website!</p>
-<hr>
-</section>
-<section id="what-i-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-do"><i class="fa-solid fa-briefcase" aria-label="briefcase"></i> What I Do</h2>
-<p>I specialize in full-stack development and data science, with a particular interest in creating intuitive user experiences and deriving insights from data.</p>
-<div class="grid">
-<section id="development" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="development"><i class="fa-solid fa-code" aria-label="code"></i> Development</h3>
-<p>Building modern web applications with cutting-edge technologies. I focus on clean code, scalability, and user experience.</p>
-<p><strong>Technologies:</strong> - JavaScript/TypeScript - React, Node.js - Python - Databases &amp; APIs</p>
-</section>
-<section id="data-science" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="data-science"><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> Data Science</h3>
-<p>Transforming data into actionable insights through analysis and visualization. I love finding patterns and telling stories with data.</p>
-<p><strong>Skills:</strong> - Data analysis - Machine learning - Visualization - Statistical modeling</p>
-</section>
-<section id="speaking" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="speaking"><i class="fa-solid fa-microphone" aria-label="microphone"></i> Speaking</h3>
-<p>Sharing knowledge through talks, workshops, and writing. I believe in giving back to the community and helping others grow.</p>
-<p><strong>Topics:</strong> - Web development - Data visualization - Best practices - Career development</p>
-</section>
-</div>
-<hr>
-</section>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background"><i class="fa-solid fa-graduation-cap" aria-label="graduation-cap"></i> Background</h2>
-<p><strong>Education:</strong> - University of Twente - Researcher</p>
-<p><strong>Experience:</strong> - Data Analyst/Scientist at <a href="https://www.exact.com">Exact</a> (Present) - Researcher at University of Twente (Previously)</p>
-<hr>
-</section>
-<section id="interests-hobbies" class="level2">
-<h2 class="anchored" data-anchor-id="interests-hobbies"><i class="fa-solid fa-heart" aria-label="heart"></i> Interests &amp; Hobbies</h2>
-<p>When I’m not coding or analyzing data, you can find me:</p>
+<section id="google-search-engine-optimization-seo-setup-guide" class="level1">
+<h1>Google Search Engine Optimization (SEO) Setup Guide</h1>
+<section id="whats-been-configured" class="level2">
+<h2 class="anchored" data-anchor-id="whats-been-configured">What’s Been Configured</h2>
+<p>Your Quarto website is now configured for better search engine indexing:</p>
+<section id="sitemap" class="level3">
+<h3 class="anchored" data-anchor-id="sitemap">1. ✅ Sitemap</h3>
 <ul>
-<li><i class="fa-solid fa-book" aria-label="book"></i> Reading about technology and science</li>
-<li><i class="fa-solid fa-hiking" aria-label="hiking"></i> Hiking and exploring nature</li>
-<li><i class="fa-solid fa-camera" aria-label="camera"></i> Photography</li>
-<li><i class="fa-solid fa-music" aria-label="music"></i> Listening to music and podcasts</li>
-<li><i class="fa-solid fa-mug-hot" aria-label="mug-hot"></i> Trying new coffee shops</li>
+<li>Quarto automatically generates <code>sitemap.xml</code> at https://mcnakhaee.com/sitemap.xml</li>
+<li>This helps Google discover all your pages</li>
+</ul>
+</section>
+<section id="robots.txt" class="level3">
+<h3 class="anchored" data-anchor-id="robots.txt">2. ✅ Robots.txt</h3>
+<ul>
+<li>Created <code>robots.txt</code> file that tells search engines they can crawl your site</li>
+<li>Points to your sitemap</li>
+</ul>
+</section>
+<section id="meta-tags" class="level3">
+<h3 class="anchored" data-anchor-id="meta-tags">3. ✅ Meta Tags</h3>
+<ul>
+<li>Added description, keywords, and Open Graph tags</li>
+<li>Enabled Twitter Card support</li>
+<li>Added structured metadata to homepage</li>
+</ul>
+</section>
+<section id="rss-feeds" class="level3">
+<h3 class="anchored" data-anchor-id="rss-feeds">4. ✅ RSS Feeds</h3>
+<ul>
+<li>Blog RSS feed available at https://mcnakhaee.com/blog/index.xml</li>
+</ul>
+</section>
+</section>
+<section id="next-steps-submit-your-site-to-google" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps-submit-your-site-to-google">Next Steps: Submit Your Site to Google</h2>
+<section id="step-1-get-google-search-console-access" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-get-google-search-console-access">Step 1: Get Google Search Console Access</h3>
+<ol type="1">
+<li>Go to <a href="https://search.google.com/search-console">Google Search Console</a></li>
+<li>Click “Start Now” and sign in with your Google account</li>
+<li>Click “Add Property”</li>
+<li>Enter your domain: <code>mcnakhaee.com</code></li>
+</ol>
+</section>
+<section id="step-2-verify-ownership" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-verify-ownership">Step 2: Verify Ownership</h3>
+<p>Choose one of these verification methods:</p>
+<section id="option-a-html-file-upload-recommended" class="level4">
+<h4 class="anchored" data-anchor-id="option-a-html-file-upload-recommended">Option A: HTML File Upload (Recommended)</h4>
+<ol type="1">
+<li>Google will give you an HTML file to download (e.g., <code>google1234567890abcdef.html</code>)</li>
+<li>Place this file in the root of your website directory</li>
+<li>Render your site: <code>quarto render</code></li>
+<li>Commit and push to GitHub</li>
+<li>Wait for Netlify to deploy</li>
+<li>Click “Verify” in Google Search Console</li>
+</ol>
+</section>
+<section id="option-b-html-meta-tag" class="level4">
+<h4 class="anchored" data-anchor-id="option-b-html-meta-tag">Option B: HTML Meta Tag</h4>
+<ol type="1">
+<li><p>Google will give you a meta tag like: <code>&lt;meta name="google-site-verification" content="abc123..." /&gt;</code></p></li>
+<li><p>Add this to your <code>index.qmd</code> frontmatter:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Muhammad Nakhaee"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">google-site-verification</span><span class="kw">:</span><span class="at"> </span><span class="st">"abc123..."</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Render, commit, push, and verify</p></li>
+</ol>
+</section>
+</section>
+<section id="step-3-submit-your-sitemap" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-submit-your-sitemap">Step 3: Submit Your Sitemap</h3>
+<ol type="1">
+<li>Once verified, in Google Search Console, go to “Sitemaps”</li>
+<li>Enter: <code>sitemap.xml</code></li>
+<li>Click “Submit”</li>
+</ol>
+</section>
+<section id="step-4-set-up-google-analytics-optional-but-recommended" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-set-up-google-analytics-optional-but-recommended">Step 4: Set Up Google Analytics (Optional but Recommended)</h3>
+<ol type="1">
+<li><p>Go to <a href="https://analytics.google.com/">Google Analytics</a></p></li>
+<li><p>Create a new property for your website</p></li>
+<li><p>Get your Measurement ID (format: <code>G-XXXXXXXXXX</code>)</p></li>
+<li><p>Update <code>_quarto.yml</code> with your real ID:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">google-analytics</span><span class="kw">:</span><span class="at"> </span><span class="st">"G-YOUR-ACTUAL-ID"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Render, commit, and push</p></li>
+</ol>
+</section>
+</section>
+<section id="additional-seo-best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="additional-seo-best-practices">Additional SEO Best Practices</h2>
+<section id="already-implemented" class="level3">
+<h3 class="anchored" data-anchor-id="already-implemented">✅ Already Implemented</h3>
+<ul>
+<li>Descriptive page titles</li>
+<li>Meta descriptions</li>
+<li>Semantic HTML structure</li>
+<li>Mobile-responsive design</li>
+<li>Fast loading (static site)</li>
+<li>HTTPS (via Netlify)</li>
+<li>Social media meta tags</li>
+</ul>
+</section>
+<section id="to-improve-further" class="level3">
+<h3 class="anchored" data-anchor-id="to-improve-further">🔄 To Improve Further</h3>
+<ol type="1">
+<li><strong>Add alt text to all images</strong> - Helps with accessibility and SEO</li>
+<li><strong>Internal linking</strong> - Link between related posts and pages</li>
+<li><strong>Regular content updates</strong> - Post consistently to your blog</li>
+<li><strong>Quality content</strong> - Focus on valuable, original content</li>
+<li><strong>Share on social media</strong> - Increases visibility and backlinks</li>
+</ol>
+</section>
+</section>
+<section id="checking-indexing-status" class="level2">
+<h2 class="anchored" data-anchor-id="checking-indexing-status">Checking Indexing Status</h2>
+<p>After submitting to Google Search Console: - Wait 24-48 hours for Google to crawl your site - Check coverage report in Search Console - Use site search: <code>site:mcnakhaee.com</code> in Google to see indexed pages</p>
+</section>
+<section id="monitoring-performance" class="level2">
+<h2 class="anchored" data-anchor-id="monitoring-performance">Monitoring Performance</h2>
+<p>Google Search Console provides: - Number of indexed pages - Search queries bringing traffic - Click-through rates - Mobile usability issues - Security problems</p>
+</section>
+<section id="quick-commands" class="level2">
+<h2 class="anchored" data-anchor-id="quick-commands">Quick Commands</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Render your site locally</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Add files and commit</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Update SEO configuration"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Push to deploy</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin quarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://support.google.com/webmasters">Google Search Console Help</a></li>
+<li><a href="https://quarto.org/docs/websites/website-tools.html#google-analytics">Quarto SEO Documentation</a></li>
+<li><a href="https://docs.netlify.com/domains-https/custom-domains/">Netlify SEO Guide</a></li>
 </ul>
 <hr>
-</section>
-<section id="achievements-recognition" class="level2">
-<h2 class="anchored" data-anchor-id="achievements-recognition"><i class="fa-solid fa-award" aria-label="award"></i> Achievements &amp; Recognition</h2>
-<ul>
-<li><strong>[Award Name]</strong> - [Organization], 2024</li>
-<li><strong>Published Article</strong> - “[Article Title]” in [Publication]</li>
-<li><strong>Open Source Contributor</strong> - [Project Names]</li>
-<li><strong>Community Leader</strong> - Organized [Event/Meetup]</li>
-</ul>
-<hr>
-</section>
-<section id="get-in-touch" class="level2">
-<h2 class="anchored" data-anchor-id="get-in-touch"><i class="fa-solid fa-envelope" aria-label="envelope"></i> Get in Touch</h2>
-<p>I’m always interested in connecting with fellow developers, data enthusiasts, and interesting people. Feel free to reach out!</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Contact Information
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><i class="fa-brands fa-github" aria-label="github"></i> <strong>GitHub:</strong> <a href="https://github.com/mcnakhaee">github.com/mcnakhaee</a></li>
-<li><i class="fa-brands fa-twitter" aria-label="twitter"></i> <strong>Twitter:</strong> <a href="https://twitter.com/m_cnakhaee"><span class="citation" data-cites="m_cnakhaee">@m_cnakhaee</span></a></li>
-<li><i class="fa-brands fa-linkedin" aria-label="linkedin"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/muhammadcnakhaee/">linkedin.com/in/muhammadcnakhaee</a></li>
-<li><i class="fa-brands fa-instagram" aria-label="instagram"></i> <strong>Instagram:</strong> <a href="https://instagram.com/mcnakhaee"><span class="citation" data-cites="mcnakhaee">@mcnakhaee</span></a></li>
-</ul>
-</div>
-</div>
-<hr>
-<hr>
-</section>
-<section id="about-this-site" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-site">About This Site</h2>
-<p>This website is built using <a href="https://quarto.org/">Quarto</a>, a modern scientific and technical publishing system. Previously, I used the <a href="https://rstudio.github.io/distill/">{distill}</a> package and Hugo with the blogdown package.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Let’s Connect!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I’m always interested in connecting with fellow data scientists, developers, and researchers. Feel free to reach out through any of my social channels!</p>
-</div>
-</div>
-</section>
-</div>
+<p><strong>Note</strong>: Google indexing can take several days to weeks. Be patient and keep creating quality content!</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
