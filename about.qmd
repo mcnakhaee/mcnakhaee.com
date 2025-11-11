@@ -1,13 +1,17 @@
 ---
-title: "About"
+title: "About Muhammad Chenariyan Nakhaee"
+pagetitle: "About - Muhammad Chenariyan Nakhaee"
 page-layout: full
+description: "Learn about Muhammad Chenariyan Nakhaee - Data Scientist at Exact, researcher, R and Python developer, and open-source contributor."
 ---
 
 ::: {.column-page}
 
-## {{< fa solid user >}} Hello, I'm Muhammad Nakhaee
+## {{< fa solid user >}} Hello, I'm Muhammad Chenariyan Nakhaee
 
 I'm a data analyst/scientist currently working at [Exact](https://www.exact.com) in the Netherlands. Before that, I worked as a researcher at the University of Twente. Welcome to my personal website!
+
+**Also known as:** Muhammad Nakhaee, Muhammad C. Nakhaee
 
 ---
 

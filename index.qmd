@@ -1,15 +1,41 @@
 ---
-title: "Muhammad Nakhaee"
-pagetitle: "Muhammad Nakhaee - Data Scientist & Developer"
+title: "Muhammad Chenariyan Nakhaee"
+pagetitle: "Muhammad Chenariyan Nakhaee - Data Scientist & Software Engineer"
 page-layout: full
-description: "Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Explore my portfolio of data science projects and blog posts."
+description: "Muhammad Chenariyan Nakhaee - Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Portfolio of data science projects and technical blog."
 author: "Muhammad Chenariyan Nakhaee"
-keywords: ["data science", "R", "Python", "data visualization", "machine learning", "portfolio", "blog"]
+keywords: ["Muhammad Chenariyan Nakhaee", "Muhammad Nakhaee", "data science", "R", "Python", "data visualization", "machine learning", "portfolio", "blog"]
 image: "profile.jpg"
 ---
 
+```{=html}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Muhammad Chenariyan Nakhaee",
+  "alternateName": ["Muhammad Nakhaee", "Muhammad C. Nakhaee", "M. Chenariyan Nakhaee"],
+  "url": "https://mcnakhaee.com",
+  "image": "https://mcnakhaee.com/profile.jpg",
+  "sameAs": [
+    "https://github.com/mcnakhaee",
+    "https://twitter.com/m_cnakhaee",
+    "https://linkedin.com/in/muhammadcnakhaee",
+    "https://instagram.com/mcnakhaee"
+  ],
+  "jobTitle": "Data Scientist",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Exact"
+  },
+  "description": "Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects",
+  "knowsAbout": ["Data Science", "R Programming", "Python", "Data Visualization", "Machine Learning", "Statistical Computing"]
+}
+</script>
+```
+
 ::: {.hero-banner}
-# Muhammad Nakhaee
+# Muhammad Chenariyan Nakhaee
 
 Data Analyst/Scientist | Researcher | Developer
 

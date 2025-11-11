@@ -3,14 +3,18 @@ project:
   output-dir: _site
 
 website:
-  title: "Muhammad Nakhaee"
-  description: "Muhammad Chenariyan Nakhaee's website. Data Scientist & Software Engineer. Exploring data visualization, R, Python, and open-source projects."
+  title: "Muhammad Chenariyan Nakhaee"
+  description: "Muhammad Chenariyan Nakhaee - Data Scientist & Software Engineer specializing in R, Python, data visualization, and open-source projects. Portfolio and blog."
   favicon: favicon.png
   site-url: https://mcnakhaee.com
   repo-url: https://github.com/mcnakhaee
-  google-analytics: "G-XXXXXXXXXX"  # Replace with your Google Analytics ID
-  open-graph: true
-  twitter-card: true
+  google-analytics: "UA-103723417-2"
+  open-graph:
+    site-name: "Muhammad Chenariyan Nakhaee"
+    locale: en_US
+  twitter-card:
+    creator: "@m_cnakhaee"
+    site: "@m_cnakhaee"
   navbar:
     background: primary
     search: true
@@ -36,7 +40,7 @@ website:
         href: https://instagram.com/mcnakhaee
   page-footer:
     left: >-
-      &#169; 2025 Muhammad Nakhaee &#8729; Made with [Quarto](https://quarto.org)
+      &#169; 2025 Muhammad Chenariyan Nakhaee &#8729; Made with [Quarto](https://quarto.org)
     center: |
       <a class="link-dark me-1" href="https://github.com/mcnakhaee" title="GitHub" target="_blank" rel="noopener">{{< fa brands github >}}</a>
       <a class="link-dark me-1" href="https://twitter.com/m_cnakhaee" title="Twitter" target="_blank" rel="noopener">{{< fa brands twitter >}}</a>
