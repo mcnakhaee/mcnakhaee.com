@@ -1,67 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mcnakhaee.com/SEO_SETUP_GUIDE.html</loc>
+    <loc>https://mcnakhaee.com/PROFILE_IMAGE_SETUP.html</loc>
+    <lastmod>2025-11-11T22:39:09.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/DEPLOYMENT_WORKFLOW.html</loc>
     <lastmod>2025-11-11T21:35:13.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/index.html</loc>
-    <lastmod>2025-11-11T21:47:47.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/DEPLOYMENT.html</loc>
-    <lastmod>2025-11-11T18:16:31.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/talks/index.html</loc>
-    <lastmod>2025-11-11T18:16:36.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/projects/MIGRATION_SUMMARY.html</loc>
-    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/projects/projects/web-app/index.html</loc>
-    <lastmod>2025-11-11T18:16:36.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/projects/projects/palmerpenguins/index.html</loc>
-    <lastmod>2025-11-11T18:16:36.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/projects/projects/data-dashboard/index.html</loc>
-    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/blog/posts/PACKAGE_REQUIREMENTS.html</loc>
-    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/blog/posts/covid-19-netherlands/index.html</loc>
-    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/blog/posts/trump-speech-readability/index.html</loc>
-    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/blog/index.html</loc>
-    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/projects/projects/delgosha/index.html</loc>
-    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/projects/projects/tidytuesday/index.html</loc>
-    <lastmod>2025-11-11T18:16:36.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/projects/IMAGES_README.html</loc>
-    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mcnakhaee.com/projects/index.html</loc>
+    <loc>https://mcnakhaee.com/gallery.html</loc>
     <lastmod>2025-11-11T18:16:35.000Z</lastmod>
   </url>
   <url>
@@ -69,11 +17,67 @@
     <lastmod>2025-11-11T21:47:50.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/gallery.html</loc>
+    <loc>https://mcnakhaee.com/projects/index.html</loc>
     <lastmod>2025-11-11T18:16:35.000Z</lastmod>
   </url>
   <url>
-    <loc>https://mcnakhaee.com/DEPLOYMENT_WORKFLOW.html</loc>
+    <loc>https://mcnakhaee.com/projects/IMAGES_README.html</loc>
+    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/projects/projects/tidytuesday/index.html</loc>
+    <lastmod>2025-11-11T18:16:36.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/projects/projects/delgosha/index.html</loc>
+    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/blog/index.html</loc>
+    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/blog/posts/trump-speech-readability/index.html</loc>
+    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/blog/posts/covid-19-netherlands/index.html</loc>
+    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/blog/posts/PACKAGE_REQUIREMENTS.html</loc>
+    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/projects/projects/data-dashboard/index.html</loc>
+    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/projects/projects/palmerpenguins/index.html</loc>
+    <lastmod>2025-11-11T18:16:36.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/projects/projects/web-app/index.html</loc>
+    <lastmod>2025-11-11T18:16:36.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/projects/MIGRATION_SUMMARY.html</loc>
+    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/talks/index.html</loc>
+    <lastmod>2025-11-11T18:16:36.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/DEPLOYMENT.html</loc>
+    <lastmod>2025-11-11T18:16:31.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/index.html</loc>
+    <lastmod>2025-11-11T22:39:10.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/SEO_SETUP_GUIDE.html</loc>
     <lastmod>2025-11-11T21:35:13.000Z</lastmod>
   </url>
 </urlset>

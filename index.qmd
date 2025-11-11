@@ -1,11 +1,12 @@
 ---
-title: "Muhammad Chenariyan Nakhaee"
+title: ""
 pagetitle: "Muhammad Chenariyan Nakhaee - Data Scientist & Software Engineer"
-page-layout: full
+page-layout: custom
 description: "Muhammad Chenariyan Nakhaee - Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Portfolio of data science projects and technical blog."
 author: "Muhammad Chenariyan Nakhaee"
 keywords: ["Muhammad Chenariyan Nakhaee", "Muhammad Nakhaee", "data science", "R", "Python", "data visualization", "machine learning", "portfolio", "blog"]
 image: "profile.jpg"
+toc: false
 ---
 
 ```{=html}
@@ -32,68 +33,485 @@ image: "profile.jpg"
   "knowsAbout": ["Data Science", "R Programming", "Python", "Data Visualization", "Machine Learning", "Statistical Computing"]
 }
 </script>
+
+<!-- Network Graph Background -->
+<canvas id="networkCanvas"></canvas>
+
+<!-- Hero Section -->
+<div class="hero-section">
+  <div class="profile-container">
+    <div class="profile-circle">
+      <img src="profile.jpg" alt="Muhammad Chenariyan Nakhaee" class="profile-image" onerror="this.src='https://via.placeholder.com/200?text=MCN'">
+    </div>
+    <h1 class="hero-title">Muhammad Chenariyan Nakhaee</h1>
+    <p class="hero-subtitle">Data Scientist & Software Engineer</p>
+    <p class="hero-description">
+      Transforming data into insights with R, Python, and open-source tools. 
+      Passionate about data visualization, statistical computing, and building elegant solutions.
+    </p>
+    
+    <!-- Social Links -->
+    <div class="social-links">
+      <a href="https://github.com/mcnakhaee" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="https://twitter.com/m_cnakhaee" target="_blank" rel="noopener" aria-label="Twitter">
+        <i class="bi bi-twitter"></i>
+      </a>
+      <a href="https://linkedin.com/in/muhammadcnakhaee" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://instagram.com/mcnakhaee" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+    </div>
+    
+    <!-- CTA Buttons -->
+    <div class="cta-buttons">
+      <a href="projects/index.html" class="btn btn-primary">View Projects</a>
+      <a href="about.html" class="btn btn-outline">About Me</a>
+    </div>
+  </div>
+</div>
+
+<!-- Latest Posts Section -->
+<div class="latest-posts-section">
+  <h2 class="section-title">Latest Posts</h2>
+  <div id="latest-posts-container" class="posts-grid">
+    <!-- Posts will be dynamically loaded here -->
+    <div class="post-card loading">
+      <div class="post-icon"><i class="bi bi-hourglass-split"></i></div>
+      <p>Loading posts...</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Network Graph Animation
+const canvas = document.getElementById('networkCanvas');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+class Node {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.vx = (Math.random() - 0.5) * 0.5;
+    this.vy = (Math.random() - 0.5) * 0.5;
+    this.radius = 3;
+  }
+
+  update() {
+    this.x += this.vx;
+    this.y += this.vy;
+
+    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(100, 149, 237, 0.5)';
+    ctx.fill();
+  }
+}
+
+const nodes = [];
+const nodeCount = 50;
+
+for (let i = 0; i < nodeCount; i++) {
+  nodes.push(new Node(
+    Math.random() * canvas.width,
+    Math.random() * canvas.height
+  ));
+}
+
+function drawConnections() {
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      const dx = nodes[i].x - nodes[j].x;
+      const dy = nodes[i].y - nodes[j].y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < 150) {
+        ctx.beginPath();
+        ctx.moveTo(nodes[i].x, nodes[i].y);
+        ctx.lineTo(nodes[j].x, nodes[j].y);
+        ctx.strokeStyle = `rgba(100, 149, 237, ${0.2 * (1 - distance / 150)})`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+    }
+  }
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  drawConnections();
+  
+  nodes.forEach(node => {
+    node.update();
+    node.draw();
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+// Load Latest Posts
+fetch('/listings.json')
+  .then(response => response.json())
+  .then(data => {
+    const postsContainer = document.getElementById('latest-posts-container');
+    postsContainer.innerHTML = '';
+    
+    // Filter blog posts and get latest 6
+    const blogPosts = data.filter(item => item.path && item.path.includes('/blog/posts/'))
+                         .sort((a, b) => new Date(b.date) - new Date(a.date))
+                         .slice(0, 6);
+    
+    if (blogPosts.length === 0) {
+      postsContainer.innerHTML = '<p class="no-posts">No posts available yet.</p>';
+      return;
+    }
+    
+    blogPosts.forEach((post, index) => {
+      const postCard = document.createElement('div');
+      postCard.className = 'post-card';
+      postCard.style.animationDelay = `${index * 0.1}s`;
+      
+      const postDate = post.date ? new Date(post.date).toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      }) : '';
+      
+      postCard.innerHTML = `
+        <a href="${post.path}" class="post-link">
+          <div class="post-icon">
+            <i class="bi bi-file-text"></i>
+          </div>
+          <h3 class="post-title">${post.title || 'Untitled'}</h3>
+          ${postDate ? `<p class="post-date">${postDate}</p>` : ''}
+          ${post.description ? `<p class="post-description">${post.description}</p>` : ''}
+        </a>
+      `;
+      
+      postsContainer.appendChild(postCard);
+    });
+  })
+  .catch(error => {
+    console.error('Error loading posts:', error);
+    document.getElementById('latest-posts-container').innerHTML = 
+      '<p class="no-posts">Unable to load posts.</p>';
+  });
+</script>
+
+<style>
+/* Reset and Base */
+body {
+  overflow-x: hidden;
+}
+
+/* Network Canvas Background */
+#networkCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.profile-container {
+  text-align: center;
+  max-width: 700px;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-circle {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: float 3s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  color: #667eea;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a:hover {
+  transform: translateY(-5px) scale(1.1);
+  background: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-3px);
+}
+
+/* Latest Posts Section */
+.latest-posts-section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.post-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: slideUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.post-card.loading {
+  text-align: center;
+  color: #666;
+}
+
+.post-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.post-icon {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.post-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.post-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.no-posts {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  grid-column: 1 / -1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .profile-circle {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+</style>
 ```
-
-::: {.hero-banner}
-# Muhammad Chenariyan Nakhaee
-
-Data Analyst/Scientist | Researcher | Developer
-
-Welcome to my personal website. I work at Exact in the Netherlands and share my work on data science, analytics, and technology.
-
-[View Projects](projects/index.qmd){.btn .btn-primary .btn-lg}
-[About Me](about.qmd){.btn .btn-outline-secondary .btn-lg}
-:::
-
-## What You'll Find Here {#getting-started}
-
-This website features:
-
-- **Projects**: Data science and development projects
-- **Posts**: Articles on data analysis, technology, and research
-- **Photography**: Travel and street photography
-- **About**: My background and experience
-
-## Featured Content
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-3}
-### {{< fa solid folder-open >}} Projects
-Explore my latest projects and work.
-[View Projects →](projects/index.qmd)
-:::
-
-::: {.g-col-12 .g-col-md-3}
-### {{< fa solid camera >}} Photography
-View my photography gallery.
-[View Gallery →](gallery.qmd)
-:::
-
-::: {.g-col-12 .g-col-md-3}
-### {{< fa regular file-lines >}} Blog
-Read the latest articles and insights.
-[Visit Blog →](blog/index.qmd)
-:::
-
-::: {.g-col-12 .g-col-md-3}
-### {{< fa regular user >}} About
-Learn more about me and what I do.
-[Learn More →](about.qmd)
-:::
-
-:::
-
-## Connect With Me
-
-Find me on social media:
-
-- {{< fa brands github >}} [GitHub](https://github.com/mcnakhaee)
-- {{< fa brands twitter >}} [Twitter](https://twitter.com/m_cnakhaee)
-- {{< fa brands linkedin >}} [LinkedIn](https://www.linkedin.com/in/muhammadcnakhaee/)
-- {{< fa brands instagram >}} [Instagram](https://instagram.com/mcnakhaee)
-
----
-
-*Website built with [Quarto](https://quarto.org/) | License: [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)*
 
