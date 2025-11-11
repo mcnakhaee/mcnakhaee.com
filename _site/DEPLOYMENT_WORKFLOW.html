@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Muhammad Nakhaee</title>
+<title>deployment_workflow – Muhammad Nakhaee</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -87,9 +122,9 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="About – Muhammad Nakhaee">
+<meta property="og:title" content="Muhammad Nakhaee">
 <meta property="og:site_name" content="Muhammad Nakhaee">
-<meta name="twitter:title" content="About – Muhammad Nakhaee">
+<meta name="twitter:title" content="Muhammad Nakhaee">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -291,7 +326,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <span class="menu-text">Photography</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -325,135 +360,112 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#deployment-workflow---pre-rendered-site" id="toc-deployment-workflow---pre-rendered-site" class="nav-link active" data-scroll-target="#deployment-workflow---pre-rendered-site">Deployment Workflow - Pre-Rendered Site</a>
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How It Works</a></li>
+  <li><a href="#deployment-steps" id="toc-deployment-steps" class="nav-link" data-scroll-target="#deployment-steps">Deployment Steps</a>
+  <ul class="collapse">
+  <li><a href="#every-time-you-update-your-site" id="toc-every-time-you-update-your-site" class="nav-link" data-scroll-target="#every-time-you-update-your-site">Every time you update your site:</a></li>
+  </ul></li>
+  <li><a href="#configuration-files" id="toc-configuration-files" class="nav-link" data-scroll-target="#configuration-files">Configuration Files</a>
+  <ul class="collapse">
+  <li><a href="#netlify.toml" id="toc-netlify.toml" class="nav-link" data-scroll-target="#netlify.toml"><code>netlify.toml</code></a></li>
+  <li><a href="#gitignore" id="toc-gitignore" class="nav-link" data-scroll-target="#gitignore"><code>.gitignore</code></a></li>
+  </ul></li>
+  <li><a href="#benefits-of-this-approach" id="toc-benefits-of-this-approach" class="nav-link" data-scroll-target="#benefits-of-this-approach">Benefits of This Approach</a></li>
+  <li><a href="#important-notes" id="toc-important-notes" class="nav-link" data-scroll-target="#important-notes">Important Notes</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta column-body">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<div class="column-page">
-<section id="hello-im-muhammad-nakhaee" class="level2">
-<h2 class="anchored" data-anchor-id="hello-im-muhammad-nakhaee"><i class="fa-solid fa-user" aria-label="user"></i> Hello, I’m Muhammad Nakhaee</h2>
-<p>I’m a data analyst/scientist currently working at <a href="https://www.exact.com">Exact</a> in the Netherlands. Before that, I worked as a researcher at the University of Twente. Welcome to my personal website!</p>
-<hr>
+<section id="deployment-workflow---pre-rendered-site" class="level1">
+<h1>Deployment Workflow - Pre-Rendered Site</h1>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Your Quarto website is now configured to be <strong>rendered locally</strong> and then deployed to Netlify as a static site. This approach is simpler and avoids the need to install R on Netlify’s build servers.</p>
 </section>
-<section id="what-i-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-do"><i class="fa-solid fa-briefcase" aria-label="briefcase"></i> What I Do</h2>
-<p>I specialize in full-stack development and data science, with a particular interest in creating intuitive user experiences and deriving insights from data.</p>
-<div class="grid">
-<section id="development" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="development"><i class="fa-solid fa-code" aria-label="code"></i> Development</h3>
-<p>Building modern web applications with cutting-edge technologies. I focus on clean code, scalability, and user experience.</p>
-<p><strong>Technologies:</strong> - JavaScript/TypeScript - React, Node.js - Python - Databases &amp; APIs</p>
+<section id="how-it-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-works">How It Works</h2>
+<ol type="1">
+<li><strong>Local Rendering</strong>: You render the site on your local machine (where R is installed)</li>
+<li><strong>Git Tracking</strong>: The <code>_site</code> folder is tracked in Git (not ignored)</li>
+<li><strong>Netlify Deployment</strong>: Netlify simply serves the pre-built files from the <code>_site</code> folder</li>
+</ol>
 </section>
-<section id="data-science" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="data-science"><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> Data Science</h3>
-<p>Transforming data into actionable insights through analysis and visualization. I love finding patterns and telling stories with data.</p>
-<p><strong>Skills:</strong> - Data analysis - Machine learning - Visualization - Statistical modeling</p>
+<section id="deployment-steps" class="level2">
+<h2 class="anchored" data-anchor-id="deployment-steps">Deployment Steps</h2>
+<section id="every-time-you-update-your-site" class="level3">
+<h3 class="anchored" data-anchor-id="every-time-you-update-your-site">Every time you update your site:</h3>
+<ol type="1">
+<li><p><strong>Make changes</strong> to your <code>.qmd</code> files, projects, or blog posts</p></li>
+<li><p><strong>Render locally</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Commit and push</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="at">-A</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Update site content"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin quarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Netlify automatically deploys</strong> the updated <code>_site</code> folder</p></li>
+</ol>
 </section>
-<section id="speaking" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="speaking"><i class="fa-solid fa-microphone" aria-label="microphone"></i> Speaking</h3>
-<p>Sharing knowledge through talks, workshops, and writing. I believe in giving back to the community and helping others grow.</p>
-<p><strong>Topics:</strong> - Web development - Data visualization - Best practices - Career development</p>
 </section>
-</div>
-<hr>
+<section id="configuration-files" class="level2">
+<h2 class="anchored" data-anchor-id="configuration-files">Configuration Files</h2>
+<section id="netlify.toml" class="level3">
+<h3 class="anchored" data-anchor-id="netlify.toml"><code>netlify.toml</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[build]</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">command</span> <span class="op">=</span> <span class="st">""</span>  <span class="co"># No build command - site is pre-rendered</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">publish</span> <span class="op">=</span> <span class="st">"_site"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background"><i class="fa-solid fa-graduation-cap" aria-label="graduation-cap"></i> Background</h2>
-<p><strong>Education:</strong> - University of Twente - Researcher</p>
-<p><strong>Experience:</strong> - Data Analyst/Scientist at <a href="https://www.exact.com">Exact</a> (Present) - Researcher at University of Twente (Previously)</p>
-<hr>
+<section id="gitignore" class="level3">
+<h3 class="anchored" data-anchor-id="gitignore"><code>.gitignore</code></h3>
+<pre><code># _site/ is commented out so it's tracked in Git
+/.quarto/
+**/*.quarto_ipynb</code></pre>
 </section>
-<section id="interests-hobbies" class="level2">
-<h2 class="anchored" data-anchor-id="interests-hobbies"><i class="fa-solid fa-heart" aria-label="heart"></i> Interests &amp; Hobbies</h2>
-<p>When I’m not coding or analyzing data, you can find me:</p>
+</section>
+<section id="benefits-of-this-approach" class="level2">
+<h2 class="anchored" data-anchor-id="benefits-of-this-approach">Benefits of This Approach</h2>
+<p>✅ <strong>Simple</strong>: No complex build setup on Netlify<br>
+✅ <strong>Fast</strong>: Netlify just serves files, no rendering needed<br>
+✅ <strong>Reliable</strong>: Builds happen locally where you control the environment<br>
+✅ <strong>R Support</strong>: Full R support since you render where R is installed<br>
+✅ <strong>Preview</strong>: You can test the site locally before deploying</p>
+</section>
+<section id="important-notes" class="level2">
+<h2 class="anchored" data-anchor-id="important-notes">Important Notes</h2>
 <ul>
-<li><i class="fa-solid fa-book" aria-label="book"></i> Reading about technology and science</li>
-<li><i class="fa-solid fa-hiking" aria-label="hiking"></i> Hiking and exploring nature</li>
-<li><i class="fa-solid fa-camera" aria-label="camera"></i> Photography</li>
-<li><i class="fa-solid fa-music" aria-label="music"></i> Listening to music and podcasts</li>
-<li><i class="fa-solid fa-mug-hot" aria-label="mug-hot"></i> Trying new coffee shops</li>
+<li>Always run <code>quarto render</code> before committing</li>
+<li>The <code>_site</code> folder will be large (contains all HTML, CSS, JS, images)</li>
+<li>Make sure to push the <code>_site</code> folder to Git</li>
+<li>Netlify will deploy automatically when you push to the <code>quarto</code> branch</li>
 </ul>
-<hr>
 </section>
-<section id="achievements-recognition" class="level2">
-<h2 class="anchored" data-anchor-id="achievements-recognition"><i class="fa-solid fa-award" aria-label="award"></i> Achievements &amp; Recognition</h2>
-<ul>
-<li><strong>[Award Name]</strong> - [Organization], 2024</li>
-<li><strong>Published Article</strong> - “[Article Title]” in [Publication]</li>
-<li><strong>Open Source Contributor</strong> - [Project Names]</li>
-<li><strong>Community Leader</strong> - Organized [Event/Meetup]</li>
-</ul>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<p>If Netlify deployment fails: 1. Check that <code>_site</code> folder exists and is pushed to Git 2. Verify <code>netlify.toml</code> has <code>publish = "_site"</code> 3. Check Netlify build logs for any errors</p>
 <hr>
-</section>
-<section id="get-in-touch" class="level2">
-<h2 class="anchored" data-anchor-id="get-in-touch"><i class="fa-solid fa-envelope" aria-label="envelope"></i> Get in Touch</h2>
-<p>I’m always interested in connecting with fellow developers, data enthusiasts, and interesting people. Feel free to reach out!</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Contact Information
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><i class="fa-brands fa-github" aria-label="github"></i> <strong>GitHub:</strong> <a href="https://github.com/mcnakhaee">github.com/mcnakhaee</a></li>
-<li><i class="fa-brands fa-twitter" aria-label="twitter"></i> <strong>Twitter:</strong> <a href="https://twitter.com/m_cnakhaee"><span class="citation" data-cites="m_cnakhaee">@m_cnakhaee</span></a></li>
-<li><i class="fa-brands fa-linkedin" aria-label="linkedin"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/muhammadcnakhaee/">linkedin.com/in/muhammadcnakhaee</a></li>
-<li><i class="fa-brands fa-instagram" aria-label="instagram"></i> <strong>Instagram:</strong> <a href="https://instagram.com/mcnakhaee"><span class="citation" data-cites="mcnakhaee">@mcnakhaee</span></a></li>
-</ul>
-</div>
-</div>
-<hr>
-<hr>
-</section>
-<section id="about-this-site" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-site">About This Site</h2>
-<p>This website is built using <a href="https://quarto.org/">Quarto</a>, a modern scientific and technical publishing system. Previously, I used the <a href="https://rstudio.github.io/distill/">{distill}</a> package and Hugo with the blogdown package.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Let’s Connect!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I’m always interested in connecting with fellow data scientists, developers, and researchers. Feel free to reach out through any of my social channels!</p>
-</div>
-</div>
-</section>
-</div>
+<p><strong>Your site should now deploy successfully on Netlify!</strong> 🎉</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

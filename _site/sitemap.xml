@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://mcnakhaee.com/SEO_SETUP_GUIDE.html</loc>
+    <lastmod>2025-11-11T21:31:25.000Z</lastmod>
+  </url>
+  <url>
     <loc>https://mcnakhaee.com/index.html</loc>
-    <lastmod>2025-11-11T18:16:35.000Z</lastmod>
+    <lastmod>2025-11-11T21:31:01.000Z</lastmod>
   </url>
   <url>
     <loc>https://mcnakhaee.com/DEPLOYMENT.html</loc>
@@ -67,5 +71,9 @@
   <url>
     <loc>https://mcnakhaee.com/gallery.html</loc>
     <lastmod>2025-11-11T18:16:35.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mcnakhaee.com/DEPLOYMENT_WORKFLOW.html</loc>
+    <lastmod>2025-11-11T18:32:15.000Z</lastmod>
   </url>
 </urlset>

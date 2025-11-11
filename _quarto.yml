@@ -4,10 +4,13 @@ project:
 
 website:
   title: "Muhammad Nakhaee"
-  description: "Muhammad Nakhaee's personal website"
+  description: "Muhammad Chenariyan Nakhaee's website. Data Scientist & Software Engineer. Exploring data visualization, R, Python, and open-source projects."
   favicon: favicon.png
-  site-url: https://mcnakhaee.com/
+  site-url: https://mcnakhaee.com
   repo-url: https://github.com/mcnakhaee
+  google-analytics: "G-XXXXXXXXXX"  # Replace with your Google Analytics ID
+  open-graph: true
+  twitter-card: true
   navbar:
     background: primary
     search: true

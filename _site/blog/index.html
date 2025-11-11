@@ -106,6 +106,15 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -138,7 +147,15 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-<link rel="alternate" type="application/rss+xml" title="Muhammad Nakhaee's Blog" href="index.xml" data-external="1"></head>
+<link rel="alternate" type="application/rss+xml" title="Muhammad Nakhaee's Blog" href="index.xml" data-external="1"><meta property="og:title" content="Posts – Muhammad Nakhaee">
+<meta property="og:description" content="Data Scientist &amp; Software Engineer. Exploring data visualization, R, Python, and open-source projects.">
+<meta property="og:image" content="https://mcnakhaee.com/blog/posts/covid-19-netherlands/featured.JPG">
+<meta property="og:site_name" content="Muhammad Nakhaee">
+<meta name="twitter:title" content="Posts – Muhammad Nakhaee">
+<meta name="twitter:description" content="Data Scientist &amp; Software Engineer. Exploring data visualization, R, Python, and open-source projects.">
+<meta name="twitter:image" content="https://mcnakhaee.com/blog/posts/covid-19-netherlands/featured.JPG">
+<meta name="twitter:card" content="summary_large_image">
+</head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -611,7 +628,7 @@ Nov 3, 2020
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/mcnakhaee\.com\/");
+        var filterRegex = new RegExp("https:\/\/mcnakhaee\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
