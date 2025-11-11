@@ -1,0 +1,58 @@
+/* Additional custom CSS */
+
+body {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Navbar enhancements */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+/* Footer styling */
+.page-footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Blog listing enhancements */
+.quarto-listing {
+  margin-top: 2rem;
+}
+
+.quarto-listing-category-title {
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+/* Improve readability */
+article {
+  max-width: 800px;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* Syntax highlighting improvements */
+code {
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  background-color: rgba(0,0,0,0.05);
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+}

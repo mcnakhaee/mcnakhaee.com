@@ -1,6 +1,26 @@
 #!/bin/bash
 set -e
 
+echo "Setting up build environment..."
+
+# Install R using conda (available on Netlify)
+echo "Installing R via conda..."
+if ! command -v conda &> /dev/null; then
+    # Install miniconda if not available
+    wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+    bash miniconda.sh -b -p $HOME/miniconda
+    export PATH="$HOME/miniconda/bin:$PATH"
+    rm miniconda.sh
+fi
+
+# Create conda environment with R
+conda create -y -n r-env -c conda-forge r-base r-knitr r-rmarkdown r-reticulate
+
+# Activate conda environment
+source activate r-env
+
+echo "R installed successfully!"
+
 echo "Installing Quarto..."
 
 # Download and install Quarto
@@ -15,8 +35,9 @@ export PATH="/opt/build/quarto/quarto-${QUARTO_VERSION}/bin:${PATH}"
 
 # Verify installation
 quarto --version
+R --version
 
-echo "Quarto installed successfully!"
+echo "Quarto and R installed successfully!"
 
 # Render the site
 echo "Rendering Quarto site..."

@@ -1,4 +1,5 @@
-_site/
+# Don't ignore _site - we deploy pre-rendered content
+# _site/
 /.quarto/
 
 **/*.quarto_ipynb
