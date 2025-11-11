@@ -1,0 +1,20 @@
+[
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/posts/PACKAGE_REQUIREMENTS.html",
+      "/blog/posts/covid-19-netherlands/index.html",
+      "/blog/posts/trump-speech-readability/index.html"
+    ]
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/projects/web-app/index.html",
+      "/projects/projects/data-dashboard/index.html",
+      "/projects/projects/tidytuesday/index.html",
+      "/projects/projects/delgosha/index.html",
+      "/projects/projects/palmerpenguins/index.html"
+    ]
+  }
+]

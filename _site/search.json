@@ -119,18 +119,102 @@
     "text": "Looking for older presentations? Check out my GitHub repository where I archive all presentation materials, slides, and code examples."
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
+    "objectID": "projects/MIGRATION_SUMMARY.html",
+    "href": "projects/MIGRATION_SUMMARY.html",
+    "title": "Projects Migration Summary",
     "section": "",
-    "text": "A collection of my open-source projects, packages, and data visualization work. Each project represents a commitment to making data science more accessible and creating tools that serve the community.\n\n\nFrom R and Python packages to weekly data visualizations, explore the projects below to see how I combine technical skills with a passion for open-source software and data storytelling."
+    "text": "I’ve successfully migrated your three projects from your Distill blog to the Quarto website. Here are the new project pages:\n\n\n\nLocation: projects/projects/tidytuesday/index.qmd\nDescription: Your weekly TidyTuesday submissions created using R and ggplot2\nCategories: R, data visualization, ggplot2\nGitHub: github.com/mcnakhaee/Tidy-Tuesday\n\n\n\n\n\nLocation: projects/projects/delgosha/index.qmd\nDescription: An R package providing ggplot2 themes for RTL languages (Persian)\nCategories: R, package development, RTL languages, Persian\nGitHub: github.com/mcnakhaee/delgosha\n\n\n\n\n\nLocation: projects/projects/palmerpenguins/index.qmd\nDescription: A Python package for loading the Palmer Penguins dataset\nCategories: Python, package development, data science, datasets\nGitHub: github.com/mcnakhaee/palmerpenguin\n\n\n\n\n\nYou need to copy three images from your old Distill blog to the new locations:\n\n\n\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\tidtuesday.png\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\delgosha.png\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\palmer.png\n\n\n\n\n\nCopy tidtuesday.png → projects\\projects\\tidytuesday\\tidytuesday.png\nCopy delgosha.png → projects\\projects\\delgosha\\delgosha.png\nCopy palmer.png → projects\\projects\\palmerpenguins\\palmer.png\n\n\n\n\n\nEach project page includes: - Comprehensive overview and description - Key features and technologies used - Installation and usage instructions (where applicable) - Links to GitHub repositories - What you learned from each project - Proper categorization for filtering\n\n\n\nThe main projects page (projects/index.qmd) now has: - Updated description focusing on open-source and data visualization work - Grid layout showing all 5 projects (2 original + 3 new) - Category filtering - Responsive design\n\n\n\nTo add more projects in the future: 1. Create a new folder in projects/projects/ 2. Add an index.qmd file with the project details 3. Add a project image 4. The project will automatically appear on the main projects page\n\n\n\n✅ All project pages created and rendering successfully ✅ Main projects page updated ✅ Site builds without errors ✅ Preview server running ⚠️ Project images need to be copied from old blog (see above)\nOnce you copy the images, the projects page will be complete!"
   },
   {
-    "objectID": "projects/index.html#featured-work",
-    "href": "projects/index.html#featured-work",
-    "title": "Projects",
+    "objectID": "projects/MIGRATION_SUMMARY.html#projects-successfully-added",
+    "href": "projects/MIGRATION_SUMMARY.html#projects-successfully-added",
+    "title": "Projects Migration Summary",
     "section": "",
-    "text": "From R and Python packages to weekly data visualizations, explore the projects below to see how I combine technical skills with a passion for open-source software and data storytelling."
+    "text": "I’ve successfully migrated your three projects from your Distill blog to the Quarto website. Here are the new project pages:\n\n\n\nLocation: projects/projects/tidytuesday/index.qmd\nDescription: Your weekly TidyTuesday submissions created using R and ggplot2\nCategories: R, data visualization, ggplot2\nGitHub: github.com/mcnakhaee/Tidy-Tuesday\n\n\n\n\n\nLocation: projects/projects/delgosha/index.qmd\nDescription: An R package providing ggplot2 themes for RTL languages (Persian)\nCategories: R, package development, RTL languages, Persian\nGitHub: github.com/mcnakhaee/delgosha\n\n\n\n\n\nLocation: projects/projects/palmerpenguins/index.qmd\nDescription: A Python package for loading the Palmer Penguins dataset\nCategories: Python, package development, data science, datasets\nGitHub: github.com/mcnakhaee/palmerpenguin"
+  },
+  {
+    "objectID": "projects/MIGRATION_SUMMARY.html#next-step-add-project-images",
+    "href": "projects/MIGRATION_SUMMARY.html#next-step-add-project-images",
+    "title": "Projects Migration Summary",
+    "section": "",
+    "text": "You need to copy three images from your old Distill blog to the new locations:\n\n\n\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\tidtuesday.png\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\delgosha.png\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\palmer.png\n\n\n\n\n\nCopy tidtuesday.png → projects\\projects\\tidytuesday\\tidytuesday.png\nCopy delgosha.png → projects\\projects\\delgosha\\delgosha.png\nCopy palmer.png → projects\\projects\\palmerpenguins\\palmer.png"
+  },
+  {
+    "objectID": "projects/MIGRATION_SUMMARY.html#what-was-created",
+    "href": "projects/MIGRATION_SUMMARY.html#what-was-created",
+    "title": "Projects Migration Summary",
+    "section": "",
+    "text": "Each project page includes: - Comprehensive overview and description - Key features and technologies used - Installation and usage instructions (where applicable) - Links to GitHub repositories - What you learned from each project - Proper categorization for filtering"
+  },
+  {
+    "objectID": "projects/MIGRATION_SUMMARY.html#updated-main-projects-page",
+    "href": "projects/MIGRATION_SUMMARY.html#updated-main-projects-page",
+    "title": "Projects Migration Summary",
+    "section": "",
+    "text": "The main projects page (projects/index.qmd) now has: - Updated description focusing on open-source and data visualization work - Grid layout showing all 5 projects (2 original + 3 new) - Category filtering - Responsive design"
+  },
+  {
+    "objectID": "projects/MIGRATION_SUMMARY.html#how-to-add-more-projects",
+    "href": "projects/MIGRATION_SUMMARY.html#how-to-add-more-projects",
+    "title": "Projects Migration Summary",
+    "section": "",
+    "text": "To add more projects in the future: 1. Create a new folder in projects/projects/ 2. Add an index.qmd file with the project details 3. Add a project image 4. The project will automatically appear on the main projects page"
+  },
+  {
+    "objectID": "projects/MIGRATION_SUMMARY.html#current-status",
+    "href": "projects/MIGRATION_SUMMARY.html#current-status",
+    "title": "Projects Migration Summary",
+    "section": "",
+    "text": "✅ All project pages created and rendering successfully ✅ Main projects page updated ✅ Site builds without errors ✅ Preview server running ⚠️ Project images need to be copied from old blog (see above)\nOnce you copy the images, the projects page will be complete!"
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html",
+    "href": "projects/projects/web-app/index.html",
+    "title": "Modern Web Application",
+    "section": "",
+    "text": "This project is a modern web application that demonstrates best practices in full-stack development. It features a responsive design, user authentication, and real-time data updates."
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html#overview",
+    "href": "projects/projects/web-app/index.html#overview",
+    "title": "Modern Web Application",
+    "section": "",
+    "text": "This project is a modern web application that demonstrates best practices in full-stack development. It features a responsive design, user authentication, and real-time data updates."
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html#key-features",
+    "href": "projects/projects/web-app/index.html#key-features",
+    "title": "Modern Web Application",
+    "section": "Key Features",
+    "text": "Key Features\n\nResponsive Design: Works seamlessly across all devices\nUser Authentication: Secure login and registration system\nReal-time Updates: Live data synchronization using WebSockets\nModern Stack: Built with React, Node.js, Express, and MongoDB"
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html#technologies-used",
+    "href": "projects/projects/web-app/index.html#technologies-used",
+    "title": "Modern Web Application",
+    "section": "Technologies Used",
+    "text": "Technologies Used\n\n\nFrontend - React - TypeScript - Tailwind CSS\n\n\nBackend - Node.js - Express - MongoDB\n\n\nTools - Git - Docker - Jest\n\n\nDeployment - Vercel - MongoDB Atlas - GitHub Actions"
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html#challenges-solutions",
+    "href": "projects/projects/web-app/index.html#challenges-solutions",
+    "title": "Modern Web Application",
+    "section": "Challenges & Solutions",
+    "text": "Challenges & Solutions\nOne of the main challenges was implementing real-time updates efficiently. We solved this by using WebSockets for live data synchronization, which significantly improved the user experience."
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html#demo-code",
+    "href": "projects/projects/web-app/index.html#demo-code",
+    "title": "Modern Web Application",
+    "section": "Demo & Code",
+    "text": "Demo & Code\n\n\n\n\n\n\nNoteLinks\n\n\n\n\nLive Demo: View Project\nGitHub Repository: View Code\n\nNote: Replace these placeholder links with your actual project URLs."
+  },
+  {
+    "objectID": "projects/projects/web-app/index.html#what-i-learned",
+    "href": "projects/projects/web-app/index.html#what-i-learned",
+    "title": "Modern Web Application",
+    "section": "What I Learned",
+    "text": "What I Learned\nThis project taught me the importance of: - Planning architecture before coding - Writing clean, maintainable code - Testing throughout the development process - Optimizing for performance from the start\n\nProject completed: October 2025"
   },
   {
     "objectID": "projects/projects/palmerpenguins/index.html",
@@ -231,109 +315,60 @@
     "text": "Credits\nDataset originally published by: - Dr. Kristen Gorman: Palmer Station, Antarctica LTER - Dr. Allison Horst: Artwork and R package\n\nOpen source project available on GitHub and PyPI"
   },
   {
-    "objectID": "projects/projects/tidytuesday/index.html",
-    "href": "projects/projects/tidytuesday/index.html",
-    "title": "TidyTuesday",
+    "objectID": "projects/projects/data-dashboard/index.html",
+    "href": "projects/projects/data-dashboard/index.html",
+    "title": "Data Analysis Dashboard",
     "section": "",
-    "text": "TidyTuesday is a weekly data project aimed at the R ecosystem. Every week, a new dataset is posted, and participants create visualizations and share their work on social media. This repository contains my submissions for the weekly TidyTuesday Project, created using R and ggplot2."
+    "text": "This data analysis dashboard provides interactive visualizations and insights from complex datasets. It’s designed to make data exploration intuitive and accessible."
   },
   {
-    "objectID": "projects/projects/tidytuesday/index.html#overview",
-    "href": "projects/projects/tidytuesday/index.html#overview",
-    "title": "TidyTuesday",
+    "objectID": "projects/projects/data-dashboard/index.html#overview",
+    "href": "projects/projects/data-dashboard/index.html#overview",
+    "title": "Data Analysis Dashboard",
     "section": "",
-    "text": "TidyTuesday is a weekly data project aimed at the R ecosystem. Every week, a new dataset is posted, and participants create visualizations and share their work on social media. This repository contains my submissions for the weekly TidyTuesday Project, created using R and ggplot2."
+    "text": "This data analysis dashboard provides interactive visualizations and insights from complex datasets. It’s designed to make data exploration intuitive and accessible."
   },
   {
-    "objectID": "projects/projects/tidytuesday/index.html#about-tidytuesday",
-    "href": "projects/projects/tidytuesday/index.html#about-tidytuesday",
-    "title": "TidyTuesday",
-    "section": "About TidyTuesday",
-    "text": "About TidyTuesday\nThe TidyTuesday project is:\n\nA safe and supportive forum for individuals to practice their data wrangling and visualization skills\nA weekly social data project that focuses on understanding data\nAn opportunity to work with real-world datasets and create compelling visualizations"
-  },
-  {
-    "objectID": "projects/projects/tidytuesday/index.html#key-features",
-    "href": "projects/projects/tidytuesday/index.html#key-features",
-    "title": "TidyTuesday",
+    "objectID": "projects/projects/data-dashboard/index.html#key-features",
+    "href": "projects/projects/data-dashboard/index.html#key-features",
+    "title": "Data Analysis Dashboard",
     "section": "Key Features",
-    "text": "Key Features\n\nWeekly Visualizations: Regular contributions exploring diverse datasets\nR & ggplot2: All visualizations created using R’s powerful ggplot2 package\nData Storytelling: Each visualization tells a unique story about the data\nReproducible Code: All code is available for learning and reproduction"
+    "text": "Key Features\n\nInteractive Visualizations: Dynamic charts and graphs using Plotly\nData Processing: Efficient data handling with Pandas\nReal-time Filtering: Interactive filters for data exploration\nExport Options: Export reports in multiple formats"
   },
   {
-    "objectID": "projects/projects/tidytuesday/index.html#technologies-used",
-    "href": "projects/projects/tidytuesday/index.html#technologies-used",
-    "title": "TidyTuesday",
+    "objectID": "projects/projects/data-dashboard/index.html#technologies-used",
+    "href": "projects/projects/data-dashboard/index.html#technologies-used",
+    "title": "Data Analysis Dashboard",
     "section": "Technologies Used",
-    "text": "Technologies Used\n\n\nLanguages & Tools - R - ggplot2 - tidyverse - RStudio\n\n\nSkills Demonstrated - Data wrangling - Statistical visualization - Design principles - Data storytelling"
+    "text": "Technologies Used\n# Core libraries used in this project\nimport pandas as pd\nimport plotly.express as px\nimport dash\nfrom dash import dcc, html\nTech Stack: - Python 3.11 - Pandas for data manipulation - Plotly & Dash for visualizations - NumPy for numerical computations"
   },
   {
-    "objectID": "projects/projects/tidytuesday/index.html#sample-visualizations",
-    "href": "projects/projects/tidytuesday/index.html#sample-visualizations",
-    "title": "TidyTuesday",
-    "section": "Sample Visualizations",
-    "text": "Sample Visualizations\nMy TidyTuesday submissions cover a wide range of topics and datasets, including:\n\nEconomic trends and indicators\nSocial and demographic data\nSports statistics\nEnvironmental data\nCultural and entertainment data\n\nEach visualization is crafted to: - Clearly communicate insights from the data - Follow best practices in data visualization - Use effective color schemes and typography - Be accessible and easy to understand"
+    "objectID": "projects/projects/data-dashboard/index.html#project-highlights",
+    "href": "projects/projects/data-dashboard/index.html#project-highlights",
+    "title": "Data Analysis Dashboard",
+    "section": "Project Highlights",
+    "text": "Project Highlights\n\nData Processing Pipeline\nThe dashboard processes large datasets efficiently using:\n\nData Cleaning: Automated preprocessing and validation\nTransformation: Feature engineering and aggregation\nVisualization: Multiple chart types and interactive elements\n\n\n\nPerformance Optimization\n\nImplemented caching for faster load times\nOptimized queries for large datasets\nUsed lazy loading for better UX"
   },
   {
-    "objectID": "projects/projects/tidytuesday/index.html#project-links",
-    "href": "projects/projects/tidytuesday/index.html#project-links",
-    "title": "TidyTuesday",
-    "section": "Project Links",
-    "text": "Project Links\n\n\n\n\n\n\nTipView My Work\n\n\n\n\nGitHub Repository: github.com/mcnakhaee/Tidy-Tuesday\nExplore my weekly submissions and see how different datasets can be visualized"
+    "objectID": "projects/projects/data-dashboard/index.html#use-cases",
+    "href": "projects/projects/data-dashboard/index.html#use-cases",
+    "title": "Data Analysis Dashboard",
+    "section": "Use Cases",
+    "text": "Use Cases\nThis dashboard has been used for: - Business intelligence reporting - Sales data analysis - Customer behavior tracking - Performance metrics monitoring\n\n\n\n\n\n\nTipTry It Out\n\n\n\nThe dashboard is designed to work with various data sources. You can connect your own CSV files or databases to visualize your data."
   },
   {
-    "objectID": "projects/projects/tidytuesday/index.html#what-i-learned",
-    "href": "projects/projects/tidytuesday/index.html#what-i-learned",
-    "title": "TidyTuesday",
-    "section": "What I Learned",
-    "text": "What I Learned\nParticipating in TidyTuesday has helped me: - Develop stronger data visualization skills - Learn to work with diverse datasets quickly - Understand design principles for effective communication - Build a portfolio of data visualization work - Engage with the R community\n\nOngoing project with weekly contributions"
+    "objectID": "projects/projects/data-dashboard/index.html#code-sample",
+    "href": "projects/projects/data-dashboard/index.html#code-sample",
+    "title": "Data Analysis Dashboard",
+    "section": "Code Sample",
+    "text": "Code Sample\nHere’s an example of creating an interactive visualization:\ndef create_chart(df, x_col, y_col):\n    fig = px.scatter(df, x=x_col, y=y_col, \n                     title=f'{y_col} vs {x_col}',\n                     hover_data=df.columns)\n    return fig"
   },
   {
-    "objectID": "projects/projects/web-app/index.html",
-    "href": "projects/projects/web-app/index.html",
-    "title": "Modern Web Application",
-    "section": "",
-    "text": "This project is a modern web application that demonstrates best practices in full-stack development. It features a responsive design, user authentication, and real-time data updates."
-  },
-  {
-    "objectID": "projects/projects/web-app/index.html#overview",
-    "href": "projects/projects/web-app/index.html#overview",
-    "title": "Modern Web Application",
-    "section": "",
-    "text": "This project is a modern web application that demonstrates best practices in full-stack development. It features a responsive design, user authentication, and real-time data updates."
-  },
-  {
-    "objectID": "projects/projects/web-app/index.html#key-features",
-    "href": "projects/projects/web-app/index.html#key-features",
-    "title": "Modern Web Application",
-    "section": "Key Features",
-    "text": "Key Features\n\nResponsive Design: Works seamlessly across all devices\nUser Authentication: Secure login and registration system\nReal-time Updates: Live data synchronization using WebSockets\nModern Stack: Built with React, Node.js, Express, and MongoDB"
-  },
-  {
-    "objectID": "projects/projects/web-app/index.html#technologies-used",
-    "href": "projects/projects/web-app/index.html#technologies-used",
-    "title": "Modern Web Application",
-    "section": "Technologies Used",
-    "text": "Technologies Used\n\n\nFrontend - React - TypeScript - Tailwind CSS\n\n\nBackend - Node.js - Express - MongoDB\n\n\nTools - Git - Docker - Jest\n\n\nDeployment - Vercel - MongoDB Atlas - GitHub Actions"
-  },
-  {
-    "objectID": "projects/projects/web-app/index.html#challenges-solutions",
-    "href": "projects/projects/web-app/index.html#challenges-solutions",
-    "title": "Modern Web Application",
-    "section": "Challenges & Solutions",
-    "text": "Challenges & Solutions\nOne of the main challenges was implementing real-time updates efficiently. We solved this by using WebSockets for live data synchronization, which significantly improved the user experience."
-  },
-  {
-    "objectID": "projects/projects/web-app/index.html#demo-code",
-    "href": "projects/projects/web-app/index.html#demo-code",
-    "title": "Modern Web Application",
-    "section": "Demo & Code",
-    "text": "Demo & Code\n\n\n\n\n\n\nNoteLinks\n\n\n\n\nLive Demo: View Project\nGitHub Repository: View Code\n\nNote: Replace these placeholder links with your actual project URLs."
-  },
-  {
-    "objectID": "projects/projects/web-app/index.html#what-i-learned",
-    "href": "projects/projects/web-app/index.html#what-i-learned",
-    "title": "Modern Web Application",
-    "section": "What I Learned",
-    "text": "What I Learned\nThis project taught me the importance of: - Planning architecture before coding - Writing clean, maintainable code - Testing throughout the development process - Optimizing for performance from the start\n\nProject completed: October 2025"
+    "objectID": "projects/projects/data-dashboard/index.html#links",
+    "href": "projects/projects/data-dashboard/index.html#links",
+    "title": "Data Analysis Dashboard",
+    "section": "Links",
+    "text": "Links\n\nGitHub: View Source Code\nDocumentation: Read More\n\n\nProject completed: September 2025"
   },
   {
     "objectID": "blog/posts/PACKAGE_REQUIREMENTS.html",
@@ -376,6 +411,41 @@
     "title": "Package Requirements for Migrated Blog Posts",
     "section": "",
     "text": "The us2020election and CoronaWatchNL packages are custom packages that need to be installed from GitHub\nFont configuration (Lobster, Poppins Light) may require system fonts to be installed\nAnimation GIFs should be placed in the respective post directories if you want them to display\nThe posts are currently optimized for display without execution, perfect for portfolio/documentation purposes"
+  },
+  {
+    "objectID": "blog/posts/covid-19-netherlands/index.html",
+    "href": "blog/posts/covid-19-netherlands/index.html",
+    "title": "Covid-19 Trends in the Netherlands",
+    "section": "",
+    "text": "Two weeks ago, I made a visualization that shows how Covid-19 cases spread in the Netherlands from the beginning of March and how grim the situation looked. However, someone pointed out the fact that the number of tests has increased significantly. It means that my plot may exaggerate the Covid-19 situation in the Netherlands. Unfortunately, I could not find testing data for each Dutch municipality. Instead, I decided to use hospitalization admissions and deceased cases to see if we can indeed see a massive spread in the second wave of Covid-19 cases in the Netherlands.\nCode\nlibrary(tidyverse)\nlibrary(CoronaWatchNL)\nlibrary(sf)\nlibrary(gganimate)\nlibrary(santoku)\nlibrary(lubridate)\nlibrary(foreign)\ntheme_set(theme_void())\ntheme_update(\n  #plot.background = element_rect(fill = '#FDF6E3',color = '#FDF6E3'),\n  text = element_text(family = 'Poppins Light'),\n  plot.subtitle = element_text(\n    family = 'Poppins Light',\n    size = 10,\n    margin = margin(b = 10)\n  ),\n  plot.title = element_text(\n    family = 'Poppins Light',\n    size = 12,\n    margin = margin(t = 10, b = 10)\n  )\n)\nI created an R package called CoronaWatchNL that allows you to access a wide range of Covid-19 datasets. I’ll use this package in this post to get Covid-19 cases, hospital admissions, and deaths for Dutch municipalities.\nCode\nmunicipalBoundaries &lt;- st_read(\n    \"https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=cbs_gemeente_2020_gegeneraliseerd&outputFormat=json\"\n  )\n\ndaily_cases_per_municpality &lt;- get_daily_cases_per_municipality()\npopulatuon_per_region &lt;- get_population_per_region()\n\ndaily_cases_per_municpality &lt;- daily_cases_per_municpality %&gt;%\n  inner_join(populatuon_per_region, by = c('Municipality_name' = 'Regions')) %&gt;%\n  mutate(\n    Date_of_publication = as_date(Date_of_publication),\n    avg_daily_total_cases = 100000 * as.numeric(Total_reported) / as.numeric(`Bevolking op 1 januari (aantal)`),\n    avg_daily_hospital_admissions = 100000 * as.numeric(Hospital_admission) / as.numeric(`Bevolking op 1 januari (aantal)`),\n    avg_daily_deceased = 100000 * as.numeric(Deceased) / as.numeric(`Bevolking op 1 januari (aantal)`)\n  )\nI compute the weekly average number of Covid-19 cases, hospitalizations, and deaths per 100,000 inhabitants in each municipality in the Netherlands. The following piece of code shows how I did this using R.\nCode\nweekly_cases &lt;- daily_cases_per_municpality %&gt;%\n  mutate(week = round_date(Date_of_publication , unit = 'week'))\n\nweekly_cases_per_municpality &lt;- weekly_cases %&gt;%\n  group_by(Municipality_name, week) %&gt;%\n  summarise(\n    avg_weekly_total_cases = mean(avg_daily_total_cases),\n    avg_weekly_hospital_admissions = mean(avg_daily_hospital_admissions),\n    avg_weekly_deceased = mean(avg_daily_deceased)) %&gt;%\n  ungroup() %&gt;%\n  mutate(\n    d_avg_weekly_total_cases = chop(avg_weekly_total_cases, c(0, 0, 0.5, 1, 5, 12, 20, 35, 55, 80, 100)),\n    d_avg_hospital_admissions = chop(\n      avg_weekly_hospital_admissions,\n      c(0, 0, 0.5, 1, 2, 3, 5, 7, 9, 10, 15)),\n    d_avg_weekly_deceased = chop(avg_weekly_deceased, c(0, 0, 0.1, 0.5, 1, 1.5, 2, 2.5, 3, 5)))\n\ndata_weekly &lt;- municipalBoundaries %&gt;%\n  right_join(weekly_cases_per_municpality,\n             by = c(statnaam = \"Municipality_name\"))\nI will create an animation that shows how Covid-19 cases spread in the Netherlands and which municipalities were and are hit hardest by the pandemic.\nCode\nmake_animation &lt;- function(data, var_name, pal, title) {\n  var_name &lt;- rlang::enquo(var_name)\n  data %&gt;%\n    #filter(week &gt; '2020-10-01') %&gt;%\n    ggplot() +\n    geom_sf(aes(fill = !!var_name), color = 'gray95') +\n    scale_fill_manual(values  = pal) +\n    coord_sf(datum = NA) +\n    labs(\n      title = title,\n      subtitle = 'Date: {current_frame}',\n      fill = 'Counts per 100,000',\n      caption = 'Source: RIVM'\n    ) +\n    transition_manual(week, cumulative = T) +\n    ease_aes(\"sine\") +\n    enter_fade(alpha = 0.5) +\n    exit_fade(alpha = 0.5)\n}"
+  },
+  {
+    "objectID": "blog/posts/covid-19-netherlands/index.html#covid-19-cases",
+    "href": "blog/posts/covid-19-netherlands/index.html#covid-19-cases",
+    "title": "Covid-19 Trends in the Netherlands",
+    "section": "Covid-19 Cases",
+    "text": "Covid-19 Cases\nThe first animation shows the number of infections in each municipality, from the start of the pandemic in February until recently. As you can see, the second wave, which began in late September, looks really terrifying. Note that there are some municipalities for which no data is available.\n\n\nCode\npal_cases &lt;- c(\n      'gray95',\n      '#fee440',\n      '#FFBA08',\n      '#FAA307',\n      '#F48C06',\n      '#E85D04',\n      '#DC2F02',\n      '#D00000',\n      '#9D0208',\n      '#6A040F',\n      '#370617',\n      '#03071e'\n    )\nmake_animation(data_weekly,d_avg_weekly_total_cases,pal_cases,'The Average Weekly Number of Covid-19 Cases\\nper 100,000 Inhabitants in the Netherlands')"
+  },
+  {
+    "objectID": "blog/posts/covid-19-netherlands/index.html#hospital-admissions",
+    "href": "blog/posts/covid-19-netherlands/index.html#hospital-admissions",
+    "title": "Covid-19 Trends in the Netherlands",
+    "section": "Hospital Admissions",
+    "text": "Hospital Admissions\nIf we look at the number of hospital admissions, we see a different story. It seems that the number of hospitalizations was higher during the first wave of Covid-19 compared to the second wave, and mostly the southern parts of the Netherlands were hit harder than the rest of the Netherlands.\n\n\nCode\npal_patients &lt;- c(\n      'gray95',\n      '#caf0f8',\n      '#ade8f4',\n      '#90e0ef',\n      '#48cae4',\n      '#00b4d8',\n      '#0096c7',\n      '#0077b6',\n      '#023e8a',\n      '#03045e',\n      '#03071e'\n)\nmake_animation(data_weekly,d_avg_hospital_admissions,pal_patients,'The Average Weekly Number of Hospital Admissions\\nper 100,000 Inhabitants in the Netherlands')"
+  },
+  {
+    "objectID": "blog/posts/covid-19-netherlands/index.html#deaths",
+    "href": "blog/posts/covid-19-netherlands/index.html#deaths",
+    "title": "Covid-19 Trends in the Netherlands",
+    "section": "Deaths",
+    "text": "Deaths\nThe trend for deceased patients looks similar to that of hospital admissions. The average number of deaths during the first wave of coronavirus was higher than the average number of deaths during the second wave.\n\n\nCode\npal_deceased &lt;- c(\n      'gray95',\n      '#fdc5f5',\n     '#e0aaff',\n      '#c77dff',\n      '#9d4edd',\n      '#7b2cbf',\n      '#5a189a',\n      '#3c096c',\n      '#240046',\n      '#10002b'\n)\nmake_animation(data_weekly,d_avg_weekly_deceased,pal_deceased,'The Average Weekly Number of Deceased Patients\\nper 100,000 Inhabitants in the Netherlands')"
+  },
+  {
+    "objectID": "blog/posts/covid-19-netherlands/index.html#conclusion",
+    "href": "blog/posts/covid-19-netherlands/index.html#conclusion",
+    "title": "Covid-19 Trends in the Netherlands",
+    "section": "Conclusion",
+    "text": "Conclusion\nThese different animations show us two distinct trends. On the one hand, we can see the number of confirmed cases rose rapidly during the second wave to affect almost all regions. On the other hand, the number of hospitalizations and deaths during the second wave slightly decreased. This might suggest that the rise in the number of cases is mainly driven by an increase in the number of tests. Alternatively, the virus might have become less deadly and severe."
   },
   {
     "objectID": "blog/posts/trump-speech-readability/index.html",
@@ -434,102 +504,11 @@
     "text": "Conclusion\nWe can consistently see that Trump’s speeches are less sophisticated and less complex than the speeches given by the rest of the politicians. We can attribute this to his lack of sophistication in terms of language, the fact that he knows how to speak to his audience, or both. Also, we can notice that Mike Pence and Barack Obama seem to use more advanced language in their speeches."
   },
   {
-    "objectID": "blog/posts/covid-19-netherlands/index.html",
-    "href": "blog/posts/covid-19-netherlands/index.html",
-    "title": "Covid-19 Trends in the Netherlands",
-    "section": "",
-    "text": "Two weeks ago, I made a visualization that shows how Covid-19 cases spread in the Netherlands from the beginning of March and how grim the situation looked. However, someone pointed out the fact that the number of tests has increased significantly. It means that my plot may exaggerate the Covid-19 situation in the Netherlands. Unfortunately, I could not find testing data for each Dutch municipality. Instead, I decided to use hospitalization admissions and deceased cases to see if we can indeed see a massive spread in the second wave of Covid-19 cases in the Netherlands.\nCode\nlibrary(tidyverse)\nlibrary(CoronaWatchNL)\nlibrary(sf)\nlibrary(gganimate)\nlibrary(santoku)\nlibrary(lubridate)\nlibrary(foreign)\ntheme_set(theme_void())\ntheme_update(\n  #plot.background = element_rect(fill = '#FDF6E3',color = '#FDF6E3'),\n  text = element_text(family = 'Poppins Light'),\n  plot.subtitle = element_text(\n    family = 'Poppins Light',\n    size = 10,\n    margin = margin(b = 10)\n  ),\n  plot.title = element_text(\n    family = 'Poppins Light',\n    size = 12,\n    margin = margin(t = 10, b = 10)\n  )\n)\nI created an R package called CoronaWatchNL that allows you to access a wide range of Covid-19 datasets. I’ll use this package in this post to get Covid-19 cases, hospital admissions, and deaths for Dutch municipalities.\nCode\nmunicipalBoundaries &lt;- st_read(\n    \"https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=cbs_gemeente_2020_gegeneraliseerd&outputFormat=json\"\n  )\n\ndaily_cases_per_municpality &lt;- get_daily_cases_per_municipality()\npopulatuon_per_region &lt;- get_population_per_region()\n\ndaily_cases_per_municpality &lt;- daily_cases_per_municpality %&gt;%\n  inner_join(populatuon_per_region, by = c('Municipality_name' = 'Regions')) %&gt;%\n  mutate(\n    Date_of_publication = as_date(Date_of_publication),\n    avg_daily_total_cases = 100000 * as.numeric(Total_reported) / as.numeric(`Bevolking op 1 januari (aantal)`),\n    avg_daily_hospital_admissions = 100000 * as.numeric(Hospital_admission) / as.numeric(`Bevolking op 1 januari (aantal)`),\n    avg_daily_deceased = 100000 * as.numeric(Deceased) / as.numeric(`Bevolking op 1 januari (aantal)`)\n  )\nI compute the weekly average number of Covid-19 cases, hospitalizations, and deaths per 100,000 inhabitants in each municipality in the Netherlands. The following piece of code shows how I did this using R.\nCode\nweekly_cases &lt;- daily_cases_per_municpality %&gt;%\n  mutate(week = round_date(Date_of_publication , unit = 'week'))\n\nweekly_cases_per_municpality &lt;- weekly_cases %&gt;%\n  group_by(Municipality_name, week) %&gt;%\n  summarise(\n    avg_weekly_total_cases = mean(avg_daily_total_cases),\n    avg_weekly_hospital_admissions = mean(avg_daily_hospital_admissions),\n    avg_weekly_deceased = mean(avg_daily_deceased)) %&gt;%\n  ungroup() %&gt;%\n  mutate(\n    d_avg_weekly_total_cases = chop(avg_weekly_total_cases, c(0, 0, 0.5, 1, 5, 12, 20, 35, 55, 80, 100)),\n    d_avg_hospital_admissions = chop(\n      avg_weekly_hospital_admissions,\n      c(0, 0, 0.5, 1, 2, 3, 5, 7, 9, 10, 15)),\n    d_avg_weekly_deceased = chop(avg_weekly_deceased, c(0, 0, 0.1, 0.5, 1, 1.5, 2, 2.5, 3, 5)))\n\ndata_weekly &lt;- municipalBoundaries %&gt;%\n  right_join(weekly_cases_per_municpality,\n             by = c(statnaam = \"Municipality_name\"))\nI will create an animation that shows how Covid-19 cases spread in the Netherlands and which municipalities were and are hit hardest by the pandemic.\nCode\nmake_animation &lt;- function(data, var_name, pal, title) {\n  var_name &lt;- rlang::enquo(var_name)\n  data %&gt;%\n    #filter(week &gt; '2020-10-01') %&gt;%\n    ggplot() +\n    geom_sf(aes(fill = !!var_name), color = 'gray95') +\n    scale_fill_manual(values  = pal) +\n    coord_sf(datum = NA) +\n    labs(\n      title = title,\n      subtitle = 'Date: {current_frame}',\n      fill = 'Counts per 100,000',\n      caption = 'Source: RIVM'\n    ) +\n    transition_manual(week, cumulative = T) +\n    ease_aes(\"sine\") +\n    enter_fade(alpha = 0.5) +\n    exit_fade(alpha = 0.5)\n}"
-  },
-  {
-    "objectID": "blog/posts/covid-19-netherlands/index.html#covid-19-cases",
-    "href": "blog/posts/covid-19-netherlands/index.html#covid-19-cases",
-    "title": "Covid-19 Trends in the Netherlands",
-    "section": "Covid-19 Cases",
-    "text": "Covid-19 Cases\nThe first animation shows the number of infections in each municipality, from the start of the pandemic in February until recently. As you can see, the second wave, which began in late September, looks really terrifying. Note that there are some municipalities for which no data is available.\n\n\nCode\npal_cases &lt;- c(\n      'gray95',\n      '#fee440',\n      '#FFBA08',\n      '#FAA307',\n      '#F48C06',\n      '#E85D04',\n      '#DC2F02',\n      '#D00000',\n      '#9D0208',\n      '#6A040F',\n      '#370617',\n      '#03071e'\n    )\nmake_animation(data_weekly,d_avg_weekly_total_cases,pal_cases,'The Average Weekly Number of Covid-19 Cases\\nper 100,000 Inhabitants in the Netherlands')"
-  },
-  {
-    "objectID": "blog/posts/covid-19-netherlands/index.html#hospital-admissions",
-    "href": "blog/posts/covid-19-netherlands/index.html#hospital-admissions",
-    "title": "Covid-19 Trends in the Netherlands",
-    "section": "Hospital Admissions",
-    "text": "Hospital Admissions\nIf we look at the number of hospital admissions, we see a different story. It seems that the number of hospitalizations was higher during the first wave of Covid-19 compared to the second wave, and mostly the southern parts of the Netherlands were hit harder than the rest of the Netherlands.\n\n\nCode\npal_patients &lt;- c(\n      'gray95',\n      '#caf0f8',\n      '#ade8f4',\n      '#90e0ef',\n      '#48cae4',\n      '#00b4d8',\n      '#0096c7',\n      '#0077b6',\n      '#023e8a',\n      '#03045e',\n      '#03071e'\n)\nmake_animation(data_weekly,d_avg_hospital_admissions,pal_patients,'The Average Weekly Number of Hospital Admissions\\nper 100,000 Inhabitants in the Netherlands')"
-  },
-  {
-    "objectID": "blog/posts/covid-19-netherlands/index.html#deaths",
-    "href": "blog/posts/covid-19-netherlands/index.html#deaths",
-    "title": "Covid-19 Trends in the Netherlands",
-    "section": "Deaths",
-    "text": "Deaths\nThe trend for deceased patients looks similar to that of hospital admissions. The average number of deaths during the first wave of coronavirus was higher than the average number of deaths during the second wave.\n\n\nCode\npal_deceased &lt;- c(\n      'gray95',\n      '#fdc5f5',\n     '#e0aaff',\n      '#c77dff',\n      '#9d4edd',\n      '#7b2cbf',\n      '#5a189a',\n      '#3c096c',\n      '#240046',\n      '#10002b'\n)\nmake_animation(data_weekly,d_avg_weekly_deceased,pal_deceased,'The Average Weekly Number of Deceased Patients\\nper 100,000 Inhabitants in the Netherlands')"
-  },
-  {
-    "objectID": "blog/posts/covid-19-netherlands/index.html#conclusion",
-    "href": "blog/posts/covid-19-netherlands/index.html#conclusion",
-    "title": "Covid-19 Trends in the Netherlands",
-    "section": "Conclusion",
-    "text": "Conclusion\nThese different animations show us two distinct trends. On the one hand, we can see the number of confirmed cases rose rapidly during the second wave to affect almost all regions. On the other hand, the number of hospitalizations and deaths during the second wave slightly decreased. This might suggest that the rise in the number of cases is mainly driven by an increase in the number of tests. Alternatively, the virus might have become less deadly and severe."
-  },
-  {
     "objectID": "blog/index.html",
     "href": "blog/index.html",
     "title": "Posts",
     "section": "",
     "text": "Welcome to my blog! Here you’ll find articles, tutorials, and insights on data science, technology, and research.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nPackage Requirements for Migrated Blog Posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCovid-19 Trends in the Netherlands\n\n\n\nR\n\ndata visualization\n\nCovid-19\n\n\n\nBased on data published by RIVM, in this post I looked at how Covid-19 cases spread throughout the Netherlands.\n\n\n\nMuhammad Chenariyan Nakhaee\n\n\nMay 22, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow Easy Is It to Understand What Donald Trump Says?\n\n\n\npolitics\n\ndata analysis\n\nNLP\n\npython\n\nR\n\n\n\nThe computational complexity of the language that Trump uses in his speeches\n\n\n\nMuhammad Chenariyan Nakhaee\n\n\nNov 3, 2020\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/projects/data-dashboard/index.html",
-    "href": "projects/projects/data-dashboard/index.html",
-    "title": "Data Analysis Dashboard",
-    "section": "",
-    "text": "This data analysis dashboard provides interactive visualizations and insights from complex datasets. It’s designed to make data exploration intuitive and accessible."
-  },
-  {
-    "objectID": "projects/projects/data-dashboard/index.html#overview",
-    "href": "projects/projects/data-dashboard/index.html#overview",
-    "title": "Data Analysis Dashboard",
-    "section": "",
-    "text": "This data analysis dashboard provides interactive visualizations and insights from complex datasets. It’s designed to make data exploration intuitive and accessible."
-  },
-  {
-    "objectID": "projects/projects/data-dashboard/index.html#key-features",
-    "href": "projects/projects/data-dashboard/index.html#key-features",
-    "title": "Data Analysis Dashboard",
-    "section": "Key Features",
-    "text": "Key Features\n\nInteractive Visualizations: Dynamic charts and graphs using Plotly\nData Processing: Efficient data handling with Pandas\nReal-time Filtering: Interactive filters for data exploration\nExport Options: Export reports in multiple formats"
-  },
-  {
-    "objectID": "projects/projects/data-dashboard/index.html#technologies-used",
-    "href": "projects/projects/data-dashboard/index.html#technologies-used",
-    "title": "Data Analysis Dashboard",
-    "section": "Technologies Used",
-    "text": "Technologies Used\n# Core libraries used in this project\nimport pandas as pd\nimport plotly.express as px\nimport dash\nfrom dash import dcc, html\nTech Stack: - Python 3.11 - Pandas for data manipulation - Plotly & Dash for visualizations - NumPy for numerical computations"
-  },
-  {
-    "objectID": "projects/projects/data-dashboard/index.html#project-highlights",
-    "href": "projects/projects/data-dashboard/index.html#project-highlights",
-    "title": "Data Analysis Dashboard",
-    "section": "Project Highlights",
-    "text": "Project Highlights\n\nData Processing Pipeline\nThe dashboard processes large datasets efficiently using:\n\nData Cleaning: Automated preprocessing and validation\nTransformation: Feature engineering and aggregation\nVisualization: Multiple chart types and interactive elements\n\n\n\nPerformance Optimization\n\nImplemented caching for faster load times\nOptimized queries for large datasets\nUsed lazy loading for better UX"
-  },
-  {
-    "objectID": "projects/projects/data-dashboard/index.html#use-cases",
-    "href": "projects/projects/data-dashboard/index.html#use-cases",
-    "title": "Data Analysis Dashboard",
-    "section": "Use Cases",
-    "text": "Use Cases\nThis dashboard has been used for: - Business intelligence reporting - Sales data analysis - Customer behavior tracking - Performance metrics monitoring\n\n\n\n\n\n\nTipTry It Out\n\n\n\nThe dashboard is designed to work with various data sources. You can connect your own CSV files or databases to visualize your data."
-  },
-  {
-    "objectID": "projects/projects/data-dashboard/index.html#code-sample",
-    "href": "projects/projects/data-dashboard/index.html#code-sample",
-    "title": "Data Analysis Dashboard",
-    "section": "Code Sample",
-    "text": "Code Sample\nHere’s an example of creating an interactive visualization:\ndef create_chart(df, x_col, y_col):\n    fig = px.scatter(df, x=x_col, y=y_col, \n                     title=f'{y_col} vs {x_col}',\n                     hover_data=df.columns)\n    return fig"
-  },
-  {
-    "objectID": "projects/projects/data-dashboard/index.html#links",
-    "href": "projects/projects/data-dashboard/index.html#links",
-    "title": "Data Analysis Dashboard",
-    "section": "Links",
-    "text": "Links\n\nGitHub: View Source Code\nDocumentation: Read More\n\n\nProject completed: September 2025"
   },
   {
     "objectID": "projects/projects/delgosha/index.html",
@@ -616,81 +595,102 @@
     "text": "What I Learned\nBuilding {delgosha} taught me: - R package development best practices - Working with fonts and text rendering in R - Internationalization and localization challenges - The importance of accessible tools for non-English speakers - How to build and maintain open-source software\n\nOpen source project available on GitHub"
   },
   {
-    "objectID": "projects/projects/IMAGES_README.html",
-    "href": "projects/projects/IMAGES_README.html",
+    "objectID": "projects/projects/tidytuesday/index.html",
+    "href": "projects/projects/tidytuesday/index.html",
+    "title": "TidyTuesday",
+    "section": "",
+    "text": "TidyTuesday is a weekly data project aimed at the R ecosystem. Every week, a new dataset is posted, and participants create visualizations and share their work on social media. This repository contains my submissions for the weekly TidyTuesday Project, created using R and ggplot2."
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#overview",
+    "href": "projects/projects/tidytuesday/index.html#overview",
+    "title": "TidyTuesday",
+    "section": "",
+    "text": "TidyTuesday is a weekly data project aimed at the R ecosystem. Every week, a new dataset is posted, and participants create visualizations and share their work on social media. This repository contains my submissions for the weekly TidyTuesday Project, created using R and ggplot2."
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#about-tidytuesday",
+    "href": "projects/projects/tidytuesday/index.html#about-tidytuesday",
+    "title": "TidyTuesday",
+    "section": "About TidyTuesday",
+    "text": "About TidyTuesday\nThe TidyTuesday project is:\n\nA safe and supportive forum for individuals to practice their data wrangling and visualization skills\nA weekly social data project that focuses on understanding data\nAn opportunity to work with real-world datasets and create compelling visualizations"
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#key-features",
+    "href": "projects/projects/tidytuesday/index.html#key-features",
+    "title": "TidyTuesday",
+    "section": "Key Features",
+    "text": "Key Features\n\nWeekly Visualizations: Regular contributions exploring diverse datasets\nR & ggplot2: All visualizations created using R’s powerful ggplot2 package\nData Storytelling: Each visualization tells a unique story about the data\nReproducible Code: All code is available for learning and reproduction"
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#technologies-used",
+    "href": "projects/projects/tidytuesday/index.html#technologies-used",
+    "title": "TidyTuesday",
+    "section": "Technologies Used",
+    "text": "Technologies Used\n\n\nLanguages & Tools - R - ggplot2 - tidyverse - RStudio\n\n\nSkills Demonstrated - Data wrangling - Statistical visualization - Design principles - Data storytelling"
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#sample-visualizations",
+    "href": "projects/projects/tidytuesday/index.html#sample-visualizations",
+    "title": "TidyTuesday",
+    "section": "Sample Visualizations",
+    "text": "Sample Visualizations\nMy TidyTuesday submissions cover a wide range of topics and datasets, including:\n\nEconomic trends and indicators\nSocial and demographic data\nSports statistics\nEnvironmental data\nCultural and entertainment data\n\nEach visualization is crafted to: - Clearly communicate insights from the data - Follow best practices in data visualization - Use effective color schemes and typography - Be accessible and easy to understand"
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#project-links",
+    "href": "projects/projects/tidytuesday/index.html#project-links",
+    "title": "TidyTuesday",
+    "section": "Project Links",
+    "text": "Project Links\n\n\n\n\n\n\nTipView My Work\n\n\n\n\nGitHub Repository: github.com/mcnakhaee/Tidy-Tuesday\nExplore my weekly submissions and see how different datasets can be visualized"
+  },
+  {
+    "objectID": "projects/projects/tidytuesday/index.html#what-i-learned",
+    "href": "projects/projects/tidytuesday/index.html#what-i-learned",
+    "title": "TidyTuesday",
+    "section": "What I Learned",
+    "text": "What I Learned\nParticipating in TidyTuesday has helped me: - Develop stronger data visualization skills - Learn to work with diverse datasets quickly - Understand design principles for effective communication - Build a portfolio of data visualization work - Engage with the R community\n\nOngoing project with weekly contributions"
+  },
+  {
+    "objectID": "projects/IMAGES_README.html",
+    "href": "projects/IMAGES_README.html",
     "title": "Project Images",
     "section": "",
     "text": "This directory should contain the following images for the project cards:\n\n\n\ntidytuesday.png - TidyTuesday project thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nShould show a sample TidyTuesday visualization\n\ndelgosha.png - Delgosha R package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show Persian text visualization or package logo\n\npalmer.png - Palmer Penguins package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show penguin illustrations or sample visualization\n\n\n\n\n\n\nImages are referenced in the respective project index.qmd files\nIf images are missing, Quarto will still render but show placeholder or no image\nYou can copy these images from your old Distill blog’s imgs/ directory\nSupported formats: PNG, JPG, SVG\n\n\n\n\n\nTidyTuesday: projects/projects/tidytuesday/tidytuesday.png\nDelgosha: projects/projects/delgosha/delgosha.png\nPalmer Penguins: projects/projects/palmerpenguins/palmer.png"
   },
   {
-    "objectID": "projects/projects/IMAGES_README.html#required-images",
-    "href": "projects/projects/IMAGES_README.html#required-images",
+    "objectID": "projects/IMAGES_README.html#required-images",
+    "href": "projects/IMAGES_README.html#required-images",
     "title": "Project Images",
     "section": "",
     "text": "tidytuesday.png - TidyTuesday project thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nShould show a sample TidyTuesday visualization\n\ndelgosha.png - Delgosha R package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show Persian text visualization or package logo\n\npalmer.png - Palmer Penguins package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show penguin illustrations or sample visualization"
   },
   {
-    "objectID": "projects/projects/IMAGES_README.html#notes",
-    "href": "projects/projects/IMAGES_README.html#notes",
+    "objectID": "projects/IMAGES_README.html#notes",
+    "href": "projects/IMAGES_README.html#notes",
     "title": "Project Images",
     "section": "",
     "text": "Images are referenced in the respective project index.qmd files\nIf images are missing, Quarto will still render but show placeholder or no image\nYou can copy these images from your old Distill blog’s imgs/ directory\nSupported formats: PNG, JPG, SVG"
   },
   {
-    "objectID": "projects/projects/IMAGES_README.html#image-locations",
-    "href": "projects/projects/IMAGES_README.html#image-locations",
+    "objectID": "projects/IMAGES_README.html#image-locations",
+    "href": "projects/IMAGES_README.html#image-locations",
     "title": "Project Images",
     "section": "",
     "text": "TidyTuesday: projects/projects/tidytuesday/tidytuesday.png\nDelgosha: projects/projects/delgosha/delgosha.png\nPalmer Penguins: projects/projects/palmerpenguins/palmer.png"
   },
   {
-    "objectID": "projects/MIGRATION_SUMMARY.html",
-    "href": "projects/MIGRATION_SUMMARY.html",
-    "title": "Projects Migration Summary",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
-    "text": "I’ve successfully migrated your three projects from your Distill blog to the Quarto website. Here are the new project pages:\n\n\n\nLocation: projects/projects/tidytuesday/index.qmd\nDescription: Your weekly TidyTuesday submissions created using R and ggplot2\nCategories: R, data visualization, ggplot2\nGitHub: github.com/mcnakhaee/Tidy-Tuesday\n\n\n\n\n\nLocation: projects/projects/delgosha/index.qmd\nDescription: An R package providing ggplot2 themes for RTL languages (Persian)\nCategories: R, package development, RTL languages, Persian\nGitHub: github.com/mcnakhaee/delgosha\n\n\n\n\n\nLocation: projects/projects/palmerpenguins/index.qmd\nDescription: A Python package for loading the Palmer Penguins dataset\nCategories: Python, package development, data science, datasets\nGitHub: github.com/mcnakhaee/palmerpenguin\n\n\n\n\n\nYou need to copy three images from your old Distill blog to the new locations:\n\n\n\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\tidtuesday.png\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\delgosha.png\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\palmer.png\n\n\n\n\n\nCopy tidtuesday.png → projects\\projects\\tidytuesday\\tidytuesday.png\nCopy delgosha.png → projects\\projects\\delgosha\\delgosha.png\nCopy palmer.png → projects\\projects\\palmerpenguins\\palmer.png\n\n\n\n\n\nEach project page includes: - Comprehensive overview and description - Key features and technologies used - Installation and usage instructions (where applicable) - Links to GitHub repositories - What you learned from each project - Proper categorization for filtering\n\n\n\nThe main projects page (projects/index.qmd) now has: - Updated description focusing on open-source and data visualization work - Grid layout showing all 5 projects (2 original + 3 new) - Category filtering - Responsive design\n\n\n\nTo add more projects in the future: 1. Create a new folder in projects/projects/ 2. Add an index.qmd file with the project details 3. Add a project image 4. The project will automatically appear on the main projects page\n\n\n\n✅ All project pages created and rendering successfully ✅ Main projects page updated ✅ Site builds without errors ✅ Preview server running ⚠️ Project images need to be copied from old blog (see above)\nOnce you copy the images, the projects page will be complete!"
+    "text": "A collection of my open-source projects, packages, and data visualization work. Each project represents a commitment to making data science more accessible and creating tools that serve the community.\n\n\nFrom R and Python packages to weekly data visualizations, explore the projects below to see how I combine technical skills with a passion for open-source software and data storytelling."
   },
   {
-    "objectID": "projects/MIGRATION_SUMMARY.html#projects-successfully-added",
-    "href": "projects/MIGRATION_SUMMARY.html#projects-successfully-added",
-    "title": "Projects Migration Summary",
+    "objectID": "projects/index.html#featured-work",
+    "href": "projects/index.html#featured-work",
+    "title": "Projects",
     "section": "",
-    "text": "I’ve successfully migrated your three projects from your Distill blog to the Quarto website. Here are the new project pages:\n\n\n\nLocation: projects/projects/tidytuesday/index.qmd\nDescription: Your weekly TidyTuesday submissions created using R and ggplot2\nCategories: R, data visualization, ggplot2\nGitHub: github.com/mcnakhaee/Tidy-Tuesday\n\n\n\n\n\nLocation: projects/projects/delgosha/index.qmd\nDescription: An R package providing ggplot2 themes for RTL languages (Persian)\nCategories: R, package development, RTL languages, Persian\nGitHub: github.com/mcnakhaee/delgosha\n\n\n\n\n\nLocation: projects/projects/palmerpenguins/index.qmd\nDescription: A Python package for loading the Palmer Penguins dataset\nCategories: Python, package development, data science, datasets\nGitHub: github.com/mcnakhaee/palmerpenguin"
-  },
-  {
-    "objectID": "projects/MIGRATION_SUMMARY.html#next-step-add-project-images",
-    "href": "projects/MIGRATION_SUMMARY.html#next-step-add-project-images",
-    "title": "Projects Migration Summary",
-    "section": "",
-    "text": "You need to copy three images from your old Distill blog to the new locations:\n\n\n\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\tidtuesday.png\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\delgosha.png\np:\\mcnakhaee\\mcnakhaee_com\\mcnakhaee_2024\\mcnakhaee.com\\imgs\\palmer.png\n\n\n\n\n\nCopy tidtuesday.png → projects\\projects\\tidytuesday\\tidytuesday.png\nCopy delgosha.png → projects\\projects\\delgosha\\delgosha.png\nCopy palmer.png → projects\\projects\\palmerpenguins\\palmer.png"
-  },
-  {
-    "objectID": "projects/MIGRATION_SUMMARY.html#what-was-created",
-    "href": "projects/MIGRATION_SUMMARY.html#what-was-created",
-    "title": "Projects Migration Summary",
-    "section": "",
-    "text": "Each project page includes: - Comprehensive overview and description - Key features and technologies used - Installation and usage instructions (where applicable) - Links to GitHub repositories - What you learned from each project - Proper categorization for filtering"
-  },
-  {
-    "objectID": "projects/MIGRATION_SUMMARY.html#updated-main-projects-page",
-    "href": "projects/MIGRATION_SUMMARY.html#updated-main-projects-page",
-    "title": "Projects Migration Summary",
-    "section": "",
-    "text": "The main projects page (projects/index.qmd) now has: - Updated description focusing on open-source and data visualization work - Grid layout showing all 5 projects (2 original + 3 new) - Category filtering - Responsive design"
-  },
-  {
-    "objectID": "projects/MIGRATION_SUMMARY.html#how-to-add-more-projects",
-    "href": "projects/MIGRATION_SUMMARY.html#how-to-add-more-projects",
-    "title": "Projects Migration Summary",
-    "section": "",
-    "text": "To add more projects in the future: 1. Create a new folder in projects/projects/ 2. Add an index.qmd file with the project details 3. Add a project image 4. The project will automatically appear on the main projects page"
-  },
-  {
-    "objectID": "projects/MIGRATION_SUMMARY.html#current-status",
-    "href": "projects/MIGRATION_SUMMARY.html#current-status",
-    "title": "Projects Migration Summary",
-    "section": "",
-    "text": "✅ All project pages created and rendering successfully ✅ Main projects page updated ✅ Site builds without errors ✅ Preview server running ⚠️ Project images need to be copied from old blog (see above)\nOnce you copy the images, the projects page will be complete!"
+    "text": "From R and Python packages to weekly data visualizations, explore the projects below to see how I combine technical skills with a passion for open-source software and data storytelling."
   },
   {
     "objectID": "about.html",
@@ -768,33 +768,5 @@
     "title": "Photography",
     "section": "",
     "text": "Capturing moments from daily life and urban environments.\n\n\n\n\n\n\nTipFollow on Instagram\n\n\n\nFor more photos and updates, follow me on Instagram: @mcnakhaee\n\n\n\nNote: All photos are automatically displayed with lightbox functionality. Click on any image to view it in full screen."
-  },
-  {
-    "objectID": "projects/IMAGES_README.html",
-    "href": "projects/IMAGES_README.html",
-    "title": "Project Images",
-    "section": "",
-    "text": "This directory should contain the following images for the project cards:\n\n\n\ntidytuesday.png - TidyTuesday project thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nShould show a sample TidyTuesday visualization\n\ndelgosha.png - Delgosha R package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show Persian text visualization or package logo\n\npalmer.png - Palmer Penguins package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show penguin illustrations or sample visualization\n\n\n\n\n\n\nImages are referenced in the respective project index.qmd files\nIf images are missing, Quarto will still render but show placeholder or no image\nYou can copy these images from your old Distill blog’s imgs/ directory\nSupported formats: PNG, JPG, SVG\n\n\n\n\n\nTidyTuesday: projects/projects/tidytuesday/tidytuesday.png\nDelgosha: projects/projects/delgosha/delgosha.png\nPalmer Penguins: projects/projects/palmerpenguins/palmer.png"
-  },
-  {
-    "objectID": "projects/IMAGES_README.html#required-images",
-    "href": "projects/IMAGES_README.html#required-images",
-    "title": "Project Images",
-    "section": "",
-    "text": "tidytuesday.png - TidyTuesday project thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nShould show a sample TidyTuesday visualization\n\ndelgosha.png - Delgosha R package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show Persian text visualization or package logo\n\npalmer.png - Palmer Penguins package thumbnail\n\nRecommended size: 400x300px or similar aspect ratio\nCould show penguin illustrations or sample visualization"
-  },
-  {
-    "objectID": "projects/IMAGES_README.html#notes",
-    "href": "projects/IMAGES_README.html#notes",
-    "title": "Project Images",
-    "section": "",
-    "text": "Images are referenced in the respective project index.qmd files\nIf images are missing, Quarto will still render but show placeholder or no image\nYou can copy these images from your old Distill blog’s imgs/ directory\nSupported formats: PNG, JPG, SVG"
-  },
-  {
-    "objectID": "projects/IMAGES_README.html#image-locations",
-    "href": "projects/IMAGES_README.html#image-locations",
-    "title": "Project Images",
-    "section": "",
-    "text": "TidyTuesday: projects/projects/tidytuesday/tidytuesday.png\nDelgosha: projects/projects/delgosha/delgosha.png\nPalmer Penguins: projects/projects/palmerpenguins/palmer.png"
   }
 ]

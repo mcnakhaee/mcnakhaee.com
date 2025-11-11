@@ -1,11 +1,10 @@
 # Netlify Deployment Configuration for Quarto
+# Site is pre-rendered locally and _site folder is deployed
 
 [build]
-  command = "chmod +x build.sh && ./build.sh"
+  # No build command needed - site is pre-rendered locally
+  command = ""
   publish = "_site"
-
-[build.environment]
-  QUARTO_VERSION = "1.4.555"
 
 [[redirects]]
   from = "/*"
