@@ -6,9 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Muhammad Chenariyan Nakhaee">
-<meta name="keywords" content="Muhammad Chenariyan Nakhaee, Muhammad Nakhaee, data science, R, Python, data visualization, machine learning, portfolio, blog">
-<meta name="description" content="Muhammad Chenariyan Nakhaee - Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Portfolio of data science projects and technical blog.">
 
 <title>Muhammad Chenariyan Nakhaee - Data Scientist &amp; Software Engineer – Muhammad Chenariyan Nakhaee</title>
 <style>
@@ -96,12 +93,10 @@ ga('send', {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Muhammad Chenariyan Nakhaee - Data Scientist &amp; Software Engineer">
-<meta property="og:description" content="Muhammad Chenariyan Nakhaee - Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Portfolio of data science projects and technical blog.">
 <meta property="og:image" content="https://mcnakhaee.com/profile.jpg">
 <meta property="og:site_name" content="Muhammad Chenariyan Nakhaee">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="Muhammad Chenariyan Nakhaee - Data Scientist &amp; Software Engineer">
-<meta name="twitter:description" content="Muhammad Chenariyan Nakhaee - Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Portfolio of data science projects and technical blog.">
 <meta name="twitter:image" content="https://mcnakhaee.com/profile.jpg">
 <meta name="twitter:creator" content="@m_cnakhaee">
 <meta name="twitter:site" content="@m_cnakhaee">
@@ -346,39 +341,7 @@ ga('send', {
 <!-- main -->
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-</div>
 
-<div>
-  <div class="description">
-    Muhammad Chenariyan Nakhaee - Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Portfolio of data science projects and technical blog.
-  </div>
-</div>
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Muhammad Chenariyan Nakhaee </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-<div>
-  <div class="keywords">
-    <div class="block-title">Keywords</div>
-    <p>Muhammad Chenariyan Nakhaee, Muhammad Nakhaee, data science, R, Python, data visualization, machine learning, portfolio, blog</p>
-  </div>
-</div>
-
-</header>
 
 
 <script type="application/ld+json">
@@ -386,7 +349,6 @@ ga('send', {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Muhammad Chenariyan Nakhaee",
-  "alternateName": ["Muhammad Nakhaee", "Muhammad C. Nakhaee", "M. Chenariyan Nakhaee"],
   "url": "https://mcnakhaee.com",
   "image": "https://mcnakhaee.com/profile.jpg",
   "sameAs": [
@@ -395,13 +357,6 @@ ga('send', {
     "https://linkedin.com/in/muhammadcnakhaee",
     "https://instagram.com/mcnakhaee"
   ],
-  "jobTitle": "Data Scientist",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Exact"
-  },
-  "description": "Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects",
-  "knowsAbout": ["Data Science", "R Programming", "Python", "Data Visualization", "Machine Learning", "Statistical Computing"]
 }
 </script>
 
@@ -439,20 +394,10 @@ ga('send', {
     
     <!-- CTA Buttons -->
     <div class="cta-buttons">
+      <a href="blog/index.html" class="btn btn-primary">Read Posts</a>
       <a href="projects/index.html" class="btn btn-primary">View Projects</a>
       <a href="about.html" class="btn btn-outline">About Me</a>
-    </div>
-  </div>
-</div>
 
-<!-- Latest Posts Section -->
-<div class="latest-posts-section">
-  <h2 class="section-title">Latest Posts</h2>
-  <div id="latest-posts-container" class="posts-grid">
-    <!-- Posts will be dynamically loaded here -->
-    <div class="post-card loading">
-      <div class="post-icon"><i class="bi bi-hourglass-split"></i></div>
-      <p>Loading posts...</p>
     </div>
   </div>
 </div>
@@ -475,7 +420,7 @@ class Node {
     this.y = y;
     this.vx = (Math.random() - 0.5) * 0.5;
     this.vy = (Math.random() - 0.5) * 0.5;
-    this.radius = 3;
+    this.radius = 4;
   }
 
   update() {
@@ -489,7 +434,7 @@ class Node {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(100, 149, 237, 0.5)';
+    ctx.fillStyle = 'rgba(235, 213, 178, 0.5)';
     ctx.fill();
   }
 }
@@ -515,7 +460,7 @@ function drawConnections() {
         ctx.beginPath();
         ctx.moveTo(nodes[i].x, nodes[i].y);
         ctx.lineTo(nodes[j].x, nodes[j].y);
-        ctx.strokeStyle = `rgba(100, 149, 237, ${0.2 * (1 - distance / 150)})`;
+        ctx.strokeStyle = `rgba(235, 213, 178, ${0.2 * (1 - distance / 150)})`;
         ctx.lineWidth = 1;
         ctx.stroke();
       }
@@ -537,54 +482,6 @@ function animate() {
 }
 
 animate();
-
-// Load Latest Posts
-fetch('/listings.json')
-  .then(response => response.json())
-  .then(data => {
-    const postsContainer = document.getElementById('latest-posts-container');
-    postsContainer.innerHTML = '';
-    
-    // Filter blog posts and get latest 6
-    const blogPosts = data.filter(item => item.path && item.path.includes('/blog/posts/'))
-                         .sort((a, b) => new Date(b.date) - new Date(a.date))
-                         .slice(0, 6);
-    
-    if (blogPosts.length === 0) {
-      postsContainer.innerHTML = '<p class="no-posts">No posts available yet.</p>';
-      return;
-    }
-    
-    blogPosts.forEach((post, index) => {
-      const postCard = document.createElement('div');
-      postCard.className = 'post-card';
-      postCard.style.animationDelay = `${index * 0.1}s`;
-      
-      const postDate = post.date ? new Date(post.date).toLocaleDateString('en-US', { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
-      }) : '';
-      
-      postCard.innerHTML = `
-        <a href="${post.path}" class="post-link">
-          <div class="post-icon">
-            <i class="bi bi-file-text"></i>
-          </div>
-          <h3 class="post-title">${post.title || 'Untitled'}</h3>
-          ${postDate ? `<p class="post-date">${postDate}</p>` : ''}
-          ${post.description ? `<p class="post-description">${post.description}</p>` : ''}
-        </a>
-      `;
-      
-      postsContainer.appendChild(postCard);
-    });
-  })
-  .catch(error => {
-    console.error('Error loading posts:', error);
-    document.getElementById('latest-posts-container').innerHTML = 
-      '<p class="no-posts">Unable to load posts.</p>';
-  });
 </script>
 
 <style>
@@ -601,7 +498,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #BE4F42 0%, #433B36 100%);
 }
 
 /* Hero Section */
@@ -637,10 +534,10 @@ body {
   margin: 0 auto 2rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 5px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  border: 5px solid #EBD5B2;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   animation: float 3s ease-in-out infinite;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(235, 213, 178, 0.1);
 }
 
 @keyframes float {
@@ -661,25 +558,25 @@ body {
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
-  color: white;
+  color: #EBD5B2;
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #EBD5B2;
   margin-bottom: 1rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   font-weight: 500;
 }
 
 .hero-description {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: #EBD5B2;
   line-height: 1.6;
   margin-bottom: 2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -698,19 +595,19 @@ body {
   justify-content: center;
   width: 50px;
   height: 50px;
-  background: rgba(255, 255, 255, 0.9);
+  background: #EBD5B2;
   border-radius: 50%;
-  color: #667eea;
+  color: #433B36;
   font-size: 1.5rem;
   transition: all 0.3s ease;
   text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .social-links a:hover {
   transform: translateY(-5px) scale(1.1);
-  background: white;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: #EBD5B2;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .cta-buttons {
@@ -731,125 +628,27 @@ body {
 }
 
 .btn-primary {
-  background: white;
-  color: #667eea;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: #EBD5B2;
+  color: #433B36;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  background: #EBD5B2;
 }
 
 .btn-outline {
   background: transparent;
-  color: white;
-  border: 2px solid white;
+  color: #EBD5B2;
+  border: 2px solid #EBD5B2;
 }
 
 .btn-outline:hover {
-  background: white;
-  color: #667eea;
+  background: #EBD5B2;
+  color: #433B36;
   transform: translateY(-3px);
-}
-
-/* Latest Posts Section */
-.latest-posts-section {
-  min-height: 100vh;
-  padding: 4rem 2rem;
-  background: rgba(255, 255, 255, 0.95);
-  position: relative;
-  z-index: 1;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 3rem;
-}
-
-.posts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.post-card {
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  animation: slideUp 0.6s ease-out forwards;
-  opacity: 0;
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.post-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.post-card.loading {
-  text-align: center;
-  color: #666;
-}
-
-.post-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.post-icon {
-  font-size: 2.5rem;
-  color: #667eea;
-  margin-bottom: 1rem;
-}
-
-.post-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
-
-.post-date {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 0.75rem;
-}
-
-.post-description {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.no-posts {
-  text-align: center;
-  color: #666;
-  font-size: 1.1rem;
-  grid-column: 1 / -1;
 }
 
 /* Responsive */
@@ -869,10 +668,6 @@ body {
   .profile-circle {
     width: 150px;
     height: 150px;
-  }
-  
-  .posts-grid {
-    grid-template-columns: 1fr;
   }
   
   .cta-buttons {
