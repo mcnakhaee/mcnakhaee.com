@@ -2,9 +2,6 @@
 title: ""
 pagetitle: "Muhammad Chenariyan Nakhaee - Data Scientist & Software Engineer"
 page-layout: custom
-description: "Muhammad Chenariyan Nakhaee - Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Portfolio of data science projects and technical blog."
-author: "Muhammad Chenariyan Nakhaee"
-keywords: ["Muhammad Chenariyan Nakhaee", "Muhammad Nakhaee", "data science", "R", "Python", "data visualization", "machine learning", "portfolio", "blog"]
 image: "profile.jpg"
 toc: false
 ---
@@ -15,7 +12,6 @@ toc: false
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Muhammad Chenariyan Nakhaee",
-  "alternateName": ["Muhammad Nakhaee", "Muhammad C. Nakhaee", "M. Chenariyan Nakhaee"],
   "url": "https://mcnakhaee.com",
   "image": "https://mcnakhaee.com/profile.jpg",
   "sameAs": [
@@ -24,13 +20,6 @@ toc: false
     "https://linkedin.com/in/muhammadcnakhaee",
     "https://instagram.com/mcnakhaee"
   ],
-  "jobTitle": "Data Scientist",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Exact"
-  },
-  "description": "Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects",
-  "knowsAbout": ["Data Science", "R Programming", "Python", "Data Visualization", "Machine Learning", "Statistical Computing"]
 }
 </script>
 
@@ -168,16 +157,19 @@ function animate() {
 animate();
 
 // Load Latest Posts
-fetch('/listings.json')
+fetch('/search.json')
   .then(response => response.json())
   .then(data => {
     const postsContainer = document.getElementById('latest-posts-container');
     postsContainer.innerHTML = '';
     
-    // Filter blog posts and get latest 6
-    const blogPosts = data.filter(item => item.path && item.path.includes('/blog/posts/'))
-                         .sort((a, b) => new Date(b.date) - new Date(a.date))
-                         .slice(0, 6);
+    // Filter blog posts only (exclude other pages)
+    const blogPosts = data.filter(item => 
+      item.href && 
+      item.href.includes('/blog/posts/') && 
+      !item.href.includes('PACKAGE_REQUIREMENTS') &&
+      item.section === "" // Only get main page entries, not subsections
+    ).slice(0, 6);
     
     if (blogPosts.length === 0) {
       postsContainer.innerHTML = '<p class="no-posts">No posts available yet.</p>';
@@ -189,20 +181,16 @@ fetch('/listings.json')
       postCard.className = 'post-card';
       postCard.style.animationDelay = `${index * 0.1}s`;
       
-      const postDate = post.date ? new Date(post.date).toLocaleDateString('en-US', { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
-      }) : '';
+      // Extract a brief description from text (first 150 chars)
+      const description = post.text ? post.text.substring(0, 150) + '...' : '';
       
       postCard.innerHTML = `
-        <a href="${post.path}" class="post-link">
+        <a href="/${post.href}" class="post-link">
           <div class="post-icon">
             <i class="bi bi-file-text"></i>
           </div>
           <h3 class="post-title">${post.title || 'Untitled'}</h3>
-          ${postDate ? `<p class="post-date">${postDate}</p>` : ''}
-          ${post.description ? `<p class="post-description">${post.description}</p>` : ''}
+          ${description ? `<p class="post-description">${description}</p>` : ''}
         </a>
       `;
       

@@ -6,9 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Muhammad Chenariyan Nakhaee">
-<meta name="keywords" content="Muhammad Chenariyan Nakhaee, Muhammad Nakhaee, data science, R, Python, data visualization, machine learning, portfolio, blog">
-<meta name="description" content="Muhammad Chenariyan Nakhaee - Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Portfolio of data science projects and technical blog.">
 
 <title>Muhammad Chenariyan Nakhaee - Data Scientist &amp; Software Engineer – Muhammad Chenariyan Nakhaee</title>
 <style>
@@ -96,12 +93,10 @@ ga('send', {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Muhammad Chenariyan Nakhaee - Data Scientist &amp; Software Engineer">
-<meta property="og:description" content="Muhammad Chenariyan Nakhaee - Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Portfolio of data science projects and technical blog.">
 <meta property="og:image" content="https://mcnakhaee.com/profile.jpg">
 <meta property="og:site_name" content="Muhammad Chenariyan Nakhaee">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="Muhammad Chenariyan Nakhaee - Data Scientist &amp; Software Engineer">
-<meta name="twitter:description" content="Muhammad Chenariyan Nakhaee - Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Portfolio of data science projects and technical blog.">
 <meta name="twitter:image" content="https://mcnakhaee.com/profile.jpg">
 <meta name="twitter:creator" content="@m_cnakhaee">
 <meta name="twitter:site" content="@m_cnakhaee">
@@ -346,39 +341,7 @@ ga('send', {
 <!-- main -->
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-</div>
 
-<div>
-  <div class="description">
-    Muhammad Chenariyan Nakhaee - Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects. Portfolio of data science projects and technical blog.
-  </div>
-</div>
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Muhammad Chenariyan Nakhaee </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-<div>
-  <div class="keywords">
-    <div class="block-title">Keywords</div>
-    <p>Muhammad Chenariyan Nakhaee, Muhammad Nakhaee, data science, R, Python, data visualization, machine learning, portfolio, blog</p>
-  </div>
-</div>
-
-</header>
 
 
 <script type="application/ld+json">
@@ -386,7 +349,6 @@ ga('send', {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Muhammad Chenariyan Nakhaee",
-  "alternateName": ["Muhammad Nakhaee", "Muhammad C. Nakhaee", "M. Chenariyan Nakhaee"],
   "url": "https://mcnakhaee.com",
   "image": "https://mcnakhaee.com/profile.jpg",
   "sameAs": [
@@ -395,13 +357,6 @@ ga('send', {
     "https://linkedin.com/in/muhammadcnakhaee",
     "https://instagram.com/mcnakhaee"
   ],
-  "jobTitle": "Data Scientist",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Exact"
-  },
-  "description": "Data Scientist and Software Engineer specializing in R, Python, data visualization, and open-source projects",
-  "knowsAbout": ["Data Science", "R Programming", "Python", "Data Visualization", "Machine Learning", "Statistical Computing"]
 }
 </script>
 
@@ -539,16 +494,19 @@ function animate() {
 animate();
 
 // Load Latest Posts
-fetch('/listings.json')
+fetch('/search.json')
   .then(response => response.json())
   .then(data => {
     const postsContainer = document.getElementById('latest-posts-container');
     postsContainer.innerHTML = '';
     
-    // Filter blog posts and get latest 6
-    const blogPosts = data.filter(item => item.path && item.path.includes('/blog/posts/'))
-                         .sort((a, b) => new Date(b.date) - new Date(a.date))
-                         .slice(0, 6);
+    // Filter blog posts only (exclude other pages)
+    const blogPosts = data.filter(item => 
+      item.href && 
+      item.href.includes('/blog/posts/') && 
+      !item.href.includes('PACKAGE_REQUIREMENTS') &&
+      item.section === "" // Only get main page entries, not subsections
+    ).slice(0, 6);
     
     if (blogPosts.length === 0) {
       postsContainer.innerHTML = '<p class="no-posts">No posts available yet.</p>';
@@ -560,20 +518,16 @@ fetch('/listings.json')
       postCard.className = 'post-card';
       postCard.style.animationDelay = `${index * 0.1}s`;
       
-      const postDate = post.date ? new Date(post.date).toLocaleDateString('en-US', { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
-      }) : '';
+      // Extract a brief description from text (first 150 chars)
+      const description = post.text ? post.text.substring(0, 150) + '...' : '';
       
       postCard.innerHTML = `
-        <a href="${post.path}" class="post-link">
+        <a href="/${post.href}" class="post-link">
           <div class="post-icon">
             <i class="bi bi-file-text"></i>
           </div>
           <h3 class="post-title">${post.title || 'Untitled'}</h3>
-          ${postDate ? `<p class="post-date">${postDate}</p>` : ''}
-          ${post.description ? `<p class="post-description">${post.description}</p>` : ''}
+          ${description ? `<p class="post-description">${description}</p>` : ''}
         </a>
       `;
       
