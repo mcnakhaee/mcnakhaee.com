@@ -24,7 +24,7 @@ toc: false
 </script>
 
 <!-- Network Graph Background -->
-<canvas id="networkCanvas"></canvas>
+<svg id="networkCanvas"></svg>
 
 <!-- Hero Section -->
 <div class="hero-section">
@@ -33,10 +33,11 @@ toc: false
       <img src="profile.jpg" alt="Muhammad Chenariyan Nakhaee" class="profile-image" onerror="this.src='https://via.placeholder.com/200?text=MCN'">
     </div>
     <h1 class="hero-title">Muhammad Chenariyan Nakhaee</h1>
-    <p class="hero-subtitle">Data Scientist & Software Engineer</p>
+    <p class="hero-subtitle">Data Scientist/AI Engineer</p>
     <p class="hero-description">
-      Transforming data into insights with R, Python, and open-source tools. 
-      Passionate about data visualization, statistical computing, and building elegant solutions.
+      I have had different roles in the world of data including researcher, data scientist, data scientist and data engineer.
+      But I'm currently an AI Engineer working for a Dutch company. 
+      I mostly use python for my day-to-day job but my true passionate is creating data visualizations and R.
     </p>
     
     <!-- Social Links -->
@@ -65,85 +66,106 @@ toc: false
   </div>
 </div>
 
+<!-- Load D3.js -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
 <script>
-// Network Graph Animation
-const canvas = document.getElementById('networkCanvas');
-const ctx = canvas.getContext('2d');
+// D3.js Network Graph Animation
+const width = window.innerWidth;
+const height = window.innerHeight;
 
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
+// Create SVG container
+const svg = d3.select("#networkCanvas")
+  .attr("width", width)
+  .attr("height", height);
 
-class Node {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    this.vx = (Math.random() - 0.5) * 0.5;
-    this.vy = (Math.random() - 0.5) * 0.5;
-    this.radius = 4;
-  }
-
-  update() {
-    this.x += this.vx;
-    this.y += this.vy;
-
-    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-  }
-
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(235, 213, 178, 0.5)';
-    ctx.fill();
-  }
-}
-
-const nodes = [];
+// Generate nodes
 const nodeCount = 50;
+const nodes = d3.range(nodeCount).map(() => ({
+  x: Math.random() * width,
+  y: Math.random() * height,
+  vx: (Math.random() - 0.5) * 0.5,
+  vy: (Math.random() - 0.5) * 0.5
+}));
 
-for (let i = 0; i < nodeCount; i++) {
-  nodes.push(new Node(
-    Math.random() * canvas.width,
-    Math.random() * canvas.height
-  ));
-}
-
-function drawConnections() {
+// Create links between nearby nodes
+function getLinks() {
+  const links = [];
+  const maxDistance = 150;
+  
   for (let i = 0; i < nodes.length; i++) {
     for (let j = i + 1; j < nodes.length; j++) {
       const dx = nodes[i].x - nodes[j].x;
       const dy = nodes[i].y - nodes[j].y;
       const distance = Math.sqrt(dx * dx + dy * dy);
-
-      if (distance < 150) {
-        ctx.beginPath();
-        ctx.moveTo(nodes[i].x, nodes[i].y);
-        ctx.lineTo(nodes[j].x, nodes[j].y);
-        ctx.strokeStyle = `rgba(235, 213, 178, ${0.2 * (1 - distance / 150)})`;
-        ctx.lineWidth = 1;
-        ctx.stroke();
+      
+      if (distance < maxDistance) {
+        links.push({
+          source: nodes[i],
+          target: nodes[j],
+          distance: distance,
+          opacity: 0.2 * (1 - distance / maxDistance)
+        });
       }
     }
   }
+  return links;
 }
 
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-  drawConnections();
-  
-  nodes.forEach(node => {
-    node.update();
-    node.draw();
-  });
+// Create link elements
+const linkGroup = svg.append("g").attr("class", "links");
+const nodeGroup = svg.append("g").attr("class", "nodes");
 
+// Create node circles
+const nodeElements = nodeGroup.selectAll("circle")
+  .data(nodes)
+  .join("circle")
+  .attr("r", 4)
+  .attr("fill", "rgba(235, 213, 178, 0.5)");
+
+// Animation function
+function animate() {
+  // Update node positions
+  nodes.forEach(node => {
+    node.x += node.vx;
+    node.y += node.vy;
+    
+    // Bounce off edges
+    if (node.x < 0 || node.x > width) node.vx *= -1;
+    if (node.y < 0 || node.y > height) node.vy *= -1;
+  });
+  
+  // Update links based on current positions
+  const links = getLinks();
+  
+  // Update link elements
+  linkGroup.selectAll("line")
+    .data(links)
+    .join("line")
+    .attr("x1", d => d.source.x)
+    .attr("y1", d => d.source.y)
+    .attr("x2", d => d.target.x)
+    .attr("y2", d => d.target.y)
+    .attr("stroke", "rgba(235, 213, 178, 1)")
+    .attr("stroke-opacity", d => d.opacity)
+    .attr("stroke-width", 1);
+  
+  // Update node positions
+  nodeElements
+    .attr("cx", d => d.x)
+    .attr("cy", d => d.y);
+  
   requestAnimationFrame(animate);
 }
 
+// Handle window resize
+window.addEventListener('resize', () => {
+  const newWidth = window.innerWidth;
+  const newHeight = window.innerHeight;
+  svg.attr("width", newWidth).attr("height", newHeight);
+});
+
+// Start animation
 animate();
 </script>
 
