@@ -2,93 +2,72 @@
 title: "About Muhammad Chenariyan Nakhaee"
 pagetitle: "About - Muhammad Chenariyan Nakhaee"
 page-layout: full
-description: "Learn about Muhammad Chenariyan Nakhaee - Data Scientist at Exact, researcher, R and Python developer, and open-source contributor."
+description: "Learn about me"
 ---
 
 ::: {.column-page}
 
 ## {{< fa solid user >}} Hello, I'm Muhammad Chenariyan Nakhaee
 
-I'm a data analyst/scientist currently working at [Exact](https://www.exact.com) in the Netherlands. Before that, I worked as a researcher at the University of Twente. Welcome to my personal website!
-
+I've had different roles in the world of data including researcher, data scientist, and data engineer.
+But I'm currently an AI Engineer working for a Dutch company. 
+I mostly use Python for my day-to-day job but my true passion is creating data visualizations and R.
 **Also known as:** Muhammad Nakhaee, Muhammad C. Nakhaee
 
 ---
 
 ## {{< fa solid briefcase >}} What I Do
 
-I specialize in full-stack development and data science, with a particular interest in creating intuitive user experiences and deriving insights from data.
+I'm Muhammad and I have been working in different roles in the data world from machine learning, AI and data engineering to data visualization. In my current job I'm a kind of an AI engineer working on our RAG solutions and developing agents. But my true passion is creating charts and graphs (hence why this blog was started)
 
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-4}
 ### {{< fa solid code >}} Development
-Building modern web applications with cutting-edge technologies. I focus on clean code, scalability, and user experience.
+
 
 **Technologies:**
-- JavaScript/TypeScript
-- React, Node.js
+
 - Python
+- R
 - Databases & APIs
+- Cloud Technolgies most notably Azure and AWS
 :::
 
 ::: {.g-col-12 .g-col-md-4}
 ### {{< fa solid chart-line >}} Data Science
-Transforming data into actionable insights through analysis and visualization. I love finding patterns and telling stories with data.
+I enjoy creating data visualization
 
 **Skills:**
 - Data analysis
 - Machine learning
-- Visualization
+- Data Visualization
 - Statistical modeling
+_ Generative AI
 :::
 
 ::: {.g-col-12 .g-col-md-4}
 ### {{< fa solid microphone >}} Speaking
-Sharing knowledge through talks, workshops, and writing. I believe in giving back to the community and helping others grow.
+Recently I gave a talk at Pydata about how I use AI for creating data visualizations
 
-**Topics:**
-- Web development
-- Data visualization
-- Best practices
-- Career development
 :::
 
 :::
 
 ---
 
-## {{< fa solid graduation-cap >}} Background
-
-**Education:**
-- University of Twente - Researcher
-
-**Experience:**
-- Data Analyst/Scientist at [Exact](https://www.exact.com) (Present)
-- Researcher at University of Twente (Previously)
-
----
 
 ## {{< fa solid heart >}} Interests & Hobbies
 
 When I'm not coding or analyzing data, you can find me:
 
 - {{< fa solid book >}} Reading about technology and science
-- {{< fa solid hiking >}} Hiking and exploring nature
-- {{< fa solid camera >}} Photography
+- {{< fa solid camera >}} Photography and collecting old cameras
 - {{< fa solid music >}} Listening to music and podcasts
-- {{< fa solid mug-hot >}} Trying new coffee shops
+- {{< fa solid person-fencing >}} Fencing
+- {{< fa solid hiking >}} Hiking and exploring nature
 
----
 
-## {{< fa solid award >}} Achievements & Recognition
-
-- **[Award Name]** - [Organization], 2024
-- **Published Article** - "[Article Title]" in [Publication]
-- **Open Source Contributor** - [Project Names]
-- **Community Leader** - Organized [Event/Meetup]
-
----
 
 ## {{< fa solid envelope >}} Get in Touch
 
@@ -109,7 +88,7 @@ I'm always interested in connecting with fellow developers, data enthusiasts, an
 
 ## About This Site
 
-This website is built using [Quarto](https://quarto.org/), a modern scientific and technical publishing system. Previously, I used the [{distill}](https://rstudio.github.io/distill/) package and Hugo with the blogdown package.
+This website is built using [Quarto](https://quarto.org/) but previously, I used the [{distill}](https://rstudio.github.io/distill/) package and Hugo with the blogdown package.
 
 ::: {.callout-tip}
 ## Let's Connect!

@@ -9,7 +9,7 @@
 <link>https://mcnakhaee.com/blog/</link>
 <atom:link href="https://mcnakhaee.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Articles on data science, analytics, and technology</description>
-<generator>quarto-1.8.25</generator>
+<generator>quarto-1.8.26</generator>
 <lastBuildDate>Fri, 21 May 2021 22:00:00 GMT</lastBuildDate>
 <item>
   <title>Covid-19 Trends in the Netherlands</title>
@@ -1779,7 +1779,7 @@ font-style: inherit;"># devtools::install_github("mcnakhaee/CoronaWatchNL")</spa
 
  ]]></description>
   <guid>https://mcnakhaee.com/blog/posts/PACKAGE_REQUIREMENTS.html</guid>
-  <pubDate>Thu, 13 Nov 2025 22:16:35 GMT</pubDate>
+  <pubDate>Sat, 15 Nov 2025 11:18:47 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,14 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-553612888a2bd2a23d5cba976544038a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c0c6ff715e5053bea2dd7328227f3a00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-553612888a2bd2a23d5cba976544038a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-36fb99357d8bf3bbcb72ef23a5d4df3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-1f457e58b849ccd375510c7c2d7f83b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-36fb99357d8bf3bbcb72ef23a5d4df3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -272,8 +272,6 @@ ga('send', {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Muhammad Chenariyan Nakhaee</span>
     </a>
@@ -361,7 +359,7 @@ ga('send', {
 </script>
 
 <!-- Network Graph Background -->
-<canvas id="networkCanvas"></canvas>
+<svg id="networkCanvas"></svg>
 
 <!-- Hero Section -->
 <div class="hero-section">
@@ -370,10 +368,11 @@ ga('send', {
       <img src="profile.jpg" alt="Muhammad Chenariyan Nakhaee" class="profile-image" onerror="this.src='https://via.placeholder.com/200?text=MCN'">
     </div>
     <h1 class="hero-title">Muhammad Chenariyan Nakhaee</h1>
-    <p class="hero-subtitle">Data Scientist &amp; Software Engineer</p>
+    <p class="hero-subtitle">Data Scientist/AI Engineer</p>
     <p class="hero-description">
-      Transforming data into insights with R, Python, and open-source tools. 
-      Passionate about data visualization, statistical computing, and building elegant solutions.
+      I have had different roles in the world of data including researcher, data scientist, data scientist and data engineer.
+      But I'm currently an AI Engineer working for a Dutch company. 
+      I mostly use python for my day-to-day job but my true passionate is creating data visualizations and R.
     </p>
     
     <!-- Social Links -->
@@ -402,85 +401,106 @@ ga('send', {
   </div>
 </div>
 
+<!-- Load D3.js -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
 <script>
-// Network Graph Animation
-const canvas = document.getElementById('networkCanvas');
-const ctx = canvas.getContext('2d');
+// D3.js Network Graph Animation
+const width = window.innerWidth;
+const height = window.innerHeight;
 
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
+// Create SVG container
+const svg = d3.select("#networkCanvas")
+  .attr("width", width)
+  .attr("height", height);
 
-class Node {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    this.vx = (Math.random() - 0.5) * 0.5;
-    this.vy = (Math.random() - 0.5) * 0.5;
-    this.radius = 4;
-  }
-
-  update() {
-    this.x += this.vx;
-    this.y += this.vy;
-
-    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-  }
-
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(235, 213, 178, 0.5)';
-    ctx.fill();
-  }
-}
-
-const nodes = [];
+// Generate nodes
 const nodeCount = 50;
+const nodes = d3.range(nodeCount).map(() => ({
+  x: Math.random() * width,
+  y: Math.random() * height,
+  vx: (Math.random() - 0.5) * 0.5,
+  vy: (Math.random() - 0.5) * 0.5
+}));
 
-for (let i = 0; i < nodeCount; i++) {
-  nodes.push(new Node(
-    Math.random() * canvas.width,
-    Math.random() * canvas.height
-  ));
-}
-
-function drawConnections() {
+// Create links between nearby nodes
+function getLinks() {
+  const links = [];
+  const maxDistance = 150;
+  
   for (let i = 0; i < nodes.length; i++) {
     for (let j = i + 1; j < nodes.length; j++) {
       const dx = nodes[i].x - nodes[j].x;
       const dy = nodes[i].y - nodes[j].y;
       const distance = Math.sqrt(dx * dx + dy * dy);
-
-      if (distance < 150) {
-        ctx.beginPath();
-        ctx.moveTo(nodes[i].x, nodes[i].y);
-        ctx.lineTo(nodes[j].x, nodes[j].y);
-        ctx.strokeStyle = `rgba(235, 213, 178, ${0.2 * (1 - distance / 150)})`;
-        ctx.lineWidth = 1;
-        ctx.stroke();
+      
+      if (distance < maxDistance) {
+        links.push({
+          source: nodes[i],
+          target: nodes[j],
+          distance: distance,
+          opacity: 0.2 * (1 - distance / maxDistance)
+        });
       }
     }
   }
+  return links;
 }
 
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-  drawConnections();
-  
-  nodes.forEach(node => {
-    node.update();
-    node.draw();
-  });
+// Create link elements
+const linkGroup = svg.append("g").attr("class", "links");
+const nodeGroup = svg.append("g").attr("class", "nodes");
 
+// Create node circles
+const nodeElements = nodeGroup.selectAll("circle")
+  .data(nodes)
+  .join("circle")
+  .attr("r", 4)
+  .attr("fill", "rgba(235, 213, 178, 0.5)");
+
+// Animation function
+function animate() {
+  // Update node positions
+  nodes.forEach(node => {
+    node.x += node.vx;
+    node.y += node.vy;
+    
+    // Bounce off edges
+    if (node.x < 0 || node.x > width) node.vx *= -1;
+    if (node.y < 0 || node.y > height) node.vy *= -1;
+  });
+  
+  // Update links based on current positions
+  const links = getLinks();
+  
+  // Update link elements
+  linkGroup.selectAll("line")
+    .data(links)
+    .join("line")
+    .attr("x1", d => d.source.x)
+    .attr("y1", d => d.source.y)
+    .attr("x2", d => d.target.x)
+    .attr("y2", d => d.target.y)
+    .attr("stroke", "rgba(235, 213, 178, 1)")
+    .attr("stroke-opacity", d => d.opacity)
+    .attr("stroke-width", 1);
+  
+  // Update node positions
+  nodeElements
+    .attr("cx", d => d.x)
+    .attr("cy", d => d.y);
+  
   requestAnimationFrame(animate);
 }
 
+// Handle window resize
+window.addEventListener('resize', () => {
+  const newWidth = window.innerWidth;
+  const newHeight = window.innerHeight;
+  svg.attr("width", newWidth).attr("height", newHeight);
+});
+
+// Start animation
 animate();
 </script>
 
