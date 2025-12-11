@@ -2,8 +2,7 @@
   {
     "listing": "/projects/index.html",
     "items": [
-      "/projects/projects/web-app/index.html",
-      "/projects/projects/data-dashboard/index.html",
+      "/projects/projects/mynextchart/index.html",
       "/projects/projects/tidytuesday/index.html",
       "/projects/projects/delgosha/index.html",
       "/projects/projects/palmerpenguins/index.html"
@@ -13,6 +12,9 @@
     "listing": "/blog/index.html",
     "items": [
       "/blog/posts/PACKAGE_REQUIREMENTS.html",
+      "/blog/posts/how-I-won-a-kaggle-prize-with-ggplot2/index.html",
+      "/blog/posts/visalizing-dutch-2025-elections/index.html",
+      "/blog/posts/visalizing-dutch-2025-elections/index2.html",
       "/blog/posts/covid-19-netherlands/index.html",
       "/blog/posts/trump-speech-readability/index.html"
     ]

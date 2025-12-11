@@ -1,0 +1,27 @@
+---
+title: "How I won a Kaggle Prize with ggplot2"
+description: "how I won a Kaggle prize with ggplot2"
+author: "Muhammad Chenariyan Nakhaee"
+date: "2025-11-15"
+categories: [data-science, python, visualization]
+image: featured.JPG
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
+draft: false
+---
+
+This is the story of how I won a Kaggle prize in a competition 3 years ago using ggplot2. I'm writing about this story for the first because I think I want to share it how data visualization and ggplot2 helped me tremendously in my storytelling
+
+3 years ago I particiapted in the Kaggle Survey 2022 ( which unfortunetly became the last edition of this comptettion)
+
+Since I was a kid I was into fantasy books although due my increasing age I cannot say it's true anymore.
+So, I thought what if the data science roles would be a a role in a fantasy world like the world of the Lord of the Rings where different people with differnt backgrounds and skills went on the same mission.
+But I still needed to incorporate that into my analysis so my visualizations convey the fantasy narrative that I had in mind.
+
+Then I also took
+
+
+sss

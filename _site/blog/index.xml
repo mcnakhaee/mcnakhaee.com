@@ -9,8 +9,98 @@
 <link>https://mcnakhaee.com/blog/</link>
 <atom:link href="https://mcnakhaee.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Articles on data science, analytics, and technology</description>
-<generator>quarto-1.8.26</generator>
-<lastBuildDate>Fri, 21 May 2021 22:00:00 GMT</lastBuildDate>
+<generator>quarto-1.8.25</generator>
+<lastBuildDate>Fri, 14 Nov 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>How I won a Kaggle Prize with ggplot2</title>
+  <dc:creator>Muhammad Chenariyan Nakhaee</dc:creator>
+  <link>https://mcnakhaee.com/blog/posts/how-I-won-a-kaggle-prize-with-ggplot2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is the story of how I won a Kaggle prize in a competition 3 years ago using ggplot2. I’m writing about this story for the first because I think I want to share it how data visualization and ggplot2 helped me tremendously in my storytelling</p>
+<p>3 years ago I particiapted in the Kaggle Survey 2022 ( which unfortunetly became the last edition of this comptettion)</p>
+<p>Since I was a kid I was into fantasy books although due my increasing age I cannot say it’s true anymore. So, I thought what if the data science roles would be a a role in a fantasy world like the world of the Lord of the Rings where different people with differnt backgrounds and skills went on the same mission. But I still needed to incorporate that into my analysis so my visualizations convey the fantasy narrative that I had in mind.</p>
+<p>Then I also took</p>
+<p>sss</p>
+
+
+<!-- -->
+
+
+ ]]></description>
+  <category>data-science</category>
+  <category>python</category>
+  <category>visualization</category>
+  <guid>https://mcnakhaee.com/blog/posts/how-I-won-a-kaggle-prize-with-ggplot2/</guid>
+  <pubDate>Fri, 14 Nov 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://mcnakhaee.com/blog/posts/how-I-won-a-kaggle-prize-with-ggplot2/featured.JPG" medium="image"/>
+</item>
+<item>
+  <title>Visualizing the Dutch 2025 Election Results</title>
+  <dc:creator>Muhammad Chenariyan Nakhaee</dc:creator>
+  <link>https://mcnakhaee.com/blog/posts/visalizing-dutch-2025-elections/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Last month, on the 29th Octobor, a snap Dutch elections took place afte the right-far right party government collapsed earlier this year.</p>
+<p>The election results showed that D66 party, a center party, won the election with 226 seats (PVV, a far-right party also gained 26 seats but D66 won a few more thousands vote). The reaction to the elction results were mostly revolved around the fact the a centrist party won the electiona a far-right party (PVV) lost the election (they had 37 seats in the last election) and many news outlets argued that this was the moment that the normality and reseaon came back to the Dutch politics and that this was a response by the Dutch to the far-right politics.</p>
+<p>But at the same time it was a defeat for the (center) left-wing parties and I also came accros this visualization on European Correspondent. I was already interested in Dutch poltics before the WWII (and the similarities to the current climate) I wanted to reproduced European Correspondent but also extended to the last election before WWII in 1937 where the Dutch Nazi Party (NSB) made its biggest gains for the far-right. So, to summarize I wanted to show the political shift withing the traditional left-right divide.</p>
+<p>these were the steps that I needed to take:</p>
+<section id="data-collection" class="level1">
+<h1>Data Collection</h1>
+<p>I needed to get the election data One thing that is really under rated about the Dutch is that they are amazing at keeping historical records and making them available to the public on this website. So, I was lucky that all data were in 1 place. At this point I just needed to scrape them. My luck didn’t end there and after some search I found a python package specifically made to crawl the election data.</p>
+
+
+<!-- -->
+
+</section>
+
+ ]]></description>
+  <category>data-science</category>
+  <category>dutch</category>
+  <category>visualization</category>
+  <guid>https://mcnakhaee.com/blog/posts/visalizing-dutch-2025-elections/</guid>
+  <pubDate>Fri, 14 Nov 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://mcnakhaee.com/blog/posts/visalizing-dutch-2025-elections/featured.JPG" medium="image"/>
+</item>
+<item>
+  <title>Visualizing the Dutch 2025 Election Results</title>
+  <dc:creator>Muhammad Chenariyan Nakhaee</dc:creator>
+  <link>https://mcnakhaee.com/blog/posts/visalizing-dutch-2025-elections/index2.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Last month, on the 29th Octobor, a snap Dutch elections took place afte the right-far right party government collapsed earlier this year.</p>
+<p>The election results showed that D66 party, a center party, won the election with 226 seats (PVV, a far-right party also gained 26 seats but D66 won a few more thousands vote). The reaction to the elction results were mostly revolved around the fact the a centrist party won the electiona a far-right party (PVV) lost the election (they had 37 seats in the last election) and many news outlets argued that this was the moment that the normality and reseaon came back to the Dutch politics and that this was a response by the Dutch to the far-right politics.</p>
+<p>But at the same time it was a defeat for the (center) left-wing parties and I also came accros this visualization on European Correspondent. I was already interested in Dutch poltics before the WWII (and the similarities to the current climate) I wanted to reproduced European Correspondent but also extended to the last election before WWII in 1937 where the Dutch Nazi Party (NSB) made its biggest gains for the far-right. So, to summarize I wanted to show the political shift withing the traditional left-right divide.</p>
+<p>these were the steps that I needed to take:</p>
+<section id="data-collection" class="level1">
+<h1>Data Collection</h1>
+<p>I needed to get the election data One thing that is really under rated about the Dutch is that they are amazing at keeping historical records and making them available to the public on this website. So, I was lucky that all data were in 1 place. At this point I just needed to scrape them. My luck didn’t end there and after some search I found a python package specifically made to crawl the election data.</p>
+
+
+<!-- -->
+
+</section>
+
+ ]]></description>
+  <category>data-science</category>
+  <category>dutch</category>
+  <category>visualization</category>
+  <guid>https://mcnakhaee.com/blog/posts/visalizing-dutch-2025-elections/index2.html</guid>
+  <pubDate>Fri, 14 Nov 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://mcnakhaee.com/blog/posts/visalizing-dutch-2025-elections/featured.JPG" medium="image"/>
+</item>
 <item>
   <title>Covid-19 Trends in the Netherlands</title>
   <dc:creator>Muhammad Chenariyan Nakhaee</dc:creator>
@@ -1779,7 +1869,7 @@ font-style: inherit;"># devtools::install_github("mcnakhaee/CoronaWatchNL")</spa
 
  ]]></description>
   <guid>https://mcnakhaee.com/blog/posts/PACKAGE_REQUIREMENTS.html</guid>
-  <pubDate>Sat, 15 Nov 2025 11:18:47 GMT</pubDate>
+  <pubDate>Thu, 11 Dec 2025 11:44:09 GMT</pubDate>
 </item>
 </channel>
 </rss>

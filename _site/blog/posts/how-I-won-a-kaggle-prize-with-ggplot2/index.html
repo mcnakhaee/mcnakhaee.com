@@ -2,14 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-09-20">
-<meta name="description" content="An interactive dashboard for data visualization and analysis using Python, Pandas, and Plotly.">
+<meta name="author" content="Muhammad Chenariyan Nakhaee">
+<meta name="dcterms.date" content="2025-11-15">
+<meta name="description" content="how I won a Kaggle prize with ggplot2">
 
-<title>Data Analysis Dashboard – Muhammad Chenariyan Nakhaee</title>
+<title>How I won a Kaggle Prize with ggplot2 – Muhammad Chenariyan Nakhaee</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,14 +76,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-36fb99357d8bf3bbcb72ef23a5d4df3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-1f457e58b849ccd375510c7c2d7f83b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-36fb99357d8bf3bbcb72ef23a5d4df3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-553612888a2bd2a23d5cba976544038a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-c0c6ff715e5053bea2dd7328227f3a00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-553612888a2bd2a23d5cba976544038a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -129,15 +130,17 @@ ga('send', {
 
 
 <link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="Data Analysis Dashboard – Muhammad Chenariyan Nakhaee">
-<meta property="og:description" content="An interactive dashboard for data visualization and analysis using Python, Pandas, and Plotly.">
+<meta property="og:title" content="How I won a Kaggle Prize with ggplot2 – Muhammad Chenariyan Nakhaee">
+<meta property="og:description" content="how I won a Kaggle prize with ggplot2">
+<meta property="og:image" content="https://mcnakhaee.com/blog/posts/how-I-won-a-kaggle-prize-with-ggplot2/featured.JPG">
 <meta property="og:site_name" content="Muhammad Chenariyan Nakhaee">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Data Analysis Dashboard – Muhammad Chenariyan Nakhaee">
-<meta name="twitter:description" content="An interactive dashboard for data visualization and analysis using Python, Pandas, and Plotly.">
+<meta name="twitter:title" content="How I won a Kaggle Prize with ggplot2 – Muhammad Chenariyan Nakhaee">
+<meta name="twitter:description" content="how I won a Kaggle prize with ggplot2">
+<meta name="twitter:image" content="https://mcnakhaee.com/blog/posts/how-I-won-a-kaggle-prize-with-ggplot2/featured.JPG">
 <meta name="twitter:creator" content="@m_cnakhaee">
 <meta name="twitter:site" content="@m_cnakhaee">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -309,6 +312,8 @@ ga('send', {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Muhammad Chenariyan Nakhaee</span>
     </a>
@@ -373,24 +378,8 @@ ga('send', {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#key-features" id="toc-key-features" class="nav-link" data-scroll-target="#key-features">Key Features</a></li>
-  <li><a href="#technologies-used" id="toc-technologies-used" class="nav-link" data-scroll-target="#technologies-used">Technologies Used</a></li>
-  <li><a href="#project-highlights" id="toc-project-highlights" class="nav-link" data-scroll-target="#project-highlights">Project Highlights</a>
-  <ul class="collapse">
-  <li><a href="#data-processing-pipeline" id="toc-data-processing-pipeline" class="nav-link" data-scroll-target="#data-processing-pipeline">Data Processing Pipeline</a></li>
-  <li><a href="#performance-optimization" id="toc-performance-optimization" class="nav-link" data-scroll-target="#performance-optimization">Performance Optimization</a></li>
-  </ul></li>
-  <li><a href="#use-cases" id="toc-use-cases" class="nav-link" data-scroll-target="#use-cases">Use Cases</a></li>
-  <li><a href="#code-sample" id="toc-code-sample" class="nav-link" data-scroll-target="#code-sample">Code Sample</a></li>
-  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -398,9 +387,9 @@ ga('send', {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Analysis Dashboard</h1>
+<div class="quarto-title-block"><div><h1 class="title">How I won a Kaggle Prize with ggplot2</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
   <div class="quarto-categories">
-    <div class="quarto-category">data science</div>
+    <div class="quarto-category">data-science</div>
     <div class="quarto-category">python</div>
     <div class="quarto-category">visualization</div>
   </div>
@@ -408,18 +397,24 @@ ga('send', {
 
 <div>
   <div class="description">
-    An interactive dashboard for data visualization and analysis using Python, Pandas, and Plotly.
+    how I won a Kaggle prize with ggplot2
   </div>
 </div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Muhammad Chenariyan Nakhaee </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 20, 2025</p>
+      <p class="date">November 15, 2025</p>
     </div>
   </div>
   
@@ -431,85 +426,15 @@ ga('send', {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This data analysis dashboard provides interactive visualizations and insights from complex datasets. It’s designed to make data exploration intuitive and accessible.</p>
-</section>
-<section id="key-features" class="level2">
-<h2 class="anchored" data-anchor-id="key-features">Key Features</h2>
-<ul>
-<li><strong>Interactive Visualizations</strong>: Dynamic charts and graphs using Plotly</li>
-<li><strong>Data Processing</strong>: Efficient data handling with Pandas</li>
-<li><strong>Real-time Filtering</strong>: Interactive filters for data exploration</li>
-<li><strong>Export Options</strong>: Export reports in multiple formats</li>
-</ul>
-</section>
-<section id="technologies-used" class="level2">
-<h2 class="anchored" data-anchor-id="technologies-used">Technologies Used</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Core libraries used in this project</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> dcc, html</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Tech Stack:</strong> - Python 3.11 - Pandas for data manipulation - Plotly &amp; Dash for visualizations - NumPy for numerical computations</p>
-</section>
-<section id="project-highlights" class="level2">
-<h2 class="anchored" data-anchor-id="project-highlights">Project Highlights</h2>
-<section id="data-processing-pipeline" class="level3">
-<h3 class="anchored" data-anchor-id="data-processing-pipeline">Data Processing Pipeline</h3>
-<p>The dashboard processes large datasets efficiently using:</p>
-<ol type="1">
-<li><strong>Data Cleaning</strong>: Automated preprocessing and validation</li>
-<li><strong>Transformation</strong>: Feature engineering and aggregation</li>
-<li><strong>Visualization</strong>: Multiple chart types and interactive elements</li>
-</ol>
-</section>
-<section id="performance-optimization" class="level3">
-<h3 class="anchored" data-anchor-id="performance-optimization">Performance Optimization</h3>
-<ul>
-<li>Implemented caching for faster load times</li>
-<li>Optimized queries for large datasets</li>
-<li>Used lazy loading for better UX</li>
-</ul>
-</section>
-</section>
-<section id="use-cases" class="level2">
-<h2 class="anchored" data-anchor-id="use-cases">Use Cases</h2>
-<p>This dashboard has been used for: - Business intelligence reporting - Sales data analysis - Customer behavior tracking - Performance metrics monitoring</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Try It Out
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The dashboard is designed to work with various data sources. You can connect your own CSV files or databases to visualize your data.</p>
-</div>
-</div>
-</section>
-<section id="code-sample" class="level2">
-<h2 class="anchored" data-anchor-id="code-sample">Code Sample</h2>
-<p>Here’s an example of creating an interactive visualization:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_chart(df, x_col, y_col):</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> px.scatter(df, x<span class="op">=</span>x_col, y<span class="op">=</span>y_col, </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                     title<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>y_col<span class="sc">}</span><span class="ss"> vs </span><span class="sc">{</span>x_col<span class="sc">}</span><span class="ss">'</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                     hover_data<span class="op">=</span>df.columns)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="links" class="level2">
-<h2 class="anchored" data-anchor-id="links">Links</h2>
-<ul>
-<li><strong>GitHub</strong>: <a href="#">View Source Code</a></li>
-<li><strong>Documentation</strong>: <a href="#">Read More</a></li>
-</ul>
-<hr>
-<p><em>Project completed: September 2025</em></p>
+<p>This is the story of how I won a Kaggle prize in a competition 3 years ago using ggplot2. I’m writing about this story for the first because I think I want to share it how data visualization and ggplot2 helped me tremendously in my storytelling</p>
+<p>3 years ago I particiapted in the Kaggle Survey 2022 ( which unfortunetly became the last edition of this comptettion)</p>
+<p>Since I was a kid I was into fantasy books although due my increasing age I cannot say it’s true anymore. So, I thought what if the data science roles would be a a role in a fantasy world like the world of the Lord of the Rings where different people with differnt backgrounds and skills went on the same mission. But I still needed to incorporate that into my analysis so my visualizations convey the fantasy narrative that I had in mind.</p>
+<p>Then I also took</p>
+<p>sss</p>
 
 
-</section>
+<!-- -->
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -595,6 +520,57 @@ ga('send', {
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -924,7 +900,35 @@ ga('send', {
       }
     }
   });
-  </script>
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "How I won a Kaggle Prize with ggplot2"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "how I won a Kaggle prize with ggplot2"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Muhammad Chenariyan Nakhaee"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2025-11-15"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [data-science, python, visualization]</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> featured.JPG</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="an">draft:</span><span class="co"> false</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>This is the story of how I won a Kaggle prize in a competition 3 years ago using ggplot2. I'm writing about this story for the first because I think I want to share it how data visualization and ggplot2 helped me tremendously in my storytelling</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>3 years ago I particiapted in the Kaggle Survey 2022 ( which unfortunetly became the last edition of this comptettion)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Since I was a kid I was into fantasy books although due my increasing age I cannot say it's true anymore.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>So, I thought what if the data science roles would be a a role in a fantasy world like the world of the Lord of the Rings where different people with differnt backgrounds and skills went on the same mission.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>But I still needed to incorporate that into my analysis so my visualizations convey the fantasy narrative that I had in mind.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Then I also took</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>sss</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-10-15">
-<meta name="description" content="A full-stack web application built with modern technologies including React, Node.js, and MongoDB.">
+<meta name="dcterms.date" content="2025-02-01">
+<meta name="description" content="An AI-powered semantic search engine for data visualizations using embeddings and vector databases">
 
-<title>Modern Web Application – Muhammad Chenariyan Nakhaee</title>
+<title>My Next Chart – Muhammad Chenariyan Nakhaee</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -40,14 +75,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-36fb99357d8bf3bbcb72ef23a5d4df3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-1f457e58b849ccd375510c7c2d7f83b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-36fb99357d8bf3bbcb72ef23a5d4df3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-553612888a2bd2a23d5cba976544038a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-c0c6ff715e5053bea2dd7328227f3a00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-553612888a2bd2a23d5cba976544038a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -94,15 +129,21 @@ ga('send', {
 
 
 <link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="Modern Web Application – Muhammad Chenariyan Nakhaee">
-<meta property="og:description" content="A full-stack web application built with modern technologies including React, Node.js, and MongoDB.">
+<meta property="og:title" content="My Next Chart – Muhammad Chenariyan Nakhaee">
+<meta property="og:description" content="An AI-powered semantic search engine for data visualizations using embeddings and vector databases">
+<meta property="og:image" content="https://mcnakhaee.com/projects/projects/mynextchart/mynextchart.png">
 <meta property="og:site_name" content="Muhammad Chenariyan Nakhaee">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Modern Web Application – Muhammad Chenariyan Nakhaee">
-<meta name="twitter:description" content="A full-stack web application built with modern technologies including React, Node.js, and MongoDB.">
+<meta property="og:image:height" content="831">
+<meta property="og:image:width" content="1051">
+<meta name="twitter:title" content="My Next Chart – Muhammad Chenariyan Nakhaee">
+<meta name="twitter:description" content="An AI-powered semantic search engine for data visualizations using embeddings and vector databases">
+<meta name="twitter:image" content="https://mcnakhaee.com/projects/projects/mynextchart/mynextchart.png">
 <meta name="twitter:creator" content="@m_cnakhaee">
 <meta name="twitter:site" content="@m_cnakhaee">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image-height" content="831">
+<meta name="twitter:image-width" content="1051">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -274,6 +315,8 @@ ga('send', {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Muhammad Chenariyan Nakhaee</span>
     </a>
@@ -344,11 +387,22 @@ ga('send', {
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#the-story" id="toc-the-story" class="nav-link" data-scroll-target="#the-story">The Story</a></li>
   <li><a href="#key-features" id="toc-key-features" class="nav-link" data-scroll-target="#key-features">Key Features</a></li>
-  <li><a href="#technologies-used" id="toc-technologies-used" class="nav-link" data-scroll-target="#technologies-used">Technologies Used</a></li>
-  <li><a href="#challenges-solutions" id="toc-challenges-solutions" class="nav-link" data-scroll-target="#challenges-solutions">Challenges &amp; Solutions</a></li>
-  <li><a href="#demo-code" id="toc-demo-code" class="nav-link" data-scroll-target="#demo-code">Demo &amp; Code</a></li>
+  <li><a href="#technology-stack" id="toc-technology-stack" class="nav-link" data-scroll-target="#technology-stack">Technology Stack</a>
+  <ul class="collapse">
+  <li><a href="#frontend" id="toc-frontend" class="nav-link" data-scroll-target="#frontend">Frontend</a></li>
+  <li><a href="#backend" id="toc-backend" class="nav-link" data-scroll-target="#backend">Backend</a></li>
+  <li><a href="#ai-embeddings" id="toc-ai-embeddings" class="nav-link" data-scroll-target="#ai-embeddings">AI &amp; Embeddings</a></li>
+  </ul></li>
+  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How It Works</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
+  <li><a href="#project-architecture" id="toc-project-architecture" class="nav-link" data-scroll-target="#project-architecture">Project Architecture</a></li>
+  <li><a href="#challenges-solved" id="toc-challenges-solved" class="nav-link" data-scroll-target="#challenges-solved">Challenges Solved</a></li>
+  <li><a href="#project-links" id="toc-project-links" class="nav-link" data-scroll-target="#project-links">Project Links</a></li>
   <li><a href="#what-i-learned" id="toc-what-i-learned" class="nav-link" data-scroll-target="#what-i-learned">What I Learned</a></li>
+  <li><a href="#future-plans" id="toc-future-plans" class="nav-link" data-scroll-target="#future-plans">Future Plans</a></li>
+  <li><a href="#disclaimer" id="toc-disclaimer" class="nav-link" data-scroll-target="#disclaimer">Disclaimer</a></li>
   </ul>
 </nav>
     </div>
@@ -358,17 +412,20 @@ ga('send', {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Modern Web Application</h1>
+<h1 class="title">My Next Chart</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">web development</div>
-    <div class="quarto-category">javascript</div>
-    <div class="quarto-category">react</div>
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">AI</div>
+    <div class="quarto-category">data visualization</div>
+    <div class="quarto-category">semantic search</div>
+    <div class="quarto-category">FastAPI</div>
+    <div class="quarto-category">React</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A full-stack web application built with modern technologies including React, Node.js, and MongoDB.
+    An AI-powered semantic search engine for data visualizations using embeddings and vector databases
   </div>
 </div>
 
@@ -379,7 +436,7 @@ ga('send', {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 15, 2025</p>
+      <p class="date">February 1, 2025</p>
     </div>
   </div>
   
@@ -393,63 +450,156 @@ ga('send', {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This project is a modern web application that demonstrates best practices in full-stack development. It features a responsive design, user authentication, and real-time data updates.</p>
+<p>My Next Chart is an innovative project that uses AI and embeddings to ‘understand’ and categorize data visualizations, making them semantically searchable. Instead of relying on keywords or tags, it analyzes the visual content and context of charts to help you find exactly the visualization you need.</p>
+</section>
+<section id="the-story" class="level2">
+<h2 class="anchored" data-anchor-id="the-story">The Story</h2>
+<p>I presented this project at PyData Amsterdam 2025, where I shared how it started and the technical challenges of building a semantic search engine for data visualizations.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/QgeUo-6k4oA?start=5" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="key-features" class="level2">
 <h2 class="anchored" data-anchor-id="key-features">Key Features</h2>
+<div class="grid">
+<section id="semantic-search" class="level3 g-col-12 g-col-md-6">
+<h3 class="anchored" data-anchor-id="semantic-search">Semantic Search</h3>
 <ul>
-<li><strong>Responsive Design</strong>: Works seamlessly across all devices</li>
-<li><strong>User Authentication</strong>: Secure login and registration system</li>
-<li><strong>Real-time Updates</strong>: Live data synchronization using WebSockets</li>
-<li><strong>Modern Stack</strong>: Built with React, Node.js, Express, and MongoDB</li>
+<li>Multimodal embeddings understand both images and text</li>
+<li>Find charts based on meaning, not just keywords</li>
+<li>AI-powered relevance ranking</li>
 </ul>
 </section>
-<section id="technologies-used" class="level2">
-<h2 class="anchored" data-anchor-id="technologies-used">Technologies Used</h2>
-<div class="grid">
-<div class="g-col-6 g-col-md-3">
-<p><strong>Frontend</strong> - React - TypeScript - Tailwind CSS</p>
-</div>
-<div class="g-col-6 g-col-md-3">
-<p><strong>Backend</strong> - Node.js - Express - MongoDB</p>
-</div>
-<div class="g-col-6 g-col-md-3">
-<p><strong>Tools</strong> - Git - Docker - Jest</p>
-</div>
-<div class="g-col-6 g-col-md-3">
-<p><strong>Deployment</strong> - Vercel - MongoDB Atlas - GitHub Actions</p>
-</div>
+<section id="rich-data-sources" class="level3 g-col-12 g-col-md-6">
+<h3 class="anchored" data-anchor-id="rich-data-sources">Rich Data Sources</h3>
+<ul>
+<li>#TidyTuesday contributions</li>
+<li>Datawrapper Dataviz Dispatch</li>
+<li>Flowingdata (work in progress)</li>
+</ul>
+</section>
 </div>
 </section>
-<section id="challenges-solutions" class="level2">
-<h2 class="anchored" data-anchor-id="challenges-solutions">Challenges &amp; Solutions</h2>
-<p>One of the main challenges was implementing real-time updates efficiently. We solved this by using WebSockets for live data synchronization, which significantly improved the user experience.</p>
+<section id="technology-stack" class="level2">
+<h2 class="anchored" data-anchor-id="technology-stack">Technology Stack</h2>
+<section id="frontend" class="level3">
+<h3 class="anchored" data-anchor-id="frontend">Frontend</h3>
+<ul>
+<li><strong>React 19</strong> - Modern UI framework</li>
+<li><strong>TypeScript</strong> - Type-safe development</li>
+<li><strong>TailwindCSS</strong> - Utility-first styling</li>
+<li><strong>Vite</strong> - Fast build tooling</li>
+</ul>
 </section>
-<section id="demo-code" class="level2">
-<h2 class="anchored" data-anchor-id="demo-code">Demo &amp; Code</h2>
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="backend" class="level3">
+<h3 class="anchored" data-anchor-id="backend">Backend</h3>
+<ul>
+<li><strong>FastAPI</strong> - High-performance Python web framework</li>
+<li><strong>Weaviate</strong> - Vector database for similarity search</li>
+<li><strong>Python</strong> - Core backend logic</li>
+</ul>
+</section>
+<section id="ai-embeddings" class="level3">
+<h3 class="anchored" data-anchor-id="ai-embeddings">AI &amp; Embeddings</h3>
+<ul>
+<li><strong>Mistral</strong> - Language model embeddings</li>
+<li><strong>Cohere embed-v4.0</strong> - Multimodal embeddings (text + images)</li>
+<li><strong>Moonshot AI</strong> - LLM services</li>
+<li><strong>Qwen VL</strong> - Vision-language model</li>
+</ul>
+</section>
+</section>
+<section id="how-it-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-works">How It Works</h2>
+<ol type="1">
+<li><strong>Data Collection</strong>: Scrapes visualizations from trusted data viz sources</li>
+<li><strong>Embedding Generation</strong>: Creates multimodal embeddings using Cohere’s embed-v4.0</li>
+<li><strong>Vector Storage</strong>: Stores embeddings in Weaviate for fast similarity search</li>
+<li><strong>Semantic Search</strong>: Users search with natural language, AI finds relevant visualizations</li>
+<li><strong>Smart Ranking</strong>: LLM services help rank and explain results</li>
+</ol>
+</section>
+<section id="data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="data-sources">Data Sources</h2>
+<p>The project indexes visualizations from some of my favorite data visualization resources:</p>
+<ul>
+<li><strong>#TidyTuesday</strong>: Weekly data visualization challenges from the R community</li>
+<li><strong>Datawrapper Dataviz Dispatch</strong>: Professional data journalism visualizations</li>
+<li><strong>Flowingdata</strong>: Data visualization tutorials and examples (coming soon)</li>
+</ul>
+</section>
+<section id="project-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="project-architecture">Project Architecture</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: Semantic search with embeddings</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> weaviate <span class="im">import</span> Client</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> search_visualizations(query: <span class="bu">str</span>, limit: <span class="bu">int</span> <span class="op">=</span> <span class="dv">10</span>):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate query embedding</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    query_embedding <span class="op">=</span> embed_text(query)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Search vector database</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> client.query.get(<span class="st">"Visualization"</span>, [</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">"title"</span>, <span class="st">"description"</span>, <span class="st">"image_url"</span>, <span class="st">"source"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    ]).with_near_vector({</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"vector"</span>: query_embedding</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    }).with_limit(limit).do()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> results</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="challenges-solved" class="level2">
+<h2 class="anchored" data-anchor-id="challenges-solved">Challenges Solved</h2>
+<ul>
+<li><strong>Multimodal Understanding</strong>: Combining visual and textual features for accurate search</li>
+<li><strong>Scalability</strong>: Efficiently indexing and searching thousands of visualizations</li>
+<li><strong>Relevance</strong>: Using AI to understand context and user intent</li>
+<li><strong>Performance</strong>: Fast vector similarity search with Weaviate</li>
+</ul>
+</section>
+<section id="project-links" class="level2">
+<h2 class="anchored" data-anchor-id="project-links">Project Links</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Links
+<span class="screen-reader-only">Tip</span>Try It Out
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>Live Demo</strong>: <a href="#">View Project</a></li>
-<li><strong>GitHub Repository</strong>: <a href="#">View Code</a></li>
+<li><strong>Live Demo</strong>: <a href="https://mynextchart.com">mynextchart.com</a></li>
+<li><strong>GitHub Repository</strong>: <a href="https://github.com/mcnakhaee/mynextchart">github.com/mcnakhaee/mynextchart</a></li>
+<li><strong>PyData Talk</strong>: <a href="https://www.youtube.com/watch?v=QgeUo-6k4oA">Watch on YouTube</a></li>
 </ul>
-<p><em>Note: Replace these placeholder links with your actual project URLs.</em></p>
 </div>
 </div>
 </section>
 <section id="what-i-learned" class="level2">
 <h2 class="anchored" data-anchor-id="what-i-learned">What I Learned</h2>
-<p>This project taught me the importance of: - Planning architecture before coding - Writing clean, maintainable code - Testing throughout the development process - Optimizing for performance from the start</p>
+<p>Building My Next Chart taught me:</p>
+<ul>
+<li><strong>Multimodal AI</strong>: Working with models that understand both images and text</li>
+<li><strong>Vector Databases</strong>: Implementing efficient similarity search at scale</li>
+<li><strong>Semantic Search</strong>: Moving beyond keyword matching to meaning-based retrieval</li>
+<li><strong>Full-Stack AI</strong>: Combining React frontend with Python AI backend</li>
+<li><strong>LLM Integration</strong>: Using language models to enhance search results</li>
+<li><strong>Data Visualization Indexing</strong>: Programmatically analyzing and categorizing charts</li>
+</ul>
+</section>
+<section id="future-plans" class="level2">
+<h2 class="anchored" data-anchor-id="future-plans">Future Plans</h2>
+<ul>
+<li>Expand to more data visualization sources (Flowingdata, Tableau Public)</li>
+<li>Add chart type classification</li>
+<li>Implement chart creation suggestions based on search intent</li>
+<li>Build a recommendation system for similar visualizations</li>
+<li>Add user-generated collections and bookmarks</li>
+</ul>
+</section>
+<section id="disclaimer" class="level2">
+<h2 class="anchored" data-anchor-id="disclaimer">Disclaimer</h2>
+<p>This is an experimental project exploring the intersection of AI and data visualization. Results may vary, and the system is continuously learning and improving.</p>
 <hr>
-<p><em>Project completed: October 2025</em></p>
+<p><em>Status: Active Development</em></p>
 
 
 </section>

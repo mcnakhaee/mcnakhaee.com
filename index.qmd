@@ -35,9 +35,8 @@ toc: false
     <h1 class="hero-title">Muhammad Chenariyan Nakhaee</h1>
     <p class="hero-subtitle">Data Scientist/AI Engineer</p>
     <p class="hero-description">
-      I have had different roles in the world of data including researcher, data scientist, data scientist and data engineer.
-      But I'm currently an AI Engineer working for a Dutch company. 
-      I mostly use python for my day-to-day job but my true passionate is creating data visualizations and R.
+      I have had different roles in the world of data including but I'm currently an AI Engineer working for a Dutch company. 
+      I mostly use python for my day-to-day job but my true passionate is creating data visualizations using R and ggplot2.
     </p>
     
     <!-- Social Links -->

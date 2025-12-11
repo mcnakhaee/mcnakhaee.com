@@ -1,0 +1,136 @@
+---
+title: "My Next Chart"
+date: "2025-02-01"
+categories: [Python, AI, data visualization, semantic search, FastAPI, React]
+description: "An AI-powered semantic search engine for data visualizations using embeddings and vector databases"
+image: "mynextchart.png"
+---
+
+## Overview
+
+My Next Chart is an innovative project that uses AI and embeddings to 'understand' and categorize data visualizations, making them semantically searchable. Instead of relying on keywords or tags, it analyzes the visual content and context of charts to help you find exactly the visualization you need.
+
+## The Story
+
+I presented this project at PyData Amsterdam 2025, where I shared how it started and the technical challenges of building a semantic search engine for data visualizations.
+
+{{< video https://www.youtube.com/embed/QgeUo-6k4oA?start=5 >}}
+
+## Key Features
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### Semantic Search
+- Multimodal embeddings understand both images and text
+- Find charts based on meaning, not just keywords
+- AI-powered relevance ranking
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Rich Data Sources
+- #TidyTuesday contributions
+- Datawrapper Dataviz Dispatch
+- Flowingdata (work in progress)
+:::
+
+:::
+
+## Technology Stack
+
+### Frontend
+- **React 19** - Modern UI framework
+- **TypeScript** - Type-safe development
+- **TailwindCSS** - Utility-first styling
+- **Vite** - Fast build tooling
+
+### Backend
+- **FastAPI** - High-performance Python web framework
+- **Weaviate** - Vector database for similarity search
+- **Python** - Core backend logic
+
+### AI & Embeddings
+- **Mistral** - Language model embeddings
+- **Cohere embed-v4.0** - Multimodal embeddings (text + images)
+- **Moonshot AI** - LLM services
+- **Qwen VL** - Vision-language model
+
+## How It Works
+
+1. **Data Collection**: Scrapes visualizations from trusted data viz sources
+2. **Embedding Generation**: Creates multimodal embeddings using Cohere's embed-v4.0
+3. **Vector Storage**: Stores embeddings in Weaviate for fast similarity search
+4. **Semantic Search**: Users search with natural language, AI finds relevant visualizations
+5. **Smart Ranking**: LLM services help rank and explain results
+
+## Data Sources
+
+The project indexes visualizations from some of my favorite data visualization resources:
+
+- **#TidyTuesday**: Weekly data visualization challenges from the R community
+- **Datawrapper Dataviz Dispatch**: Professional data journalism visualizations
+- **Flowingdata**: Data visualization tutorials and examples (coming soon)
+
+## Project Architecture
+
+```python
+# Example: Semantic search with embeddings
+from weaviate import Client
+
+def search_visualizations(query: str, limit: int = 10):
+    # Generate query embedding
+    query_embedding = embed_text(query)
+    
+    # Search vector database
+    results = client.query.get("Visualization", [
+        "title", "description", "image_url", "source"
+    ]).with_near_vector({
+        "vector": query_embedding
+    }).with_limit(limit).do()
+    
+    return results
+```
+
+## Challenges Solved
+
+- **Multimodal Understanding**: Combining visual and textual features for accurate search
+- **Scalability**: Efficiently indexing and searching thousands of visualizations
+- **Relevance**: Using AI to understand context and user intent
+- **Performance**: Fast vector similarity search with Weaviate
+
+## Project Links
+
+::: {.callout-tip}
+## Try It Out
+
+- **Live Demo**: [mynextchart.com](https://mynextchart.com)
+- **GitHub Repository**: [github.com/mcnakhaee/mynextchart](https://github.com/mcnakhaee/mynextchart)
+- **PyData Talk**: [Watch on YouTube](https://www.youtube.com/watch?v=QgeUo-6k4oA)
+:::
+
+## What I Learned
+
+Building My Next Chart taught me:
+
+- **Multimodal AI**: Working with models that understand both images and text
+- **Vector Databases**: Implementing efficient similarity search at scale
+- **Semantic Search**: Moving beyond keyword matching to meaning-based retrieval
+- **Full-Stack AI**: Combining React frontend with Python AI backend
+- **LLM Integration**: Using language models to enhance search results
+- **Data Visualization Indexing**: Programmatically analyzing and categorizing charts
+
+## Future Plans
+
+- Expand to more data visualization sources (Flowingdata, Tableau Public)
+- Add chart type classification
+- Implement chart creation suggestions based on search intent
+- Build a recommendation system for similar visualizations
+- Add user-generated collections and bookmarks
+
+## Disclaimer
+
+This is an experimental project exploring the intersection of AI and data visualization. Results may vary, and the system is continuously learning and improving.
+
+---
+
+*Status: Active Development*
