@@ -1,0 +1,44 @@
+---
+title: "MyNextChart: How I Use AI for Data Visualization and It's not to make Chart Slop"
+description: "This is "
+author: "Muhammad Chenariyan Nakhaee"
+date: "2025-12-14"
+categories: [data-science, AI, visualization, tutorial]
+image: featured.jpg
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
+draft: false
+---
+
+This is a short blog post to introduce my new project, MyNextChart which came from my frustration with keeping track of 1000s of data visualizations inspirations I saw on the internet and my eternal struggle to categorize them and make sense of them.
+
+I presented this project at PyData Amsterdam 2025 this year and you can find the recording here: [MyNextChart: How I Use AI for Data Visualization and It's not to make Chart Slop](https://www.youtube.com/watch?v=1234567890). So this blog post will be just a short summary of the talk without going into the details of the project.
+
+sss
+# How I started 
+I started this project early this year when I participated in the #30daychartchallenge after a long break from creating data visualizations. 
+I started my data visualization journey with the #TidyTuesday Like many others, I leanred and took inspiration from other people's charts and the way of doing certian things (e.g. how to create a circular bar chart). But the biggest challenge I faced was to keep  track of all the charts and graphs that I found on the internet and the websites I visited.
+
+ I have been trying to keep track of all the data visualizations and charts using tools like Notiona and Pinterest and bookmarks to catalog the charts. But it took me a lot of time, it wasn't efficient and it was subject to my mood of the day and worst I barely looked at the charts I saved. In the end I realized that I spend most of my time saving charts that actually creating them.
+
+# How I solved it
+At the time (and still) I was working as an AI Engineer for a Dutch company and I was mostly working on our RAG (retrieval-augmented generation) pipeline to generate answers based on our ducumentations for our customers when they interact with our chatbot. 
+So, naturally everything became a RAG problem for me.
+and I asked myself how can I use a RAG to retrieve the charts based on a natural language query instead of searching through my bookmarks and Pinterest boards or TidyTuesday github codes.
+and then the next question was is that how do you transform a chart into a semanitc vector for RAG. 
+
+
+# How it was implemented
+I used the QWEN-VL-MAX model hosted on Alibaba Cloud to analyze the charts and transform them into a text.
+I used the Mistral Embedding model to convert the text into vectors
+I used  Weaviate as my vector database to store the embeddings
+
+
+
+
+
+
+

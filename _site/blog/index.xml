@@ -9,8 +9,75 @@
 <link>https://mcnakhaee.com/blog/</link>
 <atom:link href="https://mcnakhaee.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Articles on data science, analytics, and technology</description>
-<generator>quarto-1.8.26</generator>
-<lastBuildDate>Fri, 21 May 2021 22:00:00 GMT</lastBuildDate>
+<generator>quarto-1.8.25</generator>
+<lastBuildDate>Fri, 14 Nov 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>MyNextChart: How I’m using AI for data visualization and it’s not what you think</title>
+  <dc:creator>Muhammad Chenariyan Nakhaee</dc:creator>
+  <link>https://mcnakhaee.com/blog/posts/mynextchart/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="intro" class="level2">
+<h2 class="anchored" data-anchor-id="intro">Intro</h2>
+<p>This is a short blog post to introduce my new project, MyNextChart which came from my frustration with keeping track of 1000s of data visualizations inspirations I saw on the internet and my eternal struggle to categorize them and make sense of them.</p>
+<p>I presented this project at PyData Amsterdam 2025 this year and you can find the recording here: <a href="https://www.youtube.com/watch?v=1234567890">MyNextChart: How I Use AI for Data Visualization and It’s not to make Chart Slop</a>. So this blog post will be just a short summary of the talk without going into the details of the project. I’ll write more about the technical details of how I built this project in a future post.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/QgeUo-6k4oA?start=5" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
+</section>
+<section id="why-i-started-this-project" class="level2">
+<h2 class="anchored" data-anchor-id="why-i-started-this-project">Why I started this project</h2>
+<p>If you’re reading posts there is a big chance you have more than a 100 open tabs in your browser that you want to read later but never get to it? Or you have 1000s of saved bookmarks on your Twitter, LinkedIn, and other social media accounts that you never get to looked at them.</p>
+<p>I suffer from the same problem but probably even worse. I have around a few thousands or more bookmarked tweets, a few hundred bookmarked LinkedIn posts, and I have a few hundred open tabs in my browsers on different computers that I wanted to read look at but never get to it. One time I even realized that I had open tabs from 3 years ago!</p>
+<p>A large part of my bookmarked posts and tweets consist of data visualizations articles and charts that I find interesting and want to take inspiration from them for my own data visualizations. To alleviate my problem I have been using a few different applications like Notion to save and organize my bookmarked charts (and articles).</p>
+<p>I have been using these saved charts for inspiration when I’m working on a new data visualization project or for challenges such as #TidyTuesday or #30daychartchallenge. And sometimes I also scroll through github repositories for contribution made by others in the #TidyTuesday and #30daychartchallenge to find certain ways of doing things that I can use in my own projects (for example, how create spiral line charts).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>However, I realized that it was not practical to save all the charts I find interesting in Notion. The incoming stream of new charts and articles is way more than what I can save in Notion.</td>
+</tr>
+<tr class="even">
+<td>Besides that, the same problem still persisted! I almost never looked at the saved charts in my Notion database. And even when I did, it was hard to find what I was looking for among hundreds of saved charts. In the end, I realized that I was spending way more cataloging charts that actually looking at them or creaiing my own charts.</td>
+</tr>
+</tbody>
+</table>
+<p>At the time, I was working on our RAG (retrieval-augmented generation) solutions at my job (and I still do) and RAG became a hammer for me and every problem became naturally a nail.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://mcnakhaee.com/blog/posts/mynextchart/rag.png" class="img-fluid figure-img"></p>
+<figcaption>My RAGnar hammer</figcaption>
+</figure>
+</div>
+<p>So I thought what if instead of scrolling through my bookmarked charts and articles and hoping to find something interesting or useful, I could search for the type of charts that I’m looking for in natural language.</p>
+<p>For example, what if I search for “circular bar charts” or “lection maps for germany” and get a list of relevant charts that match my query instead of looking through my large Notion gallery and hoping to spot something.</p>
+<hr>
+<p>So, this became the start of mynextchart.com project. In essence it uses AI and embeddings to ‘understand’ and making them semantically searchable. In my talk at PyData Amsterdam 2025 I explained how I built this project and the technical challenges of building a semantic search engine for data visualizations. You can watch the recorded talk on YouTube.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://mcnakhaee.com/blog/posts/mynextchart/arch.png" class="img-fluid figure-img"></p>
+<figcaption>How the architecture works in a simple image</figcaption>
+</figure>
+</div>
+
+
+<!-- -->
+
+</section>
+
+ ]]></description>
+  <category>data-science</category>
+  <category>python</category>
+  <category>visualization</category>
+  <guid>https://mcnakhaee.com/blog/posts/mynextchart/</guid>
+  <pubDate>Fri, 14 Nov 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://mcnakhaee.com/blog/posts/mynextchart/featured.JPG" medium="image"/>
+</item>
 <item>
   <title>Covid-19 Trends in the Netherlands</title>
   <dc:creator>Muhammad Chenariyan Nakhaee</dc:creator>
@@ -734,6 +801,8 @@ font-style: inherit;">per 100,000 Inhabitants in the Netherlands'</span>)</span>
 
 <p>Aside from their political differences, Donald Trump and Barack Obama have very contrasting personalities, traits, and characters. Obama is known to be a great communicator and an articulate speaker whose speeches are used in English classes to show how one should speak proper English. On the other hand, Trump is not the most eloquent English speaker or US president in history. Every now and then, you can find a clip on the web where Donald Trump is being mocked for the way he speaks or mispronounces words. This is so obvious that even non-native English speakers can notice how Trump’s speeches are very simple and inarticulate. Of course, this was not a bad thing for Trump at all. Actually, almost every political analyst that you see on the news talks about the fact that a vast majority of Trump’s fervent supporters are not college-educated Americans. We can attribute this to the fact that he knows how to speak to his audience and his base supporters using their language (although it is more likely that he cannot speak English better than this level).</p>
 <p>This post will investigate how difficult it is to understand what each US politician talked about in the 2020 US Election cycle. I will use several readability metrics that can help us compute text comprehensibility. A wide range of these measures are implemented in the <a href="https://github.com/shivam5992/textstat">{<code>textstat</code>}</a> Python package, and it is super easy to calculate them using this package.</p>
+<p>Aside from their political differences, Donald Trump and Barack Obama have very contrasting personalities, traits, and characters. Obama is known to be a great communicator and an articulate speaker whose speeches are used in English classes to show how one should speak proper English. On the other hand, Trump is not the most eloquent English speaker or US president in history. Every now and then, you can find a clip on the web where Donald Trump is mocked for the way he speaks or mispronounces words. This is so obvious that even non-native English speakers can notice how Trump’s speeches are very simple and inarticulate. Of course, this was not a bad thing for Trump at all. Actually, almost every political analyst you see on the news talks about the fact that a vast majority of Trump’s fervent supporters are not college-educated Americans. We can attribute this to the fact that he knows how to speak to his audience and his base supporters using their language (although it is more likely that he cannot speak English better than this level).</p>
+<p>This post will investigate how difficult it is to understand what each US politician talked about in the 2020 US Election cycle. I will use several readability metrics that can help us compute text comprehensibility. A wide range of these measures is implemented in the <a href="https://github.com/shivam5992/textstat">{<code>textstat</code>}</a> Python package, and it is super easy to calculate them using this package.</p>
 <p>I compiled a list of US Election-related speeches from rev.com and turned them into an R package called <a href="https://github.com/mcnakhaee/us2020election"><code>{us2020election}</code></a>. I use this package as my data source for my analysis. Like some of my other posts, I use Python to perform the analysis and R to visualize my results. Now let’s get started by importing the necessary packages.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -748,6 +817,7 @@ Note
 <p>This post uses R packages that need to be installed: <code>tidyverse</code>, <code>reticulate</code>, <code>ggthemes</code>, <code>us2020election</code>, <code>ggridges</code>. The code is shown for educational purposes but not executed in this rendered version.</p>
 </div>
 </div>
+<p>I compiled a list of US Election-related speeches from rev.com and turned them into an R package called <a href="https://github.com/mcnakhaee/us2020election"><code>{us2020election}</code></a>. I use this package as my data source for my analysis. Like some of my other posts, I use Python to perform the analysis and R to visualize my results. Now, let’s get started by importing the necessary packages.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1290,6 +1360,7 @@ font-style: inherit;">'The Flesch Reading Ease scores measure the complexity of 
 <section id="gunning-fog-index" class="level2">
 <h2 class="anchored" data-anchor-id="gunning-fog-index">Gunning Fog Index</h2>
 <p><a href="https://en.wikipedia.org/wiki/Gunning_fog_index">The Gunning fog index</a> is another metric to measure the complexity of a text document. It shows how many years of education one might need to understand a piece of text. Larger values of the Gunning fog index correspond to more difficult writings.</p>
+<p><a href="https://en.wikipedia.org/wiki/Gunning_fog_index">The Gunning fog index</a> is another metric to measure the complexity of a text document. It shows how many years of education one might need to understand a piece of text. Larger values of the Gunning fog index correspond to more difficult writing.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1338,6 +1409,7 @@ font-style: inherit;">'The Linsear Write Formula measures the complexity of a te
 <section id="dale-chall-readability-score" class="level2">
 <h2 class="anchored" data-anchor-id="dale-chall-readability-score">Dale-Chall Readability Score</h2>
 <p>This metric is different from the other metrics that we have talked about. It uses a dictionary of 3000 words that are easy to read and understand for a fourth-grade student. So, words that are not in this dictionary are considered to be complex. The higher the Dale-Chall Score is, the more difficult it is to read a text.</p>
+<p>This metric is different from the other metrics that we have talked about. It uses a dictionary of 3,000 words that are easy to read and understand for a fourth-grade student. So, words that are not in this dictionary are considered to be complex. The higher the Dale-Chall Score is, the more difficult it is to read a text.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1584,6 +1656,7 @@ font-style: inherit;">15</span>))</span></code></pre></div></div>
 </details>
 </div>
 <p>Interestingly, we can observe that Trump never gave a speech to an audience with difficulty more than the 7th or 8th grade. We can also convert this readability metric to numbers to visualize and compare it to other metrics.</p>
+<p>Interestingly, we can observe that Trump never gave a speech to an audience with a difficulty higher than the 7th or 8th grade. We can also convert this readability metric to numbers to visualize and compare it to other metrics.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1616,170 +1689,6 @@ font-style: inherit;">'The complexity of a text document was measured based on s
   <guid>https://mcnakhaee.com/blog/posts/trump-speech-readability/</guid>
   <pubDate>Mon, 02 Nov 2020 23:00:00 GMT</pubDate>
   <media:content url="https://mcnakhaee.com/blog/posts/trump-speech-readability/featured.JPG" medium="image"/>
-</item>
-<item>
-  <title></title>
-  <link>https://mcnakhaee.com/blog/posts/PACKAGE_REQUIREMENTS.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="package-requirements-for-migrated-blog-posts" class="level1">
-<h1>Package Requirements for Migrated Blog Posts</h1>
-<p>This document lists the R and Python packages referenced in the migrated blog posts.</p>
-<section id="trump-speech-readability-analysis-post" class="level2">
-<h2 class="anchored" data-anchor-id="trump-speech-readability-analysis-post">Trump Speech Readability Analysis Post</h2>
-<p><strong>Location:</strong> <code>blog/posts/trump-speech-readability/index.qmd</code></p>
-<section id="r-packages-required" class="level3">
-<h3 class="anchored" data-anchor-id="r-packages-required">R Packages Required:</h3>
-<ul>
-<li><code>tidyverse</code> - Data manipulation and visualization</li>
-<li><code>reticulate</code> - R interface to Python</li>
-<li><code>ggthemes</code> - Additional themes for ggplot2</li>
-<li><code>us2020election</code> - Custom package with US election speeches data (https://github.com/mcnakhaee/us2020election)</li>
-<li><code>ggridges</code> - Ridge plots for visualizations</li>
-<li><code>showtext</code> (optional) - Font management</li>
-<li><code>knitr</code> - R Markdown support</li>
-</ul>
-</section>
-<section id="python-packages-required" class="level3">
-<h3 class="anchored" data-anchor-id="python-packages-required">Python Packages Required:</h3>
-<ul>
-<li><code>numpy</code> - Numerical computing</li>
-<li><code>pandas</code> - Data manipulation</li>
-<li><code>textstat</code> - Text readability metrics (https://github.com/shivam5992/textstat)</li>
-</ul>
-</section>
-<section id="installation-commands" class="level3">
-<h3 class="anchored" data-anchor-id="installation-commands">Installation Commands:</h3>
-<section id="r-packages" class="level4">
-<h4 class="anchored" data-anchor-id="r-packages">R Packages:</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">install.packages</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"tidyverse"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"reticulate"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"ggthemes"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"ggridges"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"showtext"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"knitr"</span>))</span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Install us2020election from GitHub</span></span>
-<span id="cb1-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># install.packages("devtools")</span></span>
-<span id="cb1-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># devtools::install_github("mcnakhaee/us2020election")</span></span></code></pre></div></div>
-</section>
-<section id="python-packages" class="level4">
-<h4 class="anchored" data-anchor-id="python-packages">Python Packages:</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">pip</span> install numpy pandas textstat</span></code></pre></div></div>
-<hr>
-</section>
-</section>
-</section>
-<section id="covid-19-netherlands-analysis-post" class="level2">
-<h2 class="anchored" data-anchor-id="covid-19-netherlands-analysis-post">COVID-19 Netherlands Analysis Post</h2>
-<p><strong>Location:</strong> <code>blog/posts/covid-19-netherlands/index.qmd</code></p>
-<section id="r-packages-required-1" class="level3">
-<h3 class="anchored" data-anchor-id="r-packages-required-1">R Packages Required:</h3>
-<ul>
-<li><code>tidyverse</code> - Data manipulation and visualization</li>
-<li><code>CoronaWatchNL</code> - Custom package for Netherlands COVID-19 data (https://github.com/mcnakhaee/CoronaWatchNL)</li>
-<li><code>sf</code> - Spatial data handling</li>
-<li><code>gganimate</code> - Animated visualizations</li>
-<li><code>santoku</code> - Data binning/chopping</li>
-<li><code>lubridate</code> - Date/time handling (part of tidyverse)</li>
-<li><code>foreign</code> - Reading foreign data formats</li>
-<li><code>knitr</code> - R Markdown support</li>
-</ul>
-</section>
-<section id="installation-commands-1" class="level3">
-<h3 class="anchored" data-anchor-id="installation-commands-1">Installation Commands:</h3>
-<section id="r-packages-1" class="level4">
-<h4 class="anchored" data-anchor-id="r-packages-1">R Packages:</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">install.packages</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"tidyverse"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"sf"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"gganimate"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"santoku"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"lubridate"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"foreign"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"knitr"</span>))</span>
-<span id="cb3-2"></span>
-<span id="cb3-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Install CoronaWatchNL from GitHub</span></span>
-<span id="cb3-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># install.packages("devtools")</span></span>
-<span id="cb3-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># devtools::install_github("mcnakhaee/CoronaWatchNL")</span></span></code></pre></div></div>
-<hr>
-</section>
-</section>
-</section>
-<section id="current-configuration" class="level2">
-<h2 class="anchored" data-anchor-id="current-configuration">Current Configuration</h2>
-<p>Both posts are currently configured with <code>eval=FALSE</code> for all code chunks. This means: - ✅ The code is displayed for educational purposes - ✅ The site renders without requiring all packages to be installed - ✅ No Python environment configuration is needed - ✅ Images and GIFs (if present in post directories) will still display</p>
-</section>
-<section id="to-enable-code-execution" class="level2">
-<h2 class="anchored" data-anchor-id="to-enable-code-execution">To Enable Code Execution</h2>
-<p>If you want to execute the code:</p>
-<ol type="1">
-<li>Install all required packages (see above)</li>
-<li>For the Trump speech post, configure Python environment:
-<ul>
-<li>Uncomment the reticulate configuration in the setup chunk</li>
-<li>Ensure you have a conda environment or use <code>reticulate::use_python()</code></li>
-</ul></li>
-<li>Change <code>eval=FALSE</code> to <code>eval=TRUE</code> in the chunks you want to run</li>
-<li>Ensure data files and dependencies are available</li>
-</ol>
-</section>
-<section id="notes" class="level2">
-<h2 class="anchored" data-anchor-id="notes">Notes</h2>
-<ul>
-<li>The <code>us2020election</code> and <code>CoronaWatchNL</code> packages are custom packages that need to be installed from GitHub</li>
-<li>Font configuration (Lobster, Poppins Light) may require system fonts to be installed</li>
-<li>Animation GIFs should be placed in the respective post directories if you want them to display</li>
-<li>The posts are currently optimized for display without execution, perfect for portfolio/documentation purposes</li>
-</ul>
-
-
-</section>
-</section>
-
- ]]></description>
-  <guid>https://mcnakhaee.com/blog/posts/PACKAGE_REQUIREMENTS.html</guid>
-  <pubDate>Sat, 15 Nov 2025 11:18:47 GMT</pubDate>
 </item>
 </channel>
 </rss>

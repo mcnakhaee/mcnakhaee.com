@@ -1,0 +1,67 @@
+---
+title: "Cineville Wrapped 2025"
+description: "An interactive scrollytelling visualization of my movie-watching journey using Cineville in 2025"
+author: "Muhammad Chenariyan Nakhaee"
+date: "2025-01-29"
+categories: [data-visualization, scrollytelling, d3js, personal]
+image: featured.png
+format:
+  html:
+    page-layout: full
+    toc: false
+---
+
+```{=html}
+<style>
+.cineville-iframe-container {
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  border: none;
+  margin: -1rem -1rem 0 -1rem;
+  padding: 0;
+}
+
+.cineville-iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Hide default quarto content padding for full-width experience */
+.quarto-container {
+  padding: 0 !important;
+}
+
+main.content {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+</style>
+
+<div class="cineville-iframe-container">
+  <iframe src="cineville-wrapped.html" title="Cineville Wrapped 2025" loading="lazy"></iframe>
+</div>
+```
+
+---
+
+## About This Project
+
+This interactive scrollytelling visualization summarizes my movie-watching journey in 2025 using my Cineville pass. It includes:
+
+- **Hero Stats**: Total screenings, cinemas visited, cities, and hours watched
+- **Cinema Analysis**: Top cinemas and an interactive map of all theaters visited
+- **Movie Taste**: Genre breakdown (treemap), language distribution, and keyword cloud
+- **Cinema Calendar**: Monthly activity and a detailed heatmap
+- **Ratings Analysis**: Raincloud plot of rating distribution, top favorites, and least favorites
+- **Guilty Pleasures & Hot Takes**: Where my ratings diverged from TMDB consensus
+
+### Technologies Used
+
+- **D3.js** - Data-driven visualizations
+- **Scrollama** - Scroll-driven interactions
+- **MapLibre GL** - Interactive cinema map
+- **Tailwind CSS** - Styling
+
+[View Full Screen](cineville-wrapped.html){.btn .btn-primary target="_blank"}

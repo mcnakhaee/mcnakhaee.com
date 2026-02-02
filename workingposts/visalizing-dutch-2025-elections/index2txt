@@ -1,0 +1,212 @@
+---
+title: "Visualizing the Dutch 2025 Election Results"
+description: "Visualizing the Dutch 2025 Election Results"
+author: "Muhammad Chenariyan Nakhaee"
+date: "2025-11-15"
+categories: [data-science, dutch, visualization]
+image: featured.JPG
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
+draft: true
+---
+
+Last month, on the 29th Octobor, a snap Dutch elections took place afte the right-far right party government collapsed earlier this year.
+
+The election results showed that D66 party, a center party, won the election with 226 seats (PVV, a far-right party also gained 26 seats but D66 won a few more thousands vote).
+The reaction to the elction results were mostly revolved around the fact the a centrist party won the electiona a far-right party (PVV) lost the election (they had 37 seats in the last election) and many news outlets argued that this was the moment that the normality and reseaon came back to the Dutch politics and that this was a response by the Dutch to the far-right politics.
+
+But at the same time it was a defeat for the (center) left-wing parties and I also came accros this visualization on European Correspondent.
+I was already interested in Dutch poltics before the WWII (and the similarities to the current climate)
+I wanted to reproduced European Correspondent but also extended to the last election before WWII in 1937 where the Dutch Nazi Party (NSB) made its biggest gains for the far-right.
+So, to summarize I wanted to show the political shift withing the traditional left-right divide.
+
+these were the steps that I needed to take:
+
+
+# Data Collection 
+I needed to get the election data 
+One thing that is really under rated about the Dutch is that they are amazing at keeping historical records and making them available to the public on this website.
+So, I was lucky that all data were in 1 place. At this point I just needed to scrape them. My luck didn't end there and after some search I found a python package specifically made to crawl the election data.
+
+```{python}
+
+```
+
+
+
+```{r}
+library(tidyverse)
+library(gghighlight)
+library(ggtext)
+library(glue)
+library(showtext)
+library(geofacet)
+showtext_auto()
+# Set up font
+font_name <- 'Merriweather'
+font_add_google(name = font_name, family = font_name)
+showtext_auto()
+
+bg_color = "#EBD5B2"
+left_color = "#BE4F42"
+right_color = "#433B36"
+center_color = "#6c757d" # Added color for the center column
+text_color = "#EBD5B2"
+title_color = "#EBD5B2"
+leaning_colors <- c(
+  "Far-Left" = "#8B0000",      # Dark red
+  "Left to Center-Left" = "#BE4F42",   # red
+  "Center" = "grey65",#457B9D",        # Gray
+  "Right to Center-Right"= "#457B9D",  # Light blue
+  "Far-Right" = "#433B36"      # Navy blue
+)
+```
+
+# Assigning leaning to political parties
+
+```{r}
+dutch_elections <- read_csv('votes_1937_2025_all.csv') %>% 
+  mutate(Leaning = if_else(Leaning == 'Center-Right'| Leaning == "Right",'Right to Center-Right',Leaning),
+         Leaning = if_else(Leaning == 'Center-Left'|Leaning == 'Left','Left to Center-Left',Leaning),) %>% 
+  group_by(Gemeente,Verkiezing) %>% 
+  mutate(total_per_municpality = mean(Opkomst)) %>% 
+  ungroup() %>% 
+    group_by(Verkiezing,) %>% 
+  mutate(all_votes = sum(Votes)) %>% 
+  ungroup() %>% 
+  group_by(Verkiezing,PartyName,Leaning,all_votes) %>% 
+  summarize(sum_votes = sum(Votes)) %>% 
+  mutate(perc_votes = sum_votes/all_votes) %>% 
+  ungroup() %>% 
+  group_by(Verkiezing,Leaning) %>% 
+  summarize(sum_votes_votes = sum(perc_votes)) %>% 
+  #summarize(percentage = sum(Votes)/ total_per_municpality) %>% View()
+  ungroup() %>% 
+    mutate(Leaning = factor(Leaning, levels = c(
+    "Far-Left",
+    "Left to Center-Left", 
+    "Center",
+    "Right to Center-Right",
+    "Far-Right"
+  ))) %>% 
+  # Remove "TK" prefix and parse as date
+  mutate(date_column = year(ymd(str_remove(Verkiezing, "^TK"))))
+```
+
+
+
+# Chart choices
+An obvious choice was to recreate the European Correspondent's line chart but maybe instead of a facet for each political learningI could plot them in 1 chart and use legends or other aesthetic like colors to distinguish between them
+
+```
+```
+However, it didn't seem to be what I wanted it to show so I was looking for a different way to visualize it and a stacked area chart seemed to be the next obvious choice.
+
+
+
+```{r}
+  ggplot() +
+  geom_area(aes(x =date_column,y = sum_votes_votes,fill = Leaning ,group = Leaning  ),size = 0.2
+            ) +
+    scale_fill_manual(values = leaning_colors)+
+      scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+  scale_x_continuous(
+  limits = c(1937, 2025),
+  breaks = c(1937, 1950, 1970, 1990, 2010, 2025)
+) +
+  labs(fill = '' )+
+  theme_minimal(base_family = font_name) +
+    theme(
+      panel.grid = element_blank(),
+      axis.text.x = element_text(size = 25),
+      axis.text.y = element_text(size = 18,margin = margin( r = -20)),
+      axis.title.x = element_blank(),
+      axis.title.y = element_blank(),
+      panel.background = element_rect(fill = bg_color, color = NA),
+      plot.background = element_rect(fill = bg_color, color = NA),
+      legend.position = "top",
+      plot.margin = margin(t = 30, r = 40, b = 20, l = 30),
+      
+  legend.text = element_text(size = 18),         
+  legend.title = element_text(size = 20),    
+  legend.key.size = unit(1.1, "cm"),            
+  legend.key.height = unit(1.1, "cm"),      
+  legend.key.width = unit(1.1, "cm"),     
+    )
+
+```
+
+
+In the end the choice of the chart only matters as much as what the data wants to say and that's that the Dutch Left-wing parties have never been so small in the past 85 years
+And on the other hand even though the biggest far-right party the PVV lost almost third of its seat the far-right parties as a bloc have never been so large and actually they took more share of the votes than the last election and much more that the last election before the occupation by the Germans in WWII when the far-right party NSB took power. 
+
+
+I furtur visualized the data for each province and the results are more or less the same in each province.
+
+
+
+```{r}
+
+data_shift_per_municipality <- dutch_elections %>% 
+  mutate(Leaning = if_else(Leaning == 'Center-Right'| Leaning == "Right",'Right to Center-Right',Leaning),
+         Leaning = if_else(Leaning == 'Center-Left'|Leaning == 'Left','Left to Center-Left',Leaning),
+         Provincie = if_else(Provincie == 'Fryslân','Friesland',Provincie)) %>% 
+  filter(Provincie %in% provincies) %>% 
+  group_by(Gemeente,Verkiezing) %>% 
+  mutate(total_per_municpality = mean(Opkomst,na.rm = TRUE)) %>% 
+  ungroup() %>% 
+    group_by(Verkiezing,Provincie) %>% 
+  mutate(all_votes = sum(Votes)) %>% 
+  ungroup() %>% 
+  group_by(Verkiezing,PartyName,Leaning,Provincie,all_votes) %>% 
+  summarize(sum_votes = sum(Votes,na.rm = TRUE)) %>% 
+  mutate(perc_votes = sum_votes/all_votes) %>% 
+  filter(!is.nan(perc_votes)) %>%
+  ungroup() %>% 
+  group_by(Verkiezing,Provincie,Leaning) %>% 
+  summarize(sum_votes_votes = sum(perc_votes,na.rm = TRUE)) %>% 
+    mutate(Leaning = factor(Leaning, levels = c(
+    "Far-Left",
+    "Left to Center-Left", 
+    "Center",
+    "Right to Center-Right",
+    "Far-Right"
+  ))) %>% 
+  mutate(date_column = year(ymd(str_remove(Verkiezing, "^TK"))))
+
+data_shift_per_municipality %>% 
+    ggplot() +
+  geom_area(aes(x =date_column,y = sum_votes_votes,fill = Leaning ,group = Leaning  )) +
+    scale_fill_manual(values = leaning_colors)+
+  scale_x_continuous(
+  limits = c(1937, 2025),
+  breaks = c(1937, 1950, 1970, 1990, 2010, 2025)
+) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+  coord_cartesian(clip ='off') +
+  facet_geo(~ Provincie, grid = geofacet::nl_prov_grid1, scales = 'free_x') +
+  theme_minimal(base_family = font_name) +
+    theme(
+      panel.grid = element_blank(),
+      axis.text.x = element_text(size = 13,face = 'bold'),
+      axis.text.y = element_text(size = 11,margin = margin( r = -10)),
+      axis.title.x = element_blank(),
+      axis.title.y = element_blank(),
+      panel.background = element_rect(fill = bg_color, color = NA),
+      plot.background = element_rect(fill = bg_color, color = NA),
+      legend.position = "top",
+      plot.margin = margin(t = 70, r = 40, b = 20, l = 40),
+      legend.text = element_text(size = 20),
+      
+      strip.text = element_text(size = 30,margin = margin(t = 30)),
+  legend.title = element_blank(),
+  legend.key.size = unit(1.5, "cm"),
+  legend.key.height = unit(1.5, "cm"),
+  legend.key.width = unit(1.5, "cm"),
+      panel.spacing = unit(2, "lines")
+
+    )
+```

@@ -6,14 +6,13 @@ listing:
   type: grid
   categories: true
   grid-columns: 3
-  fields: [image, date, title, description, categories]
+  fields: [image, title, description, categories]
 page-layout: full
 ---
 
-# My Projects
+# Projects
 
-A collection of my open-source projects, packages, and data visualization work. Each project represents a commitment to making data science more accessible and creating tools that serve the community.
+A collection of my open-source projects, packages, and data visualization work.
 
-## Featured Work
 
-From R and Python packages to weekly data visualizations, explore the projects below to see how I combine technical skills with a passion for open-source software and data storytelling.
+

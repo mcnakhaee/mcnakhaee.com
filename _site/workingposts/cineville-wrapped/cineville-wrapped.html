@@ -1,0 +1,2580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#F8EBD8">
+    <title>Cineville Wrapped 2025</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/charter" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Charter', Georgia, 'Times New Roman', serif;
+            background: #F8EBD8;
+            color: #000000;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            touch-action: pan-y pinch-zoom;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Color palette theme */
+        .accent-text {
+            color: #B0C6FF;
+        }
+
+        .accent-bg {
+            background: #F1C3BD;
+        }
+
+        /* Film strip frame styling */
+        .film-strip {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .film-frame-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .film-frame-slide.active {
+            transform: translateX(0);
+        }
+
+        .film-frame-slide.enter-right {
+            transform: translateX(100%);
+        }
+
+        .film-frame-slide.enter-left {
+            transform: translateX(-100%);
+        }
+
+        .film-frame-slide.exit-left {
+            transform: translateX(-100%);
+        }
+
+        .film-frame-slide.exit-right {
+            transform: translateX(100%);
+        }
+
+        .frame-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #242424;
+            overflow: hidden;
+        }
+
+        /* Section title slide styles */
+        .section-title-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .section-title-slide h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .section-title-slide p {
+            font-size: 1.25rem;
+            color: #4a4a4a;
+        }
+
+        .section-title-slide .section-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Section background colors */
+        .section-bg-pink {
+            background: #EFE1E6 !important;
+        }
+
+        .section-bg-peach {
+            background: #F7DEBB !important;
+        }
+
+        /* Film strip sprocket holes - top */
+        .frame-inner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: #1a1a1a;
+            background-image:
+                repeating-linear-gradient(
+                    to right,
+                    transparent 0px,
+                    transparent 25px,
+                    #EFE1E6 25px,
+                    #EFE1E6 45px,
+                    transparent 45px,
+                    transparent 70px
+                );
+            background-size: 70px 20px;
+            background-position: 15px center;
+            background-repeat: repeat-x;
+            z-index: 5;
+            border-bottom: 3px solid #252525;
+        }
+
+        /* Film strip sprocket holes - bottom */
+        .frame-inner::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: #1a1a1a;
+            background-image:
+                repeating-linear-gradient(
+                    to right,
+                    transparent 0px,
+                    transparent 25px,
+                    #EFE1E6 25px,
+                    #EFE1E6 45px,
+                    transparent 45px,
+                    transparent 70px
+                );
+            background-size: 70px 20px;
+            background-position: 15px center;
+            background-repeat: repeat-x;
+            z-index: 5;
+            border-top: 5px solid #252525;
+        }
+
+        .film-frame-content-area {
+            position: absolute;
+            top: 55px;
+            bottom: 55px;
+            left: 8px;
+            right: 8px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .film-frame-viz {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            overflow: hidden;
+        }
+
+        /* Frame counter */
+        .frame-counter {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: rgba(26, 26, 26, 0.9);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: #fff;
+            border: 1px solid #333;
+            z-index: 100;
+        }
+
+        /* Year selector - fixed position */
+        .year-selector-fixed {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(26, 26, 26, 0.9);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid #333;
+            z-index: 100;
+            display: none;
+        }
+
+        .year-selector-fixed.visible {
+            display: block;
+        }
+
+        .year-selector-fixed select {
+            background: #1a1a1a;
+            border: 1px solid #444;
+            color: #fff;
+            padding: 0.25rem 0.5rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+        }
+
+        /* Scrolly sections */
+        .projector-gate {
+            position: relative;
+        }
+
+        .scroll-graphic {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .steps {
+            position: relative;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .step {
+            height: 100vh;
+            scroll-snap-align: start;
+        }
+
+        /* Enable scroll snapping on mobile for smoother step transitions */
+        @media (max-width: 768px) {
+            .projector-gate {
+                scroll-snap-type: y proximity;
+            }
+        }
+
+        /* Stat animations */
+        .stat-number {
+            transition: all 0.3s ease;
+        }
+
+        /* Cinema cards */
+        .cinema-card {
+            background: rgba(40, 40, 40, 0.9);
+            border: 1px solid #444;
+            border-radius: 12px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cinema-card:hover {
+            border-color: #F1C3BD;
+            transform: translateY(-2px);
+        }
+
+        /* Poster grid */
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .poster-thumb {
+            aspect-ratio: 2/3;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .poster-thumb:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+
+        .poster-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Tooltip */
+        .thumb-tooltip {
+            position: fixed;
+            background: rgba(26, 26, 26, 0.95);
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.875rem;
+            max-width: 250px;
+            z-index: 1000;
+            pointer-events: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        /* Genre bars */
+        .genre-bar-container {
+            background: #333;
+            border-radius: 4px;
+            overflow: hidden;
+            height: 24px;
+        }
+
+        .genre-bar {
+            height: 100%;
+            background: #B0C6FF;
+            border-radius: 4px;
+            transition: width 1s ease-out;
+        }
+
+        /* Map container */
+        #cinema-map-svg {
+            background: #1a1a1a;
+        }
+
+        /* Streak styling */
+        .streak-number {
+            color: #F1C3BD;
+        }
+
+        /* MapLibre map container */
+        #cinema-map-container {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cinema-map-marker {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #b13d2e;
+            border: 3px solid white;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .cinema-map-marker:hover {
+            transform: scale(1.2);
+        }
+
+        .cinema-map-marker.large {
+            width: 36px;
+            height: 36px;
+        }
+
+        .maplibregl-popup-content {
+            background: #1a1a1a !important;
+            color: #fff !important;
+            border-radius: 8px !important;
+            padding: 12px 16px !important;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4) !important;
+            border: 1px solid #444 !important;
+        }
+
+        .maplibregl-popup-close-button {
+            color: #aaa !important;
+            font-size: 18px !important;
+        }
+
+        .maplibregl-popup-tip {
+            border-top-color: #1a1a1a !important;
+        }
+
+        /* Scrolly text box */
+        .scroll-graphic-wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .film-strip-container {
+            flex: 1;
+            position: relative;
+            min-height: 0;
+            height: calc(100vh - 120px);
+            margin-top: 1rem;
+        }
+
+        .frame-text-box {
+            flex-shrink: 0;
+            min-height: 80px;
+            max-width: 700px;
+            width: calc(100% - 40px);
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .frame-text-box.visible {
+            opacity: 1;
+        }
+
+        .frame-text-box p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .frame-text-box .highlight {
+            color: #E96244;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .frame-text-box {
+                min-height: 60px;
+                padding: 0.75rem 1rem;
+                max-width: calc(100% - 24px);
+            }
+
+            .frame-text-box p {
+                font-size: 0.875rem;
+            }
+        }
+
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .frame-counter {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 0.4rem 0.8rem;
+                font-size: 0.75rem;
+            }
+
+            .year-selector-fixed {
+                top: 1rem;
+                right: 1rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .year-selector-fixed select {
+                font-size: 0.75rem;
+                padding: 0.2rem 0.4rem;
+            }
+
+            /* Make SVGs responsive */
+            svg {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* Reduce padding in film frames */
+            .film-frame-viz {
+                padding: 0.5rem;
+            }
+
+            /* Adjust section title sizes */
+            .section-title-slide h1 {
+                font-size: 2rem;
+            }
+
+            .section-title-slide p {
+                font-size: 1rem;
+            }
+
+            /* Smaller cinema cards */
+            .cinema-card {
+                padding: 0.75rem;
+            }
+
+            /* Adjust map height */
+            #cinema-map-container {
+                min-height: 300px;
+            }
+
+            /* Reduce sprocket hole size for mobile */
+            .frame-inner::before,
+            .frame-inner::after {
+                height: 30px;
+            }
+
+            .film-frame-content-area {
+                top: 35px;
+                bottom: 35px;
+            }
+
+            /* Hero stats adjustments */
+            #hero-stats .text-6xl,
+            #hero-stats .md\:text-7xl {
+                font-size: 3rem !important;
+            }
+
+            #hero-stats .text-3xl {
+                font-size: 1.875rem !important;
+            }
+
+            #hero-stats .text-2xl {
+                font-size: 1.5rem !important;
+            }
+
+            /* Prevent text overflow in cards */
+            .cinema-card h3 {
+                font-size: 0.875rem !important;
+            }
+
+            /* Adjust grid for very small screens */
+            @media (max-width: 380px) {
+                #top-rated-grid,
+                #least-rated-grid,
+                #guilty-pleasures-grid,
+                #hot-takes-grid {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- =======================================================================
+         INTRO SECTION
+         ======================================================================= -->
+    <section id="intro" class="min-h-screen flex items-center justify-center text-center p-8">
+        <div class="max-w-2xl">
+            <div class="mb-8">
+                <img src="https://www.cineville.nl/images/cineville-logo.svg" alt="Cineville" class="h-16 mx-auto mb-6 opacity-90" onerror="this.style.display='none'">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-[#B0C6FF]">My 2025 Cineville Wrapped</h1>
+            <p class="text-xl text-[#555] mb-4">A visual summary of my movie-watching journey in 2025 using my cineville</p>
+            <div class="mt-8">
+                <select id="year-selector" class="bg-[#1a1a1a] border border-[#333] rounded-lg px-4 py-2 text-white">
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                </select>
+            </div>
+            <div class="mt-12 animate-bounce">
+                <svg class="w-8 h-8 mx-auto text-[#555]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         SCROLLY SECTION - Film Strip Frames
+         ======================================================================= -->
+    <section id="scrolly" class="projector-gate relative">
+
+        <!-- Frame counter -->
+        <div class="frame-counter">
+            <span id="frame-current">1</span> / <span id="frame-total">18</span>
+        </div>
+
+        <!-- Year selector - fixed position -->
+        <div class="year-selector-fixed" id="year-selector-fixed">
+            <label style="color: #8b949e; font-size: 0.75rem; margin-right: 0.5rem;">Year:</label>
+            <select id="year-selector-scrolly" class="bg-[#1a1a1a] border border-[#333] rounded-lg px-3 py-1 text-white">
+            </select>
+        </div>
+
+        <!-- Sticky viewport containing all sliding frames -->
+        <div class="scroll-graphic">
+            <div class="scroll-graphic-wrapper">
+                <!-- Film strip container -->
+                <div class="film-strip-container">
+                    <div class="film-strip">
+
+                <!-- FRAME 0: Hero Stats -->
+                <div class="film-frame-slide active" data-frame="0">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz">
+                                <div id="hero-stats" class="text-center">
+                                    <p class="text-[#8b949e] text-lg mb-3">In <span id="stat-year" class="text-white font-bold">2025</span>, I attended</p>
+                                    <div class="flex items-center justify-center gap-4 mb-2">
+                                        <div class="text-6xl md:text-7xl font-black text-[#B0C6FF] stat-number" id="film-count">0</div>
+                                    </div>
+                                    <p class="text-xl text-[#8b949e] mb-6">screenings</p>
+
+                                    <!-- Secondary stats row -->
+                                    <div class="flex justify-center gap-8 mb-6">
+                                        <div class="text-center">
+                                            <div class="text-3xl font-bold text-[#F1C3BD] stat-number" id="cinema-count">0</div>
+                                            <p class="text-[#8b949e] mt-1 text-xs">cinemas</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="text-3xl font-bold text-[#B0C6FF] stat-number" id="city-count">0</div>
+                                            <p class="text-[#8b949e] mt-1 text-xs">cities</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="text-3xl font-bold text-[#E0C4D0] stat-number" id="rated-count">0</div>
+                                            <p class="text-[#8b949e] mt-1 text-xs">rated</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Time stats -->
+                                    <div class="flex justify-center gap-8">
+                                        <div class="text-center">
+                                            <div class="text-2xl font-bold text-white stat-number" id="hours-count">0</div>
+                                            <p class="text-[#8b949e] mt-1 text-xs">hours watched</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="text-2xl font-bold text-[#E96244] stat-number" id="avg-rating">0</div>
+                                            <p class="text-[#8b949e] mt-1 text-xs">my avg rating</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 1: Section Title - Cinemas I Visited -->
+                <div class="film-frame-slide enter-right" data-frame="1">
+                    <div class="frame-inner section-bg-pink">
+                        <div class="film-frame-content-area">
+                            <div class="section-title-slide">
+                                <div class="section-icon"></div>
+                                <h1>Cinemas I Visited</h1>
+                                <p>Some statistics on my favorite theaters and where I watched movies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 2: Top Cinemas -->
+                <div class="film-frame-slide enter-right" data-frame="2">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz">
+                                <div id="top-cinemas" class="w-full max-w-3xl">
+                                    <h2 class="text-2xl font-bold text-center mb-6 text-[#B0C6FF]">My Favorite Cinemas</h2>
+                                    <div id="cinema-list" class="space-y-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 3: Cinema Map -->
+                <div class="film-frame-slide enter-right" data-frame="3">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz" style="padding: 0;">
+                                <div id="cinema-map" style="width: 100%; height: 100%;">
+                                    <div id="cinema-map-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 4: Section Title - Your Taste -->
+                <div class="film-frame-slide enter-right" data-frame="4">
+                    <div class="frame-inner section-bg-peach">
+                        <div class="film-frame-content-area">
+                            <div class="section-title-slide">
+                                <div class="section-icon"></div>
+                                <h1>My Movie Taste</h1>
+                                <p>The genres, languages, and themes of movies that I watched in 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 5: Genre Breakdown -->
+                <div class="film-frame-slide enter-right" data-frame="5">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz">
+                                <div id="genre-breakdown">
+                                    <svg id="genre-bubbles-svg" class="mx-auto"></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 6: Language Distribution -->
+                <div class="film-frame-slide enter-right" data-frame="6">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz">
+                                <div id="language-breakdown" class="w-full max-w-3xl">
+                                    <h2 class="text-2xl font-bold text-center mb-6 text-[#B0C6FF]">Languages</h2>
+                                    <div id="language-bars" class="space-y-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 7: Keywords Cloud -->
+                <div class="film-frame-slide enter-right" data-frame="7">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz">
+                                <div id="keywords-cloud">
+                                    <svg id="keywords-svg" class="mx-auto"></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 8: Section Title - Movie Calendar -->
+                <div class="film-frame-slide enter-right" data-frame="8">
+                    <div class="frame-inner section-bg-pink">
+                        <div class="film-frame-content-area">
+                            <div class="section-title-slide">
+                                <div class="section-icon"></div>
+                                <h1>My Cinema Calendar</h1>
+                                <p>When I watched movies in 2025</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 9: Monthly Calendar -->
+                <div class="film-frame-slide enter-right" data-frame="9">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz">
+                                <div id="monthly-calendar">
+                                    <h2 class="text-2xl font-bold text-center mb-6 text-[#B0C6FF]" id="calendar-title">Screenings Per Month</h2>
+                                    <svg id="calendar-svg" class="mx-auto"></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 10: Activity Heatmap -->
+                <div class="film-frame-slide enter-right" data-frame="10">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz">
+                                <div id="activity-heatmap">
+                                    <h2 class="text-2xl font-bold text-center mb-6 text-[#B0C6FF]">My Detailed Cinema Year</h2>
+                                    <svg id="heatmap-svg" class="mx-auto"></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 11: Section Title - Ratings -->
+                <div class="film-frame-slide enter-right" data-frame="11">
+                    <div class="frame-inner section-bg-peach">
+                        <div class="film-frame-content-area">
+                            <div class="section-title-slide">
+                                <div class="section-icon"></div>
+                                <h1>Ratings</h1>
+                                <p>How I rated movies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 12: Ratings Distribution -->
+                <div class="film-frame-slide enter-right" data-frame="12">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz">
+                                <div id="ratings-raincloud">
+                                    <svg id="raincloud-svg" class="mx-auto"></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 13: Top Rated Films -->
+                <div class="film-frame-slide enter-right" data-frame="13">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz">
+                                <div id="top-rated" class="w-full max-w-5xl">
+                                    <h2 class="text-2xl font-bold text-center mb-2">
+                                        <span class="text-[#B0C6FF]">My Top Favorites</span>
+                                    </h2>
+                                    <p class="text-center text-[#aaa] text-sm mb-6">Films that I liked the most </p>
+                                    <div id="top-rated-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 14: Least Rated Films -->
+                <div class="film-frame-slide enter-right" data-frame="14">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz">
+                                <div id="least-rated" class="w-full max-w-5xl">
+                                    <h2 class="text-2xl font-bold text-center mb-2">
+                                        <span class="text-[#aaa]">My Least Favorites Movies</span>
+                                    </h2>
+                                    <p class="text-center text-[#aaa] text-sm mb-6">The movies I disliked the most or didn't find so much enjoyable</p>
+                                    <div id="least-rated-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 15: Section Title - Guilty Pleasures & Hot Takes -->
+                <div class="film-frame-slide enter-right" data-frame="15">
+                    <div class="frame-inner section-bg-pink">
+                        <div class="film-frame-content-area">
+                            <div class="section-title-slide">
+                                <div class="section-icon"></div>
+                                <h1>My Guilty Pleasures & Hot Takes</h1>
+                                <p>Where I disagreed with the general consensus on movies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 16: Guilty Pleasures -->
+                <div class="film-frame-slide enter-right" data-frame="16">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz">
+                                <div id="guilty-pleasures" class="w-full max-w-5xl">
+                                    <h2 class="text-2xl font-bold text-center mb-2">
+                                        <span class="text-[#F1C3BD]">Guilty Pleasures</span>
+                                    </h2>
+                                    <p class="text-center text-[#aaa] text-sm mb-6">Films I loved that the general consensus didn't love as much and I rated these higher than the crowd!</p>
+                                    <div id="guilty-pleasures-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRAME 17: Hot Takes -->
+                <div class="film-frame-slide enter-right" data-frame="17">
+                    <div class="frame-inner">
+                        <div class="film-frame-content-area">
+                            <div class="film-frame-viz">
+                                <div id="hot-takes" class="w-full max-w-5xl">
+                                    <h2 class="text-2xl font-bold text-center mb-2">
+                                        <span class="text-[#B0C6FF]">Hot Takes</span>
+                                    </h2>
+                                    <p class="text-center text-[#aaa] text-sm mb-6">Popular films I couldn't relate or enjoy but everyone else loved them!</p>
+                                    <div id="hot-takes-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Text box below the film strip -->
+                <div class="frame-text-box" id="frame-text-box">
+                    <p id="frame-text-content"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll trigger steps -->
+        <div class="steps">
+            <div class="step h-screen" data-step="0"></div>
+            <div class="step h-screen" data-step="1"></div>
+            <div class="step h-screen" data-step="2"></div>
+            <div class="step h-screen" data-step="3"></div>
+            <div class="step h-screen" data-step="4"></div>
+            <div class="step h-screen" data-step="5"></div>
+            <div class="step h-screen" data-step="6"></div>
+            <div class="step h-screen" data-step="7"></div>
+            <div class="step h-screen" data-step="8"></div>
+            <div class="step h-screen" data-step="9"></div>
+            <div class="step h-screen" data-step="10"></div>
+            <div class="step h-screen" data-step="11"></div>
+            <div class="step h-screen" data-step="12"></div>
+            <div class="step h-screen" data-step="13"></div>
+            <div class="step h-screen" data-step="14"></div>
+            <div class="step h-screen" data-step="15"></div>
+            <div class="step h-screen" data-step="16"></div>
+            <div class="step h-screen" data-step="17"></div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         OUTRO SECTION
+         ======================================================================= -->
+    <section id="outro" class="min-h-screen flex items-center justify-center text-center p-8">
+        <div class="max-w-xl">
+            <h1 class="text-4xl font-bold mb-6 text-[#B0C6FF]">That was my year in Cinema with Cineville!</h1>
+            <p class="text-xl text-[#555] mb-8">I hope I can see more movies in 2026! And visit more cinemas both within the Netherlands and abroad!</p>
+            <p class="text-[#555]"></p>
+        </div>
+    </section>
+
+    <script>
+        // =====================================================================
+        // GLOBAL STATE
+        // =====================================================================
+        let allData = [];
+        let selectedYear = 2025;
+        let stats = {};
+
+        // Language name mapping
+        const languageNames = {
+            'en': 'English',
+            'fr': 'French',
+            'ko': 'Korean',
+            'zh': 'Chinese',
+            'ja': 'Japanese',
+            'de': 'German',
+            'es': 'Spanish',
+            'it': 'Italian',
+            'nl': 'Dutch',
+            'pt': 'Portuguese',
+            'ru': 'Russian',
+            'hi': 'Hindi',
+            'ar': 'Arabic',
+            'sv': 'Swedish',
+            'da': 'Danish',
+            'no': 'Norwegian',
+            'fi': 'Finnish',
+            'pl': 'Polish',
+            'tr': 'Turkish',
+            'th': 'Thai',
+            'vi': 'Vietnamese',
+            'id': 'Indonesian',
+            'ms': 'Malay',
+            'tl': 'Tagalog',
+            'he': 'Hebrew',
+            'el': 'Greek',
+            'cs': 'Czech',
+            'hu': 'Hungarian',
+            'ro': 'Romanian',
+            'uk': 'Ukrainian',
+            'bn': 'Bengali',
+            'ta': 'Tamil',
+            'te': 'Telugu',
+            'ml': 'Malayalam',
+            'kn': 'Kannada',
+            'mr': 'Marathi',
+            'gu': 'Gujarati',
+            'pa': 'Punjabi',
+            'fa': 'Persian',
+            'ur': 'Urdu'
+        };
+
+        // =====================================================================
+        // DATA LOADING
+        // =====================================================================
+        async function loadData() {
+            try {
+                const csv = await d3.csv("cineville-wrapped-coords-enriched.csv");
+
+                allData = csv.map(d => {
+                    const watchedDate = d.Date ? new Date(d.Date) : null;
+                    return {
+                        title: d.Title || d.tmdb_title,
+                        year: d.release_date ? parseInt(d.release_date.substring(0, 4)) : null,
+                        rating: d.Rating ? parseFloat(d.Rating) : null,
+                        watchedDate: watchedDate,
+                        watchedYear: watchedDate ? watchedDate.getFullYear() : null,
+                        watchedMonth: watchedDate ? watchedDate.getMonth() : null,
+                        cinema: d['Cinema Name'] || d.Cinema,
+                        city: d.City,
+                        latitude: d.Latitude ? parseFloat(d.Latitude) : null,
+                        longitude: d.Longitude ? parseFloat(d.Longitude) : null,
+                        runtime: d.runtime ? parseInt(d.runtime) : null,
+                        director: d.director,
+                        cast: d.cast,
+                        genres: d.genres,
+                        posterUrl: d.poster_url,
+                        backdropUrl: d.backdrop_url,
+                        overview: d.overview,
+                        originalLanguage: d.original_language,
+                        tmdbRating: d.vote_average ? parseFloat(d.vote_average) : null,
+                        keywords: d.keywords
+                    };
+                }).filter(d => d.watchedDate);
+
+                // Get available years
+                const years = [...new Set(allData.map(d => d.watchedYear))].sort((a, b) => b - a);
+                selectedYear = years[0] || 2025;
+
+                // Update both year selectors
+                const selector = document.getElementById("year-selector");
+                const selectorScrolly = document.getElementById("year-selector-scrolly");
+
+                const yearOptions = years.map(y => `<option value="${y}">${y}</option>`).join("");
+                selector.innerHTML = yearOptions;
+                selectorScrolly.innerHTML = yearOptions;
+
+                selector.value = selectedYear;
+                selectorScrolly.value = selectedYear;
+
+                // Handle year change from intro selector
+                selector.addEventListener("change", (e) => {
+                    selectedYear = parseInt(e.target.value);
+                    selectorScrolly.value = selectedYear;
+                    calculateStats();
+                    renderCurrentStep();
+                });
+
+                // Handle year change from scrolly selector
+                selectorScrolly.addEventListener("change", (e) => {
+                    selectedYear = parseInt(e.target.value);
+                    selector.value = selectedYear;
+                    calculateStats();
+                    renderCurrentStep();
+                });
+
+                calculateStats();
+                initScrollama();
+
+            } catch (error) {
+                console.error("Error loading data:", error);
+            }
+        }
+
+        // =====================================================================
+        // STATS CALCULATION
+        // =====================================================================
+        function calculateStats() {
+            const yearData = allData.filter(d => d.watchedYear === selectedYear);
+
+            stats = {
+                totalFilms: yearData.length,
+                cinemas: [...new Set(yearData.map(d => d.cinema).filter(Boolean))],
+                cities: [...new Set(yearData.map(d => d.city).filter(Boolean))],
+                ratedCount: yearData.filter(d => d.rating > 0).length,
+                totalRuntime: yearData.reduce((sum, d) => sum + (d.runtime || 0), 0),
+                avgRating: d3.mean(yearData.filter(d => d.rating > 0), d => d.rating) || 0
+            };
+
+            // Top cinemas
+            const cinemaCounts = d3.rollup(yearData, v => v.length, d => d.cinema);
+            stats.topCinemas = [...cinemaCounts.entries()]
+                .filter(([name]) => name)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 5);
+
+            // Top directors
+            const directorCounts = {};
+            yearData.forEach(d => {
+                if (d.director) {
+                    d.director.split(',').forEach(dir => {
+                        const name = dir.trim();
+                        if (name) {
+                            directorCounts[name] = (directorCounts[name] || 0) + 1;
+                        }
+                    });
+                }
+            });
+            stats.topDirectors = Object.entries(directorCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 6);
+
+            // Genre counts
+            const genreCounts = {};
+            yearData.forEach(d => {
+                if (d.genres) {
+                    d.genres.split(',').forEach(g => {
+                        const genre = g.trim();
+                        if (genre) {
+                            genreCounts[genre] = (genreCounts[genre] || 0) + 1;
+                        }
+                    });
+                }
+            });
+            stats.genreCounts = Object.entries(genreCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 8);
+
+            // Language counts
+            const langCounts = {};
+            yearData.forEach(d => {
+                if (d.originalLanguage) {
+                    const lang = d.originalLanguage;
+                    langCounts[lang] = (langCounts[lang] || 0) + 1;
+                }
+            });
+            stats.languageCounts = Object.entries(langCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 8);
+
+            // Keyword counts (for wordcloud)
+            const keywordCounts = {};
+            yearData.forEach(d => {
+                if (d.keywords) {
+                    d.keywords.split(',').forEach(k => {
+                        const keyword = k.trim().toLowerCase();
+                        if (keyword && keyword.length > 2) {
+                            keywordCounts[keyword] = (keywordCounts[keyword] || 0) + 1;
+                        }
+                    });
+                }
+            });
+            stats.keywordCounts = Object.entries(keywordCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 50);
+
+            // Cinema locations
+            stats.cinemaLocations = [];
+            const cinemaMap = new Map();
+            yearData.forEach(d => {
+                if (d.cinema && d.latitude && d.longitude) {
+                    if (!cinemaMap.has(d.cinema)) {
+                        cinemaMap.set(d.cinema, {
+                            name: d.cinema,
+                            city: d.city,
+                            lat: d.latitude,
+                            lon: d.longitude,
+                            count: 0
+                        });
+                    }
+                    cinemaMap.get(d.cinema).count++;
+                }
+            });
+            stats.cinemaLocations = [...cinemaMap.values()];
+
+            // Guilty Pleasures: Films you rated high but TMDB rated low
+            // Your rating >= 3.5 AND TMDB rating <= 6.5 AND difference >= 1.5 stars (on 5-star scale)
+            stats.guiltyPleasures = yearData
+                .filter(d => {
+                    if (!d.rating || !d.tmdbRating) return false;
+                    const tmdb5Star = d.tmdbRating / 2; // Convert TMDB 10-scale to 5-scale
+                    const diff = d.rating - tmdb5Star;
+                    return d.rating >= 3.5 && tmdb5Star <= 3.25 && diff >= 1;
+                })
+                .map(d => ({
+                    ...d,
+                    tmdb5Star: d.tmdbRating / 2,
+                    diff: d.rating - (d.tmdbRating / 2)
+                }))
+                .sort((a, b) => b.diff - a.diff)
+                .slice(0, 6);
+
+            // Hot Takes: Films you rated low but TMDB rated high
+            // Your rating <= 3 AND TMDB rating >= 7 AND difference >= 1.5 stars (on 5-star scale)
+            stats.hotTakes = yearData
+                .filter(d => {
+                    if (!d.rating || !d.tmdbRating) return false;
+                    const tmdb5Star = d.tmdbRating / 2; // Convert TMDB 10-scale to 5-scale
+                    const diff = tmdb5Star - d.rating;
+                    return d.rating <= 3 && tmdb5Star >= 3.5 && diff >= 1;
+                })
+                .map(d => ({
+                    ...d,
+                    tmdb5Star: d.tmdbRating / 2,
+                    diff: (d.tmdbRating / 2) - d.rating
+                }))
+                .sort((a, b) => b.diff - a.diff)
+                .slice(0, 6);
+
+            // Top rated films
+            stats.topRated = yearData
+                .filter(d => d.rating >= 4)
+                .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+                .slice(0, 12);
+
+            // Least rated films
+            stats.leastRated = yearData
+                .filter(d => d.rating !== null && d.rating > 0 && d.rating <= 2.5)
+                .sort((a, b) => (a.rating || 0) - (b.rating || 0))
+                .slice(0, 6);
+
+            // Monthly counts
+            stats.monthlyCounts = d3.rollup(yearData, v => v.length, d => d.watchedMonth);
+
+            // Daily counts for heatmap
+            stats.dailyCounts = d3.rollup(yearData, v => v.length, d => d3.timeFormat("%Y-%m-%d")(d.watchedDate));
+        }
+
+        // =====================================================================
+        // RENDER FUNCTIONS
+        // =====================================================================
+
+        function animateNumber(element, target, duration = 1000) {
+            const start = parseInt(element.textContent) || 0;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easeProgress = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(start + (target - start) * easeProgress);
+                element.textContent = current;
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            requestAnimationFrame(update);
+        }
+
+        function renderHeroStats() {
+            document.getElementById("stat-year").textContent = selectedYear;
+            animateNumber(document.getElementById("film-count"), stats.totalFilms);
+            animateNumber(document.getElementById("cinema-count"), stats.cinemas.length);
+            animateNumber(document.getElementById("city-count"), stats.cities.length);
+            animateNumber(document.getElementById("rated-count"), stats.ratedCount);
+
+            const hours = Math.round(stats.totalRuntime / 60);
+            animateNumber(document.getElementById("hours-count"), hours);
+
+            const avgEl = document.getElementById("avg-rating");
+            avgEl.textContent = stats.avgRating.toFixed(1) + "★";
+        }
+
+        function renderTopCinemas() {
+            const container = document.getElementById("cinema-list");
+            container.innerHTML = "";
+
+            const maxCount = stats.topCinemas[0]?.[1] || 1;
+
+            stats.topCinemas.forEach(([name, count], i) => {
+                const percentage = (count / maxCount) * 100;
+                const cinema = stats.cinemaLocations.find(c => c.name === name);
+                const city = cinema?.city || "";
+
+                const bar = document.createElement("div");
+                bar.className = "cinema-card";
+                bar.innerHTML = `
+                    <div class="flex justify-between items-center mb-2">
+                        <div>
+                            <span class="text-white font-semibold">${name}</span>
+                            <span class="text-[#8b949e] text-sm ml-2">${city}</span>
+                        </div>
+                        <span class="text-[#F1C3BD] font-bold">${count}</span>
+                    </div>
+                    <div class="genre-bar-container">
+                        <div class="genre-bar" style="width: 0%"></div>
+                    </div>
+                `;
+                container.appendChild(bar);
+
+                setTimeout(() => {
+                    bar.querySelector('.genre-bar').style.width = `${percentage}%`;
+                }, 100 + i * 100);
+            });
+        }
+
+        // MapTiler API key and map instance
+        const MAPTILER_KEY = 'o7JdMkDPCQkCPbezwYnn';
+        let cinemaMap = null;
+        let mapMarkers = [];
+
+        function renderCinemaMap() {
+            const container = document.getElementById('cinema-map-container');
+
+            // If map already exists, just update markers
+            if (cinemaMap) {
+                updateMapMarkers();
+                return;
+            }
+
+            // Initialize the map
+            cinemaMap = new maplibregl.Map({
+                container: 'cinema-map-container',
+                style: `https://api.maptiler.com/maps/streets-v2-dark/style.json?key=${MAPTILER_KEY}`,
+                center: [5.2913, 52.1326],  // Netherlands center
+                zoom: 7,
+                pitch: 0,
+            });
+
+            // Add zoom controls
+            cinemaMap.addControl(new maplibregl.NavigationControl(), 'top-right');
+
+            // Wait for map to load then add markers
+            cinemaMap.on('load', function() {
+                updateMapMarkers();
+            });
+        }
+
+        function updateMapMarkers() {
+            // Remove existing markers
+            mapMarkers.forEach(marker => marker.remove());
+            mapMarkers = [];
+
+            if (!stats.cinemaLocations || stats.cinemaLocations.length === 0) return;
+
+            const maxCount = d3.max(stats.cinemaLocations, d => d.count) || 1;
+
+            // Add markers for each cinema
+            stats.cinemaLocations.forEach((cinema, i) => {
+                // Create marker element
+                const el = document.createElement('div');
+                el.className = 'cinema-map-marker';
+
+                // Scale marker size based on visit count
+                const size = 20 + (cinema.count / maxCount) * 20;
+                el.style.width = size + 'px';
+                el.style.height = size + 'px';
+
+                // Create popup
+                const popup = new maplibregl.Popup({ offset: 25 })
+                    .setHTML(`
+                        <strong style="color: #F1C3BD;">${cinema.name}</strong><br/>
+                        <span style="color: #8b949e;">${cinema.city}</span><br/>
+                        <span style="color: #F1C3BD; font-weight: bold;">${cinema.count} ${cinema.count === 1 ? 'visit' : 'visits'}</span>
+                    `);
+
+                // Add marker to map with delay for animation effect
+                setTimeout(() => {
+                    const marker = new maplibregl.Marker({ element: el })
+                        .setLngLat([cinema.lon, cinema.lat])
+                        .setPopup(popup)
+                        .addTo(cinemaMap);
+
+                    mapMarkers.push(marker);
+
+                    // Animate marker appearing
+                    el.style.transform = 'scale(0)';
+                    el.style.transition = 'transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                    requestAnimationFrame(() => {
+                        el.style.transform = 'scale(1)';
+                    });
+                }, i * 100);
+            });
+
+            // Fit map bounds to show all markers
+            if (stats.cinemaLocations.length > 1) {
+                const bounds = new maplibregl.LngLatBounds();
+                stats.cinemaLocations.forEach(cinema => {
+                    bounds.extend([cinema.lon, cinema.lat]);
+                });
+                cinemaMap.fitBounds(bounds, { padding: 50, maxZoom: 10 });
+            }
+        }
+
+        function renderGenreChart() {
+            const container = document.getElementById("genre-bars");
+            container.innerHTML = "";
+
+            const maxCount = stats.genreCounts[0]?.[1] || 1;
+
+            stats.genreCounts.forEach(([genre, count], i) => {
+                const percentage = (count / maxCount) * 100;
+                const bar = document.createElement("div");
+                bar.innerHTML = `
+                    <div class="flex justify-between text-sm mb-1">
+                        <span class="text-white">${genre}</span>
+                        <span class="text-[#8b949e]">${count}</span>
+                    </div>
+                    <div class="genre-bar-container">
+                        <div class="genre-bar" style="width: 0%"></div>
+                    </div>
+                `;
+                container.appendChild(bar);
+
+                setTimeout(() => {
+                    bar.querySelector('.genre-bar').style.width = `${percentage}%`;
+                }, 100 + i * 50);
+            });
+        }
+
+        function renderLanguageChart() {
+            const container = document.getElementById("language-bars");
+            container.innerHTML = "";
+
+            const maxCount = stats.languageCounts[0]?.[1] || 1;
+
+            stats.languageCounts.forEach(([lang, count], i) => {
+                const percentage = (count / maxCount) * 100;
+                const langName = languageNames[lang] || lang.toUpperCase();
+                const bar = document.createElement("div");
+                bar.innerHTML = `
+                    <div class="flex justify-between text-sm mb-1">
+                        <span class="text-white">${langName}</span>
+                        <span class="text-[#8b949e]">${count}</span>
+                    </div>
+                    <div class="genre-bar-container">
+                        <div class="genre-bar" style="width: 0%"></div>
+                    </div>
+                `;
+                container.appendChild(bar);
+
+                setTimeout(() => {
+                    bar.querySelector('.genre-bar').style.width = `${percentage}%`;
+                }, 100 + i * 50);
+            });
+        }
+
+        function renderGenreTreemap() {
+            const svg = d3.select("#genre-bubbles-svg");
+            svg.selectAll("*").remove();
+
+            const isMobile = window.innerWidth < 768;
+            const width = isMobile ? Math.min(window.innerWidth - 40, 500) : 900;
+            const height = isMobile ? 400 : 550;
+            svg.attr("viewBox", `0 0 ${width} ${height}`)
+                .attr("width", width)
+                .attr("height", height)
+                .attr("preserveAspectRatio", "xMidYMid meet")
+                .style("max-width", "100%")
+                .style("height", isMobile ? "auto" : null);
+
+            if (stats.genreCounts.length === 0) {
+                svg.append("text")
+                    .attr("x", width / 2)
+                    .attr("y", height / 2)
+                    .attr("text-anchor", "middle")
+                    .attr("fill", "#8b949e")
+                    .text("No genre data available");
+                return;
+            }
+
+            // Prepare data for treemap layout
+            const data = {
+                name: "genres",
+                children: stats.genreCounts.map(([name, value]) => ({ name, value }))
+            };
+
+            // Create color scale with new palette
+            const colorScale = d3.scaleOrdinal()
+                .domain(stats.genreCounts.map(d => d[0]))
+                .range(['#F1C3BD', '#B0C6FF', '#380519', '#E0C4D0', '#FFFFFF', '#F1C3BD', '#B0C6FF', '#E0C4D0']);
+
+            // Create treemap layout
+            const treemap = d3.treemap()
+                .size([width, height])
+                .padding(3)
+                .round(true);
+
+            const root = d3.hierarchy(data)
+                .sum(d => d.value)
+                .sort((a, b) => b.value - a.value);
+
+            treemap(root);
+
+            // Create groups for each tile
+            const nodes = svg.selectAll(".treemap-tile")
+                .data(root.leaves())
+                .enter()
+                .append("g")
+                .attr("class", "treemap-tile")
+                .attr("transform", d => `translate(${d.x0},${d.y0})`);
+
+            // Add rectangles
+            nodes.append("rect")
+                .attr("width", 0)
+                .attr("height", 0)
+                .attr("fill", d => colorScale(d.data.name))
+                .attr("stroke", "#1a1a1a")
+                .attr("stroke-width", 2)
+                .attr("rx", 4)
+                .style("cursor", "pointer")
+                .transition()
+                .delay((d, i) => i * 60)
+                .duration(500)
+                .ease(d3.easeCubicOut)
+                .attr("width", d => d.x1 - d.x0)
+                .attr("height", d => d.y1 - d.y0);
+
+            // Determine text color based on background
+            function getTextColor(bgColor) {
+                if (bgColor === '#380519' || bgColor === '#B0C6FF') return '#FFFFFF';
+                return '#1a1a1a';
+            }
+
+            // Add genre name labels
+            nodes.append("text")
+                .attr("x", d => (d.x1 - d.x0) / 2)
+                .attr("y", d => (d.y1 - d.y0) / 2 - 8)
+                .attr("text-anchor", "middle")
+                .attr("dominant-baseline", "middle")
+                .attr("fill", d => getTextColor(colorScale(d.data.name)))
+                .attr("font-weight", "700")
+                .attr("font-size", d => {
+                    const tileWidth = d.x1 - d.x0;
+                    const tileHeight = d.y1 - d.y0;
+                    return Math.min(tileWidth / 6, tileHeight / 4, 18) + "px";
+                })
+                .style("pointer-events", "none")
+                .text(d => {
+                    const tileWidth = d.x1 - d.x0;
+                    return tileWidth > 60 ? d.data.name : "";
+                })
+                .style("opacity", 0)
+                .transition()
+                .delay((d, i) => 400 + i * 60)
+                .duration(300)
+                .style("opacity", 1);
+
+            // Add count labels
+            nodes.append("text")
+                .attr("x", d => (d.x1 - d.x0) / 2)
+                .attr("y", d => (d.y1 - d.y0) / 2 + 12)
+                .attr("text-anchor", "middle")
+                .attr("dominant-baseline", "middle")
+                .attr("fill", d => getTextColor(colorScale(d.data.name)))
+                .attr("font-size", d => {
+                    const tileWidth = d.x1 - d.x0;
+                    return Math.min(tileWidth / 8, 14) + "px";
+                })
+                .style("pointer-events", "none")
+                .text(d => {
+                    const tileWidth = d.x1 - d.x0;
+                    return tileWidth > 40 ? d.data.value + " films" : "";
+                })
+                .style("opacity", 0)
+                .transition()
+                .delay((d, i) => 500 + i * 60)
+                .duration(300)
+                .style("opacity", 0.8);
+
+            // Add tooltip interactions
+            let tooltip = d3.select(".genre-tooltip");
+            if (tooltip.empty()) {
+                tooltip = d3.select("body").append("div")
+                    .attr("class", "thumb-tooltip genre-tooltip")
+                    .style("display", "none");
+            }
+
+            nodes.selectAll("rect")
+                .on("mouseenter", function(event, d) {
+                    d3.select(this)
+                        .transition()
+                        .duration(200)
+                        .attr("stroke", "#FFFFFF")
+                        .attr("stroke-width", 3);
+                    tooltip.style("display", "block")
+                        .html(`<strong>${d.data.name}</strong><br>${d.data.value} films`);
+                })
+                .on("mousemove", function(event) {
+                    tooltip.style("left", (event.pageX + 15) + "px")
+                        .style("top", (event.pageY - 15) + "px");
+                })
+                .on("mouseleave", function(event, d) {
+                    d3.select(this)
+                        .transition()
+                        .duration(200)
+                        .attr("stroke", "#1a1a1a")
+                        .attr("stroke-width", 2);
+                    tooltip.style("display", "none");
+                });
+        }
+
+        function renderKeywords() {
+            const svg = d3.select("#keywords-svg");
+            svg.selectAll("*").remove();
+
+            const isMobile = window.innerWidth < 768;
+            const width = isMobile ? Math.min(window.innerWidth - 40, 500) : 1000;
+            const height = isMobile ? 350 : 500;
+            svg.attr("viewBox", `0 0 ${width} ${height}`)
+                .attr("width", width)
+                .attr("height", height)
+                .attr("preserveAspectRatio", "xMidYMid meet")
+                .style("max-width", "100%")
+                .style("height", isMobile ? "auto" : null);
+
+            if (!stats.keywordCounts || stats.keywordCounts.length === 0) {
+                svg.append("text")
+                    .attr("x", width / 2)
+                    .attr("y", height / 2)
+                    .attr("text-anchor", "middle")
+                    .attr("fill", "#8b949e")
+                    .text("No keyword data available");
+                return;
+            }
+
+            // Prepare data for pack layout - fewer keywords for larger circles
+            const data = {
+                name: "keywords",
+                children: stats.keywordCounts.slice(0, 12).map(([name, value]) => ({ name, value }))
+            };
+
+            // Create color scale with new palette
+            const colorScale = d3.scaleOrdinal()
+                .range(['#F1C3BD', '#B0C6FF', '#380519', '#E0C4D0', '#FFFFFF']);
+
+            // Create pack layout - larger circles with more padding
+            const pack = d3.pack()
+                .size([width - 20, height - 20])
+                .padding(8);
+
+            const root = d3.hierarchy(data)
+                .sum(d => d.value)
+                .sort((a, b) => b.value - a.value);
+
+            pack(root);
+
+            // Create groups for each bubble
+            const nodes = svg.selectAll(".keyword-bubble")
+                .data(root.leaves())
+                .enter()
+                .append("g")
+                .attr("class", "keyword-bubble")
+                .attr("transform", d => `translate(${d.x + 10},${d.y + 10})`);
+
+            // Add circles
+            nodes.append("circle")
+                .attr("r", 0)
+                .attr("fill", (d, i) => colorScale(i))
+                .attr("opacity", 0.9)
+                .attr("stroke", "#1a1a1a")
+                .attr("stroke-width", 2)
+                .style("cursor", "pointer")
+                .transition()
+                .delay((d, i) => i * 40)
+                .duration(600)
+                .ease(d3.easeElasticOut.amplitude(1).period(0.5))
+                .attr("r", d => d.r);
+
+            // Determine text color based on background
+            function getTextColor(bgColor) {
+                if (bgColor === '#380519' || bgColor === '#B0C6FF') return '#FFFFFF';
+                return '#1a1a1a';
+            }
+
+            // Helper function to wrap text into lines that fit within a given width
+            function wrapTextToFit(text, maxCharsPerLine) {
+                const words = text.split(/\s+/);
+                const lines = [];
+                let currentLine = '';
+
+                for (let i = 0; i < words.length; i++) {
+                    const word = words[i];
+                    const testLine = currentLine ? currentLine + ' ' + word : word;
+
+                    if (testLine.length <= maxCharsPerLine) {
+                        currentLine = testLine;
+                    } else {
+                        if (currentLine) {
+                            lines.push(currentLine);
+                        }
+                        // If single word is too long, truncate it
+                        if (word.length > maxCharsPerLine) {
+                            currentLine = word.substring(0, maxCharsPerLine - 2) + '..';
+                        } else {
+                            currentLine = word;
+                        }
+                    }
+                }
+                if (currentLine) {
+                    lines.push(currentLine);
+                }
+                return lines;
+            }
+
+            // Add keyword labels with proper sizing
+            nodes.each(function(d, i) {
+                const node = d3.select(this);
+                const textColor = getTextColor(colorScale(i));
+                const radius = d.r;
+
+                // Calculate available width (use ~70% of diameter for text)
+                const availableWidth = radius * 1.4;
+
+                // Estimate characters per line based on font size
+                // Start with a base font size and adjust
+                const textLength = d.data.name.length;
+
+                // Calculate optimal font size based on circle size and text length
+                let fontSize;
+                if (radius < 30) {
+                    fontSize = Math.max(8, radius / 3);
+                } else if (radius < 50) {
+                    fontSize = Math.max(10, radius / 3.5);
+                } else {
+                    fontSize = Math.min(16, radius / 4);
+                }
+
+                // Estimate how many characters fit per line (roughly 0.6 * fontSize per char)
+                const charsPerLine = Math.floor(availableWidth / (fontSize * 0.55));
+                const lines = wrapTextToFit(d.data.name, Math.max(charsPerLine, 5));
+
+                // Limit to max 3 lines, truncate if needed
+                const maxLines = 3;
+                if (lines.length > maxLines) {
+                    lines.length = maxLines;
+                    lines[maxLines - 1] = lines[maxLines - 1].substring(0, lines[maxLines - 1].length - 2) + '..';
+                }
+
+                // Adjust font size if we have multiple lines to ensure they fit
+                const totalTextHeight = lines.length * fontSize * 1.2;
+                if (totalTextHeight > radius * 1.4) {
+                    fontSize = (radius * 1.4) / (lines.length * 1.2);
+                }
+
+                const textGroup = node.append("g")
+                    .attr("class", "keyword-text")
+                    .style("pointer-events", "none")
+                    .style("opacity", 0);
+
+                lines.forEach((line, lineIndex) => {
+                    const lineOffset = (lineIndex - (lines.length - 1) / 2) * fontSize * 1.2;
+                    textGroup.append("text")
+                        .attr("y", lineOffset)
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "middle")
+                        .attr("fill", textColor)
+                        .attr("font-weight", "600")
+                        .attr("font-size", fontSize + "px")
+                        .text(line);
+                });
+
+                textGroup.transition()
+                    .delay(400 + i * 40)
+                    .duration(300)
+                    .style("opacity", 1);
+            });
+
+            // Create tooltip
+            let tooltip = d3.select(".keyword-tooltip");
+            if (tooltip.empty()) {
+                tooltip = d3.select("body").append("div")
+                    .attr("class", "thumb-tooltip keyword-tooltip")
+                    .style("display", "none");
+            }
+
+            // Add tooltip interactions
+            nodes.selectAll("circle")
+                .on("mouseenter", function(event, d) {
+                    d3.select(this)
+                        .transition()
+                        .duration(200)
+                        .attr("r", d.r + 5)
+                        .attr("opacity", 1);
+                    tooltip.style("display", "block")
+                        .html(`<strong>${d.data.name}</strong><br>${d.data.value} ${d.data.value === 1 ? 'film' : 'films'}`);
+                })
+                .on("mousemove", function(event) {
+                    tooltip.style("left", (event.pageX + 15) + "px")
+                        .style("top", (event.pageY - 15) + "px");
+                })
+                .on("mouseleave", function(event, d) {
+                    d3.select(this)
+                        .transition()
+                        .duration(200)
+                        .attr("r", d.r)
+                        .attr("opacity", 0.9);
+                    tooltip.style("display", "none");
+                });
+        }
+
+        function renderGuiltyPleasures() {
+            const container = document.getElementById("guilty-pleasures-grid");
+            container.innerHTML = "";
+
+            if (stats.guiltyPleasures.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center text-[#8b949e] py-8">
+                        <p>No guilty pleasures found!</p>
+                        <p class="text-sm mt-2">You agree with the critics on everything.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            stats.guiltyPleasures.forEach((film, i) => {
+                const card = document.createElement("div");
+                card.className = "cinema-card";
+                card.innerHTML = `
+                    <div class="flex gap-3">
+                        <div class="w-16 h-24 flex-shrink-0 rounded overflow-hidden bg-[#21262d]">
+                            ${film.posterUrl
+                                ? `<img src="${film.posterUrl}" alt="${film.title}" class="w-full h-full object-cover">`
+                                : `<div class="w-full h-full flex items-center justify-center text-xs text-center p-1">${film.title}</div>`
+                            }
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-white font-semibold text-sm truncate">${film.title}</h3>
+                            <p class="text-[#8b949e] text-xs">${film.year || ''}</p>
+                            <div class="mt-2 space-y-1">
+                                <div class="flex justify-between text-xs">
+                                    <span class="text-[#F1C3BD]">You:</span>
+                                    <span class="text-[#E96244] font-bold">★ ${film.rating.toFixed(1)}</span>
+                                </div>
+                                <div class="flex justify-between text-xs">
+                                    <span class="text-[#8b949e]">TMDB:</span>
+                                    <span class="text-[#8b949e]">★ ${film.tmdb5Star.toFixed(1)}</span>
+                                </div>
+                                <div class="text-xs text-[#F1C3BD] mt-1">
+                                    +${film.diff.toFixed(1)} higher
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                card.style.opacity = "0";
+                card.style.transform = "translateY(20px)";
+                container.appendChild(card);
+
+                setTimeout(() => {
+                    card.style.transition = "all 0.4s ease";
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+                }, 100 + i * 100);
+            });
+        }
+
+        function renderHotTakes() {
+            const container = document.getElementById("hot-takes-grid");
+            container.innerHTML = "";
+
+            if (stats.hotTakes.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center text-[#8b949e] py-8">
+                        <p>No hot takes found!</p>
+                        <p class="text-sm mt-2">You're pretty in sync with popular opinion.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            stats.hotTakes.forEach((film, i) => {
+                const card = document.createElement("div");
+                card.className = "cinema-card";
+                card.innerHTML = `
+                    <div class="flex gap-3">
+                        <div class="w-16 h-24 flex-shrink-0 rounded overflow-hidden bg-[#21262d]">
+                            ${film.posterUrl
+                                ? `<img src="${film.posterUrl}" alt="${film.title}" class="w-full h-full object-cover">`
+                                : `<div class="w-full h-full flex items-center justify-center text-xs text-center p-1">${film.title}</div>`
+                            }
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-white font-semibold text-sm truncate">${film.title}</h3>
+                            <p class="text-[#8b949e] text-xs">${film.year || ''}</p>
+                            <div class="mt-2 space-y-1">
+                                <div class="flex justify-between text-xs">
+                                    <span class="text-[#B0C6FF]">You:</span>
+                                    <span class="text-[#E96244] font-bold">★ ${film.rating.toFixed(1)}</span>
+                                </div>
+                                <div class="flex justify-between text-xs">
+                                    <span class="text-[#8b949e]">TMDB:</span>
+                                    <span class="text-[#8b949e]">★ ${film.tmdb5Star.toFixed(1)}</span>
+                                </div>
+                                <div class="text-xs text-[#B0C6FF] mt-1">
+                                    -${film.diff.toFixed(1)} lower
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                card.style.opacity = "0";
+                card.style.transform = "translateY(20px)";
+                container.appendChild(card);
+
+                setTimeout(() => {
+                    card.style.transition = "all 0.4s ease";
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+                }, 100 + i * 100);
+            });
+        }
+
+        function renderRaincloud() {
+            const svg = d3.select("#raincloud-svg");
+            svg.selectAll("*").remove();
+
+            const isMobile = window.innerWidth < 768;
+            const width = isMobile ? Math.min(window.innerWidth - 20, 500) : 1100;
+            const height = isMobile ? 400 : 500;
+            const margin = isMobile
+                ? { top: 30, right: 20, bottom: 40, left: 40 }
+                : { top: 40, right: 60, bottom: 60, left: 70 };
+
+            svg.attr("viewBox", `0 0 ${width} ${height}`)
+                .attr("width", width)
+                .attr("height", height)
+                .attr("preserveAspectRatio", "xMidYMid meet")
+                .style("max-width", "100%")
+                .style("height", isMobile ? "auto" : null);
+
+            const innerWidth = width - margin.left - margin.right;
+            const innerHeight = height - margin.top - margin.bottom;
+
+            const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+            const yearData = allData.filter(d => d.rating !== null && d.rating > 0 && d.watchedYear === selectedYear);
+
+            if (yearData.length === 0) {
+                g.append("text")
+                    .attr("x", innerWidth / 2)
+                    .attr("y", innerHeight / 2)
+                    .attr("text-anchor", "middle")
+                    .attr("fill", "#8b949e")
+                    .text("No rated movies found");
+                return;
+            }
+
+            const xScale = d3.scaleLinear().domain([0, 5.5]).range([0, innerWidth]);
+            const yScale = d3.scaleLinear().domain([0, 1]).range([innerHeight, 0]);
+
+            // X Axis
+            g.append("g")
+                .attr("transform", `translate(0,${innerHeight})`)
+                .call(d3.axisBottom(xScale)
+                    .tickValues([0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5])
+                    .tickFormat(d => d % 1 === 0 ? `★${d}` : d))
+                .selectAll("text")
+                .attr("fill", "#8b949e");
+
+            g.selectAll(".domain, .tick line").attr("stroke", "#30363d");
+
+            // Add title
+            const isMobileTitleCheck = window.innerWidth < 768;
+            g.append("text")
+                .attr("x", innerWidth / 2)
+                .attr("y", -15)
+                .attr("text-anchor", "middle")
+                .attr("fill", "#B0C6FF")
+                .attr("font-size", isMobileTitleCheck ? "12px" : "18px")
+                .attr("font-weight", "700")
+                .text(isMobileTitleCheck ? "Rating Distribution" : "Rating Distribution - Hover over posters to see details");
+
+            // Beeswarm simulation to prevent overlap
+            const posterSize = 28;
+            const posterData = yearData.map(d => ({
+                ...d,
+                x: xScale(d.rating),
+                y: innerHeight / 2
+            }));
+
+            // Simple force simulation for beeswarm
+            const simulation = d3.forceSimulation(posterData)
+                .force("x", d3.forceX(d => xScale(d.rating)).strength(1))
+                .force("y", d3.forceY(innerHeight / 2).strength(0.05))
+                .force("collide", d3.forceCollide(posterSize / 2 + 2))
+                .stop();
+
+            // Run simulation
+            for (let i = 0; i < 120; i++) simulation.tick();
+
+            // Create tooltip
+            let beeswarmTooltip = d3.select(".beeswarm-tooltip");
+            if (beeswarmTooltip.empty()) {
+                beeswarmTooltip = d3.select("body").append("div")
+                    .attr("class", "thumb-tooltip beeswarm-tooltip")
+                    .style("display", "none");
+            }
+
+            // Create defs for circular clipping
+            const defs = svg.append("defs");
+
+            posterData.forEach((d, i) => {
+                defs.append("clipPath")
+                    .attr("id", `clip-poster-${i}`)
+                    .append("circle")
+                    .attr("r", posterSize / 2);
+            });
+
+            // Add poster images
+            const posters = g.selectAll(".movie-poster")
+                .data(posterData)
+                .enter()
+                .append("g")
+                .attr("class", "movie-poster")
+                .attr("transform", d => `translate(${d.x},${d.y})`)
+                .style("cursor", "pointer");
+
+            // Add circular background
+            posters.append("circle")
+                .attr("r", posterSize / 2)
+                .attr("fill", "#21262d")
+                .attr("stroke", "#F1C3BD")
+                .attr("stroke-width", 2)
+                .attr("opacity", 0)
+                .transition()
+                .delay((d, i) => i * 10)
+                .duration(400)
+                .attr("opacity", 1);
+
+            // Add poster images
+            posters.each(function(d, i) {
+                const group = d3.select(this);
+
+                if (d.posterUrl) {
+                    group.append("image")
+                        .attr("href", d.posterUrl)
+                        .attr("x", -posterSize / 2)
+                        .attr("y", -posterSize / 2)
+                        .attr("width", posterSize)
+                        .attr("height", posterSize)
+                        .attr("clip-path", `url(#clip-poster-${i})`)
+                        .attr("opacity", 0)
+                        .transition()
+                        .delay(i * 10)
+                        .duration(400)
+                        .attr("opacity", 0.95);
+                } else {
+                    // Fallback for movies without posters
+                    group.append("text")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "middle")
+                        .attr("fill", "#8b949e")
+                        .attr("font-size", "8px")
+                        .text(d.title.substring(0, 3))
+                        .attr("opacity", 0)
+                        .transition()
+                        .delay(i * 10)
+                        .duration(400)
+                        .attr("opacity", 1);
+                }
+            });
+
+            // Add interactions
+            posters
+                .on("mouseenter", function(event, d) {
+                    // Highlight poster
+                    d3.select(this).select("circle")
+                        .transition()
+                        .duration(200)
+                        .attr("r", posterSize / 2 + 4)
+                        .attr("stroke-width", 3)
+                        .attr("stroke", "#FFFFFF");
+
+                    d3.select(this).select("image")
+                        .transition()
+                        .duration(200)
+                        .attr("opacity", 1);
+
+                    // Show tooltip with larger text
+                    const tooltipContent = `
+                        <div style="font-size: 14px; line-height: 1.5;">
+                            <div style="font-weight: 700; font-size: 15px; margin-bottom: 4px; color: #FFFFFF;">${d.title}</div>
+                            <div style="color: #E96244; font-weight: 600; font-size: 14px; margin-bottom: 2px;">★ ${d.rating.toFixed(1)}</div>
+                            ${d.cinema ? `<div style="color: #8b949e; font-size: 12px;">@ ${d.cinema}</div>` : ''}
+                        </div>
+                    `;
+
+                    beeswarmTooltip
+                        .style("display", "block")
+                        .html(tooltipContent);
+                })
+                .on("mousemove", function(event) {
+                    beeswarmTooltip
+                        .style("left", (event.pageX + 15) + "px")
+                        .style("top", (event.pageY - 15) + "px");
+                })
+                .on("mouseleave", function(event, d) {
+                    // Reset poster
+                    d3.select(this).select("circle")
+                        .transition()
+                        .duration(200)
+                        .attr("r", posterSize / 2)
+                        .attr("stroke-width", 2)
+                        .attr("stroke", "#F1C3BD");
+
+                    d3.select(this).select("image")
+                        .transition()
+                        .duration(200)
+                        .attr("opacity", 0.95);
+
+                    // Hide tooltip
+                    beeswarmTooltip.style("display", "none");
+                });
+
+            // Add statistics text
+            const avgRating = d3.mean(yearData, d => d.rating);
+            const medianRating = d3.median(yearData, d => d.rating);
+
+            const isMobileStatsCheck = window.innerWidth < 768;
+            g.append("text")
+                .attr("x", innerWidth - 10)
+                .attr("y", 20)
+                .attr("text-anchor", "end")
+                .attr("fill", "#B0C6FF")
+                .attr("font-size", isMobileStatsCheck ? "11px" : "16px")
+                .attr("font-weight", "600")
+                .text(`Avg: ★${avgRating.toFixed(2)} | Median: ★${medianRating.toFixed(2)}`);
+        }
+
+        function renderMonthlyBars() {
+            const svg = d3.select("#calendar-svg");
+            svg.selectAll("*").remove();
+
+            const isMobile = window.innerWidth < 768;
+            const width = isMobile ? Math.min(window.innerWidth - 20, 500) : 1000;
+            const height = isMobile ? 300 : 400;
+            const margin = isMobile
+                ? { top: 20, right: 10, bottom: 30, left: 35 }
+                : { top: 20, right: 20, bottom: 40, left: 50 };
+
+            svg.attr("viewBox", `0 0 ${width} ${height}`)
+                .attr("width", width)
+                .attr("height", height)
+                .attr("preserveAspectRatio", "xMidYMid meet")
+                .style("max-width", "100%")
+                .style("height", isMobile ? "auto" : null);
+
+            const innerWidth = width - margin.left - margin.right;
+            const innerHeight = height - margin.top - margin.bottom;
+
+            const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+            const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            const data = months.map((m, i) => ({
+                month: m,
+                count: stats.monthlyCounts.get(i) || 0
+            }));
+
+            const xScale = d3.scaleBand().domain(months).range([0, innerWidth]).padding(0.2);
+            const yScale = d3.scaleLinear().domain([0, d3.max(data, d => d.count) || 1]).range([innerHeight, 0]);
+
+            // Axes
+            g.append("g")
+                .attr("transform", `translate(0,${innerHeight})`)
+                .call(d3.axisBottom(xScale))
+                .selectAll("text")
+                .attr("fill", "#8b949e");
+
+            g.append("g")
+                .call(d3.axisLeft(yScale).ticks(5))
+                .selectAll("text")
+                .attr("fill", "#8b949e");
+
+            g.selectAll(".domain, .tick line").attr("stroke", "#30363d");
+
+            // Bars
+            g.selectAll(".bar")
+                .data(data)
+                .enter()
+                .append("rect")
+                .attr("x", d => xScale(d.month))
+                .attr("y", innerHeight)
+                .attr("width", xScale.bandwidth())
+                .attr("height", 0)
+                .attr("fill", "#B0C6FF")
+                .attr("rx", 4)
+                .transition()
+                .delay((d, i) => i * 50)
+                .duration(500)
+                .attr("y", d => yScale(d.count))
+                .attr("height", d => innerHeight - yScale(d.count));
+
+            // Value labels
+            g.selectAll(".label")
+                .data(data)
+                .enter()
+                .append("text")
+                .attr("x", d => xScale(d.month) + xScale.bandwidth() / 2)
+                .attr("y", d => yScale(d.count) - 5)
+                .attr("text-anchor", "middle")
+                .attr("fill", "#8b949e")
+                .attr("font-size", "11px")
+                .text(d => d.count > 0 ? d.count : "");
+        }
+
+        function renderHeatmap() {
+            const svg = d3.select("#heatmap-svg");
+            svg.selectAll("*").remove();
+
+            const isMobile = window.innerWidth < 768;
+            const cellSize = isMobile ? 10 : 18;
+            const cellGap = isMobile ? 2 : 4;
+            const width = isMobile ? Math.min(window.innerWidth - 20, 600) : 1200;
+            const height = isMobile ? 140 : 220;
+
+            svg.attr("viewBox", `0 0 ${width} ${height}`)
+                .attr("width", width)
+                .attr("height", height)
+                .attr("preserveAspectRatio", "xMidYMid meet")
+                .style("max-width", "100%")
+                .style("height", isMobile ? "auto" : null);
+
+            const startDate = new Date(selectedYear, 0, 1);
+            const endDate = new Date(selectedYear, 11, 31);
+
+            // Get all days in the year
+            const allDays = d3.timeDays(startDate, d3.timeDay.offset(endDate, 1));
+
+            const colorScale = d3.scaleQuantize()
+                .domain([0, d3.max([...stats.dailyCounts.values()]) || 1])
+                .range(["#161b22", "#E0C4D040", "#F1C3BD80", "#F1C3BD", "#B0C6FF"]);
+
+            const weekday = d => d.getDay();
+            const week = d => d3.timeWeek.count(d3.timeYear(d), d);
+
+            const g = svg.append("g").attr("transform", "translate(40, 25)");
+
+            // Day labels
+            const dayLabels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            g.selectAll(".day-label")
+                .data([1, 3, 5])
+                .enter()
+                .append("text")
+                .attr("x", -10)
+                .attr("y", d => d * (cellSize + cellGap) + cellSize / 2)
+                .attr("text-anchor", "end")
+                .attr("dominant-baseline", "middle")
+                .attr("fill", "#8b949e")
+                .attr("font-size", "10px")
+                .text(d => dayLabels[d]);
+
+            // Month labels - include December by going to Jan 1 of next year
+            const monthsEnd = new Date(selectedYear + 1, 0, 1);
+            const months = d3.timeMonths(startDate, monthsEnd);
+            g.selectAll(".month-label")
+                .data(months)
+                .enter()
+                .append("text")
+                .attr("x", d => week(d) * (cellSize + cellGap))
+                .attr("y", -8)
+                .attr("fill", "#8b949e")
+                .attr("font-size", "10px")
+                .text(d => d3.timeFormat("%b")(d));
+
+            // Create tooltip for heatmap
+            let heatmapTooltip = d3.select(".heatmap-tooltip");
+            if (heatmapTooltip.empty()) {
+                heatmapTooltip = d3.select("body").append("div")
+                    .attr("class", "thumb-tooltip heatmap-tooltip")
+                    .style("display", "none");
+            }
+
+            // Cells
+            g.selectAll(".day")
+                .data(allDays)
+                .enter()
+                .append("rect")
+                .attr("class", "day")
+                .attr("x", d => week(d) * (cellSize + cellGap))
+                .attr("y", d => weekday(d) * (cellSize + cellGap))
+                .attr("width", cellSize)
+                .attr("height", cellSize)
+                .attr("rx", 2)
+                .attr("fill", d => {
+                    const key = d3.timeFormat("%Y-%m-%d")(d);
+                    const count = stats.dailyCounts.get(key) || 0;
+                    return colorScale(count);
+                })
+                .attr("stroke", "#21262d")
+                .attr("stroke-width", 1)
+                .style("cursor", "pointer")
+                .on("mouseenter", function(event, d) {
+                    const key = d3.timeFormat("%Y-%m-%d")(d);
+                    const count = stats.dailyCounts.get(key) || 0;
+                    const dateStr = d3.timeFormat("%B %d, %Y")(d);
+                    d3.select(this).attr("stroke", "#F1C3BD").attr("stroke-width", 2);
+                    heatmapTooltip.style("display", "block")
+                        .html(`<strong>${dateStr}</strong><br>${count} ${count === 1 ? 'screening' : 'screenings'}`);
+                })
+                .on("mousemove", function(event) {
+                    heatmapTooltip.style("left", (event.pageX + 15) + "px")
+                        .style("top", (event.pageY - 15) + "px");
+                })
+                .on("mouseleave", function() {
+                    d3.select(this).attr("stroke", "#21262d").attr("stroke-width", 1);
+                    heatmapTooltip.style("display", "none");
+                });
+
+            // Add legend
+            const legendData = [0, 1, 2, 3, 4];
+            const isMobileLegend = window.innerWidth < 768;
+            const legendX = isMobileLegend ? 10 : (53 * (cellSize + cellGap) + 20);
+            const legendY = isMobileLegend ? (7 * (cellSize + cellGap) + 20) : 30;
+            const legend = g.append("g")
+                .attr("transform", `translate(${legendX}, ${legendY})`);
+
+            legend.append("text")
+                .attr("x", 0)
+                .attr("y", -5)
+                .attr("fill", "#8b949e")
+                .attr("font-size", "10px")
+                .text("Less");
+
+            legend.selectAll(".legend-cell")
+                .data(legendData)
+                .enter()
+                .append("rect")
+                .attr("x", (d, i) => 30 + i * (cellSize + 2))
+                .attr("y", -15)
+                .attr("width", cellSize)
+                .attr("height", cellSize)
+                .attr("rx", 2)
+                .attr("fill", d => colorScale(d));
+
+            legend.append("text")
+                .attr("x", 30 + 5 * (cellSize + 2) + 5)
+                .attr("y", -5)
+                .attr("fill", "#8b949e")
+                .attr("font-size", "10px")
+                .text("More");
+        }
+
+        function renderTopRated() {
+            const container = document.getElementById("top-rated-grid");
+            container.innerHTML = "";
+
+            if (!stats.topRated || stats.topRated.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center text-[#aaa] py-8">
+                        <p>No top-rated films found!</p>
+                        <p class="text-sm mt-2">Rate some movies to see your favorites here.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            stats.topRated.slice(0, 6).forEach((film, i) => {
+                const card = document.createElement("div");
+                card.className = "cinema-card";
+                card.innerHTML = `
+                    <div class="flex gap-3">
+                        <div class="w-16 h-24 flex-shrink-0 rounded overflow-hidden bg-[#333]">
+                            ${film.posterUrl
+                                ? `<img src="${film.posterUrl}" alt="${film.title}" class="w-full h-full object-cover">`
+                                : `<div class="w-full h-full flex items-center justify-center text-xs text-center p-1 text-white">${film.title}</div>`
+                            }
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-white font-semibold text-sm truncate">${film.title}</h3>
+                            <p class="text-[#aaa] text-xs">${film.year || ''}</p>
+                            <div class="mt-2">
+                                <div class="flex items-center gap-1">
+                                    <span class="text-[#aaa] text-xs">Your rating:</span>
+                                    <span class="text-[#E96244] font-bold text-sm">★ ${film.rating.toFixed(1)}</span>
+                                </div>
+                            </div>
+                            ${film.cinema ? `<p class="text-[#aaa] text-xs mt-2 truncate">@ ${film.cinema}</p>` : ''}
+                        </div>
+                    </div>
+                `;
+                card.style.opacity = "0";
+                card.style.transform = "translateY(20px)";
+                container.appendChild(card);
+
+                setTimeout(() => {
+                    card.style.transition = "all 0.4s ease";
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+                }, 100 + i * 100);
+            });
+        }
+
+        function renderLeastRated() {
+            const container = document.getElementById("least-rated-grid");
+            container.innerHTML = "";
+
+            if (!stats.leastRated || stats.leastRated.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center text-[#8b949e] py-8">
+                        <p>No low-rated films found!</p>
+                        <p class="text-sm mt-2">You enjoyed everything you watched.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            stats.leastRated.forEach((film, i) => {
+                const card = document.createElement("div");
+                card.className = "cinema-card";
+                card.innerHTML = `
+                    <div class="flex gap-3">
+                        <div class="w-16 h-24 flex-shrink-0 rounded overflow-hidden bg-[#21262d]">
+                            ${film.posterUrl
+                                ? `<img src="${film.posterUrl}" alt="${film.title}" class="w-full h-full object-cover">`
+                                : `<div class="w-full h-full flex items-center justify-center text-xs text-center p-1">${film.title}</div>`
+                            }
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-white font-semibold text-sm truncate">${film.title}</h3>
+                            <p class="text-[#8b949e] text-xs">${film.year || ''}</p>
+                            <div class="mt-2">
+                                <div class="flex items-center gap-1">
+                                    <span class="text-[#8b949e] text-xs">Your rating:</span>
+                                    <span class="text-[#E96244] font-bold text-sm">★ ${film.rating.toFixed(1)}</span>
+                                </div>
+                            </div>
+                            ${film.cinema ? `<p class="text-[#8b949e] text-xs mt-2 truncate">@ ${film.cinema}</p>` : ''}
+                        </div>
+                    </div>
+                `;
+                card.style.opacity = "0";
+                card.style.transform = "translateY(20px)";
+                container.appendChild(card);
+
+                setTimeout(() => {
+                    card.style.transition = "all 0.4s ease";
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+                }, 100 + i * 100);
+            });
+        }
+
+        // =====================================================================
+        // FRAME TEXT CONFIGURATION
+        // =====================================================================
+        // Customize the text for each frame here. Leave empty string for no text box.
+        // You can use HTML including <span class="highlight">text</span> for emphasis.
+        const frameTexts = {
+            0: "",  // Hero Stats - no text box needed
+            1: "",  // Section title - Cinemas (already has text)
+            2: "These are the cinemas I visited most frequently. This is the first year that Lumen is not my most visited cinema.",
+            3: "A map of all the cinemas I visited this year. Larger markers mean more visits. I visited 2 cinemas for the first time in 2025: LAB111 and Flora.",
+            4: "",  // Section title - Your Taste
+            5: "The genres of movies I watched, sized by how many films fall into each category.",
+            6: "The original languages of the films I watched. Mostly English, and as usual, the second place is French.",
+            7: "Common themes and keywords from the movies I watched this year (extracted from TMDB data).",
+            8: "",  // Section title - Calendar
+            9: "My cinema activity broken down by month. As usual, December and January are my most active months. And November :(",
+            10: "A detailed view of every day I went to the cinema. Each cell represents a day of the year.",
+            11: "", // Section title - Ratings
+            12: "This is the distribution of my ratings. The movies I watched at the end of the year saved my year.",
+            13: "My absolute favorites from this year. In hindsight, I'd remove No Other Lands since it was made by a zio.",
+            14: "",
+            15: "", // Section title - Guilty Pleasures & Hot Takes
+            16: "",
+            17: "I really didn't like Memoirs of a Snail. It freaked me out."
+        };
+
+        // =====================================================================
+        // SCROLLAMA SETUP
+        // =====================================================================
+        const sections = [
+            "hero-stats",              // 0
+            "section-cinemas",         // 1 - Title slide
+            "top-cinemas",             // 2
+            "cinema-map",              // 3
+            "section-taste",           // 4 - Title slide
+            "genre-breakdown",         // 5
+            "language-breakdown",      // 6
+            "keywords-cloud",          // 7
+            "section-calendar",        // 8 - Title slide
+            "monthly-calendar",        // 9
+            "activity-heatmap",        // 10
+            "section-ratings",         // 11 - Title slide
+            "ratings-raincloud",       // 12
+            "top-rated",               // 13
+            "least-rated",             // 14
+            "section-guilty-hot",      // 15 - Title slide
+            "guilty-pleasures",        // 16
+            "hot-takes"                // 17
+        ];
+
+        let currentStep = 0;
+
+        function showSection(step) {
+            const direction = step > currentStep ? 'forward' : 'backward';
+            const frames = document.querySelectorAll('.film-frame-slide');
+
+            frames.forEach((frame, i) => {
+                if (i === step) {
+                    frame.classList.remove('exit-left', 'exit-right', 'enter-left', 'enter-right');
+                    frame.classList.add('active');
+                } else if (i === currentStep && step !== currentStep) {
+                    frame.classList.remove('active', 'enter-left', 'enter-right');
+                    frame.classList.add(direction === 'forward' ? 'exit-left' : 'exit-right');
+                } else {
+                    frame.classList.remove('active');
+                    frame.classList.add(i < step ? 'exit-left' : 'enter-right');
+                }
+            });
+
+            document.getElementById('frame-current').textContent = step + 1;
+
+            // Show year selector in scrolly section
+            const yearSelectorFixed = document.getElementById('year-selector-fixed');
+            if (yearSelectorFixed) {
+                yearSelectorFixed.classList.add('visible');
+            }
+
+            // Update frame text box
+            const textBox = document.getElementById('frame-text-box');
+            const textContent = document.getElementById('frame-text-content');
+            const text = frameTexts[step] || "";
+
+            if (text) {
+                textContent.innerHTML = text;
+                setTimeout(() => textBox.classList.add('visible'), 100);
+            } else {
+                textBox.classList.remove('visible');
+            }
+
+            currentStep = step;
+
+            // Render appropriate visualization
+            switch(step) {
+                case 0: renderHeroStats(); break;
+                case 1: break; // Title slide - Cinemas
+                case 2: renderTopCinemas(); break;
+                case 3: renderCinemaMap(); break;
+                case 4: break; // Title slide - Your Taste
+                case 5: renderGenreTreemap(); break;
+                case 6: renderLanguageChart(); break;
+                case 7: renderKeywords(); break;
+                case 8: break; // Title slide - Movie Calendar
+                case 9: renderMonthlyBars(); break;
+                case 10: renderHeatmap(); break;
+                case 11: break; // Title slide - Ratings
+                case 12: renderRaincloud(); break;
+                case 13: renderTopRated(); break;
+                case 14: renderLeastRated(); break;
+                case 15: break; // Title slide - Guilty Pleasures & Hot Takes
+                case 16: renderGuiltyPleasures(); break;
+                case 17: renderHotTakes(); break;
+            }
+        }
+
+        function renderCurrentStep() {
+            showSection(currentStep);
+        }
+
+        function initScrollama() {
+            const scroller = scrollama();
+
+            // Debounce step changes to prevent skipping on mobile
+            let lastStepTime = 0;
+            const stepDebounceMs = 100; // Minimum time between step changes
+
+            scroller
+                .setup({
+                    step: '.step',
+                    offset: 0.5,
+                    debug: false,
+                    progress: false
+                })
+                .onStepEnter(response => {
+                    const now = Date.now();
+                    // Only process if enough time has passed since last step
+                    if (now - lastStepTime > stepDebounceMs) {
+                        lastStepTime = now;
+                        showSection(response.index);
+                    }
+                });
+
+            // Debounce function to limit resize calls
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                scroller.resize();
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    renderCurrentStep(); // Re-render current visualization on resize
+                }, 250);
+            });
+
+            showSection(0);
+        }
+
+        // =====================================================================
+        // INITIALIZE
+        // =====================================================================
+        document.addEventListener("DOMContentLoaded", loadData);
+    </script>
+</body>
+</html>
