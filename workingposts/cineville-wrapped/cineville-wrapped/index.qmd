@@ -1,0 +1,116 @@
+---
+title: "Cineville Wrapped 2025"
+date: "2025-01-29"
+categories: [D3.js, Scrollytelling, Data Visualization, JavaScript, MapLibre]
+description: "An interactive scrollytelling visualization of my movie-watching journey using Cineville in 2025"
+image: "cineville-wrapped.png"
+---
+
+## Overview
+
+Cineville Wrapped is a personal data visualization project that summarizes my movie-watching journey in 2025 using my Cineville pass. Inspired by Spotify Wrapped, this interactive scrollytelling experience takes viewers through various aspects of my cinema habits throughout the year.
+
+## Key Features
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### Visual Statistics
+- Total screenings and hours watched
+- Number of cinemas and cities visited
+- Average rating and rated films count
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Interactive Visualizations
+- Genre treemap breakdown
+- Language distribution bars
+- Keyword cloud visualization
+:::
+
+:::
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### Cinema Map
+- Interactive MapLibre GL map
+- All cinemas visited with visit counts
+- Popup information on hover
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Rating Analysis
+- Beeswarm plot with movie posters
+- Top rated and least rated films
+- Guilty pleasures and hot takes
+:::
+
+:::
+
+## Technology Stack
+
+### Frontend
+- **D3.js v7** - Data-driven document manipulation
+- **Scrollama** - Scroll-driven storytelling library
+- **MapLibre GL** - Interactive vector maps
+- **Tailwind CSS** - Utility-first CSS framework
+
+### Visualizations
+- **Treemap** - Genre breakdown
+- **Bubble/Pack Layout** - Keyword cloud
+- **Beeswarm Plot** - Rating distribution with movie posters
+- **Heatmap** - Cinema activity calendar
+- **Bar Charts** - Top cinemas and languages
+
+### Data Processing
+- **Python** - Data enrichment and geocoding
+- **TMDB API** - Movie metadata (posters, ratings, genres)
+
+## How It Works
+
+1. **Data Collection**: Export Cineville viewing history
+2. **Enrichment**: Match with TMDB for posters, genres, and ratings
+3. **Geocoding**: Add coordinates for cinema locations
+4. **Visualization**: D3.js renders interactive charts in film-strip frames
+5. **Scrollytelling**: Scrollama triggers frame transitions as user scrolls
+
+## Design Approach
+
+The design mimics a classic film strip aesthetic with:
+
+- Sprocket holes on top and bottom of each frame
+- Sliding transitions between frames
+- Warm, cinema-inspired color palette (#F8EBD8 background)
+- Film-strip frame counter
+- Responsive design for mobile viewing
+
+## Project Links
+
+::: {.callout-tip}
+## View the Project
+
+- **Live Demo**: [View Cineville Wrapped](/blog/posts/cineville-wrapped/cineville-wrapped.html){target="_blank"}
+- **Blog Post**: [Read the Blog Post](/blog/posts/cineville-wrapped/)
+:::
+
+## Challenges Solved
+
+- **Responsive Film Strip**: Adapting the film strip aesthetic for all screen sizes
+- **Scroll Performance**: Optimizing D3 transitions during scroll events
+- **Map Integration**: Combining MapLibre GL with D3 visualizations
+- **Poster Beeswarm**: Creating a force-simulation beeswarm with movie poster images
+
+## What I Learned
+
+Building this project taught me:
+
+- **Scrollama Integration**: Creating smooth scroll-triggered animations
+- **D3.js Layouts**: Working with treemap, pack, and force layouts
+- **MapLibre GL**: Adding custom markers and popups
+- **Responsive SVG**: Making D3 visualizations mobile-friendly
+- **Film Strip CSS**: Creating realistic film strip effects with CSS
+
+---
+
+*Status: Complete - January 2025*

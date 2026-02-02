@@ -23,10 +23,10 @@ Creating data visualizations in RTL languages like Persian, Arabic, or Hebrew pr
 
 {delgosha} provides:
 
-- **RTL-Compatible Themes**: Pre-configured ggplot2 themes optimized for RTL languages
-- **Font Management**: Easy integration with Persian fonts
-- **Helper Functions**: Utilities to simplify working with RTL text in ggplot2
-- **Documentation**: Comprehensive examples in both English and Persian
+- **RTL-Compatible Themes for Persian**
+- **Font Management** 
+- **Helper Functions**
+- **Documentation**
 
 ## Key Features
 
@@ -40,13 +40,6 @@ Creating data visualizations in RTL languages like Persian, Arabic, or Hebrew pr
 - Example gallery
 :::
 
-::: {.g-col-6}
-**For Developers**
-- Clean, documented code
-- Extensible architecture
-- Unit tests
-- CI/CD pipeline
-:::
 
 :::
 
@@ -90,23 +83,6 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
 - **Documentation**: Full documentation and examples available in the repository
 :::
 
-## Impact
 
-This package helps:
-- Persian-speaking R users create better visualizations
-- Researchers publish work in Persian journals
-- Students learn data visualization in their native language
-- The R community become more inclusive and multilingual
-
-## What I Learned
-
-Building {delgosha} taught me:
-- R package development best practices
-- Working with fonts and text rendering in R
-- Internationalization and localization challenges
-- The importance of accessible tools for non-English speakers
-- How to build and maintain open-source software
-
----
 
 *Open source project available on GitHub*

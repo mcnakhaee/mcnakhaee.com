@@ -16,4 +16,4 @@ listing:
 page-layout: full
 ---
 
-Welcome to my blog! Here you'll find articles, tutorials, and insights on data science, technology, and research.
+Welcome to my blog! Here you'll find my thoughts, experiments and visualizations explaining various topics related to data science, AI, and data visualization.

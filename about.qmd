@@ -9,7 +9,7 @@ description: "Learn about me"
 
 ## {{< fa solid user >}} Hello, I'm Muhammad Chenariyan Nakhaee
 
-I've had different roles in the world of data including researcher, data scientist, and data engineer.
+I'm originally from Iran but I live and work in the Netherlands since 2018. I've had different roles in the world of data including researcher, data scientist, and data engineer.
 But I'm currently an AI Engineer working for a Dutch company. 
 I mostly use Python for my day-to-day job but my true passion is creating data visualizations and R.
 **Also known as:** Muhammad Nakhaee, Muhammad C. Nakhaee
@@ -17,8 +17,11 @@ I mostly use Python for my day-to-day job but my true passion is creating data v
 ---
 
 ## {{< fa solid briefcase >}} What I Do
+In the past few years, I have realized that I enjoy exploring my creative side and making different things.
+My true passion is creating charts and graphs (which is why I started this blog).
+I also enjoy photography and have a collection of old cameras that I use for my photography.
 
-I'm Muhammad and I have been working in different roles in the data world from machine learning, AI and data engineering to data visualization. In my current job I'm a kind of an AI engineer working on our RAG solutions and developing agents. But my true passion is creating charts and graphs (hence why this blog was started)
+I have worked on various projects in the data world, from machine learning, AI, and data engineering to data visualization. In my current job, I am an AI engineer working on our RAG solutions and developing agents.
 
 ::: {.grid}
 
@@ -40,10 +43,12 @@ I enjoy creating data visualization
 
 **Skills:**
 - Data analysis
+- GenAI and LLMs
 - Machine learning
 - Data Visualization
 - Statistical modeling
-_ Generative AI
+- A little bit of data engineering
+
 :::
 
 ::: {.g-col-12 .g-col-md-4}
@@ -63,7 +68,7 @@ When I'm not coding or analyzing data, you can find me:
 
 - {{< fa solid book >}} Reading about technology and science
 - {{< fa solid camera >}} Photography and collecting old cameras
-- {{< fa solid music >}} Listening to music and podcasts
+- {{< fa solid music >}} Screenprinting and doing different art projects
 - {{< fa solid person-fencing >}} Fencing
 - {{< fa solid hiking >}} Hiking and exploring nature
 

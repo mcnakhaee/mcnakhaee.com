@@ -442,6 +442,8 @@ ga('send', {
 
 <p>Aside from their political differences, Donald Trump and Barack Obama have very contrasting personalities, traits, and characters. Obama is known to be a great communicator and an articulate speaker whose speeches are used in English classes to show how one should speak proper English. On the other hand, Trump is not the most eloquent English speaker or US president in history. Every now and then, you can find a clip on the web where Donald Trump is being mocked for the way he speaks or mispronounces words. This is so obvious that even non-native English speakers can notice how Trump’s speeches are very simple and inarticulate. Of course, this was not a bad thing for Trump at all. Actually, almost every political analyst that you see on the news talks about the fact that a vast majority of Trump’s fervent supporters are not college-educated Americans. We can attribute this to the fact that he knows how to speak to his audience and his base supporters using their language (although it is more likely that he cannot speak English better than this level).</p>
 <p>This post will investigate how difficult it is to understand what each US politician talked about in the 2020 US Election cycle. I will use several readability metrics that can help us compute text comprehensibility. A wide range of these measures are implemented in the <a href="https://github.com/shivam5992/textstat">{<code>textstat</code>}</a> Python package, and it is super easy to calculate them using this package.</p>
+<p>Aside from their political differences, Donald Trump and Barack Obama have very contrasting personalities, traits, and characters. Obama is known to be a great communicator and an articulate speaker whose speeches are used in English classes to show how one should speak proper English. On the other hand, Trump is not the most eloquent English speaker or US president in history. Every now and then, you can find a clip on the web where Donald Trump is mocked for the way he speaks or mispronounces words. This is so obvious that even non-native English speakers can notice how Trump’s speeches are very simple and inarticulate. Of course, this was not a bad thing for Trump at all. Actually, almost every political analyst you see on the news talks about the fact that a vast majority of Trump’s fervent supporters are not college-educated Americans. We can attribute this to the fact that he knows how to speak to his audience and his base supporters using their language (although it is more likely that he cannot speak English better than this level).</p>
+<p>This post will investigate how difficult it is to understand what each US politician talked about in the 2020 US Election cycle. I will use several readability metrics that can help us compute text comprehensibility. A wide range of these measures is implemented in the <a href="https://github.com/shivam5992/textstat">{<code>textstat</code>}</a> Python package, and it is super easy to calculate them using this package.</p>
 <p>I compiled a list of US Election-related speeches from rev.com and turned them into an R package called <a href="https://github.com/mcnakhaee/us2020election"><code>{us2020election}</code></a>. I use this package as my data source for my analysis. Like some of my other posts, I use Python to perform the analysis and R to visualize my results. Now let’s get started by importing the necessary packages.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -456,6 +458,7 @@ Note
 <p>This post uses R packages that need to be installed: <code>tidyverse</code>, <code>reticulate</code>, <code>ggthemes</code>, <code>us2020election</code>, <code>ggridges</code>. The code is shown for educational purposes but not executed in this rendered version.</p>
 </div>
 </div>
+<p>I compiled a list of US Election-related speeches from rev.com and turned them into an R package called <a href="https://github.com/mcnakhaee/us2020election"><code>{us2020election}</code></a>. I use this package as my data source for my analysis. Like some of my other posts, I use Python to perform the analysis and R to visualize my results. Now, let’s get started by importing the necessary packages.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -618,6 +621,7 @@ Note
 <section id="gunning-fog-index" class="level2">
 <h2 class="anchored" data-anchor-id="gunning-fog-index">Gunning Fog Index</h2>
 <p><a href="https://en.wikipedia.org/wiki/Gunning_fog_index">The Gunning fog index</a> is another metric to measure the complexity of a text document. It shows how many years of education one might need to understand a piece of text. Larger values of the Gunning fog index correspond to more difficult writings.</p>
+<p><a href="https://en.wikipedia.org/wiki/Gunning_fog_index">The Gunning fog index</a> is another metric to measure the complexity of a text document. It shows how many years of education one might need to understand a piece of text. Larger values of the Gunning fog index correspond to more difficult writing.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -648,6 +652,7 @@ Note
 <section id="dale-chall-readability-score" class="level2">
 <h2 class="anchored" data-anchor-id="dale-chall-readability-score">Dale-Chall Readability Score</h2>
 <p>This metric is different from the other metrics that we have talked about. It uses a dictionary of 3000 words that are easy to read and understand for a fourth-grade student. So, words that are not in this dictionary are considered to be complex. The higher the Dale-Chall Score is, the more difficult it is to read a text.</p>
+<p>This metric is different from the other metrics that we have talked about. It uses a dictionary of 3,000 words that are easy to read and understand for a fourth-grade student. So, words that are not in this dictionary are considered to be complex. The higher the Dale-Chall Score is, the more difficult it is to read a text.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -696,6 +701,7 @@ Note
 </details>
 </div>
 <p>Interestingly, we can observe that Trump never gave a speech to an audience with difficulty more than the 7th or 8th grade. We can also convert this readability metric to numbers to visualize and compare it to other metrics.</p>
+<p>Interestingly, we can observe that Trump never gave a speech to an audience with a difficulty higher than the 7th or 8th grade. We can also convert this readability metric to numbers to visualize and compare it to other metrics.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1210,199 +1216,211 @@ Note
 <span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>This post will investigate how difficult it is to understand what each US politician talked about in the 2020 US Election cycle. I will use several readability metrics that can help us compute text comprehensibility. A wide range of these measures are implemented in the <span class="co">[</span><span class="ot">{`textstat`}</span><span class="co">](https://github.com/shivam5992/textstat)</span> Python package, and it is super easy to calculate them using this package.</span>
 <span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>I compiled a list of US Election-related speeches from rev.com and turned them into an R package called <span class="co">[</span><span class="ot">`{us2020election}`</span><span class="co">](https://github.com/mcnakhaee/us2020election)</span>. I use this package as my data source for my analysis. Like some of my other posts, I use Python to perform the analysis and R to visualize my results. Now let's get started by importing the necessary packages.</span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>Aside from their political differences, Donald Trump and Barack Obama have very contrasting personalities, traits, and characters. Obama is known to be a great communicator and an articulate speaker whose speeches are used in English classes to show how one should speak proper English. On the other hand, Trump is not the most eloquent English speaker or US president in history. Every now and then, you can find a clip on the web where Donald Trump is mocked for the way he speaks or mispronounces words. This is so obvious that even non-native English speakers can notice how Trump's speeches are very simple and inarticulate. Of course, this was not a bad thing for Trump at all. Actually, almost every political analyst you see on the news talks about the fact that a vast majority of Trump's fervent supporters are not college-educated Americans. We can attribute this to the fact that he knows how to speak to his audience and his base supporters using their language (although it is more likely that he cannot speak English better than this level).</span>
 <span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>This post uses R packages that need to be installed: <span class="in">`tidyverse`</span>, <span class="in">`reticulate`</span>, <span class="in">`ggthemes`</span>, <span class="in">`us2020election`</span>, <span class="in">`ggridges`</span>. The code is shown for educational purposes but not executed in this rendered version.</span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>This post will investigate how difficult it is to understand what each US politician talked about in the 2020 US Election cycle. I will use several readability metrics that can help us compute text comprehensibility. A wide range of these measures is implemented in the <span class="co">[</span><span class="ot">{`textstat`}</span><span class="co">](https://github.com/shivam5992/textstat)</span> Python package, and it is super easy to calculate them using this package.</span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>I compiled a list of US Election-related speeches from rev.com and turned them into an R package called <span class="co">[</span><span class="ot">`{us2020election}`</span><span class="co">](https://github.com/mcnakhaee/us2020election)</span>. I use this package as my data source for my analysis. Like some of my other posts, I use Python to perform the analysis and R to visualize my results. Now let's get started by importing the necessary packages.</span>
 <span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=FALSE}</span></span>
-<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(us2020election)</span>
-<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggridges)</span>
-<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_tufte</span>())</span>
-<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_update</span>(<span class="at">legend.position =</span> <span class="st">'none'</span>,</span>
-<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>          <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">'Lobster'</span>),</span>
-<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">t=</span> <span class="dv">10</span>,<span class="at">b=</span> <span class="dv">5</span>),<span class="at">family =</span> <span class="st">'Lobster'</span>),</span>
-<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">b=</span> <span class="dv">10</span>),<span class="at">family =</span> <span class="st">'Lobster'</span>),</span>
-<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>          <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">'#FDF6E3'</span>),</span>
-<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">'#FDF6E3'</span>))</span>
-<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a><span class="in">```{python eval=FALSE}</span></span>
-<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
-<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> textstat</span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>This post uses R packages that need to be installed: <span class="in">`tidyverse`</span>, <span class="in">`reticulate`</span>, <span class="in">`ggthemes`</span>, <span class="in">`us2020election`</span>, <span class="in">`ggridges`</span>. The code is shown for educational purposes but not executed in this rendered version.</span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>I compiled a list of US Election-related speeches from rev.com and turned them into an R package called <span class="co">[</span><span class="ot">`{us2020election}`</span><span class="co">](https://github.com/mcnakhaee/us2020election)</span>. I use this package as my data source for my analysis. Like some of my other posts, I use Python to perform the analysis and R to visualize my results. Now, let's get started by importing the necessary packages.</span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=FALSE}</span></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(us2020election)</span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggridges)</span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_tufte</span>())</span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_update</span>(<span class="at">legend.position =</span> <span class="st">'none'</span>,</span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>          <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">'Lobster'</span>),</span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">t=</span> <span class="dv">10</span>,<span class="at">b=</span> <span class="dv">5</span>),<span class="at">family =</span> <span class="st">'Lobster'</span>),</span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">b=</span> <span class="dv">10</span>),<span class="at">family =</span> <span class="st">'Lobster'</span>),</span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a>          <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">'#FDF6E3'</span>),</span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">'#FDF6E3'</span>))</span>
 <span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a>There are several readability measures for English text included in {<span class="in">`textstat`</span>}. Calculating these measures is very straightforward and easy. I will explain what each metric represents in more detail.</span>
-<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a><span class="in">```{python eval=FALSE}</span></span>
-<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>us_election_speeches <span class="op">=</span> r.us_election_speeches</span>
-<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'Flesch_Reading_Ease_formula'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.flesch_reading_ease(x))</span>
-<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'gunning_fog'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.gunning_fog(x))</span>
-<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'smog_index'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.smog_index(x))</span>
-<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'automated_readability_index'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.automated_readability_index(x))</span>
-<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'coleman_liau_index'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.coleman_liau_index(x))</span>
-<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'linsear_write_formula'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.linsear_write_formula(x))</span>
-<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'dale_chall_readability_score'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.dale_chall_readability_score(x))</span>
-<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'text_standard'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.text_standard(x))</span>
-<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'text_standard_float'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.text_standard(x,float_output  <span class="op">=</span> <span class="va">True</span>))</span>
-<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a>Let's look at the resulting dataframe.</span>
-<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=FALSE}</span></span>
-<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a>us_election_speeches <span class="ot">&lt;-</span> py<span class="sc">$</span>us_election_speeches </span>
-<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a>us_election_speeches <span class="sc">%&gt;%</span> </span>
-<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>()</span>
-<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a><span class="in">```{python eval=FALSE}</span></span>
+<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> textstat</span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a>There are several readability measures for English text included in {<span class="in">`textstat`</span>}. Calculating these measures is very straightforward and easy. I will explain what each metric represents in more detail.</span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a><span class="in">```{python eval=FALSE}</span></span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>us_election_speeches <span class="op">=</span> r.us_election_speeches</span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'Flesch_Reading_Ease_formula'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.flesch_reading_ease(x))</span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'gunning_fog'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.gunning_fog(x))</span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'smog_index'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.smog_index(x))</span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'automated_readability_index'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.automated_readability_index(x))</span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'coleman_liau_index'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.coleman_liau_index(x))</span>
+<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'linsear_write_formula'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.linsear_write_formula(x))</span>
+<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'dale_chall_readability_score'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.dale_chall_readability_score(x))</span>
+<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'text_standard'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.text_standard(x))</span>
+<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a>us_election_speeches[<span class="st">'text_standard_float'</span>] <span class="op">=</span> us_election_speeches[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: textstat.text_standard(x,float_output  <span class="op">=</span> <span class="va">True</span>))</span>
+<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a>Let's look at the resulting dataframe.</span>
 <span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a>Now I am going to visualize the changes in the distribution of speech complexity for each politician. To make things easier, I will select a list of politicians that I'd like to analyze in this post.</span>
-<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=FALSE}</span></span>
-<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a>speakers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Barack Obama'</span>,<span class="st">'Pete Buttigieg'</span>,<span class="st">'Mike Pence'</span>,<span class="st">'Elizabeth Warren'</span>,<span class="st">'Bernie Sanders'</span>,<span class="st">'Donald Trump'</span>,<span class="st">'Kamala Harris'</span>,<span class="st">'Joe Biden'</span>,<span class="st">'Mike Bloomberg'</span>)</span>
-<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a>custom_palette <span class="ot">&lt;-</span><span class="fu">c</span>(</span>
-<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mike Bloomberg'</span> <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
-<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Amy Klobuchar'</span> <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
-<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Joe Biden'</span> <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
-<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Pete Buttigieg'</span> <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
-<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Elizabeth Warren'</span> <span class="ot">=</span>  <span class="st">'#4E79A7'</span>,</span>
-<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Barack Obama'</span>  <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
-<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Bernie Sanders'</span> <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
-<span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Kamala Harris'</span> <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
-<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Donald Trump'</span>  <span class="ot">=</span> <span class="st">'#E15759'</span> ,</span>
-<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a>     <span class="st">'Mike Pence'</span> <span class="ot">=</span> <span class="st">'#E15759'</span> </span>
-<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a>Also, I created a function to make ridge plots for each metric easier.</span>
-<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=FALSE}</span></span>
-<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a>create_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">metric =</span> Flesch_Reading_Ease_formula,<span class="at">subtitle =</span> subtitle) {</span>
-<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a>  metrics <span class="ot">&lt;-</span> rlang<span class="sc">::</span><span class="fu">enquo</span>(metric)</span>
-<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a>  us_election_speeches <span class="sc">%&gt;%</span></span>
-<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a>    <span class="fu">separate_rows</span>(speaker, <span class="at">sep =</span> <span class="st">','</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(speaker <span class="sc">%in%</span> speakers, type <span class="sc">!=</span> <span class="st">'Debate'</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_count</span>(speaker) <span class="sc">%&gt;%</span></span>
-<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_density_ridges</span>(<span class="fu">aes</span>(</span>
-<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="sc">!!</span>metrics ,</span>
-<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> speaker,</span>
-<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> speaker</span>
-<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a>    )) <span class="sc">+</span></span>
-<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">''</span>, <span class="at">y =</span> <span class="st">''</span>,<span class="at">title =</span> <span class="st">"How Easy Is It to Comprehend Different US Politicians?"</span>,<span class="at">subtitle =</span> <span class="fu">str_wrap</span>(subtitle,<span class="at">width =</span> <span class="dv">100</span>)) <span class="sc">+</span></span>
-<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> custom_palette) </span>
-<span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a>Now, let's look at several readability measures in more depth.</span>
-<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a><span class="fu">## Flesch Reading Ease Scores</span></span>
-<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a>The first readability score that I will look at is based on the Flesch Reading Ease formula. It computes the number of syllables to determine how easy a piece of text is. The maximum value of Flesch Reading Ease is 122, and there is no minimum value for it. Higher Flesch Reading Ease scores indicate that the text (speech) is easier to understand by the audience. In our case, it would show how sophisticated each politician is in terms of language use. You can find more about this metric on <span class="co">[</span><span class="ot">Wikipedia</span><span class="co">](https://en.wikipedia.org/wiki/Flesch–Kincaid_readability_tests)</span>!</span>
+<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=FALSE}</span></span>
+<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a>us_election_speeches <span class="ot">&lt;-</span> py<span class="sc">$</span>us_election_speeches </span>
+<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a>us_election_speeches <span class="sc">%&gt;%</span> </span>
+<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>()</span>
+<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a>Now I am going to visualize the changes in the distribution of speech complexity for each politician. To make things easier, I will select a list of politicians that I'd like to analyze in this post.</span>
+<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=FALSE}</span></span>
+<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a>speakers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Barack Obama'</span>,<span class="st">'Pete Buttigieg'</span>,<span class="st">'Mike Pence'</span>,<span class="st">'Elizabeth Warren'</span>,<span class="st">'Bernie Sanders'</span>,<span class="st">'Donald Trump'</span>,<span class="st">'Kamala Harris'</span>,<span class="st">'Joe Biden'</span>,<span class="st">'Mike Bloomberg'</span>)</span>
+<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a>custom_palette <span class="ot">&lt;-</span><span class="fu">c</span>(</span>
+<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mike Bloomberg'</span> <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
+<span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Amy Klobuchar'</span> <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
+<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Joe Biden'</span> <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
+<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Pete Buttigieg'</span> <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
+<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Elizabeth Warren'</span> <span class="ot">=</span>  <span class="st">'#4E79A7'</span>,</span>
+<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Barack Obama'</span>  <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
+<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Bernie Sanders'</span> <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
+<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Kamala Harris'</span> <span class="ot">=</span> <span class="st">'#4E79A7'</span>,</span>
+<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Donald Trump'</span>  <span class="ot">=</span> <span class="st">'#E15759'</span> ,</span>
+<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a>     <span class="st">'Mike Pence'</span> <span class="ot">=</span> <span class="st">'#E15759'</span> </span>
+<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a>Also, I created a function to make ridge plots for each metric easier.</span>
+<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=FALSE}</span></span>
+<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a>create_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">metric =</span> Flesch_Reading_Ease_formula,<span class="at">subtitle =</span> subtitle) {</span>
+<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a>  metrics <span class="ot">&lt;-</span> rlang<span class="sc">::</span><span class="fu">enquo</span>(metric)</span>
+<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a>  us_election_speeches <span class="sc">%&gt;%</span></span>
+<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a>    <span class="fu">separate_rows</span>(speaker, <span class="at">sep =</span> <span class="st">','</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(speaker <span class="sc">%in%</span> speakers, type <span class="sc">!=</span> <span class="st">'Debate'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_count</span>(speaker) <span class="sc">%&gt;%</span></span>
+<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_density_ridges</span>(<span class="fu">aes</span>(</span>
+<span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="sc">!!</span>metrics ,</span>
+<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> speaker,</span>
+<span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> speaker</span>
+<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a>    )) <span class="sc">+</span></span>
+<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">''</span>, <span class="at">y =</span> <span class="st">''</span>,<span class="at">title =</span> <span class="st">"How Easy Is It to Comprehend Different US Politicians?"</span>,<span class="at">subtitle =</span> <span class="fu">str_wrap</span>(subtitle,<span class="at">width =</span> <span class="dv">100</span>)) <span class="sc">+</span></span>
+<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> custom_palette) </span>
+<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig.height=6,fig.width=10,eval=FALSE}</span></span>
-<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a><span class="fu">create_plot</span>(Flesch_Reading_Ease_formula ,</span>
-<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a>            <span class="at">subtitle =</span> <span class="st">'The Flesch Reading Ease scores measure the complexity of a text document. Higher scores indicate a text is easier to comprehend.'</span>)</span>
-<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a>We can interpret the scores using the following table:</span>
-<span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Score        <span class="pp">|</span> School level       <span class="pp">|</span> Notes                                                        <span class="pp">|</span></span>
-<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a><span class="pp">| ------------</span> <span class="pp">| ------------------</span> <span class="pp">| ------------------------------------------------------------</span> <span class="pp">|</span></span>
-<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 100.00–90.00 <span class="pp">|</span> 5th grade          <span class="pp">|</span> Very easy to read. Easily understood by an average 11-year-old student. <span class="pp">|</span></span>
-<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 90.0–80.0    <span class="pp">|</span> 6th grade          <span class="pp">|</span> Easy to read. Conversational English for consumers.          <span class="pp">|</span></span>
-<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 80.0–70.0    <span class="pp">|</span> 7th grade          <span class="pp">|</span> Fairly easy to read.                                         <span class="pp">|</span></span>
-<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 70.0–60.0    <span class="pp">|</span> 8th &amp; 9th grade    <span class="pp">|</span> Plain English. Easily understood by 13- to 15-year-old students. <span class="pp">|</span></span>
-<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 60.0–50.0    <span class="pp">|</span> 10th to 12th grade <span class="pp">|</span> Fairly difficult to read.                                    <span class="pp">|</span></span>
-<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 50.0–30.0    <span class="pp">|</span> College            <span class="pp">|</span> Difficult to read.                                           <span class="pp">|</span></span>
-<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 30.0–10.0    <span class="pp">|</span> College graduate   <span class="pp">|</span> Very difficult to read. Best understood by university graduates. <span class="pp">|</span></span>
-<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 10.0–0.0     <span class="pp">|</span> Professional       <span class="pp">|</span> Extremely difficult to read. Best understood by university graduates. <span class="pp">|</span></span>
-<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gunning Fog Index</span></span>
-<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The Gunning fog index</span><span class="co">](https://en.wikipedia.org/wiki/Gunning_fog_index)</span> is another metric to measure the complexity of a text document. It shows how many years of education one might need to understand a piece of text. Larger values of the Gunning fog index correspond to more difficult writings.</span>
-<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig.height=6,fig.width=10,eval=FALSE}</span></span>
-<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a><span class="fu">create_plot</span>(gunning_fog,<span class="at">subtitle =</span> <span class="st">'The Gunning fog index measures the complexity of a text document. Larger values of the Gunning fog index correspond to more difficult writings.'</span> )</span>
-<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a>Now, let's look at several readability measures in more depth.</span>
+<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a><span class="fu">## Flesch Reading Ease Scores</span></span>
+<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a>The first readability score that I will look at is based on the Flesch Reading Ease formula. It computes the number of syllables to determine how easy a piece of text is. The maximum value of Flesch Reading Ease is 122, and there is no minimum value for it. Higher Flesch Reading Ease scores indicate that the text (speech) is easier to understand by the audience. In our case, it would show how sophisticated each politician is in terms of language use. You can find more about this metric on <span class="co">[</span><span class="ot">Wikipedia</span><span class="co">](https://en.wikipedia.org/wiki/Flesch–Kincaid_readability_tests)</span>!</span>
+<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig.height=6,fig.width=10,eval=FALSE}</span></span>
+<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a><span class="fu">create_plot</span>(Flesch_Reading_Ease_formula ,</span>
+<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a>            <span class="at">subtitle =</span> <span class="st">'The Flesch Reading Ease scores measure the complexity of a text document. Higher scores indicate a text is easier to comprehend.'</span>)</span>
+<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a>We can interpret the scores using the following table:</span>
+<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Score        <span class="pp">|</span> School level       <span class="pp">|</span> Notes                                                        <span class="pp">|</span></span>
+<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a><span class="pp">| ------------</span> <span class="pp">| ------------------</span> <span class="pp">| ------------------------------------------------------------</span> <span class="pp">|</span></span>
+<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 100.00–90.00 <span class="pp">|</span> 5th grade          <span class="pp">|</span> Very easy to read. Easily understood by an average 11-year-old student. <span class="pp">|</span></span>
+<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 90.0–80.0    <span class="pp">|</span> 6th grade          <span class="pp">|</span> Easy to read. Conversational English for consumers.          <span class="pp">|</span></span>
+<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 80.0–70.0    <span class="pp">|</span> 7th grade          <span class="pp">|</span> Fairly easy to read.                                         <span class="pp">|</span></span>
+<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 70.0–60.0    <span class="pp">|</span> 8th &amp; 9th grade    <span class="pp">|</span> Plain English. Easily understood by 13- to 15-year-old students. <span class="pp">|</span></span>
+<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 60.0–50.0    <span class="pp">|</span> 10th to 12th grade <span class="pp">|</span> Fairly difficult to read.                                    <span class="pp">|</span></span>
+<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 50.0–30.0    <span class="pp">|</span> College            <span class="pp">|</span> Difficult to read.                                           <span class="pp">|</span></span>
+<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 30.0–10.0    <span class="pp">|</span> College graduate   <span class="pp">|</span> Very difficult to read. Best understood by university graduates. <span class="pp">|</span></span>
+<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 10.0–0.0     <span class="pp">|</span> Professional       <span class="pp">|</span> Extremely difficult to read. Best understood by university graduates. <span class="pp">|</span></span>
+<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gunning Fog Index</span></span>
 <span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a><span class="fu">## The SMOG Index</span></span>
+<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The Gunning fog index</span><span class="co">](https://en.wikipedia.org/wiki/Gunning_fog_index)</span> is another metric to measure the complexity of a text document. It shows how many years of education one might need to understand a piece of text. Larger values of the Gunning fog index correspond to more difficult writings.</span>
 <span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The SMOG index</span><span class="co">](https://en.wikipedia.org/wiki/SMOG)</span> computes the ratio of polysyllables (words with three or more syllables) in sentences to determine text complexity.</span>
+<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The Gunning fog index</span><span class="co">](https://en.wikipedia.org/wiki/Gunning_fog_index)</span> is another metric to measure the complexity of a text document. It shows how many years of education one might need to understand a piece of text. Larger values of the Gunning fog index correspond to more difficult writing.</span>
 <span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig.height=6,fig.width=10,eval=FALSE}</span></span>
-<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a><span class="fu">create_plot</span>(smog_index,<span class="at">subtitle =</span> <span class="st">'The SMOG index measures the complexity of a text document. Larger values of the SMOG index indicate more difficult writings.'</span> )</span>
+<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a><span class="fu">create_plot</span>(gunning_fog,<span class="at">subtitle =</span> <span class="st">'The Gunning fog index measures the complexity of a text document. Larger values of the Gunning fog index correspond to more difficult writings.'</span> )</span>
 <span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-160"><a href="#cb14-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a><span class="fu">## Linsear Write Formula</span></span>
+<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a><span class="fu">## The SMOG Index</span></span>
 <span id="cb14-162"><a href="#cb14-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a>Like the previous metric, <span class="co">[</span><span class="ot">the Linsear Write Formula</span><span class="co">](https://en.wikipedia.org/wiki/Linsear_Write)</span> uses words with three or more syllables to compute text readability. It also relies on the sentence length to measure how difficult reading a text could be.</span>
+<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The SMOG index</span><span class="co">](https://en.wikipedia.org/wiki/SMOG)</span> computes the ratio of polysyllables (words with three or more syllables) in sentences to determine text complexity.</span>
 <span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig.height=6,fig.width=10,eval=FALSE}</span></span>
-<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a><span class="fu">create_plot</span>(linsear_write_formula, <span class="at">subtitle =</span> <span class="st">'The Linsear Write Formula measures the complexity of a text document. Larger values indicate more difficult writings.'</span>)</span>
+<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a><span class="fu">create_plot</span>(smog_index,<span class="at">subtitle =</span> <span class="st">'The SMOG index measures the complexity of a text document. Larger values of the SMOG index indicate more difficult writings.'</span> )</span>
 <span id="cb14-167"><a href="#cb14-167" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dale-Chall Readability Score</span></span>
+<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## Linsear Write Formula</span></span>
 <span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a>This metric is different from the other metrics that we have talked about. It uses a dictionary of 3000 words that are easy to read and understand for a fourth-grade student. So, words that are not in this dictionary are considered to be complex. The higher the Dale-Chall Score is, the more difficult it is to read a text.</span>
+<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a>Like the previous metric, <span class="co">[</span><span class="ot">the Linsear Write Formula</span><span class="co">](https://en.wikipedia.org/wiki/Linsear_Write)</span> uses words with three or more syllables to compute text readability. It also relies on the sentence length to measure how difficult reading a text could be.</span>
 <span id="cb14-172"><a href="#cb14-172" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-173"><a href="#cb14-173" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig.height=6,fig.width=10,eval=FALSE}</span></span>
-<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a><span class="fu">create_plot</span>(dale_chall_readability_score,<span class="at">subtitle =</span> <span class="st">'The Dale-Chall Readability Score measures the complexity of a text document. The higher the Dale-Chall Score is, the more difficult it is to read a text.'</span>)</span>
+<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a><span class="fu">create_plot</span>(linsear_write_formula, <span class="at">subtitle =</span> <span class="st">'The Linsear Write Formula measures the complexity of a text document. Larger values indicate more difficult writings.'</span>)</span>
 <span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a><span class="fu">## A Unified Readability Score</span></span>
+<span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dale-Chall Readability Score</span></span>
 <span id="cb14-178"><a href="#cb14-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a>We introduced several readability metrics, but each one of them might give us a slightly different result. There is a way in <span class="in">`textstat`</span> to combine all these metrics and have a single readability metric.</span>
+<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a>This metric is different from the other metrics that we have talked about. It uses a dictionary of 3000 words that are easy to read and understand for a fourth-grade student. So, words that are not in this dictionary are considered to be complex. The higher the Dale-Chall Score is, the more difficult it is to read a text.</span>
 <span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig.height = 14, fig.width=15,eval=FALSE}</span></span>
-<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a>us_election_speeches <span class="sc">%&gt;%</span></span>
-<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(speaker <span class="sc">%in%</span> speakers) <span class="sc">%&gt;%</span></span>
-<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">text_standard =</span> <span class="fu">str_replace</span>(text_standard,<span class="st">' and '</span>,<span class="st">'-'</span>),</span>
-<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a>        <span class="at">text_standard =</span> <span class="fu">factor</span>(</span>
-<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a>    text_standard,</span>
-<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a>    <span class="at">levels =</span> <span class="fu">c</span>(</span>
-<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a>      <span class="st">'4th-5th grade'</span>,</span>
-<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a>      <span class="st">'5th-6th grade'</span>,</span>
-<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a>      <span class="st">'6th-7th grade'</span>,</span>
-<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a>      <span class="st">'7th-8th grade'</span>,</span>
-<span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a>      <span class="st">'8th-9th grade'</span>,</span>
-<span id="cb14-193"><a href="#cb14-193" aria-hidden="true" tabindex="-1"></a>      <span class="st">'9th-10th grade'</span>,</span>
-<span id="cb14-194"><a href="#cb14-194" aria-hidden="true" tabindex="-1"></a>      <span class="st">'10th-11th grade'</span>,</span>
-<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a>      <span class="st">'11th-12th grade'</span>,</span>
-<span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a>      <span class="st">'12th-13th grade'</span>,</span>
-<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a>      <span class="st">'14th-15th grade'</span></span>
-<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
-<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(speaker, text_standard) <span class="sc">%&gt;%</span></span>
-<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">n =</span> n <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>()  <span class="sc">+</span></span>
-<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">x =</span> text_standard , <span class="at">y =</span>  n, <span class="at">fill =</span> speaker)) <span class="sc">+</span></span>
-<span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">''</span>, <span class="at">y =</span> <span class="st">'Number of Speeches'</span>, <span class="at">title =</span> <span class="st">"How Easy Is It to Understand Trump's Speeches?"</span>,</span>
-<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">'Based on several readability tests, the education level that one needs to comprehend the 2020 Election speeches by different US politicians is illustrated in this plot.'</span> ) <span class="sc">+</span></span>
-<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> custom_palette) <span class="sc">+</span></span>
-<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> speaker, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text  =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">13</span>),</span>
-<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>,<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">r =</span> <span class="dv">10</span>,<span class="at">l =</span> <span class="dv">10</span>)),</span>
-<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>,<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">b =</span> <span class="dv">10</span>,<span class="at">t =</span> <span class="dv">10</span>)),</span>
-<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>,<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">b =</span> <span class="dv">10</span>)),</span>
-<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a>        <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>))</span>
-<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a>Interestingly, we can observe that Trump never gave a speech to an audience with difficulty more than the 7th or 8th grade. We can also convert this readability metric to numbers to visualize and compare it to other metrics.</span>
-<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig.height=6,fig.width=10,eval=FALSE}</span></span>
-<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a><span class="fu">create_plot</span>(text_standard_float,</span>
-<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a>            <span class="at">subtitle =</span> <span class="st">'The complexity of a text document was measured based on several readability metrics where larger values indicate more difficult writings.'</span>)</span>
-<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
-<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a>We can consistently see that Trump's speeches are less sophisticated and less complex than the speeches given by the rest of the politicians. We can attribute this to his lack of sophistication in terms of language, the fact that he knows how to speak to his audience, or both. Also, we can notice that Mike Pence and Barack Obama seem to use more advanced language in their speeches.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a>This metric is different from the other metrics that we have talked about. It uses a dictionary of 3,000 words that are easy to read and understand for a fourth-grade student. So, words that are not in this dictionary are considered to be complex. The higher the Dale-Chall Score is, the more difficult it is to read a text.</span>
+<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig.height=6,fig.width=10,eval=FALSE}</span></span>
+<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a><span class="fu">create_plot</span>(dale_chall_readability_score,<span class="at">subtitle =</span> <span class="st">'The Dale-Chall Readability Score measures the complexity of a text document. The higher the Dale-Chall Score is, the more difficult it is to read a text.'</span>)</span>
+<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a><span class="fu">## A Unified Readability Score</span></span>
+<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a>We introduced several readability metrics, but each one of them might give us a slightly different result. There is a way in <span class="in">`textstat`</span> to combine all these metrics and have a single readability metric.</span>
+<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig.height = 14, fig.width=15,eval=FALSE}</span></span>
+<span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a>us_election_speeches <span class="sc">%&gt;%</span></span>
+<span id="cb14-193"><a href="#cb14-193" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(speaker <span class="sc">%in%</span> speakers) <span class="sc">%&gt;%</span></span>
+<span id="cb14-194"><a href="#cb14-194" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">text_standard =</span> <span class="fu">str_replace</span>(text_standard,<span class="st">' and '</span>,<span class="st">'-'</span>),</span>
+<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a>        <span class="at">text_standard =</span> <span class="fu">factor</span>(</span>
+<span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a>    text_standard,</span>
+<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a>    <span class="at">levels =</span> <span class="fu">c</span>(</span>
+<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a>      <span class="st">'4th-5th grade'</span>,</span>
+<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a>      <span class="st">'5th-6th grade'</span>,</span>
+<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a>      <span class="st">'6th-7th grade'</span>,</span>
+<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a>      <span class="st">'7th-8th grade'</span>,</span>
+<span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a>      <span class="st">'8th-9th grade'</span>,</span>
+<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a>      <span class="st">'9th-10th grade'</span>,</span>
+<span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a>      <span class="st">'10th-11th grade'</span>,</span>
+<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a>      <span class="st">'11th-12th grade'</span>,</span>
+<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a>      <span class="st">'12th-13th grade'</span>,</span>
+<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a>      <span class="st">'14th-15th grade'</span></span>
+<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
+<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(speaker, text_standard) <span class="sc">%&gt;%</span></span>
+<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">n =</span> n <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>()  <span class="sc">+</span></span>
+<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">x =</span> text_standard , <span class="at">y =</span>  n, <span class="at">fill =</span> speaker)) <span class="sc">+</span></span>
+<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">''</span>, <span class="at">y =</span> <span class="st">'Number of Speeches'</span>, <span class="at">title =</span> <span class="st">"How Easy Is It to Understand Trump's Speeches?"</span>,</span>
+<span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">'Based on several readability tests, the education level that one needs to comprehend the 2020 Election speeches by different US politicians is illustrated in this plot.'</span> ) <span class="sc">+</span></span>
+<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> custom_palette) <span class="sc">+</span></span>
+<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> speaker, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text  =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">13</span>),</span>
+<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>,<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">r =</span> <span class="dv">10</span>,<span class="at">l =</span> <span class="dv">10</span>)),</span>
+<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>,<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">b =</span> <span class="dv">10</span>,<span class="at">t =</span> <span class="dv">10</span>)),</span>
+<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>,<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">b =</span> <span class="dv">10</span>)),</span>
+<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a>        <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>))</span>
+<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a>Interestingly, we can observe that Trump never gave a speech to an audience with difficulty more than the 7th or 8th grade. We can also convert this readability metric to numbers to visualize and compare it to other metrics.</span>
+<span id="cb14-227"><a href="#cb14-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a>Interestingly, we can observe that Trump never gave a speech to an audience with a difficulty higher than the 7th or 8th grade. We can also convert this readability metric to numbers to visualize and compare it to other metrics.</span>
+<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig.height=6,fig.width=10,eval=FALSE}</span></span>
+<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a><span class="fu">create_plot</span>(text_standard_float,</span>
+<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a>            <span class="at">subtitle =</span> <span class="st">'The complexity of a text document was measured based on several readability metrics where larger values indicate more difficult writings.'</span>)</span>
+<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-235"><a href="#cb14-235" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
+<span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a>We can consistently see that Trump's speeches are less sophisticated and less complex than the speeches given by the rest of the politicians. We can attribute this to his lack of sophistication in terms of language, the fact that he knows how to speak to his audience, or both. Also, we can notice that Mike Pence and Barack Obama seem to use more advanced language in their speeches.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

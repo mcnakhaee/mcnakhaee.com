@@ -3,57 +3,546 @@ title: "Photography"
 page-layout: full
 ---
 
-# Photography Gallery
+```{=html}
+<style>
+.film-strip-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  padding: 40px 0;
+  margin: 40px 0;
+}
 
-Welcome to my photography gallery. Here I share photos from my travels and everyday moments.
+.film-strip {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
 
-::: {.callout-note}
-## Coming Soon
-This gallery is currently being updated with new photos. Check back soon!
-:::
+.film-strip:hover {
+  animation-play-state: paused;
+}
+
+.film-frame {
+  position: relative;
+  flex-shrink: 0;
+  width: 400px;
+  background: #1a1a1a;
+  padding: 20px 10px;
+  border-radius: 4px;
+}
+
+.film-holes-top,
+.film-holes-bottom {
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  left: 0;
+}
+
+.film-holes-top { top: 5px; }
+.film-holes-bottom { bottom: 5px; }
+
+.film-hole {
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border-radius: 2px;
+}
+
+.film-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border: 2px solid #333;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.film-image:hover {
+  transform: scale(1.05);
+}
+
+.film-label {
+  text-align: center;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.film-strip-reverse {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: scrollReverse 35s linear infinite;
+  width: fit-content;
+}
+
+.film-strip-reverse:hover {
+  animation-play-state: paused;
+}
+
+.section-title {
+  font-family: 'Courier New', monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-align: center;
+  margin: 40px 0 20px 0;
+  color: #EBD5B2;
+}
+
+.arrow {
+  background: rgba(235, 213, 178, 0.8);
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  color: #433B36;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: rgba(235, 213, 178, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow-left { left: 20px; }
+.arrow-right { right: 20px; }
+</style>
+
+<div class="section-title">FILM PHOTOGRAPHY</div>
+
+<div class="film-strip-container">
+  <button class="arrow arrow-left" onclick="document.getElementById('filmStrip1').style.animationPlayState = 'paused'">‹</button>
+  <button class="arrow arrow-right" onclick="document.getElementById('filmStrip1').style.animationPlayState = 'running'">›</button>
+  
+  <div class="film-strip" id="filmStrip1">
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/2025-11-29-0005.jpg" alt="Film Photo 1" class="film-image">
+      <div class="film-label">NOVEMBER 2025</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/2025-11-29-0006.jpg" alt="Film Photo 2" class="film-image">
+      <div class="film-label">NOVEMBER 2025</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/2025-11-29-0007.jpg" alt="Film Photo 3" class="film-image">
+      <div class="film-label">NOVEMBER 2025</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/2025-11-29-0008.jpg" alt="Film Photo 4" class="film-image">
+      <div class="film-label">NOVEMBER 2025</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <!-- Duplicate for infinite scroll -->
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/2025-11-29-0005.jpg" alt="Film Photo 1" class="film-image">
+      <div class="film-label">NOVEMBER 2025</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/2025-11-29-0006.jpg" alt="Film Photo 2" class="film-image">
+      <div class="film-label">NOVEMBER 2025</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/2025-11-29-0007.jpg" alt="Film Photo 3" class="film-image">
+      <div class="film-label">NOVEMBER 2025</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/2025-11-29-0008.jpg" alt="Film Photo 4" class="film-image">
+      <div class="film-label">NOVEMBER 2025</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">URBAN LANDSCAPES</div>
+
+<div class="film-strip-container">
+  <button class="arrow arrow-left" onclick="document.getElementById('filmStrip2').style.animationPlayState = 'paused'">‹</button>
+  <button class="arrow arrow-right" onclick="document.getElementById('filmStrip2').style.animationPlayState = 'running'">›</button>
+  
+  <div class="film-strip-reverse" id="filmStrip2">
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo9.jpg" alt="Urban Photo 1" class="film-image">
+      <div class="film-label">CITY LIFE</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo10.jpg" alt="Urban Photo 2" class="film-image">
+      <div class="film-label">CITY LIFE</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo11.jpg" alt="Urban Photo 3" class="film-image">
+      <div class="film-label">CITY LIFE</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo12.jpg" alt="Urban Photo 4" class="film-image">
+      <div class="film-label">CITY LIFE</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <!-- Duplicate for infinite scroll -->
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo9.jpg" alt="Urban Photo 1" class="film-image">
+      <div class="film-label">CITY LIFE</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo10.jpg" alt="Urban Photo 2" class="film-image">
+      <div class="film-label">CITY LIFE</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo11.jpg" alt="Urban Photo 3" class="film-image">
+      <div class="film-label">CITY LIFE</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo12.jpg" alt="Urban Photo 4" class="film-image">
+      <div class="film-label">CITY LIFE</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">NATURE & GARDENS</div>
+
+<div class="film-strip-container">
+  <button class="arrow arrow-left" onclick="document.getElementById('filmStrip3').style.animationPlayState = 'paused'">‹</button>
+  <button class="arrow arrow-right" onclick="document.getElementById('filmStrip3').style.animationPlayState = 'running'">›</button>
+  
+  <div class="film-strip" id="filmStrip3">
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo13.jpg" alt="Nature Photo 1" class="film-image">
+      <div class="film-label">GARDENS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo14.jpg" alt="Nature Photo 2" class="film-image">
+      <div class="film-label">GARDENS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo15.jpg" alt="Nature Photo 3" class="film-image">
+      <div class="film-label">GARDENS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo16.jpg" alt="Nature Photo 4" class="film-image">
+      <div class="film-label">GARDENS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <!-- Duplicate for infinite scroll -->
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo13.jpg" alt="Nature Photo 1" class="film-image">
+      <div class="film-label">GARDENS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo14.jpg" alt="Nature Photo 2" class="film-image">
+      <div class="film-label">GARDENS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo15.jpg" alt="Nature Photo 3" class="film-image">
+      <div class="film-label">GARDENS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo16.jpg" alt="Nature Photo 4" class="film-image">
+      <div class="film-label">GARDENS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">PORTRAITS & MOMENTS</div>
+
+<div class="film-strip-container">
+  <button class="arrow arrow-left" onclick="document.getElementById('filmStrip4').style.animationPlayState = 'paused'">‹</button>
+  <button class="arrow arrow-right" onclick="document.getElementById('filmStrip4').style.animationPlayState = 'running'">›</button>
+  
+  <div class="film-strip-reverse" id="filmStrip4">
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo17.jpg" alt="Portrait Photo 1" class="film-image">
+      <div class="film-label">MOMENTS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo18.jpg" alt="Portrait Photo 2" class="film-image">
+      <div class="film-label">MOMENTS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo19.jpg" alt="Portrait Photo 3" class="film-image">
+      <div class="film-label">MOMENTS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo20.jpg" alt="Portrait Photo 4" class="film-image">
+      <div class="film-label">MOMENTS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <!-- Duplicate for infinite scroll -->
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo17.jpg" alt="Portrait Photo 1" class="film-image">
+      <div class="film-label">MOMENTS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo18.jpg" alt="Portrait Photo 2" class="film-image">
+      <div class="film-label">MOMENTS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo19.jpg" alt="Portrait Photo 3" class="film-image">
+      <div class="film-label">MOMENTS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+
+    <div class="film-frame">
+      <div class="film-holes-top">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+      <img src="gallery/images/photo20.jpg" alt="Portrait Photo 4" class="film-image">
+      <div class="film-label">MOMENTS</div>
+      <div class="film-holes-bottom">
+        <span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span><span class="film-hole"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Click to view full image
+document.querySelectorAll('.film-image').forEach(img => {
+  img.addEventListener('click', function() {
+    window.open(this.src, '_blank');
+  });
+});
+</script>
+```
 
 ---
-
-## Travel Photography
-
-Photos from various destinations and adventures around the world.
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-4}
-![](images/placeholder1.jpg){.lightbox}
-
-**Location 1**
-Description coming soon
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![](images/placeholder2.jpg){.lightbox}
-
-**Location 2**
-Description coming soon
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![](images/placeholder3.jpg){.lightbox}
-
-**Location 3**
-Description coming soon
-:::
-
-:::
-
----
-
-## Street Photography
-
-Capturing moments from daily life and urban environments.
 
 ::: {.callout-tip}
-## Follow on Instagram
+## Instagram
 For more photos and updates, follow me on Instagram: [@mcnakhaee](https://instagram.com/mcnakhaee)
 :::
 
 ---
 
-*Note: All photos are automatically displayed with lightbox functionality. Click on any image to view it in full screen.*
+*Film photography collection. Click on any image to view full screen. Hover to pause the animation.*
